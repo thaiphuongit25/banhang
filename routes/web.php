@@ -46,3 +46,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::namespace('admin')->group(function () {
     Route::resource('admin/products', 'ProductsController');
 });
+
+Route::get('/dangky', 'RegistrationController@create');
+Route::post('dangky', 'RegistrationController@store');
+ 
+Route::get('/dangnhap', 'SessionsController@create');
+Route::post('/dangnhap', 'SessionsController@store');
+Route::get('/dangxuat', 'SessionsController@destroy');

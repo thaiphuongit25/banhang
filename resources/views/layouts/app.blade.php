@@ -52,7 +52,7 @@
                         <div class="user_control" style="position:relative;margin-top:5px">
                             <input type="hidden" id="check_login" value="0">
                             <a href="account/login.html">Đăng Nhập</a></a>
-                            | <a href="users/new.html">Đăng Ký</a></a>
+                            | <a href="/dangky">Đăng Ký</a></a>
                         </div>
                     </div>
                     <div class="cart-scroll" id="box-cart-scroll">
@@ -109,7 +109,7 @@
                 </div>
                 <div class="user_control" style="position:relative;">
                     <input type="hidden" id="check_login" value="0">
-                    <a href="/account/login">Đăng Nhập</a> | <a href="/users/new">Đăng Ký</a>
+                    <a href="/account/login">Đăng Nhập</a> | <a href="/dangky">Đăng Ký</a>
                     <a class="support-img" href="/support/me"><img src="/images/yah.png" alt="Yah"></a>
                 </div>
                 <div class="flag" style="float: right; padding-top:2px;">
