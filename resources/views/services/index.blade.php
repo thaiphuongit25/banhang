@@ -40,9 +40,7 @@
                     <div class="clear"></div>
                 </div>
               @endforeach
-                <div style="margin-top: 20px;margin-left: 20px;width: 90%;float: left;text-align: center;">
-
-                </div>
+                <div style="margin-top: 20px;margin-left: 20px;width: 90%;float: left;text-align: center;"></div>
             </div>
         </div>
     </div>
