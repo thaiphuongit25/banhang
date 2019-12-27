@@ -1,79 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<!-- <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-md-8">
-      <div class="card">
-        <div class="card-header">{{ __('Register') }}</div>
 
-        <div class="card-body">
-          <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <div class="form-group row">
-              <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
-              <div class="col-md-6">
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                @error('name')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-              <div class="col-md-6">
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-
-                @error('email')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-              <div class="col-md-6">
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                @error('password')
-                <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
-                </span>
-                @enderror
-              </div>
-            </div>
-
-            <div class="form-group row">
-              <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-              <div class="col-md-6">
-                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-              </div>
-            </div>
-
-            <div class="form-group row mb-0">
-              <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                  {{ __('Register') }}
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <style type="text/css">
   .select-location {
     border: 1px solid #ccc;
@@ -109,9 +37,10 @@
           </td>
         </tr>
         <tr>
-          <td>Email<sup>*</sup></td>
           <td>
-            <input class="required" type="text" name="user[email]" id="user_email" />
+            Email<sup>*</sup>
+          </td>
+          <td>
             <input id="email" type="email" class="required @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email"><br>
             @error('email')
             <span class="invalid-feedback" role="alert">
@@ -148,11 +77,16 @@
         <tr>
           <td>Điện thoại<sup>*</sup></td>
           <td>
-            <input class="required" type="text" name="user[phone]" id="user_phone" /> <br>
+            <input id="phone-number" type="tel" class="required @error('phone-number') is-invalid @enderror" name="phone-number" value="{{ old('phone-number') }}" required autocomplete="phone-number"><br>
+            @error('phone')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
             <label class="off red" id="lb_user_phone">Nhập số điện thoại</label>
           </td>
         </tr>
-        <tr>
+        <!-- <tr>
           <td>
             <div style="position:relative;">
               Tỉnh/thành phố<sup>*</sup>
@@ -225,6 +159,11 @@
               <option value="62">Bạc Liêu</option>
               <option value="63">Cà Mau</option>
             </select><br>
+            @error('profile-location1')
+            <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+            </span>
+            @enderror
             <label class="off red" id="lb_profile-location1">Hãy chọn tỉnh/thành phố</label>
           </td>
         </tr>
@@ -254,11 +193,11 @@
             </div>
             <label class="off red" id="lb_profile-location3">Hãy chọn phường/xã</label>
           </td>
-        </tr>
+        </tr> -->
         <tr>
           <td>Số nhà và tên đường<sup>*</sup> </td>
           <td>
-            <input class="required" type="text" name="profile[address]" id="profile_address" /><br>
+            <input id="address" type="text" class="required @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address"><br>
             <label class="off red" id="lb_profile_address">Vui lòng nhập số nhà, tên đường</label>
           </td>
         </tr>
@@ -269,31 +208,24 @@
       <table>
         <tr>
           <td>Tên công ty</td>
-          <td><input type="text" name="profile[company]" id="profile_company" /> </td>
+          <td><input id="company-name" type="text" class="@error('company-name') is-invalid @enderror" name="company-name" value="{{ old('company-name') }}" autocomplete="company-name"><br>
+          </td>
         </tr>
         <tr>
           <td>Địa chỉ</td>
-          <td><input type="text" name="profile[address_pay]" id="profile_address_pay" /> </td>
+          <td><input id="company-address" type="text" class="@error('company-address') is-invalid @enderror" name="company-address" value="{{ old('company-address') }}" autocomplete="company-address"><br>
+          </td>
         </tr>
         <tr>
           <td>Mã số thuế</td>
-          <td><input type="text" name="profile[mst]" id="profile_mst" /> </td>
+          <td><input id="tax-code" type="text" class="@error('tax-code') is-invalid @enderror" name="tax-code" value="{{ old('tax-code') }}" autocomplete="tax-code"><br>
         </tr>
         <tr>
           <td></td>
           <td>
-            <div class="cap-orderonline" id="captcha">
-
-              <p style="position:relative;">
-                <input type="text" placeholder="Mã xác nhận" class="captcha-inputs" name="captcha" id="input_captcha_valid" value="" style="width:84px; padding:4px;">
-                <span style="font-weight:bolder; font-size:17px; color: #027AC7; padding-left:8px; letter-spacing:2px;  padding:5px 18px; position:absolute; top:0px; left:94px;">
-                  bNa3Tt
-                </span>
-                <span style="position:absolute; background-color:transparent; width:200px; height:30px; top:0;left:131px;">&nbsp;</span>
-                <input type="hidden" class="text-change" value="bNa3Tt" id="captcha_valid">
-              </p>
-            </div>
-            <label class="off red" id="lb_capcha">Mã xác nhận không đúng</label>
+            <!-- Google reCaptcha -->
+            <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY')  }}"></div>
+            <!-- End Google reCaptcha -->
             <div class="cap-orderonline right-cart-info" style="color:#c30; font-size:11px; font-weight:bold;">
               (*) Là các mục phải nhập!
             </div>
