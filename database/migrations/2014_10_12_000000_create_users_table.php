@@ -21,6 +21,15 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->boolean('is_admin')->default(false);
+            $table->string('city');
+            $table->string('district');
+            $table->string('wards');
+            $table->string('address');
+            $table->integer('phone_number');
+            $table->integer('company_name')->nullable();
+            $table->integer('tax_code')->nullable();
+            $table->integer('company_address')->nullable();
+            $table->string('note')->nullable();
             $table->timestamps();
         });
     }
