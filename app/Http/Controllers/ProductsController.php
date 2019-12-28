@@ -40,7 +40,13 @@ class ProductsController extends Controller
     {
         $categor = Category::where('slug', $slug)->first();
         $categories = Category::all();
-        return view("products.categories", compact("categor", "categories"));
+        if (!$categor) {
+            $type = Type::where('slug', $slug)->first();
+            $categories = Category::where("type_id", $type->id);
+            return view("products.types", compact("type", "categories"));
+        } else {
+            return view("products.categories", compact("categor", "categories"));
+        }
     }
 
     /**

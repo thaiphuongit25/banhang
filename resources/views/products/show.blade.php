@@ -3,8 +3,8 @@
     <div class="texttitle sitemaps">
         <a href="/">Trang Chủ</a>
         <a href="/product">Sản Phẩm</a>
-        <a href="/product/ics">{{ $product->category->type->name }}</a>
-        <a href="/product/linear-ics">{{ $product->category->name }}</a>
+        <a href="/product/{{ $product->category->type->slug }}">{{ $product->category->type->name }}</a>
+        <a href="/product/{{ $product->category->slug }}">{{ $product->category->name }}</a>
         <a href="/product/amplifiers-instrumentation-opamps-buffer-amps">{{$product->name}}</a>
     </div>
 </div>
