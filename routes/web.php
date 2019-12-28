@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('products.index');
-});
+Route::get('/', 'ProductsController@index')->name('products');
+Route::get('/products/{slug}', 'ProductsController@show')->name('products_show');
+Route::get('/product/{slug}', 'ProductsController@showCategories')->name('categories');
+
 
 Route::get('/suppliers', function () {
     return view('suppliers.index');

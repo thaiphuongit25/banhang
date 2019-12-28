@@ -5,7 +5,7 @@ namespace App\model;
 use Illuminate\Database\Eloquent\Model;
 use App\model\Category;
 
-class Product extends Model
+class Type extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -13,11 +13,11 @@ class Product extends Model
      * @var array
      */
     protected $fillable = [
-       'id', 'name', 'desc', 'specification', 'slug'
+        'id', 'name', 'desc', 'slug'
     ];
 
-    public function category()
+    public function categories()
     {
-        return $this->belongsTo(Category::class);
+        return $this->hasMany(Category::class);
     }
 }
