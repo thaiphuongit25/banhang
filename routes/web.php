@@ -24,10 +24,6 @@ Route::get('/services', function () {
     return view('services.index');
 });
 
-Route::get('/news', function () {
-    return view('news.index');
-});
-
 Route::get('/lien-he', function () {
     return view('contact.index');
 });
@@ -44,6 +40,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController');
+Route::resource('articles', 'ArticleController');
 
 Route::namespace('admin')->group(function () {
     Route::resource('admin/products', 'ProductsController');
@@ -55,3 +52,6 @@ Route::namespace('admin')->group(function () {
 // Route::get('/dangnhap', 'SessionsController@create');
 // Route::post('/dangnhap', 'SessionsController@store');
 // Route::get('/dangxuat', 'SessionsController@destroy');
+Route::get('/news', 'ArticleController@index');
+Route::get('/news/{id}', 'ArticleController@category_details')->name('article_category_details');
+Route::get('/news-detail/{id}', 'ArticleController@show');

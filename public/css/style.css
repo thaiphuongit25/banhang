@@ -2659,13 +2659,13 @@ table {
 }
 
 .pagination a.next_page {
-    background: url("page-paginate.png") no-repeat;
+    background: url("/images/page-paginate.png") no-repeat;
     background-position: 3px -108px;
     padding-right: 11px
 }
 
 .pagination a.previous_page {
-    background: url("page-paginate.png") no-repeat;
+    background: url("/images/page-paginate.png") no-repeat;
     background-position: 1px -8px;
     padding-left: 7px;
     margin-right: 3px
@@ -4370,12 +4370,12 @@ span.date {
 }
 
 span.cmt-count {
-    background: url("comment-icon.png") no-repeat scroll left center;
+    background: url("/images/comment-icon.png") no-repeat scroll left center;
     padding-left: 20px
 }
 
 span.view-count {
-    background: url("eye-icon.png") no-repeat scroll left center;
+    background: url("/images/eye-icon.png") no-repeat scroll left center;
     padding-left: 24px
 }
 
