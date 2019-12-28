@@ -15,7 +15,6 @@ class CreateTypesTable extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('type_id')->references('id')->on('types');
             $table->string('name');
             $table->string('desc');
             $table->integer('status');
