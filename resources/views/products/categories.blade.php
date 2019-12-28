@@ -2,9 +2,9 @@
 <div class="container-crumb">
     <div class="texttitle sitemaps">
         <a href="/">Trang Chủ</a>
-        <a href="/product">Sản Phẩm</a>
+        <a href="/">Sản Phẩm</a>
 
-        <a href="/product/ics">{{ $categor->type->name }}</a>
+        <a href="/product/{{ $categor->type->slug }}">{{ $categor->type->name }}</a>
         <a href="#">
             <h1 class="h1-title">{{ $categor->name }}</h1>
         </a>

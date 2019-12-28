@@ -1,7 +1,7 @@
 <ul>
     @foreach ( getTypes() as $type )
         <li class="root">
-            <a href="#">{{ $type->name }}</a>
+            <a href="/product/{{$type->slug}}">{{ $type->name }}</a>
             <ul class="ddsubmenustyle blackwhite" style="min-height: 545px;">
                 <span class="titleul">ICs</span>
                 <li class="click">
