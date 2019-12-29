@@ -25,9 +25,14 @@ class ProductsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function search(Request $request)
     {
-        //
+        $name = $request->has('search') ? $request->search : '';
+        $page = $request->has('page') ? $request->page : 1;
+        $offset = $page == 1 ? 0 : 16*($page - 1);
+        $products = Product::where("name", 'LIKE','%'.$name.'%')->offset($offset)->limit(16)->get();
+        $numberPage = count($products) / 16;
+        return view('products.list', compact('products', 'name', 'numberPage'));
     }
 
       /**
@@ -42,8 +47,9 @@ class ProductsController extends Controller
         $categories = Category::all();
         if (!$categor) {
             $type = Type::where('slug', $slug)->first();
+            $types = Type::all();
             $categories = Category::where("type_id", $type->id);
-            return view("products.types", compact("type", "categories"));
+            return view("products.types", compact("type", "types", "categories"));
         } else {
             return view("products.categories", compact("categor", "categories"));
         }
@@ -58,7 +64,11 @@ class ProductsController extends Controller
     public function show($slug)
     {
         $product = Product::where('slug', $slug)->first();
+        $sameProducts = Product::where("category_id", $product->category_id)
+            ->whereNotIn("id", [$product->id])->get();
+        $productHots = Product::whereNotIn("id", [$product->id])
+            ->orderBy('price', 'DESC')->limit(10)->get();
         $categories = Category::all();
-        return view("products.show", compact("product", "categories"));
+        return view("products.show", compact("product", "categories", "sameProducts", "productHots"));
     }
 }

@@ -542,7 +542,8 @@ if (function(e, t) {
                     if (s[a] && s[a].test(o)) {
                         l.unshift(a);
                         break
-                    } if (l[0] in n) r = l[0];
+                    }
+            if (l[0] in n) r = l[0];
             else {
                 for (a in n) {
                     if (!l[0] || e.converters[a + " " + l[0]]) {
@@ -570,7 +571,8 @@ if (function(e, t) {
                         if (s = o.split(" "), s[1] === r && (a = c[l + " " + s[0]] || c["* " + s[0]])) {
                             !0 === a ? a = c[o] : !0 !== c[o] && (r = s[0], u.unshift(s[1]));
                             break
-                        } if (!0 !== a)
+                        }
+                if (!0 !== a)
                     if (a && e["throws"]) t = a(t);
                     else try {
                         t = a(t)
@@ -822,7 +824,8 @@ if (function(e, t) {
                         } else {
                             if (c[2]) return K.apply(n, t.getElementsByTagName(e)), n;
                             if ((o = c[3]) && x.getElementsByClassName && t.getElementsByClassName) return K.apply(n, t.getElementsByClassName(o)), n
-                        } if (x.qsa && !X[e + " "] && (!H || !H.test(e))) {
+                        }
+                    if (x.qsa && !X[e + " "] && (!H || !H.test(e))) {
                         if (1 !== m) h = t, f = e;
                         else if ("object" !== t.nodeName.toLowerCase()) {
                             for ((s = t.getAttribute("id")) ? s = s.replace(be, "\\$&") : t.setAttribute("id", s = M), d = C(e), r = d.length, l = pe.test(s) ? "#" + s : "[id='" + s + "']"; r--;) d[r] = l + " " + p(d[r]);
@@ -986,7 +989,8 @@ if (function(e, t) {
                             })).replace(se, "$1"), n, s < i && y(e.slice(s, i)), i < o && y(e = e.slice(i)), i < o && p(e))
                         }
                         u.push(n)
-                    } return h(u)
+                    }
+                return h(u)
             }
 
             function b(e, n) {
@@ -1007,7 +1011,8 @@ if (function(e, t) {
                                     if (p(u, a || I, s)) {
                                         l.push(u);
                                         break
-                                    } c && (R = w)
+                                    }
+                                c && (R = w)
                             }
                             o && ((u = !p && u) && f--, i && m.push(u))
                         }
@@ -1483,7 +1488,8 @@ if (function(e, t) {
                     if (1 === e.nodeType) {
                         if (o && fe(e).is(n)) break;
                         i.push(e)
-                    } return i
+                    }
+                return i
             },
             we = function(e, t) {
                 for (var n = []; e; e = e.nextSibling) 1 === e.nodeType && e !== t && n.push(e);
@@ -1560,7 +1566,8 @@ if (function(e, t) {
                         if (n.nodeType < 11 && (a ? a.index(n) > -1 : 1 === n.nodeType && fe.find.matchesSelector(n, e))) {
                             r.push(n);
                             break
-                        } return this.pushStack(r.length > 1 ? fe.uniqueSort(r) : r)
+                        }
+                return this.pushStack(r.length > 1 ? fe.uniqueSort(r) : r)
             },
             index: function(e) {
                 return e ? "string" == typeof e ? fe.inArray(this[0], fe(e)) : fe.inArray(e.jquery ? e[0] : e, this) : this[0] && this[0].parentNode ? this.first().prevAll().length : -1
@@ -2027,7 +2034,8 @@ if (function(e, t) {
                                 elem: l,
                                 handlers: i
                             })
-                        } return s < t.length && a.push({
+                        }
+                return s < t.length && a.push({
                     elem: this,
                     handlers: t.slice(s)
                 }), a
@@ -2708,7 +2716,8 @@ if (function(e, t) {
                             if (n = i[l], (n.selected || l === o) && (de.optDisabled ? !n.disabled : null === n.getAttribute("disabled")) && (!n.parentNode.disabled || !fe.nodeName(n.parentNode, "optgroup"))) {
                                 if (t = fe(n).val(), r) return t;
                                 a.push(t)
-                            } return a
+                            }
+                        return a
                     },
                     set: function(e, t) {
                         for (var n, i, o = e.options, r = fe.makeArray(t), a = o.length; a--;)
@@ -2873,7 +2882,8 @@ if (function(e, t) {
                         if (o = B(n), i = 1 === n.nodeType && (" " + o + " ").replace(Ot, " ")) {
                             for (a = 0; r = t[a++];) i.indexOf(" " + r + " ") < 0 && (i += r + " ");
                             s = fe.trim(i), o !== s && fe.attr(n, "class", s)
-                        } return this
+                        }
+                return this
             },
             removeClass: function(e) {
                 var t, n, i, o, r, a, s, l = 0;
@@ -2887,7 +2897,8 @@ if (function(e, t) {
                             for (a = 0; r = t[a++];)
                                 for (; i.indexOf(" " + r + " ") > -1;) i = i.replace(" " + r + " ", " ");
                             s = fe.trim(i), o !== s && fe.attr(n, "class", s)
-                        } return this
+                        }
+                return this
             },
             toggleClass: function(e, t) {
                 var n = typeof e;
@@ -3203,7 +3214,8 @@ if (function(e, t) {
                                         l = ""
                                     }
                                     r || !t.isLocal || t.crossDomain ? 1223 === r && (r = 204) : r = c.text ? 200 : 404
-                                } c && o(r, l, c, a.getAllResponseHeaders())
+                                }
+                            c && o(r, l, c, a.getAllResponseHeaders())
                         }, t.async ? 4 === a.readyState ? e.setTimeout(n) : a.onreadystatechange = ln[s] = n : n()
                     },
                     abort: function() {
@@ -3826,7 +3838,8 @@ var ddlevelsmenu = {
                         d = document.createElement("div");
                     d.appendChild(l[c]), u.appendChild(d), this.arrowpointers.showarrow.sublevel && this.buildmenu(e, u, l[c], this.ulindex, !1, t)
                 }
-            } this.addEvent(window, function() {
+            }
+        this.addEvent(window, function() {
             ddlevelsmenu.getwindowsize(), ddlevelsmenu.gettopitemsdimensions()
         }, "resize")
     },
@@ -4075,7 +4088,8 @@ function(e) {
                 if (0 === --this.o.speed) {
                     this.o.speed = 1;
                     break
-                } var n = this;
+                }
+            var n = this;
             this.trigger = null, this.funcMoveBack = function() {
                 n.trigger = this, n.moveBack()
             }, this.funcMoveForward = function() {
@@ -5069,140 +5083,188 @@ var menu = {
             })
         }
     }(jQuery), $(document).ready(function() {
+        var listCart = [];
+        var cardOld = localStorage.getItem("list_card");
+        if (cardOld) {
+            listCart = JSON.parse(cardOld);
+        }
+        $(".card_value").html(listCart.length);
         $html = $("#main-search").html(), $(".auto-load-topic-forum").each(function() {
-            $.ajax({
-                url: $(this).attr("data-url"),
-                dataType: "script"
-            })
-        }), $(".defaultText").focus(function() {
-            $(this).val() == $(this)[0].title && ($(this).removeClass("defaultTextActive"), $(this).val(""))
-        }), $(".mn-product").click(function() {
-            $top = $(this).offset().top, $left = $(this).offset().left, $height = $(this).height(), $("#menubar").show().css({
-                top: $top + $height,
-                left: $left,
-                visibility: "visible"
-            }), $(".overlay").show(), $(this).addClass("mmcurrent")
-        }), $(document).click(function(e) {
-            $target = $(e.target), $target.closest("#menubar").length || !$("#menubar").is(":visible") || $target.closest(".mn-product").length || ($("#menubar").hide(), $(".overlay").hide(), $(".mn-product").removeClass("mmcurrent"))
-        }), $(".defaultText").blur(function() {
-            "" == $(this).val() && ($(this).addClass("defaultTextActive"), $(this).val($(this)[0].title))
-        }), $(".product-option:first-child").addClass("pcurrent"), $(".product-option:first-child").find("input").prop("checked", !0), $(".product-option").click(function() {
-            var e = $("#product_option_id").val();
-            1 == $(this).find("input").is(":checked") ? ($(this).removeClass("pcurrent"), $(this).find("input").prop("checked", !1), $("#product_option_id").val(removeString(e, $(this).attr("data-id"))), console.log("-")) : ($(this).addClass("pcurrent"), $(this).find("input").prop("checked", !0), $("#product_option_id").val(addItemString(e, $(this).attr("data-id"))), console.log("+"))
-        }), $(".product-option input").click(function() {
-            $("#product_option_id").val();
-            1 == $(this).is(":checked") ? ($(this).parent().removeClass("pcurrent"), $(this).prop("checked", !1), console.log("-")) : ($(this).parent().addClass("pcurrent"), $(this).prop("checked", !0), console.log("+"))
-        }), $(".defaultText").blur(), $(".go-top").click(function() {
-            $(window).scrollTop(1)
-        }), $(".ordered_btn").is(":checked") ? $("#ordered").show() : $("#ordered").hide(), $(".ordered_btn").click(function() {
-            $(this).is(":checked") ? $("#ordered").show() : $("#ordered").hide()
-        }), $(window).keypress(function(e) {
-            e.which
-        }), $(window).scroll(function() {
-            var e = jQuery(window).scrollTop();
-            parseInt(e) <= 50 ? $("#top-fix-scroll").css({
-                display: "none"
-            }) : $("#top-fix-scroll").css({
-                display: "block"
-            }), parseInt(e) >= 500 ? $(".go-top").css({
-                display: "block"
-            }) : $(".go-top").css({
-                display: "none"
-            })
-        }), $(".cart-popup-hover-main").hover(function() {
-            $(".cart-popup-hover").css({
-                display: "block"
-            })
-        }, function() {
-            $(".cart-popup-hover").css({
-                display: "none"
-            })
-        }), $(".cart-popup-hover-scroll").hover(function() {
-            $(".cart-popup-hover-scroll .cart-popup-hover").css({
-                display: "block"
-            })
-        }, function() {
-            $(".cart-popup-hover").css({
-                display: "none"
-            })
-        }), $(".menu-doc img.view-menu-btn").click(function() {
-            $(".menu-doc ul").toggle("slide")
-        }), $(".menu-doc ul span").click(function() {
-            $(".menu-doc ul").css({
-                display: "none"
-            })
-        }), $("body").click(function(e) {
-            $(e.target).closest("#search-mobile").length || $("#search-mobile").hide()
-        }), $(".adtocartdestop").find(".btn-cart").click(function() {
-            $parent = $(this).parents(".adtocartdestop");
-            var e = $parent.find(".quantity-buy").val(),
-                t = $parent.find(".product_id").val();
-            !isNaN(e) && "" != e && e > -1 ? $.ajax({
-                url: "/carts/add_to_cart",
-                type: "POST",
-                dataType: "script",
-                data: {
-                    id: t,
-                    quantitybuy: e
+                $.ajax({
+                    url: $(this).attr("data-url"),
+                    dataType: "script"
+                })
+            }), $(".defaultText").focus(function() {
+                $(this).val() == $(this)[0].title && ($(this).removeClass("defaultTextActive"), $(this).val(""))
+            }), $(".mn-product").click(function() {
+                $top = $(this).offset().top, $left = $(this).offset().left, $height = $(this).height(), $("#menubar").show().css({
+                    top: $top + $height,
+                    left: $left,
+                    visibility: "visible"
+                }), $(".overlay").show(), $(this).addClass("mmcurrent")
+            }), $(document).click(function(e) {
+                $target = $(e.target), $target.closest("#menubar").length || !$("#menubar").is(":visible") || $target.closest(".mn-product").length || ($("#menubar").hide(), $(".overlay").hide(), $(".mn-product").removeClass("mmcurrent"))
+            }), $(".defaultText").blur(function() {
+                "" == $(this).val() && ($(this).addClass("defaultTextActive"), $(this).val($(this)[0].title))
+            }), $(".product-option:first-child").addClass("pcurrent"), $(".product-option:first-child").find("input").prop("checked", !0), $(".product-option").click(function() {
+                var e = $("#product_option_id").val();
+                1 == $(this).find("input").is(":checked") ? ($(this).removeClass("pcurrent"), $(this).find("input").prop("checked", !1), $("#product_option_id").val(removeString(e, $(this).attr("data-id"))), console.log("-")) : ($(this).addClass("pcurrent"), $(this).find("input").prop("checked", !0), $("#product_option_id").val(addItemString(e, $(this).attr("data-id"))), console.log("+"))
+            }), $(".product-option input").click(function() {
+                $("#product_option_id").val();
+                1 == $(this).is(":checked") ? ($(this).parent().removeClass("pcurrent"), $(this).prop("checked", !1), console.log("-")) : ($(this).parent().addClass("pcurrent"), $(this).prop("checked", !0), console.log("+"))
+            }), $(".defaultText").blur(), $(".go-top").click(function() {
+                $(window).scrollTop(1)
+            }), $(".ordered_btn").is(":checked") ? $("#ordered").show() : $("#ordered").hide(), $(".ordered_btn").click(function() {
+                $(this).is(":checked") ? $("#ordered").show() : $("#ordered").hide()
+            }), $(window).keypress(function(e) {
+                e.which
+            }), $(window).scroll(function() {
+                var e = jQuery(window).scrollTop();
+                parseInt(e) <= 50 ? $("#top-fix-scroll").css({
+                    display: "none"
+                }) : $("#top-fix-scroll").css({
+                    display: "block"
+                }), parseInt(e) >= 500 ? $(".go-top").css({
+                    display: "block"
+                }) : $(".go-top").css({
+                    display: "none"
+                })
+            }), $(".cart-popup-hover-main").hover(function() {
+                $(".cart-popup-hover").css({
+                    display: "block"
+                })
+            }, function() {
+                $(".cart-popup-hover").css({
+                    display: "none"
+                })
+            }), $(".cart-popup-hover-scroll").hover(function() {
+                $(".cart-popup-hover-scroll .cart-popup-hover").css({
+                    display: "block"
+                })
+            }, function() {
+                $(".cart-popup-hover").css({
+                    display: "none"
+                })
+            }), $(".menu-doc img.view-menu-btn").click(function() {
+                $(".menu-doc ul").toggle("slide")
+            }), $(".menu-doc ul span").click(function() {
+                $(".menu-doc ul").css({
+                    display: "none"
+                })
+            }), $("body").click(function(e) {
+                $(e.target).closest("#search-mobile").length || $("#search-mobile").hide()
+            }),
+            $(".review-product").click(function() {
+                var product_id = parseInt($(this).attr("id"));
+                var listSee = [];
+                var seeOld = localStorage.getItem("saw_product");
+                var isExits = false;
+                if (seeOld) {
+                    listSee = JSON.parse(seeOld);
+                    listSee.forEach(function(value) {
+                        if (value.id == product_id) {
+                            isExits = true;
+                        }
+                    });
                 }
-            }) : alert("!!!Error!!!")
-        }), $(".item-ct-pr-home").each(function() {
-            $.ajax({
-                type: "get",
-                url: "/products/subject?id=" + $(this).attr("id"),
-                dataType: "script"
+                if (!isExits) {
+                    listSee.push({ id: product_id });
+                }
+                localStorage.setItem("saw_product", JSON.stringify(listSee));
+            }),
+            $(".btn-cart").click(function(e) {
+                e.preventDefault();
+                var product_id = parseInt($(this).attr("id"));
+                var quantity = $('.quantity-buy').val();
+                var listCard = [];
+                var cardOld = localStorage.getItem("list_card");
+                var isExits = false;
+                if (cardOld) {
+                    listCard = JSON.parse(cardOld);
+                    listCard.map(function(value) {
+                        if (value.id == product_id) {
+                            isExits = true;
+                            return value.quantity = parseInt(value.quantity) + parseInt(quantity);
+                        }
+                    });
+                }
+                if (!isExits) {
+                    listCard.push({ id: product_id, quantity: quantity });
+                }
+                localStorage.setItem("list_card", JSON.stringify(listCard));
+                $(".card_value").html(listCard.length);
+            }),
+            $(".adtocartdestop").find(".btn-cart").click(function() {
+
+                $parent = $(this).parents(".adtocartdestop");
+                var e = $parent.find(".quantity-buy").val(),
+                    t = $parent.find(".product_id").val();
+                !isNaN(e) && "" != e && e > -1 ? $.ajax({
+                    url: "/carts/add_to_cart",
+                    type: "POST",
+                    dataType: "script",
+                    data: {
+                        id: t,
+                        quantitybuy: e
+                    }
+                }) : alert("!!!Error!!!")
+            }), $(".item-ct-pr-home").each(function() {
+                $.ajax({
+                    type: "get",
+                    url: "/products/subject?id=" + $(this).attr("id"),
+                    dataType: "script"
+                })
+            }), $(".next").click(function() {
+                if ($(this).attr("disable") == undefined) {
+                    var e = $(this).parent(".item-ct-pr-home").attr("id"),
+                        t = $(this).parent(".item-ct-pr-home").children(".content-item-ct-pr-home").children().children(".v-p-t").last().attr("id");
+                    $.ajax({
+                        url: "/products/subject?id=" + e + "&last=" + t,
+                        dataType: "script"
+                    }), $(this).attr("disable", !0), $(this).parent(".item-ct-pr-home").children(".prev").removeAttr("disable")
+                }
+            }), $(".prev").click(function() {
+                if ($(this).attr("disable") == undefined) {
+                    var e = $(this).parent(".item-ct-pr-home").attr("id"),
+                        t = $(this).parent(".item-ct-pr-home").children(".content-item-ct-pr-home").children().children(".v-p-t").first().attr("id");
+                    $.ajax({
+                        url: "/products/subject?id=" + e + "&first=" + t,
+                        dataType: "script"
+                    }), $(this).attr("disable", !0), $(this).parent(".item-ct-pr-home").children(".next").removeAttr("disable")
+                }
+            }), $(".touchspin-down").click(function() {
+                $quantity = $(this).parents(".touchspin").find(".quantity-buy");
+                var e = $quantity.val();
+                e = parseInt(e) - 1, e = e < 1 ? 1 : e, $quantity.val(e)
+            }), $(".touchspin-up").click(function() {
+                $quantity = $(this).parents(".touchspin").find(".quantity-buy");
+                var e = $quantity.val();
+                e = parseInt(e) + 1, $quantity.val(e)
+            }), setTimeout(function() {
+                $(".alert").remove()
+            }, 4e3), $(".show").zoomImage(), $(".show-small-img:first-of-type").css({
+                border: "solid 1px #951b25",
+                padding: "2px"
+            }), $(".show-small-img:first-of-type").attr("alt", "now").siblings().removeAttr("alt"), $(".show-small-img").click(function() {
+                $("#show-img").attr("src", $(this).attr("src")), $("#big-img").attr("src", $(this).attr("src")), $(this).attr("alt", "now").siblings().removeAttr("alt"), $(this).css({
+                    border: "solid 1px #951b25"
+                }).siblings().css({
+                    border: "solid 1px #eee",
+                    padding: "0"
+                }), $("#small-img-roll").children().length > 4 && ($(this).index() >= 3 && $(this).index() < $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($(this).index() - 2) + "px") : $(this).index() == $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($("#small-img-roll").children().length - 4) + "px") : $("#small-img-roll").css("left", "0"))
+            }), $("#next-img").click(function() {
+                $("#show-img").attr("src", $(".show-small-img[alt='now']").next().attr("src")), $("#big-img").attr("src", $(".show-small-img[alt='now']").next().attr("src")), $(".show-small-img[alt='now']").next().css({
+                    border: "solid 1px #951b25"
+                }).siblings().css({
+                    border: "solid 1px #eee",
+                    padding: "0"
+                }), $(".show-small-img[alt='now']").next().attr("alt", "now").siblings().removeAttr("alt"), $("#small-img-roll").children().length > 4 && ($(".show-small-img[alt='now']").index() >= 3 && $(".show-small-img[alt='now']").index() < $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($(".show-small-img[alt='now']").index() - 2) + "px") : $(".show-small-img[alt='now']").index() == $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($("#small-img-roll").children().length - 4) + "px") : $("#small-img-roll").css("left", "0"))
+            }), $("#prev-img").click(function() {
+                $("#show-img").attr("src", $(".show-small-img[alt='now']").prev().attr("src")), $("#big-img").attr("src", $(".show-small-img[alt='now']").prev().attr("src")), $(".show-small-img[alt='now']").prev().css({
+                    border: "solid 1px #951b25"
+                }).siblings().css({
+                    border: "solid 1px #eee",
+                    padding: "0"
+                }), $(".show-small-img[alt='now']").prev().attr("alt", "now").siblings().removeAttr("alt"), $("#small-img-roll").children().length > 4 && ($(".show-small-img[alt='now']").index() >= 3 && $(".show-small-img[alt='now']").index() < $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($(".show-small-img[alt='now']").index() - 2) + "px") : $(".show-small-img[alt='now']").index() == $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($("#small-img-roll").children().length - 4) + "px") : $("#small-img-roll").css("left", "0"))
             })
-        }), $(".next").click(function() {
-            if ($(this).attr("disable") == undefined) {
-                var e = $(this).parent(".item-ct-pr-home").attr("id"),
-                    t = $(this).parent(".item-ct-pr-home").children(".content-item-ct-pr-home").children().children(".v-p-t").last().attr("id");
-                $.ajax({
-                    url: "/products/subject?id=" + e + "&last=" + t,
-                    dataType: "script"
-                }), $(this).attr("disable", !0), $(this).parent(".item-ct-pr-home").children(".prev").removeAttr("disable")
-            }
-        }), $(".prev").click(function() {
-            if ($(this).attr("disable") == undefined) {
-                var e = $(this).parent(".item-ct-pr-home").attr("id"),
-                    t = $(this).parent(".item-ct-pr-home").children(".content-item-ct-pr-home").children().children(".v-p-t").first().attr("id");
-                $.ajax({
-                    url: "/products/subject?id=" + e + "&first=" + t,
-                    dataType: "script"
-                }), $(this).attr("disable", !0), $(this).parent(".item-ct-pr-home").children(".next").removeAttr("disable")
-            }
-        }), $(".touchspin-down").click(function() {
-            $quantity = $(this).parents(".touchspin").find(".quantity-buy");
-            var e = $quantity.val();
-            e = parseInt(e) - 1, e = e < 1 ? 1 : e, $quantity.val(e)
-        }), $(".touchspin-up").click(function() {
-            $quantity = $(this).parents(".touchspin").find(".quantity-buy");
-            var e = $quantity.val();
-            e = parseInt(e) + 1, $quantity.val(e)
-        }), setTimeout(function() {
-            $(".alert").remove()
-        }, 4e3), $(".show").zoomImage(), $(".show-small-img:first-of-type").css({
-            border: "solid 1px #951b25",
-            padding: "2px"
-        }), $(".show-small-img:first-of-type").attr("alt", "now").siblings().removeAttr("alt"), $(".show-small-img").click(function() {
-            $("#show-img").attr("src", $(this).attr("src")), $("#big-img").attr("src", $(this).attr("src")), $(this).attr("alt", "now").siblings().removeAttr("alt"), $(this).css({
-                border: "solid 1px #951b25"
-            }).siblings().css({
-                border: "solid 1px #eee",
-                padding: "0"
-            }), $("#small-img-roll").children().length > 4 && ($(this).index() >= 3 && $(this).index() < $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($(this).index() - 2) + "px") : $(this).index() == $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($("#small-img-roll").children().length - 4) + "px") : $("#small-img-roll").css("left", "0"))
-        }), $("#next-img").click(function() {
-            $("#show-img").attr("src", $(".show-small-img[alt='now']").next().attr("src")), $("#big-img").attr("src", $(".show-small-img[alt='now']").next().attr("src")), $(".show-small-img[alt='now']").next().css({
-                border: "solid 1px #951b25"
-            }).siblings().css({
-                border: "solid 1px #eee",
-                padding: "0"
-            }), $(".show-small-img[alt='now']").next().attr("alt", "now").siblings().removeAttr("alt"), $("#small-img-roll").children().length > 4 && ($(".show-small-img[alt='now']").index() >= 3 && $(".show-small-img[alt='now']").index() < $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($(".show-small-img[alt='now']").index() - 2) + "px") : $(".show-small-img[alt='now']").index() == $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($("#small-img-roll").children().length - 4) + "px") : $("#small-img-roll").css("left", "0"))
-        }), $("#prev-img").click(function() {
-            $("#show-img").attr("src", $(".show-small-img[alt='now']").prev().attr("src")), $("#big-img").attr("src", $(".show-small-img[alt='now']").prev().attr("src")), $(".show-small-img[alt='now']").prev().css({
-                border: "solid 1px #951b25"
-            }).siblings().css({
-                border: "solid 1px #eee",
-                padding: "0"
-            }), $(".show-small-img[alt='now']").prev().attr("alt", "now").siblings().removeAttr("alt"), $("#small-img-roll").children().length > 4 && ($(".show-small-img[alt='now']").index() >= 3 && $(".show-small-img[alt='now']").index() < $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($(".show-small-img[alt='now']").index() - 2) + "px") : $(".show-small-img[alt='now']").index() == $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($("#small-img-roll").children().length - 4) + "px") : $("#small-img-roll").css("left", "0"))
-        })
     });
