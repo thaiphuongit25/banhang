@@ -3,7 +3,7 @@
     <div class="left-content-cart left">
         <div id="infor_cart" style="margin-top:15px">
             <div class="title-gh">
-                Giỏ hàng (1)
+                Giỏ hàng (<span class="number_order"></span>)
             </div>
             <div id="show-cart">
                 <form id="update_cart" action="/carts/update_to_cart" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
@@ -17,45 +17,6 @@
                                 <th> Đơn giá </th>
                                 <th> Thành tiền </th>
                                 <th> Xóa </th>
-                            </tr>
-                            <tr>
-                                <td class="no"> 1 </td>
-                                <td class="pn">
-                                    <div style="width:29%;float:left;margin-right:1%">
-                                        <a href="/products/sg8v1"><img alt="SG8V1" class="image-hover" src="https://thegioiic.com/upload/medium/2734.jpg"></a>
-                                    </div>
-                                    <div style="float:left;width:70%">
-                                        <a target="_blank" href="/products/sg8v1">SG8V1</a>
-                                    </div>
-                                </td>
-                                <td class="pp">
-                                    <table cellpadding="0" cellspacing="0" style="width: 100%;height:50px">
-                                        <tbody>
-                                            <tr>
-                                                <td style="width:50px;"> Số lượng </td>
-                                                <td style="width:90px;"> Đơn giá </td>
-                                            </tr>
-                                            <tr>
-                                                <td style="text-align:right;padding-right:5px"> 1000 </td>
-                                                <td style="text-align:right;padding-right:5px"> 50.000 đ </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </td>
-                                <td class="pq">
-                                    <input type="number" id="3000" value="18" class="cart-quantity-change" style="width:45px; text-align:center;" min="1">
-                                    <br>
-                                    <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">17</span> Cái</span>
-                                </td>
-                                <td class="pup" style="text-align:right;padding-right:5px">
-                                    65,000 đ
-                                </td>
-                                <td class="pup" style="text-align:right;padding-right:5px">
-                                    1,170,000 đ
-                                </td>
-                                <td class="pa">
-                                    <a confirm="Bạn có muốn xóa?" data-remote="true" href="/carts/delete?id=3000">Xóa</a>
-                                </td>
                             </tr>
                         </tbody>
                     </table>

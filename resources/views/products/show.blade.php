@@ -244,18 +244,12 @@
                                             </td>
                                             <td>Đơn giá<br>(VND)</td>
                                         </tr>
+                                        @foreach ($product->units as $unit)
                                         <tr>
-                                            <td class="price-column">1</td>
-                                            <td class="price-column">16,000 </td>
+                                            <td class="price-column">{{ $unit->number }}</td>
+                                            <td class="price-column">{{ $unit->unit_price }} </td>
                                         </tr>
-                                        <tr>
-                                            <td class="price-column">20</td>
-                                            <td class="price-column">15,500 </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="price-column">50</td>
-                                            <td class="price-column">15,000 </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

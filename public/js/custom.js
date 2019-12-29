@@ -1,7 +1,30 @@
 $(document).ready(function() {
     window.onload = function() {
         var curren_url = window.location.href.split("/").slice(-1)[0];
-        if (curren_url === "carts") {
+
+        function getListTD(atr) {
+            var listTr = "";
+            atr.forEach(function(value) {
+                listTr +=
+                    "<tr>" +
+                    "<td style='text-align:right;padding-right:5px'>" + value.number + "</td>" +
+                    "<td style='text-align:right;padding-right:5px'>" + value.unit_price + "đ </td>"
+                "</tr>";
+            });
+            return listTr;
+        }
+
+        var getUnit = function(units, quantity) {
+            let unit = units[0].unit_price;
+            units.forEach(function(value) {
+                if (quantity < value.number) {
+                    unit = value.unit_price;
+                }
+            });
+            return [unit * quantity, unit];
+        }
+
+        var calculateUnitPrice = function() {
             var list_card = localStorage.getItem("list_card");
             if (list_card) {
                 list_card = JSON.parse(list_card);
@@ -12,11 +35,31 @@ $(document).ready(function() {
             list_card.forEach(function(value) {
                 ids.push(value.id);
             });
+            var quantityCurrent = function(id) {
+                let quantity = 0;
+                if (list_card) {
+                    list_card.forEach(function(value) {
+                        if (value.id == id) {
+                            quantity = value.quantity;
+                        }
+                    });
+                }
+                return quantity;
+            }
+
+            var totalPrice = function(products) {
+                let total = 0;
+                products.forEach(function(value) {
+                    total += getUnit(value.units, quantityCurrent(value.id))[0];
+                });
+                return total;
+            }
             $.ajax({
                 type: 'get',
                 url: '/cart_products?ids=' + ids,
                 data: { ids: ids },
                 success: function(data) {
+                    $(".number_order").html(data.length);
                     $('.list-carts').find("tr").toArray().forEach(function(value, index) {
                         if (index > 0) {
                             value.remove();
@@ -41,23 +84,20 @@ $(document).ready(function() {
                             "<td style='width:50px;'> Số lượng </td>" +
                             "<td style='width:90px;'> Đơn giá </td>" +
                             "</tr>" +
-                            "<tr>" +
-                            "<td style='text-align:right;padding-right:5px'> 1000 </td>" +
-                            "<td style='text-align:right;padding-right:5px'> 50.000 đ </td>" +
-                            "</tr>" +
+                            getListTD(value.units) +
                             "</tbody>" +
                             "</table>" +
                             "</td>" +
                             "<td class='pq'>" +
-                            "<input type='number' id='3000' value='18' class='cart-quantity-change' style='width:45px; text-align:center;' min='1>" +
+                            "<input type='number' id='" + value.id + "' value='" + quantityCurrent(value.id) + "' class='cart-quantity-change' style='width:45px; text-align:center;' min='1>" +
                             "<br>" +
                             "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + value.quantity + "</span> Cái</span>" +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            "65,000 đ" +
+                            getUnit(value.units, quantityCurrent(value.id))[0] + "đ" +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            "1,170,000 đ" +
+                            getUnit(value.units, quantityCurrent(value.id))[1] + "đ" +
                             "</td>" +
                             "<td class='pa'>" +
                             "<a confirm='Bạn có muốn xóa?' data-remote='true' href='/carts/delete?id=" + value.id + "'>Xóa</a>" +
@@ -65,12 +105,43 @@ $(document).ready(function() {
                             "</tr>"
                         )
                     });
+                    $('.list-carts').append(
+                        "<tr>" +
+                        "<td colspan='5' style='border:none;text-align:right'>" +
+                        "Tiền hàng" +
+                        "</td>" +
+                        "<td style='text-align: right;font-size: 15px;font-weight: bold;width:140px;border:none'>" +
+                        "<span id='total-cart' data-value='1265000'>" +
+                        +totalPrice(data) + "đ" +
+                        "</span>" +
+                        "</td>" +
+                        "<td style='width:45px;border:none'></td>" +
+                        "</tr>"
+                    );
+
                 },
                 error: function(error) {
-                    alert("Đã có lỗi xẩy ra");
+                    console.log("Đã có lỗi xẩy ra");
                 }
             });
-        };
+        }
+
+        if (curren_url === "carts") {
+            calculateUnitPrice();
+        }
+
+        $('.list-carts').on('change', '.cart-quantity-change', function() {
+            let product_id = $(this).attr("id");
+            let quantity = this.value;
+            let list_cart = JSON.parse(localStorage.getItem("list_card"));
+            list_cart.map(function(value) {
+                if (value.id == product_id) {
+                    return value.quantity = quantity;
+                }
+            });
+            localStorage.setItem("list_card", JSON.stringify(list_cart));
+            calculateUnitPrice();
+        });
 
         var seeIdProducts = localStorage.getItem("saw_product");
         var listSeeIds = [];
@@ -82,29 +153,31 @@ $(document).ready(function() {
         $.ajax({
             type: 'get',
             url: '/cart_products?ids=' + listSeeIds,
-            data: { ids: ids },
+            data: { ids: listSeeIds },
             success: function(data) {
-                $(".seed-product").append(
-                    "<li>" +
-                    "<div class='list-same'>" +
-                    "<div class='image-same'>" +
-                    "<a href='/products/lm258p'><img alt='' src='https://thegioiic.com/upload/medium/200.jpg'></a>" +
-                    "</div>" +
-                    "<div class='name-same'>" +
-                    "<p class='name-a ablack'>" +
-                    "<a style='padding:0' href='/products/" + data.slug + "'>" + data.name + "</a>" +
-                    "</p>" +
-                    "<p class='price blue'>" +
-                    data.price + "đ/Cái" +
-                    "</p>" +
-                    "<p>" +
-                    // "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + data.quantity + "</span> Cái</span>" +
-                    "</p>" +
-                    "</div>" +
-                    "<div class='clear'></div>" +
-                    "</div>" +
-                    "</li>"
-                );
+                data.forEach(function(value) {
+                    $(".seed-product").append(
+                        "<li>" +
+                        "<div class='list-same'>" +
+                        "<div class='image-same'>" +
+                        "<a href='/products/lm258p'><img alt='' src='https://thegioiic.com/upload/medium/200.jpg'></a>" +
+                        "</div>" +
+                        "<div class='name-same'>" +
+                        "<p class='name-a ablack'>" +
+                        "<a style='padding:0' href='/products/" + value.slug + "'>" + value.name + "</a>" +
+                        "</p>" +
+                        "<p class='price blue'>" +
+                        value.price + "đ/Cái" +
+                        "</p>" +
+                        "<p>" +
+                        // "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + data.quantity + "</span> Cái</span>" +
+                        "</p>" +
+                        "</div>" +
+                        "<div class='clear'></div>" +
+                        "</div>" +
+                        "</li>"
+                    );
+                });
             },
             error: function(error) {
                 console.log(error);

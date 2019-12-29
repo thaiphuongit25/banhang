@@ -25,7 +25,7 @@ class CartsController extends Controller
     public function cartProducts(Request $request)
     {
         $ids = $request->has('ids') ? $request->ids : [];
-        $products = Product::find($ids);
+        $products = Product::with('units')->whereIn("id", $ids)->get();
         return response()->json($products);
     }
 

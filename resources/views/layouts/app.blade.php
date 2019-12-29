@@ -137,7 +137,7 @@
                 Giỏ hàng
               </label>
               <span class="cartd" id="cartd"><sup>
-                  <strong style="color:red">1</strong>
+                  <strong style="color:red"  class="card_value">0</strong>
                 </sup>
               </span>
             </a>
