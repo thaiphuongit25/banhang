@@ -115,7 +115,7 @@
         <div class="user_control" style="display: flex;">
           <input type="hidden" id="check_login" value="0">
           @if (Auth::check())
-            <a href="#">Chào {{ Auth::user()->name }}</a> | 
+            <a href="/mypage">Chào {{ Auth::user()->name }}</a> | 
             <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout-btn' type="submit">Đăng xuất</button></form>
           @else
             <a href="/login">Đăng Nhập</a> | <a href="/register">Đăng Ký</a>

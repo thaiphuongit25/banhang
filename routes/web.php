@@ -42,16 +42,13 @@ Route::get('pages/quy-dinh-bao-hanh', function () {
 
 Auth::routes();
 
+Route::get('/mypage', 'UserController@mypage');
+Route::get('/change-password', 'UserController@showChangePasswordForm');
+Route::post('/change-password', 'UserController@changePassword');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController');
 
 Route::namespace('admin')->group(function () {
     Route::resource('admin/products', 'ProductsController');
 });
-
-// Route::get('/dangky', 'RegistrationController@create');
-// Route::post('dangky', 'RegistrationController@store');
- 
-// Route::get('/dangnhap', 'SessionsController@create');
-// Route::post('/dangnhap', 'SessionsController@store');
-// Route::get('/dangxuat', 'SessionsController@destroy');
