@@ -2,7 +2,7 @@
 <div class="container-crumb">
     <div class="texttitle sitemaps">
         <a href="/">Trang Chủ</a>
-        <a href="/product">Sản Phẩm</a>
+        <a href="/products">Sản Phẩm</a>
         <a href="/product/{{ $product->category->type->slug }}">{{ $product->category->type->name }}</a>
         <a href="/product/{{ $product->category->slug }}">{{ $product->category->name }}</a>
         <a href="/product/amplifiers-instrumentation-opamps-buffer-amps">{{$product->name}}</a>
@@ -39,230 +39,6 @@
                             </div>
                             <div style="position:relative;top:5px;float:left">
                                 <a href="/users/16942">Lương Vĩ Quân</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/dien-tro-120-ohm-1w-5-4-vong-mau">Điện Trở 120 Ohm 1W 5% 4 Vòng Màu</a>
-                            <span style="padding-left:5px;font-size:11px"> 13:03  27/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/14032"><img alt="Avatar" src="https://thegioiic.com/photo/large/424.jpg"></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/14032">Mua Tại Thegioiic</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/hop-nhua-chong-nuoc-115x90x55">Hộp Nhựa Chống Nước 115x90x55</a>
-                            <span style="padding-left:5px;font-size:11px"> 09:47  27/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/9467"><span class="noavatarname">N</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/9467">Nguyễn Viết Hân</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/mach-den-giao-thong">Mạch Đèn Giao Thông</a>
-                            <span style="padding-left:5px;font-size:11px"> 14:57  25/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/17826"><span class="noavatarname">C</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/17826">CHU LƯU PHƯƠNG</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/led-day-mau-xanh-duong-5050-khong-tham-nuoc">LED Dây Màu Xanh Dương 5050 Không Thấm Nước</a>
-                            <span style="padding-left:5px;font-size:11px"> 11:11  23/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/14393"><img alt="Avatar" src="https://thegioiic.com/photo/large/481.jpg"></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/14393">Vi Văn Trí</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/led-day-mau-xanh-duong-5050-khong-tham-nuoc">LED Dây Màu Xanh Dương 5050 Không Thấm Nước</a>
-                            <span style="padding-left:5px;font-size:11px"> 08:11  23/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/17764"><span class="noavatarname">L</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/17764">Lưu Quang Huy</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/led-day-mau-xanh-duong-5050-khong-tham-nuoc">LED Dây Màu Xanh Dương 5050 Không Thấm Nước</a>
-                            <span style="padding-left:5px;font-size:11px"> 08:10  23/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/17764"><span class="noavatarname">L</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/17764">Lưu Quang Huy</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/raspberry-pi-4-model-b-4gb">Raspberry Pi 4 Model B 4GB</a>
-                            <span style="padding-left:5px;font-size:11px"> 08:40  20/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/17687"><span class="noavatarname">K</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/17687">Khúc anh tài</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/lm7812-mach-on-ap-12v">LM7812 Mạch Ổn Áp 12V</a>
-                            <span style="padding-left:5px;font-size:11px"> 11:11  12/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/14393"><img alt="Avatar" src="https://thegioiic.com/photo/large/481.jpg"></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/14393">Vi Văn Trí</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/lm7812-mach-on-ap-12v">LM7812 Mạch Ổn Áp 12V</a>
-                            <span style="padding-left:5px;font-size:11px"> 19:34  11/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/3048"><span class="noavatarname">N</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/3048">Nguyễn Xuân Hùng</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/lm7812-mach-on-ap-12v">LM7812 Mạch Ổn Áp 12V</a>
-                            <span style="padding-left:5px;font-size:11px"> 14:11  10/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/14393"><img alt="Avatar" src="https://thegioiic.com/photo/large/481.jpg"></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/14393">Vi Văn Trí</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/lm7812-mach-on-ap-12v">LM7812 Mạch Ổn Áp 12V</a>
-                            <span style="padding-left:5px;font-size:11px"> 11:18  10/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/17427"><span class="noavatarname">L</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/17427">Lê Minh Chánh</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/mach-hien-thi-muc-pin-5v">Mạch Hiển Thị Mức Pin 5V</a>
-                            <span style="padding-left:5px;font-size:11px"> 08:06  10/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/14393"><img alt="Avatar" src="https://thegioiic.com/photo/large/481.jpg"></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/14393">Vi Văn Trí</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/mach-hien-thi-muc-pin-5v">Mạch Hiển Thị Mức Pin 5V</a>
-                            <span style="padding-left:5px;font-size:11px"> 15:36  09/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/17302"><span class="noavatarname">P</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/17302">Phương</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="item-forum-content" style="border-bottom:1px solid #DDD">
-                        <div class="content-forum left" style="width:100%;padding-left:3px">
-                            <a href="/products/mach-sac-pin-co-bao-ve-3cell-25a-v1">Mạch Sạc Pin Có Bảo Vệ 3Cell 25A V1</a>
-                            <span style="padding-left:5px;font-size:11px"> 15:17  09/12/2019 </span>
-                        </div>
-                        <div class="left cc" style="width:100%;">
-                            <div class="forum-user-avatar left">
-                                <a href="/users/12494"><span class="noavatarname">V</span></a>
-
-                                <div class="clear"></div>
-                            </div>
-                            <div style="position:relative;top:5px;float:left">
-                                <a href="/users/12494">Võ Tá Dương</a>
                             </div>
                         </div>
                     </li>
@@ -325,26 +101,8 @@
         </div>
         <div id="product_viewed">
             <div class="same-by-list ">
-                <ul class="content">
-                    <li>
-                        <div class="list-same">
-                            <div class="image-same">
-                                <a href="/products/lm258p"><img alt="" src="https://thegioiic.com/upload/medium/200.jpg"></a>
-                            </div>
-                            <div class="name-same">
-                                <p class="name-a ablack">
-                                    <a style="padding:0" href="/products/lm258p">{{ $product->name }}</a>
-                                </p>
-                                <p class="price blue">
-                                    {{ $product->price }} đ/Cái
-                                </p>
-                                <p>
-                                    <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span> Cái</span>
-                                </p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </li>
+                <ul class="content seed-product">
+
                 </ul>
                 <div class="clear"></div>
             </div>
@@ -424,20 +182,24 @@
                     </div>
                 </div>
                 <div class="new-update-style-name right">
-                    <h1>LM258P</h1>
+                    <h1>{{ $product->name }}</h1>
                     <p id="name-p">
-                        IC OPAMP GP 2 CIRCUIT 8DIP
+                        {{ $product->desc }}
                     </p>
                 </div>
                 <div class="new-update-style-info right">
                     <div class="info-product-show infodescription">
                         <div id="info-p">
                             <p style="padding:4px 0">
-                                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/suppliers/texas-instruments">Texas Instruments</a>
+                                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/suppliers/{{ $product->brand->slug }}">{{ $product->brand->name }}</a>
                             </p>
                             <div class="inventory_product">
                                 <div class="contact-to-order-w bgaqua"><span class="icon-i"></span>
+                                @if ($product->status == 0)
+                                    <div class="brown"><span class="f"><a class="contact-to-order-show" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span><span>(Đặt mua 7-10 ngày có hàng)</span></div>
+                                @else
                                     <div class="ngreen"><span class="f">Hàng còn:  {{ $product->quantity }} Cái</span><span>(Gửi hàng trong ngày)</span></div>
+                                @endif
                                 </div>
                             </div>
 
@@ -459,7 +221,8 @@
                                 </span>
                                 </div>
                                 <p id="cart-p" style="padding-top:13px">
-                                    <input type="submit" value="Thêm vào giỏ hàng" class="btn-cart btn-cart-show">
+                                    <input hidden value="{{ $product->id }}" class="products_id">
+                                    <input type="button" value="Thêm vào giỏ hàng" class="btn-cart btn-cart-show" id="{{$product->id}}">
                                 </p>
                             </form>
                             <form class="new_favorite" id="new_favorite" action="/favorites" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
@@ -481,18 +244,12 @@
                                             </td>
                                             <td>Đơn giá<br>(VND)</td>
                                         </tr>
+                                        @foreach ($product->units as $unit)
                                         <tr>
-                                            <td class="price-column">1</td>
-                                            <td class="price-column">16,000 </td>
+                                            <td class="price-column">{{ $unit->number }}</td>
+                                            <td class="price-column">{{ $unit->unit_price }} </td>
                                         </tr>
-                                        <tr>
-                                            <td class="price-column">20</td>
-                                            <td class="price-column">15,500 </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="price-column">50</td>
-                                            <td class="price-column">15,000 </td>
-                                        </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
@@ -764,237 +521,34 @@
                     </div>
                     <div class="same-by-list" id="paging_container8">
                         <ul class="content">
+                        @foreach ( $sameProducts as $sameProduct )
                             <li>
                                 <div class="list-same">
                                     <div class="image-same ">
-                                        <a href="/products/lm224n"><img alt="" src="https://thegioiic.com/upload/medium/1037.jpg"></a>
+                                        <a href="/products/{{ $sameProduct->slug }}"><img alt="" src="https://thegioiic.com/upload/medium/612.jpg"></a>
                                     </div>
                                     <div class="name-same">
                                         <p class="name-a ablack">
-                                            <a title="LM224N" href="/products/lm224n">LM224N</a>
+                                            <a title="MCP6041T-I/OT" href="/products/{{ $sameProduct->slug }}">{{ $sameProduct->name }}</a>
                                         </p>
                                         <p class="price blue">
-                                            16,000 đ/Cái
+                                           {{ $sameProduct->price }} đ/Cái
                                         </p>
                                         <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">90</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/mcp6001t-i-lt"><img alt="" src="https://thegioiic.com/upload/medium/612.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="MCP6001T-I/LT" href="/products/mcp6001t-i-lt">MCP6001T-I/LT</a>
-                                        </p>
-                                        <p class="price blue">
-                                            6,000 đ/Cái
-                                        </p>
-                                        <p>
+                                        @if ($sameProduct-> status == 0)
                                             <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
+                                        @else
+                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $sameProduct->quantity }}</span> Cái</span>
+                                        @endif
                                         </p>
                                     </div>
                                     <div class="clear"></div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/mcp606t-i-ot"><img alt="" src="https://thegioiic.com/upload/medium/612.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="MCP606T-I/OT" href="/products/mcp606t-i-ot">MCP606T-I/OT</a>
-                                        </p>
-                                        <p class="price blue">
-                                            7,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/mcp6001t-i-ot"><img alt="" src="https://thegioiic.com/upload/medium/612.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="MCP6001T-I/OT" href="/products/mcp6001t-i-ot">MCP6001T-I/OT</a>
-                                        </p>
-                                        <p class="price blue">
-                                            6,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/mcp6041t-i-ot"><img alt="" src="https://thegioiic.com/upload/medium/612.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="MCP6041T-I/OT" href="/products/mcp6041t-i-ot">MCP6041T-I/OT</a>
-                                        </p>
-                                        <p class="price blue">
-                                            8,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/mcp6004t-i-st"><img alt="" src="https://thegioiic.com/upload/medium/148.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="MCP6004T-I/ST" href="/products/mcp6004t-i-st">MCP6004T-I/ST</a>
-                                        </p>
-                                        <p class="price blue">
-                                            13,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/mcp6004-i-sl"><img alt="" src="https://thegioiic.com/upload/medium/147.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="MCP6004-I/SL" href="/products/mcp6004-i-sl">MCP6004-I/SL</a>
-                                        </p>
-                                        <p class="price blue">
-                                            7,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/ths4042cdgnr"><img alt="" src="https://thegioiic.com/upload/medium/5433.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="THS4042CDGNR" href="/products/ths4042cdgnr">THS4042CDGNR</a>
-                                        </p>
-                                        <p class="price blue">
-                                            10,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">6</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/tl084ipt"><img alt="" src="https://thegioiic.com/upload/medium/148.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="TL084IPT" href="/products/tl084ipt">TL084IPT</a>
-                                        </p>
-                                        <p class="price blue">
-                                            6,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/tl082cd"><img alt="" src="https://thegioiic.com/upload/medium/202.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="TL082CD" href="/products/tl082cd">TL082CD</a>
-                                        </p>
-                                        <p class="price blue">
-                                            4,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/tl072acp"><img alt="" src="https://thegioiic.com/upload/medium/200.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="TL072ACP" href="/products/tl072acp">TL072ACP</a>
-                                        </p>
-                                        <p class="price blue">
-                                            5,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same ">
-                                        <a href="/products/tl062cd"><img alt="" src="https://thegioiic.com/upload/medium/202.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="TL062CD" href="/products/tl062cd">TL062CD</a>
-                                        </p>
-                                        <p class="price blue">
-                                            4,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">159</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
+                        @endforeach
                         </ul>
                         <div style="text-align: right;padding: 10px" id="view-more">
-                            <a href="/product/amplifiers-instrumentation-opamps-buffer-amps">Xem thêm</a>
+                            <a href="/product/{{ $product->category->slug }}">Xem thêm</a>
                         </div>
                         <div class="clear"></div>
                     </div>
@@ -1006,234 +560,31 @@
 
                     <div class="same-by-list" id="paging_container8">
                         <ul class="content">
+                        @foreach ( $productHots as $productHot)
                             <li>
                                 <div class="list-same">
                                     <div class="image-same">
-                                        <a href="/products/tay-han-dieu-chinh-nhiet-do-80w-vinasemi-936h-co-lcd-hien-thi-nhiet"><img alt="" src="https://thegioiic.com/upload/medium/14768.jpg"></a>
+                                        <a id="{{$product->id}}" class="review-product" href="/products/{{ $productHot->slug }}"><img alt="" src="https://thegioiic.com/upload/medium/14768.jpg"></a>
                                     </div>
                                     <div class="name-same">
                                         <p class="name-a ablack">
-                                            <a title="Tay Hàn Điều Chỉnh Nhiệt Độ 80W Vinasemi 936H Có LCD Hiển Thị Nhiệt" href="/products/tay-han-dieu-chinh-nhiet-do-80w-vinasemi-936h-co-lcd-hien-thi-nhiet">Tay Hàn Điều Chỉnh Nhiệt Độ 80W Vinasemi 936H Có LCD Hiển Thị Nhiệt</a>
+                                            <a id="{{$product->id}}" class="review-product" title="{{  $productHot->name }}" href="/products/{{ $productHot->slug }}">{{  $productHot->name }}</a>
                                         </p>
                                         <p class="price blue">
-                                            199,000 đ/Cái
+                                           {{  $productHot->price }} đ/Cái
                                         </p>
                                         <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">15</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/raspberry-pi-4-model-b-4gb"><img alt="" src="https://thegioiic.com/upload/medium/14287.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="Raspberry Pi 4 Model B 4GB" href="/products/raspberry-pi-4-model-b-4gb">Raspberry Pi 4 Model B 4GB</a>
-                                        </p>
-                                        <p class="price blue">
-                                            1,939,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">9</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/raspberry-pi-4-model-b-2gb"><img alt="" src="https://thegioiic.com/upload/medium/14287.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="Raspberry Pi 4 Model B 2GB" href="/products/raspberry-pi-4-model-b-2gb">Raspberry Pi 4 Model B 2GB</a>
-                                        </p>
-                                        <p class="price blue">
-                                            1,569,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">16</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/tay-han-dieu-chinh-nhiet-do-60w-vinasemi99"><img alt="" src="https://thegioiic.com/upload/medium/11073.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="Tay Hàn Điều Chỉnh Nhiệt Độ 60W Vinasemi99" href="/products/tay-han-dieu-chinh-nhiet-do-60w-vinasemi99">Tay Hàn Điều Chỉnh Nhiệt Độ 60W Vinasemi99</a>
-                                        </p>
-                                        <p class="price blue">
-                                            139,000 đ/Cái
-                                        </p>
-                                        <p>
+                                        @if ($productHot-> status == 0)
                                             <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
+                                        @else
+                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $productHot->quantity }}</span> Cái</span>
+                                        @endif
                                         </p>
                                     </div>
                                     <div class="clear"></div>
                                 </div>
                             </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/cuon-nhua-in-3d-pla-1-75-1kg-do"><img alt="" src="https://thegioiic.com/upload/medium/15376.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="Cuộn Nhựa In 3D PLA 1.75 1KG Đỏ" href="/products/cuon-nhua-in-3d-pla-1-75-1kg-do">Cuộn Nhựa In 3D PLA 1.75 1KG Đỏ</a>
-                                        </p>
-                                        <p class="price blue">
-                                            186,000 đ/Cuộn(1Kg)
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">40</span> Cuộn(1Kg)</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/vinasemi-936-may-han-dieu-chinh-nhiet-do-60w"><img alt="" src="https://thegioiic.com/upload/medium/9797.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="Vinasemi-936 Máy Hàn Điều Chỉnh Nhiệt Độ 60W" href="/products/vinasemi-936-may-han-dieu-chinh-nhiet-do-60w">Vinasemi-936 Máy Hàn Điều Chỉnh Nhiệt Độ 60W</a>
-                                        </p>
-                                        <p class="price blue">
-                                            449,000 đ/Máy
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">15</span> Máy</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/beaglebone-black-industrial-4g"><img alt="" src="https://thegioiic.com/upload/medium/4339.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="BeagleBone Black Industrial 4G" href="/products/beaglebone-black-industrial-4g">BeagleBone Black Industrial 4G</a>
-                                        </p>
-                                        <p class="price blue">
-                                            1,959,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">3</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/stm32f407g-disc1"><img alt="" src="https://thegioiic.com/upload/medium/13220.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="STM32F407G-DISC1" href="/products/stm32f407g-disc1">STM32F407G-DISC1</a>
-                                        </p>
-                                        <p class="price blue">
-                                            668,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">11</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/uno-r3-atmega328-smd-ch340"><img alt="" src="https://thegioiic.com/upload/medium/5690.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="Uno R3 ATmega328-SMD CH340" href="/products/uno-r3-atmega328-smd-ch340">Uno R3 ATmega328-SMD CH340</a>
-                                        </p>
-                                        <p class="price blue">
-                                            78,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">206</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/may-han-fx-888d-hakko"><img alt="" src="https://thegioiic.com/upload/medium/2904.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="Máy Hàn FX-888D HAKKO" href="/products/may-han-fx-888d-hakko">Máy Hàn FX-888D HAKKO</a>
-                                        </p>
-                                        <p class="price blue">
-                                            2,049,000 đ/Máy
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">5</span> Máy</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/arduino-mega2560-r3"><img alt="" src="https://thegioiic.com/upload/medium/3781.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="Arduino MEGA2560 R3" href="/products/arduino-mega2560-r3">Arduino MEGA2560 R3</a>
-                                        </p>
-                                        <p class="price blue">
-                                            205,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="list-same">
-                                    <div class="image-same">
-                                        <a href="/products/beaglebone-black-rev-c"><img alt="" src="https://thegioiic.com/upload/medium/3146.jpg"></a>
-                                    </div>
-                                    <div class="name-same">
-                                        <p class="name-a ablack">
-                                            <a title="BeagleBone Black(Rev C)" href="/products/beaglebone-black-rev-c">BeagleBone Black(Rev C)</a>
-                                        </p>
-                                        <p class="price blue">
-                                            1,520,000 đ/Cái
-                                        </p>
-                                        <p>
-                                            <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">4</span> Cái</span>
-                                        </p>
-                                    </div>
-                                    <div class="clear"></div>
-                                </div>
-                            </li>
+                        @endforeach
                         </ul>
                         <div class="clear"></div>
                     </div>
@@ -1270,6 +621,10 @@
     </div>
     <script type="text/javascript">
         $(document).ready(function($) {
+            $(".btn-cart").click(function() {
+                alert("get card");
+            });
+
             $("ul#product_tab li a").click(function() {
                 var id = $(this).attr('data-id');
                 $("ul#product_tab li a").removeClass("select");
