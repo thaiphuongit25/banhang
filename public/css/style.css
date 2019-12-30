@@ -2525,7 +2525,7 @@ table {
 
 .crumb span.background-crumb-menu,
 .sitemaps a {
-    background: url("right-arrow.png") no-repeat scroll right center;
+    background: url("/images/right-arrow.png") no-repeat scroll right center;
     padding-right: 15px;
     margin-right: 0
 }
