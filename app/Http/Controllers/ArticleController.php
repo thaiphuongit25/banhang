@@ -31,7 +31,8 @@ class ArticleController extends Controller
         $article = Article::find($id);
         $article->view_count = $article->view_count + 1;
         $article->save();
-        return view('articles.show', compact('article'));
+        $related_articles = Article::where('id', '!=', $article->id)->paginate(10);
+        return view('articles.show', compact('article', 'related_articles'));
     }
 
     public function category_details($id)

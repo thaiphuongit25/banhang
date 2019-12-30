@@ -25,6 +25,7 @@
             </div>
         </div>
         @include('articles.comment_section')
+        @include('articles.related_articles', ['related_articles' => $related_articles])
     </div>
     @include('articles.menu_right')
 </div>

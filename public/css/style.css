@@ -736,7 +736,7 @@ a.contact-to-order:hover {
 }
 
 #view-product #info-product #cart a {
-    background: url("bullet_cart.jpg");
+    background: url("/images/bullet_cart.jpg");
     display: block
 }
 
@@ -1753,7 +1753,7 @@ ul#navigation li.selectedd a:visited {
 
 .show-page ul li {
     padding: 1px 0 2px 25px;
-    background: transparent url("bullet-i.png") no-repeat scroll 14px 7px
+    background: transparent url("/images/bullet-i.png") no-repeat scroll 14px 7px
 }
 
 .show-page ul li img {
@@ -1810,7 +1810,7 @@ ul#navigation li.selectedd a:visited {
     padding: 5px 4px 5px 22px;
     display: block;
     border-bottom: 1px solid #ccc;
-    background: transparent url("bullet-i.png") no-repeat scroll 11px 11px;
+    background: transparent url("/images/bullet-i.png") no-repeat scroll 11px 11px;
     color: #8B8C8C;
     font-size: 12px;
     font-family: Arial, Tahoma, Verdana, MS Sans Serif
@@ -3127,7 +3127,7 @@ table {
 .infor-cart-help ul#help-gh li a {
     display: block;
     padding: 4px 0 4px 22px;
-    background: transparent url("bullet-i.png") no-repeat scroll 10px 10px;
+    background: transparent url("/images/bullet-i.png") no-repeat scroll 10px 10px;
     float: left;
     clear: both
 }
@@ -3139,7 +3139,7 @@ table {
 #other-news li {
     padding: 2px 0 2px 12px;
     float: left;
-    background: transparent url("bullet-i.png") no-repeat scroll 1px 8px;
+    background: transparent url("/images/bullet-i.png") no-repeat scroll 1px 8px;
     clear: both
 }
 
