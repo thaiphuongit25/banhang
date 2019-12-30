@@ -8,10 +8,14 @@ $(document).ready(function() {
                 listTr +=
                     "<tr>" +
                     "<td style='text-align:right;padding-right:5px'>" + value.number + "</td>" +
-                    "<td style='text-align:right;padding-right:5px'>" + value.unit_price + "đ </td>"
+                    "<td style='text-align:right;padding-right:5px'>" + formatPrice(value.unit_price) + "đ </td>"
                 "</tr>";
             });
             return listTr;
+        }
+
+        var formatPrice = function(unit) {
+            return Number((unit).toFixed(1)).toLocaleString();
         }
 
         var getUnit = function(units, quantity) {
@@ -56,7 +60,7 @@ $(document).ready(function() {
             }
             $.ajax({
                 type: 'get',
-                url: '/cart_products?ids=' + ids,
+                url: '/cart_products',
                 data: { ids: ids },
                 success: function(data) {
                     $(".number_order").html(data.length);
@@ -94,13 +98,13 @@ $(document).ready(function() {
                             "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + value.quantity + "</span> Cái</span>" +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            getUnit(value.units, quantityCurrent(value.id))[0] + "đ" +
+                            formatPrice(getUnit(value.units, quantityCurrent(value.id))[0]) + "đ" +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            getUnit(value.units, quantityCurrent(value.id))[1] + "đ" +
+                            formatPrice(getUnit(value.units, quantityCurrent(value.id))[1]) + "đ" +
                             "</td>" +
                             "<td class='pa'>" +
-                            "<a confirm='Bạn có muốn xóa?' data-remote='true' href='/carts/delete?id=" + value.id + "'>Xóa</a>" +
+                            "<a class='remove-cart' id=" + value.id + ">Xóa</a>" +
                             "</td>" +
                             "</tr>"
                         )
@@ -112,7 +116,7 @@ $(document).ready(function() {
                         "</td>" +
                         "<td style='text-align: right;font-size: 15px;font-weight: bold;width:140px;border:none'>" +
                         "<span id='total-cart' data-value='1265000'>" +
-                        +totalPrice(data) + "đ" +
+                        formatPrice(totalPrice(data)) + "đ" +
                         "</span>" +
                         "</td>" +
                         "<td style='width:45px;border:none'></td>" +
@@ -143,6 +147,18 @@ $(document).ready(function() {
             calculateUnitPrice();
         });
 
+        $('.list-carts').on('click', ".remove-cart", function() {
+            let id = $(this).attr("id");
+            let atr = [];
+            let list_cart = JSON.parse(localStorage.getItem("list_card"));
+            atr = list_cart.filter(function(value) {
+                return value.id != id;
+            });
+            localStorage.setItem("list_card", JSON.stringify(atr));
+            $(".card_value").html(atr.length);
+            calculateUnitPrice();
+        });
+
         var seeIdProducts = localStorage.getItem("saw_product");
         var listSeeIds = [];
         if (seeIdProducts) {
@@ -152,7 +168,7 @@ $(document).ready(function() {
         }
         $.ajax({
             type: 'get',
-            url: '/cart_products?ids=' + listSeeIds,
+            url: '/cart_products',
             data: { ids: listSeeIds },
             success: function(data) {
                 data.forEach(function(value) {
@@ -167,7 +183,7 @@ $(document).ready(function() {
                         "<a style='padding:0' href='/products/" + value.slug + "'>" + value.name + "</a>" +
                         "</p>" +
                         "<p class='price blue'>" +
-                        value.price + "đ/Cái" +
+                        formatPrice(value.price) + "đ/Cái" +
                         "</p>" +
                         "<p>" +
                         // "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + data.quantity + "</span> Cái</span>" +

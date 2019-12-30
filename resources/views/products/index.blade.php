@@ -165,7 +165,7 @@
                                 {{ $product->desc }}
                             </div>
                             <div class="price blue">
-                               {{ $product->price }} đ/Cái
+                               {{ number_format($product->price) }} đ/Cái
                             </div>
 
                             <div>

@@ -247,7 +247,7 @@
                                         @foreach ($product->units as $unit)
                                         <tr>
                                             <td class="price-column">{{ $unit->number }}</td>
-                                            <td class="price-column">{{ $unit->unit_price }} </td>
+                                            <td class="price-column">{{ number_format($unit->unit_price) }} </td>
                                         </tr>
                                         @endforeach
                                     </tbody>
@@ -532,7 +532,7 @@
                                             <a title="MCP6041T-I/OT" href="/products/{{ $sameProduct->slug }}">{{ $sameProduct->name }}</a>
                                         </p>
                                         <p class="price blue">
-                                           {{ $sameProduct->price }} đ/Cái
+                                           {{ number_format($sameProduct->price) }} đ/Cái
                                         </p>
                                         <p>
                                         @if ($sameProduct-> status == 0)
@@ -571,7 +571,7 @@
                                             <a id="{{$product->id}}" class="review-product" title="{{  $productHot->name }}" href="/products/{{ $productHot->slug }}">{{  $productHot->name }}</a>
                                         </p>
                                         <p class="price blue">
-                                           {{  $productHot->price }} đ/Cái
+                                           {{ number_format($productHot->price) }} đ/Cái
                                         </p>
                                         <p>
                                         @if ($productHot-> status == 0)
