@@ -9,6 +9,16 @@
     background-color: #efefef;
   }
 </style>
+@if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+@if (session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+@endif
 <div id="wrapper">
   <div id="body">
     <div id="body-left">
@@ -18,7 +28,7 @@
         </div>
         <div class="left-information-content">
           <a href="/mypage">Thông tin cá nhân</a>
-          <a href="/users/17755/edit">Đổi mật khẩu</a>
+          <a href="/change-password">Đổi mật khẩu</a>
         </div>
         <div class="left-information-content">
           <a href="/orders">Đơn hàng của tôi</a>
@@ -50,8 +60,8 @@
                   Mật khẩu hiện tại<sup>*</sup>
                 </td>
                 <td>
-                  <input id="password" type="password" class="required @error('password') is-invalid @enderror" name="password" required autocomplete="password"><br>
-                  @error('password')
+                  <input id="current-password" type="password" class="required @error('current-password') is-invalid @enderror" name="current-password" required autocomplete="password"><br>
+                  @error('current-password')
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                   </span>
@@ -64,8 +74,8 @@
                   Mật khẩu<sup>*</sup>
                 </td>
                 <td>
-                  <input id="new_password" type="password" class="required @error('new_password') is-invalid @enderror" name="new_password" required autocomplete="new-password"><br>
-                  @error('new_password')
+                  <input id="new-password" type="password" class="required @error('new-password') is-invalid @enderror" name="new-password" required><br>
+                  @error('new-password')
                   <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                   </span>
@@ -78,7 +88,7 @@
                   Nhập lại mật khẩu<sup>*</sup>
                 </td>
                 <td>
-                  <input id="password-confirm" type="password" class="required equalTo(#new_password)" name="password_confirmation" required autocomplete="new-password"><br>
+                  <input id="password-confirm" type="password" class="required" name="password-confirm" required><br>
                   <label class="off red" id="lb_user_password_confirmation">Hãy nhập lại mật khẩu</label>
                 </td>
               </tr>

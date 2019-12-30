@@ -69,7 +69,7 @@
             Nhập lại mật khẩu<sup>*</sup>
           </td>
           <td>
-            <input id="password-confirm" type="password" class="required equalTo(&#39;#user_password&#39;)" name="password_confirmation" required autocomplete="new-password"><br>
+            <input id="password-confirm" type="password" class="required" name="password_confirmation" required autocomplete="new-password"><br>
             <label class="off red" id="lb_user_password_confirmation">Hãy nhập lại mật khẩu</label>
           </td>
         </tr>
