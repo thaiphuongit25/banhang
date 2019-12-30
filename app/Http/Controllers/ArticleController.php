@@ -14,8 +14,13 @@ class ArticleController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {   
+        if ($request->has('q')) {
+            $query = $request->query('q');
+            $articles = Article::where('title', 'like', '%' . $query . '%')->get();
+            return view('articles.search_result', compact('articles', 'query'));
+        }
         $categories = ArticleCategory::with('articles')->get();
         return view('articles.index', compact('categories'));
     }

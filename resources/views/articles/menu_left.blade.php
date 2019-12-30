@@ -3,12 +3,11 @@
         Tin tức
     </div>
     <ul class="ul-left-page">
+        @foreach (getArticleCategories() as $category)
         <li>
-            <a class="parent" href="/news/tin-cong-nghe">Tin Công Nghệ</a>
+            <a class="parent" href="/news/{{ $category->id }}">{{ $category->name }}</a>
         </li>
-        <li>
-            <a class="parent" href="/news/tin-thi-truong">Tin Thị Trường</a>
-        </li>
+        @endforeach
     </ul>
 </div>
 <div class="left-menu">
