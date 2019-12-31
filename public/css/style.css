@@ -871,6 +871,10 @@ li:last-child .list-same {
     border-bottom: 1px solid #DDD
 }
 
+.reply-container .reply-item:last-child .list-rp {
+    border-bottom: none;
+}
+
 .report-product .rp-user .list-rp span.anchor-rp {
     position: absolute;
     top: 0;

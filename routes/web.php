@@ -41,8 +41,9 @@ Route::get('pages/quy-dinh-bao-hanh', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('services', 'ServiceController');
-Route::resource('articles', 'ArticleController');
+Route::resource('services', 'ServiceController')->only(['index', 'show']);
+Route::resource('articles', 'ArticleController')->only(['index', 'show']);
+Route::resource('comments', 'CommentController')->only(['store']);
 
 Route::namespace('admin')->group(function () {
     Route::resource('admin/products', 'ProductsController');

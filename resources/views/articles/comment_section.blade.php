@@ -3,64 +3,108 @@
     <div class="rp-user">
         <div class="title-rp">
             <div class="tt-rp">
-                <b class="blue">Phản hồi(1)</b>
+                <b class="blue">Phản hồi ({{ count($article->comments) }})</b>
             </div>
         </div>
+        @foreach ($article->comments as $comment)
         <div class="rplist">
             <div class="list-rp">
                 <div class="cm-rp">
                     <div class="content-rp" style="color:#252525 !important;">
-                        Cái này hay thế nhỉ
+                        {!!html_entity_decode($comment->content)!!}
                     </div>
                 </div>
-                <div class="img-rp">
+                <div class="img-rp" style="width: 100%;">
                     <div class="avatar-report">
-                        <a href="/users/17669"><span class="noavatarname">T</span></a>
+                        <a href="/users/{{ $comment->user->id }}"><span class="noavatarname">T</span></a>
 
                     </div>
-                    <div class="name-rp">
-                        <b><a href="/users/17669"><em class="Highlight"
-                                    style="padding: 1px; box-shadow: rgb(229, 229, 229) 1px 1px; border-radius: 3px; -webkit-print-color-adjust: exact; background-color: rgb(255, 255, 102); color: rgb(0, 0, 0); font-style: inherit;">Tang
-                                    Hoai Duy</em></a></b>(08:42 - 30/12/2019)
+                    <div class="name-rp" style="line-height: 2.2;">
+                        <b>
+                            <a href="/users/{{ $comment->user->id }}">
+                                <em class="Highlight"
+                                    style="padding: 1px; box-shadow: rgb(229, 229, 229) 1px 1px; border-radius: 3px; -webkit-print-color-adjust: exact; background-color: rgb(255, 255, 102); color: rgb(0, 0, 0); font-style: inherit;">
+                                    {{ $comment->user->name }}
+                                </em>
+                            </a>
+                        </b>
+                        {{ date('(H:m - d/m/Y)', strtotime($article->created_at)) }}
                     </div>
 
-                    <div class="reply">
+                    <div class="reply" style="float: right; padding-right: 5px; line-height: 2.2;">
                         <a href="javascript:" class="btn-reply-report" data-product="177" data-category="1" id="984">Trả
                             lời</a>
                     </div>
                 </div>
-
+                <div class="clear"></div>
                 <div class="reply-box" id="box-reply-report-984">
 
                 </div>
-                <div class="reply-container" data-start="2" data-url="/comments/get/?parent_id=984" data-count="0">
-                    <div id="reply-container-984">
+                <div class="reply-container" style="width: 90%; float: right;" data-start="2" data-url="/comments/get/?parent_id=984" data-count="1">
+                    @foreach ($comment->replies as $reply)
+                    <div id="reply-container-984" class="reply-item">
+                        <div class="list-rp">
+                            <div class="cm-rp">
+                                <div class="content-rp" style="color:#252525 !important;">
+                                {!!html_entity_decode($reply->content)!!}
+                                </div>
+                            </div>
+                            <div class="img-rp" style="width: 100%;">
+                                <div class="avatar-report">
+                                    <a href="/users/{{ $comment->user->id }}"><span class="noavatarname">T</span></a>
+
+                                </div>
+                                <div class="name-rp" style="line-height: 2.2;">
+                                    <b>
+                                        <a href="/users/{{ $comment->user->id }}">
+                                            <em class="Highlight"
+                                                style="padding: 1px; box-shadow: rgb(229, 229, 229) 1px 1px; border-radius: 3px; -webkit-print-color-adjust: exact; background-color: rgb(255, 255, 102); color: rgb(0, 0, 0); font-style: inherit;">
+                                                {{ $comment->user->name }}
+                                            </em>
+                                        </a>
+                                    </b>
+                                    {{ date('(H:m - d/m/Y)', strtotime($reply->created_at)) }}
+                                </div>
+
+                                <div class="reply" style="float: right; padding-right: 5px; line-height: 2.2;">
+                                    <a href="javascript:" class="btn-reply-report" data-product="177" data-category="1" id="984">Trả
+                                        lời</a>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="reply-box" id="box-reply-report-984">
+
+                            </div>
+                        </div>
                     </div>
+                    @endforeach
                 </div>
                 <div class="clear"></div>
             </div>
         </div>
         <div class="clear"></div>
+        @endforeach
     </div>
-    <form class="form-comment" id="new_report" action="/reports" accept-charset="UTF-8" data-remote="true"
-        method="post"><input name="utf8" type="hidden" value="✓">
-        <input value="177" type="hidden" name="report[product_id]" id="report_product_id">
-        <input value="1" type="hidden" name="report[category]" id="report_category">
+    <form class="form-comment" id="new_comment" action="{{ route('comments.store') }}" accept-charset="UTF-8"
+        method="post">
+        @csrf
+        <input name="utf8" type="hidden" value="✓">
+        <input value="App\model\Article" type="hidden" name="commentable_type" id="commentable_type">
+        <input value="{{ $article->id }}" type="hidden" name="commentable_id" id="commentable_id">
         <div class="form-report-product">
-            <textarea class="text-change" placeholder="Nhập nội dung" name="report[content]"
-                id="report_content"></textarea>
+            <textarea class="text-change" placeholder="Nhập nội dung" name="content"
+                id="content" style="width: 98%;"></textarea>
             <div id="captcha">
-
                 <p style="position:relative;">
                     <input type="text" placeholder="Mã xác nhận" class="captcha-inputs" name="captcha"
                         id="input_captcha_valid" value="" style="width:84px; padding:4px;">
                     <span
                         style="font-weight:bolder; font-size:17px; color: #027AC7; padding-left:8px; letter-spacing:2px;  padding:5px 18px; position:absolute; top:0px; left:94px;">
-                        fyRCqh
+                        ffeSrm
                     </span>
                     <span
                         style="position:absolute; background-color:transparent; width:200px; height:30px; top:0;left:131px;">&nbsp;</span>
-                    <input type="hidden" class="text-change" value="fyRCqh" id="captcha_valid">
+                    <input type="hidden" class="text-change" value="ffeSrm" id="captcha_valid">
                 </p>
             </div>
             <div style="padding-top: 8px">
@@ -83,7 +127,6 @@
                     return;
                 }
             });
-
         </script>
     </form>
 </div>

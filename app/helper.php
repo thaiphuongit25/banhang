@@ -19,4 +19,8 @@
         return ArticleCategory::with('articles')->orderBy('id', 'ASC')->take(1)->get();
     }
 
+    function getTotalReplies($article) {
+        return count($article->comments);
+    }
+
 
