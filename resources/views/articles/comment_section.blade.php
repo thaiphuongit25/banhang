@@ -65,16 +65,8 @@
                                     </b>
                                     {{ date('(H:m - d/m/Y)', strtotime($reply->created_at)) }}
                                 </div>
-
-                                <div class="reply" style="float: right; padding-right: 5px; line-height: 2.2;">
-                                    <a href="javascript:" class="btn-reply-report" data-product="177" data-category="1" id="984">Trả
-                                        lời</a>
-                                </div>
                             </div>
                             <div class="clear"></div>
-                            <div class="reply-box" id="box-reply-report-984">
-
-                            </div>
                         </div>
                     </div>
                     @endforeach
@@ -92,41 +84,19 @@
         <input value="App\model\Article" type="hidden" name="commentable_type" id="commentable_type">
         <input value="{{ $article->id }}" type="hidden" name="commentable_id" id="commentable_id">
         <div class="form-report-product">
-            <textarea class="text-change" placeholder="Nhập nội dung" name="content"
-                id="content" style="width: 98%;"></textarea>
+            <textarea class="text-change {{ $errors && count($errors->get('content')) > 0 ? 'input-errors' : '' }}" 
+                placeholder="Nhập nội dung" name="content"
+                id="content" style="width: 98%;">{{ old('content') }}</textarea>
             <div id="captcha">
                 <p style="position:relative;">
-                    <input type="text" placeholder="Mã xác nhận" class="captcha-inputs" name="captcha"
-                        id="input_captcha_valid" value="" style="width:84px; padding:4px;">
-                    <span
-                        style="font-weight:bolder; font-size:17px; color: #027AC7; padding-left:8px; letter-spacing:2px;  padding:5px 18px; position:absolute; top:0px; left:94px;">
-                        ffeSrm
-                    </span>
-                    <span
-                        style="position:absolute; background-color:transparent; width:200px; height:30px; top:0;left:131px;">&nbsp;</span>
-                    <input type="hidden" class="text-change" value="ffeSrm" id="captcha_valid">
+                    <input type="text" placeholder="Mã xác nhận" class="captcha-inputs {{ $errors && count($errors->get('captcha')) > 0 ? 'input-errors' : '' }}" name="captcha"
+                        id="input_captcha_valid" value="" style="width: 84px; float: left; margin-top: 2px; margin-right: 10px;">
+                    {!! captcha_img() !!}
                 </p>
             </div>
             <div style="padding-top: 8px">
                 <input type="submit" value="Đăng" class="btn btn-primary">
             </div>
         </div>
-
-        <script type="text/javascript">
-            $("#new_report").submit(function (event) {
-                var capt_value = $(this).find("#captcha_valid").val().toUpperCase();
-                if (trim($("#report_content").val()) == "") {
-                    $("#report_content").addClass('input-errors');
-                    event.preventDefault();
-                    return false;
-                } else if (trim($(this).find("#input_captcha_valid").val()).toUpperCase() != trim(capt_value)) {
-                    $(this).find("#input_captcha_valid").addClass('input-errors');
-                    event.preventDefault();
-                    return false;
-                } else {
-                    return;
-                }
-            });
-        </script>
     </form>
 </div>

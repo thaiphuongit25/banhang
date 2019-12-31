@@ -2,6 +2,7 @@
     use App\model\Type;
     use App\model\ArticleCategory;
     use App\model\Service;
+    use App\model\Reply;
 
     function getTypes() {
         return Type::all();
@@ -20,7 +21,9 @@
     }
 
     function getTotalReplies($article) {
-        return count($article->comments);
+        $comment_ids = $article->comments->pluck('id')->toArray();
+        $replies = Reply::whereIn('comment_id', $comment_ids)->get();
+        return count($comment_ids) + count($replies);
     }
 
 

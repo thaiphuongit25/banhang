@@ -9,6 +9,13 @@ class CommentController extends Controller
 {
     public function store(Request $request)
     {   
+        $request->validate([
+            'content' => 'required',
+            'commentable_id' => 'required',
+            'commentable_type' => 'required',
+            'captcha' => 'required|captcha'
+        ]);
+
         $comment = new Comment;
         $comment->content = $request->content;
         $comment->status = 1;
@@ -17,6 +24,6 @@ class CommentController extends Controller
         $comment->user_id = 1; // Auth::user()->id;
         $comment->save();
 
-        return redirect('/news');
+        return redirect()->back();
     }
 }
