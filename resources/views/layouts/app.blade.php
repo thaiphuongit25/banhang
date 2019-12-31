@@ -16,6 +16,8 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ url('js/main.js') }}" defer></script>
     <script src="{{ url('js/custom.js') }}" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">

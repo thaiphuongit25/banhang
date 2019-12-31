@@ -69,7 +69,7 @@
             Nhập lại mật khẩu<sup>*</sup>
           </td>
           <td>
-            <input id="password-confirm" type="password" class="required equalTo(&#39;#user_password&#39;)" name="password_confirmation" required autocomplete="new-password"><br>
+            <input id="password-confirm" type="password" class="required equalTo(#password)" name="password_confirmation" required autocomplete="new-password"><br>
             <label class="off red" id="lb_user_password_confirmation">Hãy nhập lại mật khẩu</label>
           </td>
         </tr>
@@ -224,7 +224,7 @@
           <td></td>
           <td>
             <!-- Google reCaptcha -->
-            <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY')  }}"></div>
+            <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}"></div>
             <!-- End Google reCaptcha -->
             <div class="cap-orderonline right-cart-info" style="color:#c30; font-size:11px; font-weight:bold;">
               (*) Là các mục phải nhập!
