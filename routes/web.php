@@ -51,22 +51,13 @@ Route::resource('articles', 'ArticleController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
 Route::post('comments/reply', 'CommentController@reply')->name('comments.reply');
 
-//
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
     Route::resource('brands', 'BrandsController');
 });
-<<<<<<< HEAD
-=======
 
-// Route::get('/dangky', 'RegistrationController@create');
-// Route::post('dangky', 'RegistrationController@store');
-
-// Route::get('/dangnhap', 'SessionsController@create');
-// Route::post('/dangnhap', 'SessionsController@store');
-// Route::get('/dangxuat', 'SessionsController@destroy');
 Route::get('/news', 'ArticleController@index');
 Route::get('/news/{id}', 'ArticleController@category_details')->name('article_category_details');
 Route::get('/news-detail/{id}', 'ArticleController@show');
->>>>>>> child_branch_1
+
