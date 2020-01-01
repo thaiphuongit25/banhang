@@ -4146,7 +4146,7 @@ select:hover {
     padding-left: 60px
 }
 
-.form-comment .input-errors {
+.input-errors {
     border: 2px solid red
 }
 

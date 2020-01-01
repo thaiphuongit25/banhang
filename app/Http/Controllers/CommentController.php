@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\model\Comment;
+use App\model\Reply;
 
 class CommentController extends Controller
 {
@@ -18,11 +19,26 @@ class CommentController extends Controller
 
         $comment = new Comment;
         $comment->content = $request->content;
-        $comment->status = 1;
         $comment->commentable_id = $request->commentable_id;
         $comment->commentable_type = $request->commentable_type;
-        $comment->user_id = 1; // Auth::user()->id;
+        $comment->user_id = Auth::user()->id;
         $comment->save();
+
+        return redirect()->back();
+    }
+
+    public function reply(Request $request)
+    {
+        $request->validate([
+            'content' => 'required',
+            'comment_id' => 'required'
+        ]);
+
+        $reply = new Reply;
+        $reply->content = $request->content;
+        $reply->comment_id = $request->comment_id;
+        $reply->user_id = Auth::user()->id;
+        $reply->save();
 
         return redirect()->back();
     }

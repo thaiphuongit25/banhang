@@ -44,8 +44,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController')->only(['index', 'show']);
 Route::resource('articles', 'ArticleController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
-Route::post('captcha', 'CommentController@captchaValidate');
-Route::get('refreshcaptcha', 'CommentController@refreshCaptcha');
+Route::post('comments/reply', 'CommentController@reply')->name('comments.reply');
 
 Route::namespace('admin')->group(function () {
     Route::resource('admin/products', 'ProductsController');

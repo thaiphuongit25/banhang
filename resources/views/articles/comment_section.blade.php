@@ -1,4 +1,4 @@
-<div class="report-product" style="position: relative">
+<div class="report-product js-articleComments" style="position: relative">
 
     <div class="rp-user">
         <div class="title-rp">
@@ -32,13 +32,13 @@
                     </div>
 
                     <div class="reply" style="float: right; padding-right: 5px; line-height: 2.2;">
-                        <a href="javascript:" class="btn-reply-report" data-product="177" data-category="1" id="984">Trả
+                        <a href="javascript:" class="btn-reply-report js-replyBtn" data-target="#js-replyBox-{{ $comment->id }}" data-comment-id="{{ $comment->id }}">Trả
                             lời</a>
                     </div>
                 </div>
                 <div class="clear"></div>
-                <div class="reply-box" id="box-reply-report-984">
-
+                <div class="reply-box" id="js-replyBox-{{ $comment->id }}">
+                    
                 </div>
                 <div class="reply-container" style="width: 90%; float: right;" data-start="2" data-url="/comments/get/?parent_id=984" data-count="1">
                     @foreach ($comment->replies as $reply)
@@ -77,6 +77,7 @@
         <div class="clear"></div>
         @endforeach
     </div>
+    @if(Auth::user())
     <form class="form-comment" id="new_comment" action="{{ route('comments.store') }}" accept-charset="UTF-8"
         method="post">
         @csrf
@@ -99,4 +100,16 @@
             </div>
         </div>
     </form>
+
+    <div class="js-formReply" style="display: none;">
+        <form class="form-reply" action="{{ route('comments.reply') }}" accept-charset="UTF-8" method="post">
+            @csrf
+            <textarea name="content" placeholder="Nhập nội dung" style="width: 87%; padding: 1%; float: left; font-size: 13px; font-family: inherit;"></textarea>
+            <input type="hidden" name="comment_id">
+            <button type="submit" class="js-reply-submitBtn" style="width: 10%; float: right; height: 42px;">
+                Trả lời
+            </button>
+        </form>
+    </div>
+    @endif
 </div>
