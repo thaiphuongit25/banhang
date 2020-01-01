@@ -9,7 +9,7 @@
             <input name="utf8" type="hidden" value="✓">
             @csrf
               <p id="login-error" style="color: red;">
-                  @if (count($errors) > 0)
+                  @if (count($errors->get('email')) > 0 || count($errors->get('password')) > 0)
                   Tài khoản hoặc mật khẩu không chính xác
                   @endif
               </p>
@@ -36,7 +36,7 @@
   </div>
 </div>
 <script type="text/javascript">
-@if (count($errors) > 0)
+@if (count($errors->get('email')) > 0 || count($errors->get('password')) > 0)
     $('#login_dialog').show();
 @endif
 </script>

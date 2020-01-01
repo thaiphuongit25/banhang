@@ -55,6 +55,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
     Route::resource('brands', 'BrandsController');
+    Route::resource('services', 'ServicesController', [
+        'as' => 'admin'
+    ]);
 });
 
 Route::get('/news', 'ArticleController@index');
