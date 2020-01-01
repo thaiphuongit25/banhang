@@ -31,6 +31,12 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/';
 
+    protected function redirectTo()
+    {
+        session()->flash("success","Đăng ký thành công!");
+        return '/';
+    }
+
     /**
      * Create a new controller instance.
      *
@@ -55,6 +61,9 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:6', 'confirmed'],
             'phone-number' => ['required', 'string', 'min:10'],
             'address' => ['required', 'string'],
+            'company_name' => ['string', 'max:255'],
+            'tax_code' => ['integer'],
+            'company_address' => ['string', 'max:255'],
             'g-recaptcha-response' => ['required', new \App\Rules\ValidRecaptcha]
         ]);
     }

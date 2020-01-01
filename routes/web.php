@@ -40,6 +40,11 @@ Route::get('pages/quy-dinh-bao-hanh', function () {
 
 Auth::routes();
 
+Route::get('/mypage', 'UserController@mypage');
+Route::post('/update_info', 'UserController@update');
+Route::get('/change-password', 'UserController@showChangePasswordForm');
+Route::post('/change-password', 'UserController@changePassword');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController')->only(['index', 'show']);
 Route::resource('articles', 'ArticleController')->only(['index', 'show']);
@@ -52,6 +57,8 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('products', 'ProductsController');
     Route::resource('brands', 'BrandsController');
 });
+<<<<<<< HEAD
+=======
 
 // Route::get('/dangky', 'RegistrationController@create');
 // Route::post('dangky', 'RegistrationController@store');
@@ -62,3 +69,4 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
 Route::get('/news', 'ArticleController@index');
 Route::get('/news/{id}', 'ArticleController@category_details')->name('article_category_details');
 Route::get('/news-detail/{id}', 'ArticleController@show');
+>>>>>>> child_branch_1
