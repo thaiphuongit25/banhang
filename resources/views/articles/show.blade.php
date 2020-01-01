@@ -16,7 +16,7 @@
                 <h1 style="font-size:14px; font-weight:bolder; padding:10px 0 8px 12px; color:#027AC7; ">
                     {{ $article->title }}
                 </h1>
-                <span style="padding-left: 11px;" class="date">{{ date('d/m/Y | H:m', strtotime($article->created_at)) }}</span>
+                <span style="padding-left: 11px;" class="date">{{ date('d/m/Y | G:i', strtotime($article->created_at)) }}</span>
                 <span class="cmt-count">{{ getTotalReplies($article) }}</span>
                 <span class="view-count">{{ $article->view_count }}</span>
             </div>
