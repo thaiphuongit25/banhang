@@ -3,10 +3,10 @@
     <div class="rp-user">
         <div class="title-rp">
             <div class="tt-rp">
-                <b class="blue">Phản hồi ({{ count($article->comments) }})</b>
+                <b class="blue">Phản hồi ({{ count($commentable_object->comments) }})</b>
             </div>
         </div>
-        @foreach ($article->comments as $comment)
+        @foreach ($commentable_object->comments as $comment)
         <div class="rplist">
             <div class="list-rp">
                 <div class="cm-rp">
@@ -28,7 +28,7 @@
                                 </em>
                             </a>
                         </b>
-                        {{ date('(H:m - d/m/Y)', strtotime($article->created_at)) }}
+                        {{ date('(H:m - d/m/Y)', strtotime($commentable_object->created_at)) }}
                     </div>
 
                     <div class="reply" style="float: right; padding-right: 5px; line-height: 2.2;">
@@ -82,8 +82,8 @@
         method="post">
         @csrf
         <input name="utf8" type="hidden" value="✓">
-        <input value="App\model\Article" type="hidden" name="commentable_type" id="commentable_type">
-        <input value="{{ $article->id }}" type="hidden" name="commentable_id" id="commentable_id">
+        <input value="{{ $commentable_type }}" type="hidden" name="commentable_type" id="commentable_type">
+        <input value="{{ $commentable_object->id }}" type="hidden" name="commentable_id" id="commentable_id">
         <div class="form-report-product">
             <textarea class="text-change {{ $errors && count($errors->get('content')) > 0 ? 'input-errors' : '' }}" 
                 placeholder="Nhập nội dung" name="content"

@@ -1,5 +1,5 @@
 $(function () {
-    $('.js-articleComments').on('click', '.js-replyBtn', function(e) {
+    $('.js-commentsContainer').on('click', '.js-replyBtn', function(e) {
         e.preventDefault()
         const target = $(this).data('target')
         const commentId = $(this).data('comment-id')
@@ -10,7 +10,7 @@ $(function () {
         }
     })
 
-    $('.js-articleComments').on('click', '.js-reply-submitBtn', function (e) {
+    $('.js-commentsContainer').on('click', '.js-reply-submitBtn', function (e) {
         e.preventDefault()
         $content = $(this).parent().find('[name="content"]')
         if ($content.val().trim() === '') {

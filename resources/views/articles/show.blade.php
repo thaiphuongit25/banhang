@@ -24,7 +24,7 @@
                 {!!html_entity_decode($article->content)!!}
             </div>
         </div>
-        @include('articles.comment_section', ['article' => $article])
+        @include('comment_section', ['commentable_object' => $article, 'commentable_type' => 'App\model\Article'])
         @include('articles.related_articles', ['related_articles' => $related_articles])
     </div>
     @include('articles.menu_right')
