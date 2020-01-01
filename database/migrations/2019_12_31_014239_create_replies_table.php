@@ -18,7 +18,7 @@ class CreateRepliesTable extends Migration
             $table->integer('user_id')->references('id')->on('users');
             $table->integer('comment_id')->references('id')->on('comments');
             $table->text('content');
-            $table->integer('status')->default('0');
+            $table->integer('status')->default('1');
             $table->timestamps();
         });
     }

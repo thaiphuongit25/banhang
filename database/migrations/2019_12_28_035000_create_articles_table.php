@@ -20,7 +20,7 @@ class CreateArticlesTable extends Migration
             $table->text('content');
             $table->string('thumbnail');
             $table->integer('view_count')->default('0');
-            $table->integer('status')->default('0');
+            $table->integer('status')->default('1');
             $table->string('slug');
             $table->string('meta_title');
             $table->string('meta_keywords');

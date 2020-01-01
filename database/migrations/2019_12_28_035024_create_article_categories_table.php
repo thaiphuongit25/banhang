@@ -16,7 +16,7 @@ class CreateArticleCategoriesTable extends Migration
         Schema::create('article_categories', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('status')->default('0');
+            $table->integer('status')->default('1');
             $table->string('slug');
             $table->string('meta_title');
             $table->string('meta_keywords');
