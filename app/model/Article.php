@@ -17,4 +17,8 @@ class Article extends Model
     {
         return $this->morphMany(Comment::class, 'commentable');
     }
+
+    protected $fillable = [
+        'id', 'article_category_id', 'title', 'content', 'slug', 'thumbnail', 'status', 'meta_title', 'meta_keywords', 'meta_description'
+    ];
 }
