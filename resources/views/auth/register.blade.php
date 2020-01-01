@@ -224,7 +224,7 @@
           <td></td>
           <td>
             <!-- Google reCaptcha -->
-            <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY')  }}"></div>
+            <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}"></div>
             <!-- End Google reCaptcha -->
             <div class="cap-orderonline right-cart-info" style="color:#c30; font-size:11px; font-weight:bold;">
               (*) Là các mục phải nhập!

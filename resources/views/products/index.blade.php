@@ -134,9 +134,10 @@
     </div>
     <div class="left item-home mainDevice">
     @foreach($types as $type)
+        @if (count($type->categories))
         <div class="item-ct-pr-home" id="{{ $type->id }}">
             <div class="title-item-ct-pr-home">
-                <h2 style="float:left"><a href="/product/ics">{{ $type->name }}</a></h2>
+                <h2 style="float:left"><a href="/product/ics" class="review_product">{{ $type->name }}</a></h2>
                 <span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/ics">Xem thêm</a></span>
                 <ul class="subject-child-show-home">
                 @foreach ( $type->categories as $category )
@@ -154,17 +155,17 @@
                     @foreach ( $category->products as $product )
                     <div class="v-p-t" id="{{ $product->id }}">
                         <div class="img-v-p popular ">
-                            <a id="showtip_i_18190" href="/products/{{ $product->slug }}" title=""><img alt="EL817S" class="image-hover" src="https://thegioiic.com/upload/large/620.jpg"></a>
+                            <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product"><img alt="EL817S" class="image-hover" src="https://thegioiic.com/upload/large/620.jpg"></a>
                         </div>
                         <div class="info-v-p">
                             <div class="name-a">
-                                <a title="{{ $product->name }}" id="name_18190" href="/products/{{ $product->slug }}">{{ $product->name }}</a>
+                                <a title="{{ $product->name }}" id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}">{{ $product->name }}</a>
                             </div>
                             <div class="desc_small">
                                 {{ $product->desc }}
                             </div>
                             <div class="price blue">
-                               {{ $product->price }} đ/Cái
+                               {{ number_format($product->price) }} đ/Cái
                             </div>
 
                             <div>
@@ -191,6 +192,7 @@
             <div class="clear"></div>
         </div>
         <div class="clear"></div>
+        @endif
     @endforeach
     </div>
     <style>

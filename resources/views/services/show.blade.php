@@ -3,6 +3,7 @@
     <div class="texttitle sitemaps">
         <a href="/">Trang Chủ</a>
         <a href="/services">Dịch vụ</a>
+        <a href="/services/{{ $service->id }}">{{ $service->title }}</a>
     </div>
 </div>
 <div id="body-left">
@@ -20,7 +21,7 @@
                 {!!html_entity_decode($service->content)!!}
             </div>
         </div>
-        @include('services.comment_section')
+        @include('comment_section', ['commentable_object' => $service, 'commentable_type' => 'App\model\Service'])
     </div>
     @include('services.menu_right')
 </div>

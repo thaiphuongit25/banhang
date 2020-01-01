@@ -736,7 +736,7 @@ a.contact-to-order:hover {
 }
 
 #view-product #info-product #cart a {
-    background: url("bullet_cart.jpg");
+    background: url("/images/bullet_cart.jpg");
     display: block
 }
 
@@ -869,6 +869,10 @@ li:last-child .list-same {
     position: relative;
     padding: 5px 0 0 0;
     border-bottom: 1px solid #DDD
+}
+
+.reply-container .reply-item:last-child .list-rp {
+    border-bottom: none;
 }
 
 .report-product .rp-user .list-rp span.anchor-rp {
@@ -1753,7 +1757,7 @@ ul#navigation li.selectedd a:visited {
 
 .show-page ul li {
     padding: 1px 0 2px 25px;
-    background: transparent url("bullet-i.png") no-repeat scroll 14px 7px
+    background: transparent url("/images/bullet-i.png") no-repeat scroll 14px 7px
 }
 
 .show-page ul li img {
@@ -1810,7 +1814,7 @@ ul#navigation li.selectedd a:visited {
     padding: 5px 4px 5px 22px;
     display: block;
     border-bottom: 1px solid #ccc;
-    background: transparent url("bullet-i.png") no-repeat scroll 11px 11px;
+    background: transparent url("/images/bullet-i.png") no-repeat scroll 11px 11px;
     color: #8B8C8C;
     font-size: 12px;
     font-family: Arial, Tahoma, Verdana, MS Sans Serif
@@ -2525,7 +2529,7 @@ table {
 
 .crumb span.background-crumb-menu,
 .sitemaps a {
-    background: url("right-arrow.png") no-repeat scroll right center;
+    background: url("/images/right-arrow.png") no-repeat scroll right center;
     padding-right: 15px;
     margin-right: 0
 }
@@ -2659,13 +2663,13 @@ table {
 }
 
 .pagination a.next_page {
-    background: url("page-paginate.png") no-repeat;
+    background: url("/images/page-paginate.png") no-repeat;
     background-position: 3px -108px;
     padding-right: 11px
 }
 
 .pagination a.previous_page {
-    background: url("page-paginate.png") no-repeat;
+    background: url("/images/page-paginate.png") no-repeat;
     background-position: 1px -8px;
     padding-left: 7px;
     margin-right: 3px
@@ -3127,7 +3131,7 @@ table {
 .infor-cart-help ul#help-gh li a {
     display: block;
     padding: 4px 0 4px 22px;
-    background: transparent url("bullet-i.png") no-repeat scroll 10px 10px;
+    background: transparent url("/images/bullet-i.png") no-repeat scroll 10px 10px;
     float: left;
     clear: both
 }
@@ -3139,7 +3143,7 @@ table {
 #other-news li {
     padding: 2px 0 2px 12px;
     float: left;
-    background: transparent url("bullet-i.png") no-repeat scroll 1px 8px;
+    background: transparent url("/images/bullet-i.png") no-repeat scroll 1px 8px;
     clear: both
 }
 
@@ -4142,7 +4146,7 @@ select:hover {
     padding-left: 60px
 }
 
-.form-comment .input-errors {
+.input-errors {
     border: 2px solid red
 }
 
@@ -4370,12 +4374,12 @@ span.date {
 }
 
 span.cmt-count {
-    background: url("comment-icon.png") no-repeat scroll left center;
+    background: url("/images/comment-icon.png") no-repeat scroll left center;
     padding-left: 20px
 }
 
 span.view-count {
-    background: url("eye-icon.png") no-repeat scroll left center;
+    background: url("/images/eye-icon.png") no-repeat scroll left center;
     padding-left: 24px
 }
 
@@ -7355,4 +7359,36 @@ div.ppt {
 
 .user_control .register_btn {
     margin-left: 5px;
+}
+}
+
+.dialog_bank {
+    width: 340px;
+    height: 250px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -170px;
+    background: #FFF;
+    display: none;
+    border: 5px solid #61b1cf;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dialog_bank .title-box {
+    position: relative;
+    top: 0;
+    width: 99%;
+    padding: 7px;
+    background: #DDD;
+}
+
+.dialog_bank .close_box {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
 }

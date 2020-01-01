@@ -5,16 +5,14 @@
         </div>
     </div>
     <div class="right-menu">
-        @foreach (getSuggestArticleCategories() as $category)
-        <div class="title">{{ $category->name }}</div>
+        <div class="title">Dịch vụ</div>
         <ul class="ul-left-page">
-            @foreach ($category->articles as $article)
+            @foreach (getSuggestServices() as $service)
             <li>
-                <a href="/news/{{ $article->id }}">{{ $article->title }}</a>
+                <a class="tip-service" href="{{ route('services.show', ['service' => $service->id]) }}">{{ $service->title }}</a>
             </li>
             @endforeach
         </ul>
-        @endforeach
     </div>
 
     <div class="right-ad">

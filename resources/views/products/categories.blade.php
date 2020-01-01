@@ -2,7 +2,7 @@
 <div class="container-crumb">
     <div class="texttitle sitemaps">
         <a href="/">Trang Chủ</a>
-        <a href="/">Sản Phẩm</a>
+        <a href="/products">Sản Phẩm</a>
 
         <a href="/product/{{ $categor->type->slug }}">{{ $categor->type->name }}</a>
         <a href="#">
@@ -146,11 +146,11 @@
                 @foreach ( $categor->products as $product )
                     <div class="item-product-category" style="height: 315px">
                         <div class="image popular">
-                            <a id="showtip_i_9319" title="LA4440J" target="_blank" href="/products/la4440j"><img alt="LA4440J" class="" src="https://thegioiic.com/upload/large/7181.jpg"></a>
+                            <a id="{{$product->id}}" class="review-product" title="LA4440J" target="_blank" href="/products/{{ $product->slug }}"><img alt="LA4440J" class="" src="https://thegioiic.com/upload/large/7181.jpg"></a>
                         </div>
                         <div class="name">
                             <p class="name-a">
-                                <a title="LA4440J" target="_blank" href="/products/la4440j">{{ $product->name }}</a>
+                                <a id="{{$product->id}}" class="review-product" title="LA4440J" target="_blank" href="/products/{{ $product->slug }}">{{ $product->name }}</a>
                             </p>
                             <div class="desc_small">
                                 {{ $product->desc }}
