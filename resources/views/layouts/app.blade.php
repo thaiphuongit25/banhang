@@ -12,16 +12,16 @@
   <link rel="shortcut icon" href="{{ url('images/favicon.ico') }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ url('js/main.js') }}" defer></script>
-    <script src="{{ url('js/custom.js') }}" defer></script>
-    <script src="{{ url('js/comment.js') }}" defer></script>
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <!-- Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="{{ asset('js/app.js') }}" defer></script>
+  <script src="{{ url('js/main.js') }}" defer></script>
+  <script src="{{ url('js/custom.js') }}" defer></script>
+  <script src="{{ url('js/comment.js') }}" defer></script>
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -117,10 +117,10 @@
         <div class="user_control" style="display: flex;">
           <input type="hidden" id="check_login" value="0">
           @if (Auth::check())
-            <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
-            <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
+          <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
+          <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
           @else
-            <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
+          <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
           @endif
           <a class="support-img" href="/support/me"><img src="/images/yah.png" alt="Yah"></a>
         </div>
@@ -140,7 +140,7 @@
                 Giỏ hàng
               </label>
               <span class="cartd" id="cartd"><sup>
-                  <strong style="color:red"  class="card_value">0</strong>
+                  <strong style="color:red" class="card_value">0</strong>
                 </sup>
               </span>
             </a>
