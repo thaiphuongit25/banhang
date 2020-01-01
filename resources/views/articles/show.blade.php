@@ -17,14 +17,14 @@
                     {{ $article->title }}
                 </h1>
                 <span style="padding-left: 11px;" class="date">{{ date('d/m/Y | H:m', strtotime($article->created_at)) }}</span>
-                <span class="cmt-count">0</span>
+                <span class="cmt-count">{{ getTotalReplies($article) }}</span>
                 <span class="view-count">{{ $article->view_count }}</span>
             </div>
             <div style="padding:12px 6px 12px 12px;" id="page_content">
                 {!!html_entity_decode($article->content)!!}
             </div>
         </div>
-        @include('articles.comment_section')
+        @include('comment_section', ['commentable_object' => $article, 'commentable_type' => 'App\model\Article'])
         @include('articles.related_articles', ['related_articles' => $related_articles])
     </div>
     @include('articles.menu_right')

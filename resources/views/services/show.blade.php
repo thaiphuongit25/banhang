@@ -21,7 +21,7 @@
                 {!!html_entity_decode($service->content)!!}
             </div>
         </div>
-        @include('services.comment_section')
+        @include('comment_section', ['commentable_object' => $service, 'commentable_type' => 'App\model\Service'])
     </div>
     @include('services.menu_right')
 </div>
