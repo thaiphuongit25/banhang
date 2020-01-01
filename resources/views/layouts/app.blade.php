@@ -105,7 +105,7 @@
           </ul>
         </div>
         <div class="textmenu_top" style="float: left;">
-          <img class="phone" src="/assets/phone-5132c0a1dbb76aaf5137a4c070684d7332a2cd648f49606b6212839e8fc77b83.png" alt="Phone">
+          <img class="phone" src="https://thegioiic.com/assets/phone-5132c0a1dbb76aaf5137a4c070684d7332a2cd648f49606b6212839e8fc77b83.png" alt="Phone">
           <span class="px">(28)3896.8699</span> |
           <span class="px">0972924961</span>
         </div>
@@ -115,10 +115,10 @@
         <div class="user_control" style="display: flex;">
           <input type="hidden" id="check_login" value="0">
           @if (Auth::check())
-            <a href="/mypage">Chào {{ Auth::user()->name }}</a> | 
-            <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout-btn' type="submit">Đăng xuất</button></form>
+          <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
+          <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
           @else
-            <a href="/login">Đăng Nhập</a> | <a href="/register">Đăng Ký</a>
+          <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
           @endif
           <a class="support-img" href="/support/me"><img src="/images/yah.png" alt="Yah"></a>
         </div>
@@ -159,6 +159,16 @@
   </div>
   <div id="wrapper">
     <div id="body">
+      @if (session('error'))
+      <div class="alert alert-danger">
+        {{ session('error') }}
+      </div>
+      @endif
+      @if (session('success'))
+      <div class="alert alert-success">
+        {{ session('success') }}
+      </div>
+      @endif
       @yield('content')
     </div>
     <div id="footer">

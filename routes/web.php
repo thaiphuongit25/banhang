@@ -43,6 +43,7 @@ Route::get('pages/quy-dinh-bao-hanh', function () {
 Auth::routes();
 
 Route::get('/mypage', 'UserController@mypage');
+Route::post('/update_info', 'UserController@update');
 Route::get('/change-password', 'UserController@showChangePasswordForm');
 Route::post('/change-password', 'UserController@changePassword');
 

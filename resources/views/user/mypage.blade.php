@@ -3,29 +3,7 @@
 
 <div id="wrapper">
   <div id="body">
-    <div id="body-left">
-      <div class="left-information">
-        <div class="title-gf">
-          Thông tin khách hàng
-        </div>
-        <div class="left-information-content">
-          <a href="/mypage">Thông tin cá nhân</a>
-          <a href="/change-password">Đổi mật khẩu</a>
-        </div>
-        <div class="left-information-content">
-          <a href="/orders">Đơn hàng của tôi</a>
-        </div>
-        <div class="left-information-content">
-          <a href="/favorites">Sản phẩm yêu thích</a>
-        </div>
-        <div class="left-information-content">
-          <a href="/#">Bài viết</a>
-        </div>
-        <div class="left-information-content">
-          <a href="/#">Thông báo</a>
-        </div>
-      </div>
-    </div>
+    @include('layouts.mypage.side_menu')
     <div id="body-right">
       <style type="text/css">
         .select-location {
@@ -43,9 +21,8 @@
           <div style="border-bottom:1px solid #ddd; padding:2px 0 4px 4px; font-size:15px; font-weight:bold; color:#666; margin-bottom:9px;">
             Thông tin dùng đăng nhập website
           </div>
-          <form class="edit_profile" id="edit_profile_17932" enctype="multipart/form-data" action="/profiles/17932" accept-charset="UTF-8" data-remote="true" method="post">
-            <input name="utf8" type="hidden" value="&#x2713;" />
-            <input type="hidden" name="_method" value="patch" />
+          <form class="edit_profile" id="edit_profile_17932" enctype="multipart/form-data" action="/update_info" accept-charset="UTF-8" method="post">
+            @csrf
             <table>
               <tr>
                 <td>Email</td>
@@ -58,14 +35,18 @@
             </table>
             <div class="avatar-update">
               ` <div style="float:left;width:120px;">
-                <img src="/images/no-avatar-100.png" alt="No avatar 100" />
+                @if(empty($user->avatar))
+                  <img src="https://thegioiic.com/images/no-avatar-100.png" alt="No avatar 100" />
+                @else
+                  <img src="/storage/avatars/{{$user->avatar}}" alt="my avatar" />
+                @endif
               </div>
               <div style="float:left;">
                 <div style="position:relative;margin-bottom:32px">
                   Hình đại diện
                 </div>
 
-                <input type="file" name="photo[cover_image]" id="photo_cover_image" />
+                <input id="avatar" type="file" class="form-control" name="avatar" />
               </div>
             </div>
             <div style="border-bottom:1px solid #ddd; padding:20px 0 4px 4px; font-size:15px; font-weight:bold; color:#666; margin-bottom:9px;">
@@ -80,18 +61,28 @@
                   </div>
                 </td>
                 <td>
-                  <input class="required" value="{{ $user->name }}" type="text" name="user[fullname]" id="user_fullname" />
+                  <input class="required" value="{{ $user->name }}" type="text" name="name" id="user_fullname" />
                   <br>
                   <label class="off red" id="lb_user_fullname">Hãy nhập họ tên của bạn</label>
+                  @error('phone')
+                  <span class="invalid-feedback red" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
                 </td>
               </tr>
               <tr>
                 <td>
                   Điện thoại<sup> * </sup>
                 </td>
-                <td> <input class="number required" type="text" value="{{ $user->phone_number }}" name="profile[phone]" id="profile_phone" />
+                <td> <input class="number required" type="text" value="{{ $user->phone_number }}" name="phone_number" id="profile_phone" />
                   <br>
                   <label class="off red" id="lb_profile_phone">Nhập số điện thoại</label>
+                  @error('phone_number')
+                  <span class="invalid-feedback red" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
                 </td>
               </tr>
               <!-- <tr>
@@ -241,8 +232,13 @@
                   </div>
                 </td>
                 <td>
-                  <input class="required" type="text" value="{{ $user->address }}" name="profile[address]" id="profile_address" /> <br>
+                  <input class="required" type="text" value="{{ $user->address }}" name="address" id="profile_address" /> <br>
                   <label class="off red" id="lb_profile_address">Vui lòng nhập số nhà, tên đường</label>
+                  @error('address')
+                  <span class="invalid-feedback red" role="alert">
+                    <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
                 </td>
               </tr>
             </table>
@@ -256,15 +252,15 @@
                     Tên công ty
                   </div>
                 </td>
-                <td> <input type="text" value="" name="profile[company]" id="profile_company" /> </td>
+                <td> <input type="text" value="{{ $user->company_name }}" name="company_name" id="profile_company" /> </td>
               </tr>
               <tr>
                 <td> Mã số thuế </td>
-                <td> <input type="text" value="" name="profile[mst]" id="profile_mst" /></td>
+                <td> <input type="text" value="{{ $user->tax_code }}" name="tax_code" id="profile_mst" /></td>
               </tr>
               <tr>
                 <td> Địa chỉ công ty </td>
-                <td> <input type="text" value="" name="profile[address_pay]" id="profile_address_pay" /></td>
+                <td> <input type="text" value="{{ $user->company_address }}" name="company_address" id="profile_address_pay" /></td>
               </tr>
               <tr>
                 <td></td>
@@ -276,7 +272,7 @@
           </form>
         </div>
       </div>
-      <script>
+      <!-- <script>
         $(document).ready(function() {
           $("input.required").blur(function() {
             if ($(this).val() != "") {
@@ -344,7 +340,7 @@
 
           });
         });
-      </script>
+      </script> -->
     </div>
     <div class="clear"></div>
   </div>

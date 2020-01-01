@@ -7335,11 +7335,24 @@ div.ppt {
     z-index: 9999
 }
 
-.logout-btn {
+.user_control .logout .logout_btn {
     background: none;
     border: none;
     padding: 0;
     color: #999;
     cursor: pointer;
     font-weight: bold;
-  }
+    margin-left: 5px;
+}
+
+.user_control .mypage_btn {
+    margin-right: 5px;
+}
+
+.user_control .login_btn {
+    margin-right: 5px;
+}
+
+.user_control .register_btn {
+    margin-left: 5px;
+}

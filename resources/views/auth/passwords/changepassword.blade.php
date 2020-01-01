@@ -9,41 +9,9 @@
     background-color: #efefef;
   }
 </style>
-@if (session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-@endif
-@if (session('success'))
-    <div class="alert alert-success">
-        {{ session('success') }}
-    </div>
-@endif
 <div id="wrapper">
   <div id="body">
-    <div id="body-left">
-      <div class="left-information">
-        <div class="title-gf">
-          Thông tin khách hàng
-        </div>
-        <div class="left-information-content">
-          <a href="/mypage">Thông tin cá nhân</a>
-          <a href="/change-password">Đổi mật khẩu</a>
-        </div>
-        <div class="left-information-content">
-          <a href="/orders">Đơn hàng của tôi</a>
-        </div>
-        <div class="left-information-content">
-          <a href="/favorites">Sản phẩm yêu thích</a>
-        </div>
-        <div class="left-information-content">
-          <a href="/#">Bài viết</a>
-        </div>
-        <div class="left-information-content">
-          <a href="/#">Thông báo</a>
-        </div>
-      </div>
-    </div>
+    @include('layouts.mypage.side_menu')
     <div id="body-right">
       <div style="background-color:#fff; padding:0px; width:100%;float:left; margin-right:6px;">
         <div class="title-gf">
