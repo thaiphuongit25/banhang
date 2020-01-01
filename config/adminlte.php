@@ -195,6 +195,11 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
+            'text'    => 'Thương hiệu',
+            'url'  => 'admin/brands',
+            'icon'    => 'fas fa-fw',
+        ],
+        [
             'text'    => 'Sản phẩm',
             'url'  => 'admin/products',
             'icon'    => 'fas fa-fw',
