@@ -162,6 +162,7 @@
   <div id="wrapper">
     <div id="body">
       @yield('content')
+      @include('auth.login_dialog')
     </div>
     <div id="footer">
       @include('footer')

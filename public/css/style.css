@@ -7346,4 +7346,35 @@ div.ppt {
     color: #999;
     cursor: pointer;
     font-weight: bold;
-  }
+}
+
+.dialog_bank {
+    width: 340px;
+    height: 250px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -125px;
+    margin-left: -170px;
+    background: #FFF;
+    display: none;
+    border: 5px solid #61b1cf;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.dialog_bank .title-box {
+    position: relative;
+    top: 0;
+    width: 99%;
+    padding: 7px;
+    background: #DDD;
+}
+
+.dialog_bank .close_box {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+}

@@ -1,4 +1,4 @@
-<div class="report-product js-articleComments" style="position: relative">
+<div class="report-product js-commentsContainer" style="position: relative">
 
     <div class="rp-user">
         <div class="title-rp">
@@ -16,7 +16,9 @@
                 </div>
                 <div class="img-rp" style="width: 100%;">
                     <div class="avatar-report">
-                        <a href="/users/{{ $comment->user->id }}"><span class="noavatarname">T</span></a>
+                        <a href="/users/{{ $comment->user->id }}">
+                            <span class="noavatarname">{{ firstCharacterOfName($comment->user->name) }}</span>
+                        </a>
 
                     </div>
                     <div class="name-rp" style="line-height: 2.2;">
@@ -32,7 +34,7 @@
                     </div>
 
                     <div class="reply" style="float: right; padding-right: 5px; line-height: 2.2;">
-                        <a href="javascript:" class="btn-reply-report js-replyBtn" data-target="#js-replyBox-{{ $comment->id }}" data-comment-id="{{ $comment->id }}">Trả
+                        <a href="javascript:" class="btn-reply-report {{ Auth::user() ? 'js-replyBtn' : 'js-openLoginDialog' }}" data-target="#js-replyBox-{{ $comment->id }}" data-comment-id="{{ $comment->id }}">Trả
                             lời</a>
                     </div>
                 </div>
@@ -51,7 +53,9 @@
                             </div>
                             <div class="img-rp" style="width: 100%;">
                                 <div class="avatar-report">
-                                    <a href="/users/{{ $comment->user->id }}"><span class="noavatarname">T</span></a>
+                                    <a href="/users/{{ $comment->user->id }}">
+                                        <span class="noavatarname">{{ firstCharacterOfName($reply->user->name) }}</span>
+                                    </a>
 
                                 </div>
                                 <div class="name-rp" style="line-height: 2.2;">
@@ -77,7 +81,6 @@
         <div class="clear"></div>
         @endforeach
     </div>
-    @if(Auth::user())
     <form class="form-comment" id="new_comment" action="{{ route('comments.store') }}" accept-charset="UTF-8"
         method="post">
         @csrf
@@ -95,12 +98,19 @@
                     {!! captcha_img() !!}
                 </p>
             </div>
+            @if(Auth::user())
             <div style="padding-top: 8px">
                 <input type="submit" value="Đăng" class="btn btn-primary">
             </div>
+            @else
+            <div style="padding-top: 8px">
+                <a class="hover" href="{{ route('login') }}"><b>Đăng Nhập</b></a>  hoặc  <a class="hover" href="{{ route('register') }}"><b>Đăng ký</b></a> để chia sẻ.
+        </div>
+            @endif
         </div>
     </form>
 
+    @if(Auth::user())
     <div class="js-formReply" style="display: none;">
         <form class="form-reply" action="{{ route('comments.reply') }}" accept-charset="UTF-8" method="post">
             @csrf

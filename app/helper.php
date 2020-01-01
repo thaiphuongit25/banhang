@@ -26,4 +26,8 @@
         return count($comment_ids) + count($replies);
     }
 
+    function firstCharacterOfName($name) {
+        return substr($name, 0, 1);
+    }
+
 
