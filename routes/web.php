@@ -58,6 +58,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth
     Route::resource('services', 'ServicesController', [
         'as' => 'admin'
     ]);
+    Route::resource('article_categories', 'ArticleCategoriesController', [
+        'as' => 'admin'
+    ])->except(['destroy']);
 });
 
 Route::get('/news', 'ArticleController@index');

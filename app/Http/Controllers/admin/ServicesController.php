@@ -60,7 +60,7 @@ class ServicesController extends Controller
 
         Service::create($service);
 
-        return redirect()->route('services.index')->with('success', 'Data Added successfully.');
+        return redirect()->route('admin.services.index')->with('success', 'Data Added successfully.');
     }
 
     /**
@@ -119,7 +119,7 @@ class ServicesController extends Controller
 
         Service::whereId($id)->update($form_data);
 
-        return redirect()->route('services.index')->with('success', 'Data Updated successfully.');
+        return redirect()->route('admin.services.index')->with('success', 'Data Updated successfully.');
     }
 
     /**
