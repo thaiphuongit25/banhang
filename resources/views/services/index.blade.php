@@ -19,7 +19,7 @@
                 <div class="service">
                     <div class="img-service">
                         <a href="{{ route('services.show', ['service' => $service->id]) }}">
-                          <img alt="" src="https://thegioiic.com/upload/medium/2515.jpg">
+                            <img src="{{ URL::to('/') }}/images/{{ $service->thumbnail }}" class="img-thumbnail" />
                         </a>
                     </div>
                     <div class="info-service">

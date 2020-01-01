@@ -203,6 +203,11 @@ return [
             'text'    => 'Sản phẩm',
             'url'  => 'admin/products',
             'icon'    => 'fas fa-fw',
+        ],
+        [
+            'text'    => 'Dịch vụ',
+            'url'  => 'admin/services',
+            'icon'    => 'fas fa-fw',
         ]
     ],
 

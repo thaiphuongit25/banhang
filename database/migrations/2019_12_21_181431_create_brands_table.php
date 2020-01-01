@@ -18,8 +18,8 @@ class CreateBrandsTable extends Migration
             $table->string('name');
             $table->string('logo');
             $table->string('desc');
-            $table->integer('status');
-            $table->string('slug')->default('1');
+            $table->integer('status')->default('1');
+            $table->string('slug');
             $table->string('meta_title');
             $table->string('meta_keywords');
             $table->string('meta_description');
