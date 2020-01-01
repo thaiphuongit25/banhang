@@ -44,13 +44,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController');
 Route::resource('articles', 'ArticleController');
 
-Route::namespace('admin')->group(function () {
-    Route::resource('admin/products', 'ProductsController');
+//
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
+    Route::get('/', 'ProductsController@index');
+    Route::resource('products', 'ProductsController');
+    Route::resource('brands', 'BrandsController');
 });
 
 // Route::get('/dangky', 'RegistrationController@create');
 // Route::post('dangky', 'RegistrationController@store');
- 
+
 // Route::get('/dangnhap', 'SessionsController@create');
 // Route::post('/dangnhap', 'SessionsController@store');
 // Route::get('/dangxuat', 'SessionsController@destroy');
