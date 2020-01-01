@@ -30,7 +30,7 @@
                                 </em>
                             </a>
                         </b>
-                        {{ date('(H:m - d/m/Y)', strtotime($commentable_object->created_at)) }}
+                        {{ date('(G:i - d/m/Y)', strtotime($comment->created_at)) }}
                     </div>
 
                     <div class="reply" style="float: right; padding-right: 5px; line-height: 2.2;">
@@ -67,7 +67,7 @@
                                             </em>
                                         </a>
                                     </b>
-                                    {{ date('(H:m - d/m/Y)', strtotime($reply->created_at)) }}
+                                    {{ date('(G:i - d/m/Y)', strtotime($reply->created_at)) }}
                                 </div>
                             </div>
                             <div class="clear"></div>

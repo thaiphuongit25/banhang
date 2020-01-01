@@ -32,4 +32,9 @@ class Product extends Model
     {
         return $this->hasMany(Unit::class);
     }
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
+    }
 }

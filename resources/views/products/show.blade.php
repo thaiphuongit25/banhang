@@ -466,53 +466,7 @@
                     </div>
                 </div>
 
-                <div class="report-product" id="report-user">
-                    <div class="rp-user">
-                        <div class="title-rp">
-                            <div class="t">
-                                <b class="blue">Phản hồi(0)</b>
-                            </div>
-                        </div>
-                    </div>
-                    <form class="form-comment" id="new_report" action="/reports" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
-                        <input value="18480" type="hidden" name="report[product_id]" id="report_product_id">
-                        <input value="0" type="hidden" name="report[category]" id="report_category">
-                        <div class="form-report-product">
-                            <textarea class="text-change" placeholder="Nhập nội dung" name="report[content]" id="report_content"></textarea>
-                            <div id="captcha">
-
-                                <p style="position:relative;">
-                                    <input type="text" placeholder="Mã xác nhận" class="captcha-inputs" name="captcha" id="input_captcha_valid" value="" style="width:84px; padding:4px;">
-                                    <span style="font-weight:bolder; font-size:17px; color: #027AC7; padding-left:8px; letter-spacing:2px;  padding:5px 18px; position:absolute; top:0px; left:94px;">
-            4TOX8a
-        </span>
-                                    <span style="position:absolute; background-color:transparent; width:200px; height:30px; top:0;left:131px;">&nbsp;</span>
-                                    <input type="hidden" class="text-change" value="4TOX8a" id="captcha_valid">
-                                </p>
-                            </div>
-                            <div style="padding-top: 8px">
-                                <a class="hover" href="/account/login?path=%2Fproducts%2Flm258p"><b>Đăng Nhập</b></a> hoặc <a class="hover" href="/users/new?path=%2Fproducts%2Flm258p"><b>Đăng ký</b></a> để chia sẻ.
-                            </div>
-                        </div>
-
-                        <script type="text/javascript">
-                            $("#new_report").submit(function(event) {
-                                var capt_value = $(this).find("#captcha_valid").val().toUpperCase();
-                                if (trim($("#report_content").val()) == "") {
-                                    $("#report_content").addClass('input-errors');
-                                    event.preventDefault();
-                                    return false;
-                                } else if (trim($(this).find("#input_captcha_valid").val()).toUpperCase() != trim(capt_value)) {
-                                    $(this).find("#input_captcha_valid").addClass('input-errors');
-                                    event.preventDefault();
-                                    return false;
-                                } else {
-                                    return;
-                                }
-                            });
-                        </script>
-                    </form>
-                </div>
+                @include('comment_section', ['commentable_object' => $product, 'commentable_type' => 'App\model\Product'])
             </div>
             <div class="info-product-show-right">
                 <div class="right-menu" id="same-product">
