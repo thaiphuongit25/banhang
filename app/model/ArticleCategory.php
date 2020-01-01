@@ -11,4 +11,8 @@ class ArticleCategory extends Model
     {
         return $this->hasMany(Article::class);
     }
+
+    protected $fillable = [
+        'id', 'name', 'slug', 'status'
+    ];
 }

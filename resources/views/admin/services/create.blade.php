@@ -24,43 +24,43 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Tiêu đề</label>
                 <div class="col-sm-10">
-                    <input type="text" name="title" class="form-control" />
+                    <input type="text" name="title" class="form-control" value="{{ old('title') }}" />
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Nội dung</label>
                 <div class="col-sm-10">
-                    <textarea name="content" class="form-control"></textarea>
+                    <textarea name="content" class="form-control">value="{{ old('content') }}"</textarea>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Ảnh</label>
                 <div class="col-sm-10">
-                    <input type="file" name="thumbnail" />
+                    <input type="file" name="thumbnail" value="{{ old('thumbnail') }}" />
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Slug</label>
                 <div class="col-sm-10">
-                    <input type="text" name="slug" class="form-control" />
+                    <input type="text" name="slug" class="form-control" value="{{ old('slug') }}" />
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Meta title</label>
                 <div class="col-sm-10">
-                    <input type="text" name="meta_title" class="form-control" />
+                    <input type="text" name="meta_title" class="form-control" value="{{ old('meta_title') }}" />
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Meta keyword</label>
                 <div class="col-sm-10">
-                    <input type="text" name="meta_keyword" class="form-control" />
+                    <input type="text" name="meta_keyword" class="form-control" value="{{ old('meta_keyword') }}" />
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Meta description</label>
                 <div class="col-sm-10">
-                    <textarea name="meta_description" class="form-control"></textarea>
+                    <textarea name="meta_description" class="form-control">{{ old('meta_description') }}</textarea>
                 </div>
             </div>
             <div class="form-group text-center">
