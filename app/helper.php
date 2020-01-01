@@ -27,7 +27,15 @@
     }
 
     function firstCharacterOfName($name) {
-        return substr($name, 0, 1);
+        return strtoupper(substr($name, 0, 1));
+    }
+
+    function statusStr($status) {
+        return 
+        [
+            0 => 'Disabled',
+            1 => 'Active'
+        ][$status];
     }
 
 
