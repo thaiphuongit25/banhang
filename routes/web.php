@@ -51,7 +51,7 @@ Route::resource('articles', 'ArticleController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
 Route::post('comments/reply', 'CommentController@reply')->name('comments.reply');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
     Route::resource('brands', 'BrandsController');
