@@ -28,6 +28,13 @@ class LoginController extends Controller
      */
     protected $redirectTo = '/';
 
+    protected function redirectTo()
+    {
+        session()->flash("success","Đăng nhập thành công!");
+        return '/';
+    }
+
+
     /**
      * Create a new controller instance.
      *

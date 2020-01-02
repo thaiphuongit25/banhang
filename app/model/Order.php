@@ -14,16 +14,17 @@ class Order extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'customer_id', 'date_order', 'total', 'note'
+
+        'id', 'user_id', 'date_order', 'total', 'note'
     ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class, 'customer_id');
-    }
-
-     public function orderDetails()
+     public function user()
      {
-         return $this->hasMany(OrderDetail::class);
+         return $this->belongsTo(User::class);
+     }
+
+     public function products()
+     {
+        return $this->belongsToMany(Product::class);
      }
 }

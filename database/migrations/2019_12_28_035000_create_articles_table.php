@@ -20,11 +20,11 @@ class CreateArticlesTable extends Migration
             $table->text('content');
             $table->string('thumbnail');
             $table->integer('view_count')->default('0');
-            $table->integer('status');
+            $table->integer('status')->default('1');
             $table->string('slug');
-            $table->string('meta_title');
-            $table->string('meta_keywords');
-            $table->string('meta_description');
+            $table->string('meta_title')->nullable();
+            $table->string('meta_keywords')->nullable();
+            $table->string('meta_description')->nullable();
             $table->timestamps();
         });
     }

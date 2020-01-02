@@ -1,24 +1,10 @@
-@extends('adminlte::page') @section('title', 'Danh sách sản phẩm') @section('content_header')
-<h1>Danh sách đặt hàng</h1>
-@stop @section('content')
+@extends('adminlte::page')
+@section('title', 'Dashboard')
+@section('content_header')
+<h1>Danh sách đơn hàng</h1>
+@stop
+@section('content')
 <div class="card">
-    <div class="card-header">
-        <div class="row">
-            <form action="{{ route('admin.orders.index') }}" method="GET" class="col-sm-5">
-                <div class="input-group">
-                    <input type="text" name="search" class="form-control" placeholder="Tìm kiếm">
-                    <div class="input-group-append_btn">
-                        <button type="submit" class="btn btn-secondary" type="button">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
-                </div>
-            </form>
-            <div class="margin-button col-sm-7">
-                <a href="{{ route('admin.orders.create') }}" class="btn btn-primary float-right">Thêm mới</a>
-            </div>
-        </div>
-    </div>
     <div class="card-body">
         @if(session()->get('success'))
         <div class="alert alert-success">
@@ -29,29 +15,50 @@
             <thead>
                 <tr>
                     <td>ID</td>
-                    <td>Khách hàng</td>
-                    <td>Ngày đặt hàng</td>
-                    <td>Tổng tiền</td>
+                    <td>Tên người mua</td>
+                    <td>Ngày đặt đơn</td>
+                    <td>Ngày cập nhật</td>
+                    <td>Tổng giá trị</td>
+                    <td>Lưu ý</td>
                     <td>Trạng thái</td>
                 </tr>
             </thead>
             <tbody>
                 @foreach($orders as $order)
                 <tr>
-                    <td>{{ $order->id }}</td>
-                    <td>{{ $order->user->name }}</td>
-                    <td>{{ $order->date_order }}</td>
-                    <td>{{ number_format($order->total) }} vnd</td>
-                    <td></td>
+                    <td>{{$order->id}}</td>
+                    <td>{{$order->user->name}}</td>
+                    <td>{{$order->date_order}}</td>
+                    <td>{{$order->updated_at}}</td>
+                    <td>{{$order->total}}</td>
+                    <td>{{$order->note}}</td>
+                    <td>
+                        @foreach(config('constants.order_status') as $status => $value)
+                            @if ($order->status == $value)
+                                {{ $status }}
+                            @endif
+                        @endforeach
+                    </td>
+                    <td>
+                        <a href="{{ route('admin.orders.edit',$order->id) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('admin.orders.destroy', $order->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>
-        </table>
-        <br> {{ $orders->links() }}
     </div>
 </div>
-@stop @section('css')
-<link rel="stylesheet" href="/css/admin_custom.css"> @stop @section('js')
+@stop
+@section('css')
+<link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+@section('js')
 <script>
     console.log('Hi!');
 </script>

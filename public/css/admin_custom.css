@@ -1,3 +1,4 @@
+
 .margin-button {
     margin-bottom: 20px;
 }
@@ -16,4 +17,8 @@
     text-align: center;
     pointer-events: none;
     color: #aaa;
+}
+.require:after {
+    content: " *";
+    color: red;
 }

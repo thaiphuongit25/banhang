@@ -17,6 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->integer('customer_id')->references('id')->on('customers');;
             $table->dateTime('date_order');
+            $table->integer('status')->default(1);
             $table->double('total');
             $table->string('note')->nullable();
             $table->timestamps();
