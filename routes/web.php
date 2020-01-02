@@ -52,7 +52,7 @@ Route::resource('articles', 'ArticleController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
 Route::post('comments/reply', 'CommentController@reply')->name('comments.reply');
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'middleware' => 'auth'], function () {
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
     Route::resource('brands', 'BrandsController');
@@ -67,4 +67,3 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
 Route::get('/news', 'ArticleController@index');
 Route::get('/news/{id}', 'ArticleController@category_details')->name('article_category_details');
 Route::get('/news-detail/{id}', 'ArticleController@show');
-
