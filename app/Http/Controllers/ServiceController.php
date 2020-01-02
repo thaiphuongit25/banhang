@@ -14,7 +14,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::all();
+        $services = Service::active()->get();
         return view('services.index', compact('services'));
     }
 
@@ -26,7 +26,7 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $service = Service::find($id);
+        $service = Service::active()->findOrFail($id);
         return view('services.show', compact('service'));
     }
 }
