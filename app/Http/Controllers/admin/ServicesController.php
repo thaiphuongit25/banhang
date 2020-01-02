@@ -113,7 +113,7 @@ class ServicesController extends Controller
             'slug'             =>   $request->slug,
             'thumbnail'        =>   $image_name,
             'meta_title'       =>   $request->meta_title,
-            'meta_keywords'    =>  $request->meta_keywords,
+            'meta_keywords'    =>   $request->meta_keywords,
             'meta_description' =>   $request->meta_description 
         );
 
@@ -132,6 +132,6 @@ class ServicesController extends Controller
     {
         $data = Service::findOrFail($id);
         $data->delete();
-        return redirect()->route('services.index')->with('success', 'Data is successfully deleted');
+        return redirect()->route('admin.services.index')->with('success', 'Data is successfully deleted');
     }
 }

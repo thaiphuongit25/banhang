@@ -41,5 +41,9 @@ class Product extends Model
     public function quantity_by_order()
     {
         return $this->belongsTo(OrderDetail::class);
+
+    public function comments()
+    {
+        return $this->morphMany(Comment::class, 'commentable');
     }
 }

@@ -27,7 +27,7 @@
                         <div style="width: 73%;float: left;">
                             <a href="{{ route('articles.show', ['article' => $article->id]) }}">{{ $article->title }}</a>
                             <br>
-                            <span style=" padding:2px 2px 0 3px;">{{ date('d/m/Y | H:m', strtotime($article->created_at)) }}</span>
+                            <span style=" padding:2px 2px 0 3px;">{{ date('d/m/Y | G:i', strtotime($article->created_at)) }}</span>
                             <span class="cmt-count">{{ getTotalReplies($article) }}</span>
                             <span class="view-count">{{ $article->view_count }}</span><br> {!! Str::words(strip_tags($article->content), 40, '...')  !!}
                         </div>

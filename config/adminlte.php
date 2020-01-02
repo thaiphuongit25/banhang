@@ -218,6 +218,11 @@ return [
             'text'    => 'Danh mục tin tức',
             'url'  => 'admin/article_categories',
             'icon'    => 'fas fa-fw',
+        ],
+        [
+            'text'    => 'Tin tức',
+            'url'  => 'admin/articles',
+            'icon'    => 'fas fa-fw',
         ]
     ],
 

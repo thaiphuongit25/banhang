@@ -21,7 +21,6 @@ $(function () {
     })
 
     $('.js-commentsContainer').on('click', '.js-openLoginDialog', function (e) {
-        debugger
         e.preventDefault()
         $('#login_dialog').show()
     })

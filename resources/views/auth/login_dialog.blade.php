@@ -1,6 +1,6 @@
 <div id="login_dialog" class="dialog_bank" style="display: none;">
   <div class="title-box">
-    Đăng Nhập   
+    Đăng Nhập
     <span class="close_box" onclick="$('#login_dialog').hide();">X</span>
   </div>
   <div class="bank-container">
