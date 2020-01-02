@@ -12,6 +12,11 @@ class ArticleCategory extends Model
         return $this->hasMany(Article::class);
     }
 
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
+
     protected $fillable = [
         'id', 'name', 'slug', 'status'
     ];
