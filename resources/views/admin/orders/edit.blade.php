@@ -29,6 +29,12 @@
         </div>
       </div>
       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Email người mua</label>
+        <div class="col-sm-10">
+          <input type="text" name="email" class="form-control" value="{{ $order->user->email }}" disabled />
+        </div>
+      </div>
+      <div class="form-group row">
         <label class="col-sm-2 col-form-label">Ngày đặt đơn</label>
         <div class="col-sm-10">
           <input type="text" name="desc" class="form-control" value="{{ $order->date_order }}" disabled />
@@ -73,7 +79,7 @@
                           <option value="">-- choose product --</option>
                           @foreach ($products as $product)
                               <option value="{{ $product->id }}" {{ $product->id == $c_product->id ? 'selected' : '' }}>
-                                  {{ $product->name }} (${{ number_format($product->price, 2) }})
+                                  {{ $product->name }} (₫{{ number_format($product->price) }})
                               </option>
                           @endforeach
                       </select>
