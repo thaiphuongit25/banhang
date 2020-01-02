@@ -107,3 +107,12 @@
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
+@section('js')
+<script src={{ url('ckeditor/ckeditor.js') }}></script>
+<script>
+    CKEDITOR.replace( 'desc', {
+        filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+    } );
+</script>
+@include('ckfinder::setup')
+@stop
