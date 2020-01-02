@@ -200,8 +200,23 @@ return [
             'icon'    => 'fas fa-fw',
         ],
         [
+            'text'    => 'Phân Loại',
+            'url'  => '/admin/types',
+            'icon'    => 'fas fa-fw',
+        ],
+        [
+            'text'    => 'Danh mục',
+            'url'  => '/admin/categories',
+            'icon'    => 'fas fa-fw',
+        ],
+        [
             'text'    => 'Sản phẩm',
             'url'  => 'admin/products',
+            'icon'    => 'fas fa-fw',
+        ],
+        [
+            'text'    => 'Đơn hàng',
+            'url'  => '/admin/orders',
             'icon'    => 'fas fa-fw',
         ]
     ],

@@ -155,7 +155,7 @@
                     @foreach ( $category->products as $product )
                     <div class="v-p-t" id="{{ $product->id }}">
                         <div class="img-v-p popular ">
-                            <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product"><img alt="EL817S" class="image-hover" src="https://thegioiic.com/upload/large/620.jpg"></a>
+                            <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product"><img alt="EL817S" class="image-hover" src="{{ URL::to('/') }}/images/{{ $product->image }}"></a>
                         </div>
                         <div class="info-v-p">
                             <div class="name-a">
@@ -173,7 +173,7 @@
                             </div>
                         </div>
                         <div id="showtip_18190" class="showtip">
-                            <img alt="EL817S" class="fff" src="https://thegioiic.com/upload/large/620.jpg">
+                            <img alt="EL817S" class="fff" src="{{ URL::to('/') }}/images/{{ $product->image }}">
 
                         </div>
                         <script type="text/javascript">

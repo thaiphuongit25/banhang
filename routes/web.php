@@ -17,6 +17,7 @@ Route::get('/product/{slug}', 'ProductsController@showCategories')->name('catego
 Route::get('/products', 'ProductsController@search')->name('products_search');
 Route::get('/carts', 'CartsController@cart')->name('carts');
 Route::get('/cart_products', 'CartsController@cartProducts')->name('carts_products');
+Route::post('/buy_products', 'CartsController@buyProducts')->name('carts_products');
 
 Route::get('/suppliers', function () {
     return view('suppliers.index');
@@ -44,11 +45,14 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController');
 Route::resource('articles', 'ArticleController');
 
-//
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
+//'middleware' => 'auth'
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
     Route::resource('brands', 'BrandsController');
+    Route::resource('types', 'TypesController');
+    Route::resource('categories', 'CategoriesController');
+    Route::resource('orders', 'OrdersController');
 });
 
 // Route::get('/dangky', 'RegistrationController@create');

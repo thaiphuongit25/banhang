@@ -1,20 +1,24 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
+use App\model\Order;
 use Illuminate\Http\Request;
-use App\model\Product;
+use App\model\OrderDetail;
 
-class CartsController extends Controller
+class OrdersController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function cart()
+    public function index(Request $request)
     {
-        return view('carts.cart');
+        $name = $request->has('search') ? $request->search : "";
+        $orders = Order::whereDate('date_order', '>=', now())->paginate(10);
+        return view('admin.orders.index', ['orders' => $orders]);
     }
 
     /**
@@ -22,13 +26,10 @@ class CartsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function cartProducts(Request $request)
+    public function create()
     {
-        $ids = $request->has('ids') ? $request->ids : [];
-        $products = Product::with('units')->whereIn("id", $ids)->get();
-        return response()->json($products);
+        //
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -36,9 +37,9 @@ class CartsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function buyProducts(Request $request)
+    public function store(Request $request)
     {
-
+        //
     }
 
     /**

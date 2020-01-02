@@ -199,5 +199,30 @@ $(document).ready(function() {
                 console.log(error);
             }
         });
+        $('.continue-buy').click(function() {
+            window.location.href = "/";
+        });
+        $(".confirm-order").click(function() {
+            let listCart = JSON.parse(localStorage.getItem('list_card'));
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+            $.ajax({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                },
+                type: 'post',
+                url: '/buy_products',
+                data: { cards: listCart },
+                success: function(data) {
+
+                },
+                error: function(error) {
+                    console.log("da co loi xay ra");
+                }
+            })
+        });
     }
 });

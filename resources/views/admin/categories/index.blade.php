@@ -1,24 +1,24 @@
 @extends('adminlte::page')
-@section('title', 'Danh sách sản phẩm')
+@section('title', 'Dashboard')
 @section('content_header')
-<h1>Danh sách sản phẩm</h1>
+<h1>Danh sách danh mục</h1>
 @stop
 @section('content')
 <div class="card">
     <div class="card-header">
         <div class="row">
-            <form action="{{ route('admin.products.index') }}" method="GET" class="col-sm-5">
+            <form action="{{ route('admin.categories.index') }}" method="GET" class="col-sm-5">
                 <div class="input-group">
-                    <input type="text" name="search" class="form-control" placeholder="Tìm kiếm">
+                    <input categorie="text" name="search" class="form-control" placeholder="Tìm kiếm">
                     <div class="input-group-append_btn">
-                        <button type="submit" class="btn btn-secondary" type="button">
+                        <button categorie="submit" class="btn btn-secondary" categorie="button">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
                 </div>
             </form>
             <div class="margin-button col-sm-7">
-                <a href="{{ route('admin.products.create') }}" class="btn btn-primary float-right">Thêm mới</a>
+                <a href="{{ route('admin.categories.create') }}" class="btn btn-primary float-right">Thêm mới</a>
             </div>
         </div>
     </div>
@@ -32,26 +32,24 @@
         <thead>
             <tr>
             <td>ID</td>
-            <td>Tên sản phẩm</td>
+            <td>Tên danh mục</td>
             <td>Miêu tả</td>
-            <td>Hình ảnh</td>
             </tr>
         </thead>
         <tbody>
-            @foreach($products as $product)
+            @foreach($categories as $categorie)
             <tr>
-                <td>{{$product->id}}</td>
-                <td>{{$product->name}}</td>
-                <td>{{$product->desc}}</td>
-                <td><img src="{{ URL::to('/') }}/images/{{ $product->image }}" class="img-thumbnail" width="75" /></td>
+                <td>{{$categorie->id}}</td>
+                <td>{{$categorie->name}}</td>
+                <td>{{$categorie->desc}}</td>
                 <td>
-                    <a href="{{ route('admin.products.edit',$product->id) }}" class="btn btn-primary">Edit</a>
+                    <a href="{{ route('admin.categories.edit',$categorie->id) }}" class="btn btn-primary">Edit</a>
                 </td>
                 <td>
-                    <form action="{{ route('admin.products.destroy', $product->id)}}" method="post">
+                    <form action="{{ route('admin.categories.destroy', $categorie->id)}}" method="post">
                     @csrf
                     @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Delete</button>
+                    <button class="btn btn-danger" categorie="submit">Delete</button>
                     </form>
                 </td>
             </tr>
@@ -59,7 +57,7 @@
         </tbody>
     </table>
     <br>
-    {{ $products->links() }}
+    {{ $categories->links() }}
     </div>
 </div>
 @stop
