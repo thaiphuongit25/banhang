@@ -18,13 +18,16 @@ $(document).ready(function() {
             return Number((unit).toFixed(1)).toLocaleString();
         }
 
-        var getUnit = function(units, quantity) {
-            let unit = units[0].unit_price;
-            units.forEach(function(value) {
-                if (quantity < value.number) {
-                    unit = value.unit_price;
-                }
-            });
+        var getUnit = function(units, quantity, price) {
+            let  unit = price;
+            if (units.length > 0) {
+                unit = units[0].unit_price;
+                units.forEach(function(value) {
+                    if (quantity < value.number) {
+                        unit = value.unit_price;
+                    }
+                });
+            }
             return [unit * quantity, unit];
         }
 
@@ -56,8 +59,8 @@ $(document).ready(function() {
                 let cart = [];
                 let tmp = null;
                 products.forEach(function(value) {
-                    total += getUnit(value.units, quantityCurrent(value.id))[0];
-                    tmp = getUnit(value.units, quantityCurrent(value.id));
+                    total += getUnit(value.units, quantityCurrent(value.id), value.price)[0];
+                    tmp = getUnit(value.units, quantityCurrent(value.id), value.price);
                     cart.push({id: value.id, quantity: quantityCurrent(value.id), unit: tmp[1]})
                 });
                 cart.push({total: total});
@@ -104,10 +107,10 @@ $(document).ready(function() {
                             "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + value.quantity + "</span> Cái</span>" +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            formatPrice(getUnit(value.units, quantityCurrent(value.id))[0]) + "đ" +
+                            formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[0]) + "đ" +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            formatPrice(getUnit(value.units, quantityCurrent(value.id))[1]) + "đ" +
+                            formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[1]) + "đ" +
                             "</td>" +
                             "<td class='pa'>" +
                             "<a class='remove-cart' id=" + value.id + ">Xóa</a>" +

@@ -10,15 +10,15 @@
     }
 
     function getArticleCategories() {
-        return ArticleCategory::all();
+        return ArticleCategory::active()->get();
     }
 
     function getSuggestServices() {
-        return Service::orderBy('id', 'DESC')->take(5)->get();
+        return Service::active()->orderBy('id', 'DESC')->take(5)->get();
     }
 
     function getSuggestArticleCategories() {
-        return ArticleCategory::with('articles')->orderBy('id', 'ASC')->take(1)->get();
+        return ArticleCategory::active()->with('articles')->orderBy('id', 'ASC')->take(1)->get();
     }
 
     function getTotalReplies($article) {

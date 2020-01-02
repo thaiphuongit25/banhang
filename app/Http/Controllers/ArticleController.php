@@ -18,10 +18,10 @@ class ArticleController extends Controller
     {   
         if ($request->has('q')) {
             $query = $request->query('q');
-            $articles = Article::where('title', 'like', '%' . $query . '%')->get();
+            $articles = Article::active()->where('title', 'like', '%' . $query . '%')->get();
             return view('articles.search_result', compact('articles', 'query'));
         }
-        $categories = ArticleCategory::with('articles')->get();
+        $categories = ArticleCategory::active()->with('articles')->get();
         return view('articles.index', compact('categories'));
     }
 
@@ -33,17 +33,17 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $article = Article::find($id);
+        $article = Article::active()->findOrFail($id);
         $article->view_count = $article->view_count + 1;
         $article->save();
-        $related_articles = Article::where('id', '!=', $article->id)->paginate(10);
+        $related_articles = Article::active()->where('id', '!=', $article->id)->paginate(10);
         return view('articles.show', compact('article', 'related_articles'));
     }
 
     public function category_details($id)
     {
-        $category = ArticleCategory::find($id);
-        $articles = Article::where('article_category_id', $category->id)->paginate(10);
+        $category = ArticleCategory::active()->findOrFail($id);
+        $articles = Article::active()->where('article_category_id', $category->id)->paginate(10);
         return view('articles.category_details', compact('category', 'articles'));
     }
 }
