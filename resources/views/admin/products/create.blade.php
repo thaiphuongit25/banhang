@@ -52,7 +52,13 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Miêu tả</label>
                 <div class="col-sm-10">
-                    <textarea name="desc">{{ old('desc') }}</textarea>
+                    <textarea name="desc"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label require">Chi tiết sản phẩm</label>
+                <div class="col-sm-10">
+                    <textarea name="specification">{{ old('specification') }}</textarea>
                 </div>
             </div>
             <div class="form-group row">
@@ -110,7 +116,7 @@
 @section('js')
 <script src={{ url('ckeditor/ckeditor.js') }}></script>
 <script>
-    CKEDITOR.replace( 'desc', {
+    CKEDITOR.replace( 'specification', {
         filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
     } );
 </script>

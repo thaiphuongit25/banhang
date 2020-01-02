@@ -63,6 +63,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                    <label class="col-sm-2 col-form-label require">Chi tiết sản phẩm</label>
+                    <div class="col-sm-10">
+                        <textarea name="specification">{{ $product->specification }}</textarea>
+                    </div>
+                </div>
+            <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Ảnh</label>
                 <div class="col-sm-10">
                     <input type="file" name="image" value="{{ $product->image }}" />
@@ -118,7 +124,7 @@
 @section('js')
 <script src={{ url('ckeditor/ckeditor.js') }}></script>
 <script>
-    CKEDITOR.replace( 'desc', {
+    CKEDITOR.replace( 'specification', {
         filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
     } );
 </script>

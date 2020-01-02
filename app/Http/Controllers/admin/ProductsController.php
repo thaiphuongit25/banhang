@@ -47,6 +47,7 @@ class ProductsController extends Controller
             'desc'              =>  'required',
             'slug'              =>  'required',
             'quantity'          =>  'required',
+            'specification'     =>  'required',
             'brand_id'          =>  'required',
             'category_id'       =>  'required',
             'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -60,6 +61,7 @@ class ProductsController extends Controller
         $product = array(
             'name'               =>   $request->name,
             'desc'               =>   $request->desc,
+            'specification'      =>   $request->specification,
             'price'              =>   $request->price,
             'quantity'           =>   $request->quantity,
             'slug'               =>   $request->slug,
@@ -106,6 +108,7 @@ class ProductsController extends Controller
             $request->validate([
                 'name'              =>  'required',
                 'desc'              =>  'required',
+                'specification'     =>  'required',
                 'slug'              =>  'required',
                 'quantity'          =>  'required',
                 'brand_id'          =>  'required',
@@ -122,6 +125,7 @@ class ProductsController extends Controller
             $request->validate([
                 'name'              =>  'required',
                 'desc'              =>  'required',
+                'specification'     =>  'required',
                 'slug'              =>  'required',
                 'price'             =>  'required',
                 'brand_id'          =>  'required',
@@ -132,6 +136,7 @@ class ProductsController extends Controller
         $form_data = array(
             'name'              =>   $request->name,
             'desc'              =>   $request->desc,
+            'specification'     =>   $request->specification,
             'slug'              =>   $request->slug,
             'quantity'          =>   $request->quantity,
             'price'             =>   $request->price,
