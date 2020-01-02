@@ -19,7 +19,7 @@
                 <div class="service">
                     <div class="img-service">
                         <a href="{{ route('services.show', ['service' => $service->id]) }}">
-                            <img src="{{ URL::to('/') }}/images/{{ $service->thumbnail }}" class="img-thumbnail" />
+                            <img src="{{ URL::to('/') }}/images/{{ $service->thumbnail }}" />
                         </a>
                     </div>
                     <div class="info-service">
