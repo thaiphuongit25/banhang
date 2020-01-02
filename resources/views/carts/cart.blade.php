@@ -9,7 +9,7 @@
                 <form id="update_cart" action="/carts/update_to_cart" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
                     <table class="cart" cellpadding="0" cellspacing="0">
                         <tbody class="list-carts">
-                            <tr >
+                            <tr>
                                 <th> No. </th>
                                 <th> Tên sản phẩm </th>
                                 <th> Bảng giá </th>
@@ -72,11 +72,46 @@
                 </script>
             </div>
         </div>
+        @if (Auth::guest())
         <div style="border:1px solid #DDD;padding:10px;text-align:center">
             Vui lòng
-            <a style="margin:0 5px;" class="btn btn-primary" href="/account/login?path=%2Fcarts"><b>Đăng Nhập</b></a> để đặt hàng
+            <a style="margin:0 5px;" class="btn btn-primary" href="/user/login?path=%2Fcarts"><b>Đăng Nhập</b></a> để đặt hàng
+        </div>
+        @endif
+        @if (!Auth::guest())
+        <div id="infor_cart" style="margin-top:15px">
+            <div class="title-gh">
+                Hình thức giao hàng
+            </div>
+            <div class="method-cart">
+                <ul>
+                    <li>
+                        <input type="radio" name="bill_buy[delivery_method]" value="1" checked="checked" id="buy_in_shop">
+                        <label for="buy_in_shop">Mua và thanh toán tại cửa hàng</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="bill_buy[delivery_method]" value="2" id="express_delivery">
+                        <label for="express_delivery">Chuyển phát nhanh</label>
+                        <span id="express-delivery-value" data-value="37000" style="display:none">
+                        37,000  đ
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="border:1px solid #DDD;padding:10px;">
+            <ul id="list-info">
+                <li>
+                    <div id="action-cart">
+                        <input type="submit" id="btnSubmit" value="Đặt hàng" class="btn btn-primary confirm-order">
+                        <input type="button" value="Mua thêm" class="btn btn-warning continue-buy">
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
         </div>
 
+        @endif
         <div class="infor-cart-help">
             <div class="title-gh">
                 Trợ giúp
@@ -98,25 +133,29 @@
             <div class="clear"></div>
         </div>
     </div>
+    @if (Auth::guest())
     <div class="right-sidebar-cart right">
         <div style="background-color:#fff; border:1px solid #ccc; width:96%;float:right">
             <div class="title-gf" style="color:#FFF;padding: 5px 0 5px 10px;background: #3f96cf">
                 Đăng Nhập
             </div>
             <div style="padding:1px 0 6px 9px;">
-                <form class="new_user" id="new_user" action="/account/authenticate" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="Hf0eVFUZ3koyS6UMWnRrFUWPLbC6OMbnTmeGgISGLM6QslQnaCWpp5HPj7GZ0/DDA6ITtgoy6gJlI8n65p8JEA==">
+                <form class="new_user" id="new_user" method="POST" action="{{ route('login') }}" accept-charset="UTF-8">
+                    @csrf
+                    <input name="utf8" type="hidden" value="✓">
+                    <input type="hidden" name="authenticity_token" value="Hf0eVFUZ3koyS6UMWnRrFUWPLbC6OMbnTmeGgISGLM6QslQnaCWpp5HPj7GZ0/DDA6ITtgoy6gJlI8n65p8JEA==">
                     <p style="padding:8px 0 0 0; font-weight:bolder;">
                         Email
                     </p>
                     <p>
-                        <input value="" style="border:1px solid #DDD; padding:6px;width:90%" type="text" name="user[email]" id="user_email">
+                        <input value="" style="border:1px solid #DDD; padding:6px;width:90%" type="text" name="email" id="user_email">
                         <input type="hidden" value="/carts" name="path">
                     </p>
                     <p style="padding:8px 0 0 0; font-weight:bolder;">
                         Mật khẩu
                     </p>
                     <p>
-                        <input style="border:1px solid #DDD; padding:6px;width:90%" type="password" name="user[password]" id="user_password">
+                        <input style="border:1px solid #DDD; padding:6px;width:90%" type="password" name="password" id="user_password">
                     </p>
 
                     <p style="padding:8px 0 0 0px; text-align:left;">
@@ -129,6 +168,7 @@
         </div>
 
     </div>
+    @endif
     <script type="text/javascript">
         function checkForm(event) {
             var capt_value = $("#captcha_valid").val().toUpperCase();

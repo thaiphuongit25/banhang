@@ -17,6 +17,7 @@ Route::get('/product/{slug}', 'ProductsController@showCategories')->name('catego
 Route::get('/products', 'ProductsController@search')->name('products_search');
 Route::get('/carts', 'CartsController@cart')->name('carts');
 Route::get('/cart_products', 'CartsController@cartProducts')->name('carts_products');
+Route::post('/buy_products', 'CartsController@buyProducts')->name('carts_products');
 
 Route::get('/suppliers', function () {
     return view('suppliers.index');
@@ -51,21 +52,16 @@ Route::resource('articles', 'ArticleController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
 Route::post('comments/reply', 'CommentController@reply')->name('comments.reply');
 
-Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'admin'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'middleware' => 'auth'], function () {
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
     Route::resource('brands', 'BrandsController');
-    Route::resource('users', 'UsersController', [ 'as' => 'admin' ]);
-    Route::resource('orders', 'OrdersController', [ 'as' => 'admin' ]);
-    Route::resource('services', 'ServicesController', [
-        'as' => 'admin'
-    ]);
-    Route::resource('article_categories', 'ArticleCategoriesController', [
-        'as' => 'admin'
-    ])->except(['destroy']);
-    Route::resource('articles', 'ArticlesController', [
-        'as' => 'admin'
-    ]);
+    Route::resource('types', 'TypesController');
+    Route::resource('categories', 'CategoriesController');
+    Route::resource('orders', 'OrdersController');
+    Route::resource('services', 'ServicesController');
+    Route::resource('article_categories', 'ArticleCategoriesController')->except(['destroy']);
+    Route::resource('articles', 'ArticlesController');
 });
 
 Route::get('/news', 'ArticleController@index');

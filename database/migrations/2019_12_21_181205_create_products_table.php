@@ -19,14 +19,15 @@ class CreateProductsTable extends Migration
             $table->integer('brand_id')->references('id')->on('brands');
             $table->string('name', 200);
             $table->string('desc');
+            $table->string('image');
             $table->string('specification');
             $table->integer('quantity');
-            $table->integer('price');
-            $table->integer('status');
+            $table->integer('price')->default(0);;
+            $table->integer('status')->default(1);
             $table->string('slug');
-            $table->string('meta_title');
-            $table->string('meta_keywords');
-            $table->string('meta_description');
+            $table->string('meta_title')->default(null);;
+            $table->string('meta_keywords')->default(null);;
+            $table->string('meta_description')->default(null);
             $table->timestamps();
         });
     }

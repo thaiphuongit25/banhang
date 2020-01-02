@@ -63,7 +63,7 @@
                             @foreach ( $category->products as $product )
                                 <div class="item-subject">
                                     <div class="image">
-                                        <a id="{{$product->id}}" class="review-product" title="ICDREC" href="/products/{{ $product->slug }}"><img alt="ICDREC" class="" src="https://thegioiic.com/upload/large/2734.jpg"></a>
+                                        <a id="{{$product->id}}" class="review-product" title="ICDREC" href="/products/{{ $product->slug }}"><img alt="ICDREC" class="" src="{{ URL::to('/') }}/images/{{ $product->image }}"></a>
                                     </div>
                                     <div class="name">
                                         <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}">{{ $product->name }}</a>

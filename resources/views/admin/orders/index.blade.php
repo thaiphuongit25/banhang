@@ -32,7 +32,7 @@
                     <td>{{$order->updated_at}}</td>
                     <td>{{$order->total}}</td>
                     <td>{{$order->note}}</td>
-                    <td> 
+                    <td>
                         @foreach(config('constants.order_status') as $status => $value)
                             @if ($order->status == $value)
                                 {{ $status }}

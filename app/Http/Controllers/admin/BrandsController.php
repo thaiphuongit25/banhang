@@ -13,10 +13,11 @@ class BrandsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $brands = Brand::all();
-        return view('admin.brands.index', compact('brands'));
+        $name = $request->has('search') ? $request->search : "";
+        $brands = Brand::where("name", 'LIKE','%'.$name.'%')->paginate(10);
+        return view('admin.brands.index', ['brands' => $brands]);
     }
 
     /**
@@ -38,10 +39,10 @@ class BrandsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name'    =>  'required',
+            'name'     =>  'required',
             'desc'     =>  'required',
             'slug'     =>  'required',
-            'logo'         =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'logo'     =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $logo = $request->file('logo');
@@ -57,7 +58,7 @@ class BrandsController extends Controller
 
         Brand::create($brand);
 
-        return redirect()->route('brands.index')->with('success', 'Data Added successfully.');
+        return redirect()->route('admin.brands.index')->with('success', 'Data Added successfully.');
     }
 
     /**
@@ -113,7 +114,7 @@ class BrandsController extends Controller
 
         Brand::whereId($id)->update($form_data);
 
-        return redirect()->route('brands.index')->with('success', 'Data Updated successfully.');
+        return redirect()->route('admin.brands.index')->with('success', 'Data Updated successfully.');
     }
 
     /**
@@ -126,6 +127,6 @@ class BrandsController extends Controller
     {
         $data = Brand::findOrFail($id);
         $data->delete();
-        return redirect()->route('brands.index')->with('success', 'Data is successfully deleted');
+        return redirect()->route('admin.brands.index')->with('success', 'Data is successfully deleted');
     }
 }

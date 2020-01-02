@@ -168,15 +168,15 @@
             <div id="info-product">
                 <div class="image-product-show">
                     <div class="image">
-                        <div class="show" href="https://thegioiic.com/upload/large/200.jpg" style="position: relative;">
-                            <img class="large" alt="LM258P" src="https://thegioiic.com/upload/large/200.jpg" id="show-img" style="width: 100%; height: 100%;">
+                        <div class="show" href="{{ URL::to('/') }}/images/{{ $product->image }}" style="position: relative;">
+                            <img class="large" alt="LM258P" src="{{ URL::to('/') }}/images/{{ $product->image }}" id="show-img" style="width: 100%; height: 100%;">
                             <div style="position: absolute; left: 76.5px; top: 149px; background-color: rgb(0, 0, 0); width: 100px; height: 100px; opacity: 0.2; border: 1px solid rgb(204, 204, 204); cursor: crosshair; display: none;"></div>
                         </div>
                     </div>
                     <div class="small-img">
                         <div class="small-container">
                             <div id="small-img-roll">
-                                <img src="https://thegioiic.com/upload/large/200.jpg" class="thumb show-small-img" alt="now" style="border: 1px solid rgb(149, 27, 37); padding: 2px;">
+                                <img src="{{ URL::to('/') }}/images/{{ $product->image }}" class="thumb show-small-img" alt="now" style="border: 1px solid rgb(149, 27, 37); padding: 2px;">
                             </div>
                         </div>
                     </div>
