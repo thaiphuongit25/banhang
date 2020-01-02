@@ -17,7 +17,7 @@ Route::get('/product/{slug}', 'ProductsController@showCategories')->name('catego
 Route::get('/products', 'ProductsController@search')->name('products_search');
 Route::get('/carts', 'CartsController@cart')->name('carts');
 Route::get('/cart_products', 'CartsController@cartProducts')->name('carts_products');
-Route::post('/buy_products', 'CartsController@buyProducts')->name('carts_products');
+Route::post('/buy_products', 'CartsController@buyProducts')->name('buys_products');
 
 Route::get('/suppliers', function () {
     return view('suppliers.index');

@@ -53,9 +53,15 @@ $(document).ready(function() {
 
             var totalPrice = function(products) {
                 let total = 0;
+                let cart = [];
+                let tmp = null;
                 products.forEach(function(value) {
                     total += getUnit(value.units, quantityCurrent(value.id))[0];
+                    tmp = getUnit(value.units, quantityCurrent(value.id));
+                    cart.push({id: value.id, quantity: quantityCurrent(value.id), unit: tmp[1]})
                 });
+                cart.push({total: total});
+                localStorage.setItem('buy_card', JSON.stringify(cart));
                 return total;
             }
             $.ajax({
@@ -176,7 +182,7 @@ $(document).ready(function() {
                         "<li>" +
                         "<div class='list-same'>" +
                         "<div class='image-same'>" +
-                        "<a href='/products/lm258p'><img alt='' src='https://thegioiic.com/upload/medium/200.jpg'></a>" +
+                        "<a href='/products/lm258p'><img alt='' src='/images/" + value.image + "'></a>" +
                         "</div>" +
                         "<div class='name-same'>" +
                         "<p class='name-a ablack'>" +
@@ -203,21 +209,34 @@ $(document).ready(function() {
             window.location.href = "/";
         });
         $(".confirm-order").click(function() {
-            let listCart = JSON.parse(localStorage.getItem('list_card'));
+            let listCart = JSON.parse(localStorage.getItem('buy_card'));
+            let method_check = $(".method-cart").find('input').toArray();
+            let note = "";
+            method_check.forEach(function(value){
+                if (value.checked){
+                    if (value.value == "1") {
+                        note = "Mua và thanh toán tại cửa hàng";
+                    } else {
+                        note = "Chuyển phát nhanh";
+                    }
+                }
+            });
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 }
             });
             $.ajax({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                },
                 type: 'post',
                 url: '/buy_products',
-                data: { cards: listCart },
+                data: { cards: listCart, note: note },
                 success: function(data) {
-
+                    if(data == true) {
+                        localStorage.removeItem('buy_card');
+                        localStorage.removeItem('list_card');
+                        setTimeout(alert('Đặt hàng thành công'), 2000);
+                        window.location.href = "/";
+                    }
                 },
                 error: function(error) {
                     console.log("da co loi xay ra");

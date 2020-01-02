@@ -86,11 +86,11 @@
             <div class="method-cart">
                 <ul>
                     <li>
-                        <input type="radio" name="bill_buy[delivery_method]" value="1" checked="checked" id="buy_in_shop">
+                        <input type="radio" name="bill_buy" value="1" checked="checked" id="buy_in_shop">
                         <label for="buy_in_shop">Mua và thanh toán tại cửa hàng</label>
                     </li>
                     <li>
-                        <input type="radio" name="bill_buy[delivery_method]" value="2" id="express_delivery">
+                        <input type="radio" name="bill_buy" value="2" id="buy_in_shop">
                         <label for="express_delivery">Chuyển phát nhanh</label>
                         <span id="express-delivery-value" data-value="37000" style="display:none">
                         37,000  đ

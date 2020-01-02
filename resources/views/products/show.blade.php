@@ -479,7 +479,7 @@
                             <li>
                                 <div class="list-same">
                                     <div class="image-same ">
-                                        <a href="/products/{{ $sameProduct->slug }}"><img alt="" src="https://thegioiic.com/upload/medium/612.jpg"></a>
+                                        <a href="/products/{{ $sameProduct->slug }}"><img alt="" src="{{ URL::to('/') }}/images/{{ $sameProduct->image }}"></a>
                                     </div>
                                     <div class="name-same">
                                         <p class="name-a ablack">
@@ -518,7 +518,7 @@
                             <li>
                                 <div class="list-same">
                                     <div class="image-same">
-                                        <a id="{{$product->id}}" class="review-product" href="/products/{{ $productHot->slug }}"><img alt="" src="https://thegioiic.com/upload/medium/14768.jpg"></a>
+                                        <a id="{{$product->id}}" class="review-product" href="/products/{{ $productHot->slug }}"><img alt="" src="{{ URL::to('/') }}/images/{{ $productHot->image }}"></a>
                                     </div>
                                     <div class="name-same">
                                         <p class="name-a ablack">
