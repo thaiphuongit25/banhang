@@ -95,7 +95,7 @@
                 <p style="position:relative;">
                     <input type="text" placeholder="Mã xác nhận" class="captcha-inputs {{ $errors && count($errors->get('captcha')) > 0 ? 'input-errors' : '' }}" name="captcha"
                         id="input_captcha_valid" value="" style="width: 84px; float: left; margin-top: 2px; margin-right: 10px;">
-                    {!! captcha_img() !!}
+                    {!! captcha_img('flat') !!}
                 </p>
             </div>
             @if(Auth::user())
