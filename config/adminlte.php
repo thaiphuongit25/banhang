@@ -205,6 +205,11 @@ return [
             'icon'    => 'fas fa-fw',
         ],
         [
+            'text'    => 'Đơn hàng',
+            'url'  => 'admin/orders',
+            'icon'    => 'fas fa-fw',
+        ],
+        [
             'text'    => 'Dịch vụ',
             'url'  => 'admin/services',
             'icon'    => 'fas fa-fw',

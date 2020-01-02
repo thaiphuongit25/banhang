@@ -33,6 +33,15 @@ class Product extends Model
         return $this->hasMany(Unit::class);
     }
 
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
+
+    public function quantity_by_order()
+    {
+        return $this->belongsTo(OrderDetail::class);
+
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable');
