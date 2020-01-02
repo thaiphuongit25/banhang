@@ -49,10 +49,7 @@ class ProductsController extends Controller
             'brand_id'          =>  'required',
             'category_id'       =>  'required',
             'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'price'             =>  'required',
-            'meta_title'        =>  'required',
-            'meta_keywords'     =>  'required',
-            'meta_description'  =>  'required'
+            'price'             =>  'required'
         ]);
 
         $image = $request->file('image');
@@ -111,10 +108,7 @@ class ProductsController extends Controller
                 'brand_id'          =>  'required',
                 'category_id'       =>  'required',
                 'price'             =>  'required',
-                'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-                'meta_title'        =>  'required',
-                'meta_keywords'     =>  'required',
-                'meta_description'  =>  'required'
+                'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
             ]);
 
             $image_name = time().'.'.$image->getClientOriginalExtension();
@@ -128,10 +122,7 @@ class ProductsController extends Controller
                 'slug'              =>  'required',
                 'price'             =>  'required',
                 'brand_id'          =>  'required',
-                'category_id'       =>  'required',
-                'meta_title'        =>  'required',
-                'meta_keywords'     =>  'required',
-                'meta_description'  =>  'required'
+                'category_id'       =>  'required'
             ]);
         }
 

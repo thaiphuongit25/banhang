@@ -23,13 +23,13 @@
             @method('PUT')
             @csrf
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Tên sản phẩm</label>
+                <label class="col-sm-2 col-form-label require">Tên sản phẩm</label>
                 <div class="col-sm-10">
                     <input type="text" name="name" class="form-control" value="{{ $product->name }}" />
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Thương hiệu</label>
+                <label class="col-sm-2 col-form-label require">Thương hiệu</label>
                 <div class="col-sm-10">
                     <select name="brand_id" class="form-control">
                         @foreach ($brands as $brand)
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Danh mục</label>
+                <label class="col-sm-2 col-form-label require">Danh mục</label>
                 <div class="col-sm-10">
                     <select name="category_id" class="form-control">
                         @foreach ($categories as $category)
@@ -57,9 +57,9 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Miêu tả</label>
+                <label class="col-sm-2 col-form-label require">Miêu tả</label>
                 <div class="col-sm-10">
-                    <input type="text" name="desc" class="form-control" value="{{ $product->desc }}" />
+                    <textarea name="desc">{{ $product->desc }}</textarea>
                 </div>
             </div>
             <div class="form-group row">
@@ -70,19 +70,19 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Giá cứng</label>
+                <label class="col-sm-2 col-form-label require">Giá cứng</label>
                 <div class="col-sm-10">
                     <input type="input" name="price" class="form-control"  value="{{ $product->price }}" />
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Số lượng</label>
+                <label class="col-sm-2 col-form-label require">Số lượng</label>
                 <div class="col-sm-10">
                     <input type="input" name="qunatity" class="form-control" value="{{ $product->quantity }}" />
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Slug</label>
+                <label class="col-sm-2 col-form-label require">Slug</label>
                 <div class="col-sm-10">
                     <input type="text" name="slug" class="form-control" value="{{ $product->slug }}" />
                 </div>
