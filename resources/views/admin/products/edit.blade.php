@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Giá cứng</label>
+                <label class="col-sm-2 col-form-label require">Giá cứng(VND)</label>
                 <div class="col-sm-10">
                     <input type="input" name="price" class="form-control"  value="{{ $product->price }}" />
                 </div>
@@ -78,7 +78,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Số lượng</label>
                 <div class="col-sm-10">
-                    <input type="input" name="qunatity" class="form-control" value="{{ $product->quantity }}" />
+                    <input type="input" name="quantity" class="form-control" value="{{ $product->quantity }}" />
                 </div>
             </div>
             <div class="form-group row">
