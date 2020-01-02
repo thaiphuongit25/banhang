@@ -72,3 +72,12 @@
     </div>
 </div>
 @stop
+@section('js')
+<script src={{ url('ckeditor/ckeditor.js') }}></script>
+<script>
+    CKEDITOR.replace( 'content', {
+        filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+    } );
+</script>
+@include('ckfinder::setup')
+@stop
