@@ -70,7 +70,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Số lượng</label>
                 <div class="col-sm-10">
-                    <input type="input" name="qunatity" class="form-control" />
+                    <input type="input" name="quantity" class="form-control" />
                 </div>
             </div>
             <div class="form-group row">
