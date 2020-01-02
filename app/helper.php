@@ -3,6 +3,7 @@
     use App\model\ArticleCategory;
     use App\model\Service;
     use App\model\Reply;
+    use App\model\Comment;
 
     function getTypes() {
         return Type::all();
@@ -36,6 +37,10 @@
             0 => 'Disabled',
             1 => 'Active'
         ][$status];
+    }
+
+    function getNewestComments() {
+        return Comment::with('user')->where('commentable_type', 'App\model\Product')->orderBy('id', 'DESC')->take(10)->get();
     }
 
 
