@@ -14,16 +14,22 @@ class Order extends Model
      * @var array
      */
     protected $fillable = [
-        'user_id', 'date_order', 'total', 'note'
-    ];
+        'id', 'user_id', 'date_order', 'total', 'note'
+     ];
 
-     public function user()
-     {
-         return $this->belongsTo(User::class);
-     }
+    public function scopeOrderDetail($query, $product_id)
+    {
+        return $query->where('product_id', $product_id);
+    }
+ 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
-     public function products()
-     {
-        return $this->belongsToMany(Product::class);
-     }
+    public function products()
+    {
+        return $this->belongsToMany(Product::class, 'order_details')
+                    ->withPivot('quantity', 'price');
+    }
 }

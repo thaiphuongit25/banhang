@@ -19,6 +19,11 @@ class Product extends Model
        'meta_keywords', 'meta_description', 'specification', 'quantity'
     ];
 
+    public function scopeOrderDetail($query, $order_id)
+    {
+        return $query->where('order_id', $order_id);
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -37,11 +42,6 @@ class Product extends Model
     public function orders()
     {
         return $this->belongsToMany(Order::class);
-    }
-
-    public function quantity_by_order()
-    {
-        return $this->belongsTo(OrderDetail::class);
     }
 
     public function comments()
