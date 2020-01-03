@@ -75,7 +75,7 @@
         @if (Auth::guest())
         <div style="border:1px solid #DDD;padding:10px;text-align:center">
             Vui lòng
-            <a style="margin:0 5px;" class="btn btn-primary" href="/user/login?path=%2Fcarts"><b>Đăng Nhập</b></a> để đặt hàng
+            <a style="margin:0 5px;" class="btn btn-primary" href="/login"><b>Đăng Nhập</b></a> để đặt hàng
         </div>
         @endif
         @if (!Auth::guest())
