@@ -34,7 +34,7 @@ class BrandController extends Controller
      */
     public function show($id)
     {
-        $brand = Brand::active()->findOrFail($id);
+        $brand = Brand::active()->whereSlug($id)->firstOrFail();
         $products = Product::where('brand_id', $brand->id)->paginate(20);
         $total_count = Product::where('brand_id', $brand->id)->count();
         return view('brands.show', compact('brand', 'products', 'total_count'));

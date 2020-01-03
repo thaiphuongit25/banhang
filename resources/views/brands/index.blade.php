@@ -30,12 +30,12 @@
                         @foreach ($brands as $brand)
                         <li style="width:30%;float:left;height: 185px;margin:0 10px 10px 10px;text-align:center;border:1px solid #DDD;border-radius:5px">
                             <div style="min-height:100px; margin-top:12px;">
-                                <a href="{{ route('brands.show', ['brand' => $brand->id]) }}">
+                                <a href="{{ route('brands.show', ['brand' => $brand->slug]) }}">
                                     <img alt="" src="{{ URL::to('/') }}/images/{{ $brand->logo }}">
                                 </a>
                             </div>
                             <div>
-                                <a href="{{ route('brands.show', ['brand' => $brand->id]) }}">Atmel</a>
+                                <a href="{{ route('brands.show', ['brand' => $brand->slug]) }}">Atmel</a>
                             </div>
                         </li>
                         @endforeach
