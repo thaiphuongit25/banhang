@@ -3,7 +3,7 @@
     <div class="texttitle sitemaps">
         <a href="/">Trang Chủ</a>
         <a href="/brands">Thương hiệu</a>
-        <a href="/brands/{{ $brand->id }}">{{ $brand->name }}</a>
+        <a href="/brands/{{ $brand->slug }}">{{ $brand->name }}</a>
     </div>
 </div>
 <div id="body-left">
