@@ -3,7 +3,7 @@
     <div class="texttitle sitemaps">
         <a href="/">Trang Chủ</a>
         <a href="/news">Tin tức</a>
-        <a href="/news-detail/{{ $article->id }}">{{ $article->title }}</a>
+        <a href="/news-detail/{{ $article->slug }}">{{ $article->title }}</a>
     </div>
 </div>
 <div id="body-left">

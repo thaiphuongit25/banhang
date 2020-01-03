@@ -5,7 +5,7 @@
     <ul class="ul-left-page">
         @foreach (getArticleCategories() as $category)
         <li>
-            <a class="parent" href="/news/{{ $category->id }}">{{ $category->name }}</a>
+            <a class="parent" href="/news/{{ $category->slug }}">{{ $category->name }}</a>
         </li>
         @endforeach
     </ul>

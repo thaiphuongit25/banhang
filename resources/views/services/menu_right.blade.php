@@ -10,7 +10,7 @@
         <ul class="ul-left-page">
             @foreach ($category->articles as $article)
             <li>
-                <a href="/news/{{ $article->id }}">{{ $article->title }}</a>
+                <a href="/news-detail/{{ $article->slug }}">{{ $article->title }}</a>
             </li>
             @endforeach
         </ul>

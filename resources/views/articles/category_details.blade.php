@@ -13,18 +13,18 @@
         <div style="padding-bottom:25px;position:relative" class="_100">
             <div class="show-page" style="background-color:#fff;margin-bottom:10px;border: 1px solid #DDD;border-radius:8px">
                 <div class="title-show-page">
-                    <a href="{{ route('article_category_details', ['id' => $category->id]) }}">{{ $category->name }}</a>
+                    <a href="{{ route('article_category_details', ['id' => $category->slug]) }}">{{ $category->name }}</a>
                 </div>
                 <ul class="page-tech">
                     @foreach ($articles as $article)
                     <li style="background: none;padding-left: 0;">
                         <div style="float:left;margin-right: 4%;width:22%;">
-                            <a style="padding-right:6px; display:block; float:left;" href="{{ route('articles.show', ['article' => $article->id]) }}">
+                            <a style="padding-right:6px; display:block; float:left;" href="/news-detail/{{ $article->slug }}">
                                 <img src="{{ URL::to('/') }}/images/{{ $article->thumbnail }}" />
                             </a>
                         </div>
                         <div style="width: 73%;float: left;">
-                            <a href="{{ route('articles.show', ['article' => $article->id]) }}">{{ $article->title }}</a>
+                            <a href="/news-detail/{{ $article->slug }}">{{ $article->title }}</a>
                             <br>
                             <span style=" padding:2px 2px 0 3px;">{{ date('d/m/Y | G:i', strtotime($article->created_at)) }}</span>
                             <span class="cmt-count">0</span>

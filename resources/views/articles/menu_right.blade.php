@@ -9,7 +9,7 @@
         <ul class="ul-left-page">
             @foreach (getSuggestServices() as $service)
             <li>
-                <a class="tip-service" href="{{ route('services.show', ['service' => $service->id]) }}">{{ $service->title }}</a>
+                <a class="tip-service" href="/services/{{ $service->slug }}">{{ $service->title }}</a>
             </li>
             @endforeach
         </ul>

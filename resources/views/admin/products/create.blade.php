@@ -52,7 +52,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Miêu tả</label>
                 <div class="col-sm-10">
-                    <textarea name="desc"></textarea>
+                    <input type="text" name="desc" class="form-control">
                 </div>
             </div>
             <div class="form-group row">

@@ -8,7 +8,7 @@
 					</a>
             </li>
             <li class="mn-supplier">
-                <a class="menu_parent" href="/suppliers">Thương hiệu</a>
+                <a class="menu_parent" href="/brands">Thương hiệu</a>
             </li>
             <li class="mn-service">
                 <a href="/services" class="menu_parent" rel="submenu2">Dịch vụ</a>

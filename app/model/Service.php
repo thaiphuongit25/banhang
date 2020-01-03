@@ -4,9 +4,38 @@ namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
 use App\model\Comment;
+use Cviebrock\EloquentSluggable\Sluggable;
+use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
 class Service extends Model
 {
+    use Sluggable;
+    use SluggableScopeHelpers;
+
+    /**
+     * Return the sluggable configuration array for this model.
+     *
+     * @return array
+     */
+    public function sluggable()
+    {
+        return [
+            'slug' => [
+                'source' => 'title'
+            ]
+        ];
+    }
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
     public function comments()
     {
         return $this->morphMany(Comment::class, 'commentable');

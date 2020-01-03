@@ -26,7 +26,7 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $service = Service::active()->findOrFail($id);
+        $service = Service::active()->whereSlug($id)->firstOrFail();
         return view('services.show', compact('service'));
     }
 }

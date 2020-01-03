@@ -148,7 +148,7 @@
                     <div class="info-product-show infodescription">
                         <div id="info-p">
                             <p style="padding:4px 0">
-                                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/suppliers/{{ $product->brand->slug }}">{{ $product->brand->name }}</a>
+                                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/brands/{{ $product->brand->slug }}">{{ $product->brand->name }}</a>
                             </p>
                             <div class="inventory_product">
                                 <div class="contact-to-order-w bgaqua"><span class="icon-i"></span>

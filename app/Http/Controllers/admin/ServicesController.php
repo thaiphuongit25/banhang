@@ -40,7 +40,6 @@ class ServicesController extends Controller
         $request->validate([
             'title'     =>  'required',
             'content'   =>  'required',
-            'slug'      =>  'required',
             'thumbnail' =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -91,7 +90,7 @@ class ServicesController extends Controller
             $request->validate([
                 'title'     =>  'required',
                 'content'   =>  'required',
-                'slug'      =>  'required',
+                'slug'      =>  'required|unique:services',
                 'thumbnail' =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
