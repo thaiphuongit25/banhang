@@ -36,8 +36,7 @@
                             {{ $product->desc }}
                         </div>
                         <div class="price blue">
-                            255,000 đ
-                            /Cái
+                            {{ number_format($product->price) }} đ/Cái
                         </div>
                         <div>
                             <span class="green"> <a class="contact-to-order"

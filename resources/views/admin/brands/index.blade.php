@@ -35,6 +35,7 @@
             <td>Tên thương hiệu</td>
             <td>Miêu tả</td>
             <td>Hình ảnh</td>
+            <td>Slug</td>
             </tr>
         </thead>
         <tbody>
@@ -44,6 +45,7 @@
                 <td>{{$brand->name}}</td>
                 <td>{!! Str::words(strip_tags($brand->desc), 30, '...')  !!}</td>
                 <td><img src="{{ URL::to('/') }}/images/{{ $brand->logo }}" class="img-thumbnail" width="75" /></td>
+                <td>{{$brand->slug}}</td>
                 <td>
                     <a href="{{ route('admin.brands.edit',$brand->id) }}" class="btn btn-primary">Edit</a>
                 </td>
