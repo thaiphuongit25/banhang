@@ -8,13 +8,6 @@
         <form class="new_user" id="new_user" method="POST" action="{{ route('login') }}">
             <input name="utf8" type="hidden" value="✓">
             @csrf
-              <p id="login-error" style="color: red;">
-                  @if (count($errors->get('email')) > 0 || count($errors->get('password')) > 0)
-                    <span class="alert alert-danger" role="alert">
-                        <strong>Tài khoản hoặc mật khẩu không chính xác</strong>
-                    </span>
-                  @endif
-              </p>
               <p style="padding:8px 0 0 0; font-weight:bolder;">
                 Email
               </p>
@@ -37,10 +30,3 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
-@if (count($errors->get('email')) > 0 || count($errors->get('password')) > 0)
-  @if (!Request::is('login'))
-    $('#login_dialog').show();
-  @endif
-@endif
-</script>
