@@ -29,14 +29,14 @@
 </head>
 
 <body data-cart="0">
-  <!-- <div id="top-fix-scroll" class="top-fix-scroll">
-    <div id="top-fix-scroll" class="top-fix-scroll">
+  <div id="top-fix-scroll" class="top-fix-scroll" style="height: 40px;">
+    <div id="top-fix-scroll">
       <div>
         <div class="logo-scroll">
-          <a href="index.html"><img alt="" class="" src="upload/large/12525.jpg" /></a>
+          <a href="index.html"><img alt="" class="" src="https://thegioiic.com/upload/large/12525.jpg" /></a>
         </div>
         <div class="form-scroll" id="main-search-scroll">
-          <form action="https://thegioiic.com/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          <form action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
             <div class="namesub">
               <input type="text" placeholder="Tên sản phẩm" name="search" value="" autocomplete="off" id="txtQueryTop" class="defaultText text">
               <input type="submit" class="btn-search-home" value="" style="right:7px;top:4px">
@@ -44,25 +44,19 @@
           </form>
         </div>
         <div class="register-cart">
-          <div class="scroll-flag">
-            <div class="flag f">
-              <a href="forum.html"><img src="images/flag_vn.gif"></a>
-            </div>
-            <div class="flag">
-              <a href="product/rf-detector.html"><img src="images/flag_en.gif"></a>
-            </div>
-          </div>
           <div class="register-scroll">
-            <div class="user_control" style="position:relative;margin-top:5px">
+            <div class="user_control" style="display: flex;">
               <input type="hidden" id="check_login" value="0">
               @if (Auth::check())
-                      do this
+              <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
+              <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
               @else
-              <a href="account/login.html">Đăng Nhập</a></a>
-              | <a href="/register">Đăng Ký</a></a>
+              <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
               @endif
+              <a class="support-img" href="/support/me"><img src="/images/yah.png" alt="Yah"></a>
             </div>
           </div>
+
           <div class="cart-scroll" id="box-cart-scroll">
             <div id="cart1" class="cart-popup-hover-scroll">
               <a class="bb-hover" href="carts.html">
@@ -81,10 +75,10 @@
         <div class="clear"></div>
       </div>
     </div>
-  </div> -->
+  </div>
   <h1 class="h1_home">IC, transistor, capacitor, inductor, Linh kiện điện tử, linh kien dien tu, electronic component</h1>
   <div id="divAdRight" style="position: absolute; top: 0px">
-    <a href="http://ledsang.com/" TARGET="_blank"><img src="upload/large/10493.jpg" width="140" /></a>
+    <a href="http://ledsang.com/" TARGET="_blank"><img src="https://thegioiic.com/upload/large/10493.jpg" width="140" /></a>
   </div>
   <div class="container">
     <div id="top_bar" class="col-12">
