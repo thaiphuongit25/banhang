@@ -14,10 +14,15 @@ class Brand extends Model
      */
     protected $fillable = [
         'id', 'name', 'desc', 'slug', 'logo'
-     ];
+    ];
 
-     public function products()
-     {
-         return $this->hasMany(Product::class);
-     }
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
+
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
+    }
 }

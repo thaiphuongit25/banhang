@@ -19,10 +19,6 @@ Route::get('/carts', 'CartsController@cart')->name('carts');
 Route::get('/cart_products', 'CartsController@cartProducts')->name('carts_products');
 Route::post('/buy_products', 'CartsController@buyProducts')->name('buys_products');
 
-Route::get('/suppliers', function () {
-    return view('suppliers.index');
-});
-
 Route::get('/services', function () {
     return view('services.index');
 });
@@ -49,6 +45,7 @@ Route::post('/change-password', 'UserController@changePassword');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController')->only(['index', 'show']);
 Route::resource('articles', 'ArticleController')->only(['index', 'show']);
+Route::resource('brands', 'BrandController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
 Route::post('comments/reply', 'CommentController@reply')->name('comments.reply');
 

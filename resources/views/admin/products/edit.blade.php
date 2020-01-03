@@ -59,7 +59,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Miêu tả</label>
                 <div class="col-sm-10">
-                    <textarea name="desc">{{ $product->desc }}</textarea>
+                    <input type="text" name="desc" class="form-control" value="{{ $product->desc }}">
                 </div>
             </div>
             <div class="form-group row">
