@@ -13,11 +13,11 @@ class Unit extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'number', 'unit_price'
-     ];
+        'id', 'product_id', 'number', 'unit_price'
+    ];
 
-     public function product()
-     {
-         return $this->belongsTo(Product::class);
-     }
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
 }

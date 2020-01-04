@@ -20,6 +20,12 @@ class ProductsController extends Controller
         return view('products.index', compact('types'));
     }
 
+    public function searchAutoHome(Request $request)
+    {
+        $q = $request->has('q') ? $request->q : '';
+        $products = Product::where('name', 'LIKE', '%'.$q.'%')->get();
+        return response()->json(['total' => count($products), 'products' => $products]);
+    }
     /**
      * Show the form for creating a new resource.
      *
