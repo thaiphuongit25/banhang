@@ -233,6 +233,11 @@ return [
             'text'    => 'Tin tức',
             'url'  => 'admin/articles',
             'icon'    => 'fas fa-fw',
+        ],
+        [
+            'text'    => 'Khách hàng',
+            'url'  => 'admin/users',
+            'icon'    => 'fas fa-fw',
         ]
     ],
 
