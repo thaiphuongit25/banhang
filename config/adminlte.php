@@ -197,47 +197,49 @@ return [
         [
             'text'    => 'Thương hiệu',
             'url'  => 'admin/brands',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'fas fa-copyright',
         ],
         [
             'text'    => 'Phân Loại',
             'url'  => '/admin/types',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'fas fa-list-alt',
         ],
         [
+
             'text'    => 'Danh mục',
             'url'  => '/admin/categories',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'fas fa-th-list',
         ],
         [
             'text'    => 'Sản phẩm',
             'url'  => 'admin/products',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'fas fa-cogs',
         ],
         [
             'text'    => 'Đơn hàng',
             'url'  => '/admin/orders',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'fas fa-file-invoice-dollar',
         ],
         [
             'text'    => 'Dịch vụ',
             'url'  => 'admin/services',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'fas fa-business-time',
         ],
         [
             'text'    => 'Danh mục tin tức',
             'url'  => 'admin/article_categories',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'fas fa-list-alt',
         ],
         [
             'text'    => 'Tin tức',
             'url'  => 'admin/articles',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'far fa-newspaper',
         ],
         [
             'text'    => 'Khách hàng',
             'url'  => 'admin/users',
-            'icon'    => 'fas fa-fw',
+            'icon'    => 'fas fa-users',
+
         ]
     ],
 
