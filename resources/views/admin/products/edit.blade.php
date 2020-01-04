@@ -111,6 +111,41 @@
                     <input categorie="text" name="meta_description" value="{{ $product->meta_description }}" class="form-control" />
                 </div>
             </div>
+            <div class="form-group row">
+                <input type="hidden" name="count" value="1" />
+                <label class="col-sm-2 col-form-label">Đơn giá</label>
+                <div class="col-sm-10" id="fields">
+                @foreach ($product->units as $unit)
+                    <div class="row margin-button">
+                        <div class="col-sm-3">
+                            <input autocomplete="off" value="{{ $unit->number }}" class="form-control" name="number-{{ $unit->id }}" type="text" placeholder="Số lượng">
+                        </div>
+                        <div class="col-sm-3">
+                            <input autocomplete="off" value="{{ $unit->unit_price }}" class="form-control" name="unit-{{ $unit->id }}" type="text" placeholder="Đơn giá(VND)">
+                        </div>
+                        <div class="col-sm-1">
+                            <button id="b1" class="btn btn-primary add-more form-control" type="button">+</button>
+                        </div>
+                        <div class="col-sm-1">
+                            <button id="b1" class="btn btn-danger remove-me form-control" type="button">-</button>
+                        </div>
+                    </div>
+                @endforeach
+                @if (!count($product->units))
+                <div class="row margin-button">
+                    <div class="col-sm-3">
+                        <input autocomplete="off" class="form-control" name="number_" type="text" placeholder="Số lượng">
+                    </div>
+                    <div class="col-sm-3">
+                        <input autocomplete="off" class="form-control" name="unit_" type="text" placeholder="Đơn giá(VND)">
+                    </div>
+                    <div class="col-sm-1">
+                        <button id="b1" class="btn btn-primary add-more form-control" type="button">+</button>
+                    </div>
+                </div>
+                @endif
+                </div>
+            </div>
             <div class="form-group text-center">
                 <input type="submit" name="add" class="btn btn-primary input-lg" value="Cập nhật" />
             </div>
@@ -122,6 +157,7 @@
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 @section('js')
+<script src={{ url('js/custom.js') }}></script>
 <script src={{ url('ckeditor/ckeditor.js') }}></script>
 <script>
     CKEDITOR.replace( 'specification', {

@@ -38,10 +38,15 @@
                         <div class="price blue">
                             {{ number_format($product->price) }} đ/Cái
                         </div>
-                        <div>
+                        {{--  <div>
                             <span class="green"> <a class="contact-to-order"
                                     href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                        </div>
+                        </div>  --}}
+                        @if ($product->status == 0)
+                            <div class="brown"><span class="f"><a class="contact-to-order-show" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span><span>(Đặt mua 7-10 ngày có hàng)</span></div>
+                        @else
+                            <div class="ngreen"><span class="f">Hàng còn:  {{ $product->quantity }} Cái</span><span>(Gửi hàng trong ngày)</span></div>
+                        @endif
                     </div>
                     <div class="adtocartdestop" style="float:left; width:180px;text-align: right">
                         <input type="hidden" name="id" class="product_id" value="19">

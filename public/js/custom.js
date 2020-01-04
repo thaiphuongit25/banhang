@@ -19,7 +19,7 @@ $(document).ready(function() {
         }
 
         var getUnit = function(units, quantity, price) {
-            let  unit = price;
+            let unit = price;
             if (units.length > 0) {
                 unit = units[0].unit_price;
                 units.forEach(function(value) {
@@ -61,9 +61,9 @@ $(document).ready(function() {
                 products.forEach(function(value) {
                     total += getUnit(value.units, quantityCurrent(value.id), value.price)[0];
                     tmp = getUnit(value.units, quantityCurrent(value.id), value.price);
-                    cart.push({id: value.id, quantity: quantityCurrent(value.id), unit: tmp[1]})
+                    cart.push({ id: value.id, quantity: quantityCurrent(value.id), unit: tmp[1] })
                 });
-                cart.push({total: total});
+                cart.push({ total: total });
                 localStorage.setItem('buy_card', JSON.stringify(cart));
                 return total;
             }
@@ -215,8 +215,8 @@ $(document).ready(function() {
             let listCart = JSON.parse(localStorage.getItem('buy_card'));
             let method_check = $(".method-cart").find('input').toArray();
             let note = "";
-            method_check.forEach(function(value){
-                if (value.checked){
+            method_check.forEach(function(value) {
+                if (value.checked) {
                     if (value.value == "1") {
                         note = "Mua và thanh toán tại cửa hàng";
                     } else {
@@ -234,7 +234,7 @@ $(document).ready(function() {
                 url: '/buy_products',
                 data: { cards: listCart, note: note },
                 success: function(data) {
-                    if(data == true) {
+                    if (data == true) {
                         localStorage.removeItem('buy_card');
                         localStorage.removeItem('list_card');
                         setTimeout(alert('Đặt hàng thành công, Vui lòng liên hệ liên hệ tới số máy (28)3896.8699 | 0972924961 để đặt hàng.'), 2000);
@@ -247,4 +247,34 @@ $(document).ready(function() {
             })
         });
     }
+
+    var next = 0;
+    $(".add-more").click(function(e) {
+        e.preventDefault();
+        var addto = "#field" + next;
+        var addRemove = "#field" + (next);
+        next = next + 1;
+        var newIn = '<div class="row margin-button">' +
+            '<div class="col-sm-3">' +
+            '<input autocomplete="off" class="form-control" name="number_' + next + '"type="text" placeholder="Số lượng" data-items="1">' +
+            '</div>' +
+            '<div class="col-sm-3">' +
+            '<input autocomplete="off" class="form-control" name="unit_' + next + '"type="text" placeholder="Đơn giá(VND)" data-items="2">' +
+            '</div>' +
+            '<div class="col-sm-1">' +
+            '<button class="btn btn-danger remove-me form-control" type="button">-</button>' +
+            '</div>' +
+            '</div>';
+
+        $("#fields").append(newIn);
+
+        $('.remove-me').click(function(e) {
+            e.preventDefault();
+            $(this).parent().parent().remove();
+        });
+    });
+    $('.remove-me').click(function(e) {
+        e.preventDefault();
+        $(this).parent().parent().remove();
+    });
 });

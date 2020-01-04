@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\model\Product;
 use App\model\Brand;
 use App\model\Category;
+use App\model\Unit;
 
 class ProductsController extends Controller
 {
@@ -72,8 +73,29 @@ class ProductsController extends Controller
             'meta_keywords'      =>   $request->meta_keywords,
             'meta_description'   =>   $request->meta_description
         );
+        $product = Product::create($product);
+        $units = [];
+        $i = 0;
+        foreach($request->request as $key => $value) {
+            //dd($key);
+            if (stripos($key, "number") !== false) {
+                array_push($units, ['number' => $value]);
+            }
+            if (stripos($key, "unit") !== false) {
+                $units[$i]['unit'] = $value;
+                $i += 1;
+            }
+        }
 
-        Product::create($product);
+        if (count($units)) {
+            foreach($units as $unit) {
+                Unit::create([
+                    'product_id' => $product->id,
+                    'number'     => $unit['number'],
+                    'unit_price' => $unit['unit']
+                ]);
+            }
+        }
 
         return redirect()->route('admin.products.index')->with('success', 'Data Added successfully.');
     }
@@ -149,6 +171,64 @@ class ProductsController extends Controller
         );
 
         Product::whereId($id)->update($form_data);
+        $units = [];
+        $unitsOld = [];
+        $i = 0;
+        $j = 0;
+        foreach($request->request as $key => $value) {
+            if (stripos($key, "number-") !== false) {
+                $idUnit = explode("-", $key)[1];
+                array_push($unitsOld, ['id' => $idUnit, 'number' => $value]);
+            }
+
+            if (stripos($key, "unit-") !== false) {
+                $unitsOld[$j]['unit'] = $value;
+                $j += 1;
+            }
+
+            if (stripos($key, "number_") !== false) {
+                array_push($units, ['number' => $value]);
+            }
+            if (stripos($key, "unit_") !== false) {
+                $units[$i]['unit'] = $value;
+                $i += 1;
+            }
+        }
+
+        if (count($unitsOld)) {
+            foreach($unitsOld as $unit) {
+                Unit::whereId($unit['id'])->update([
+                    'product_id' => $id,
+                    'number'     => $unit['number'],
+                    'unit_price' => $unit['unit']
+                ]);
+            }
+        }
+
+        $product =  Product::findOrFail($id);
+        foreach($product->units as $unit){
+            $check = false;
+            foreach($unitsOld as $u) {
+                if ($unit-> id == $u['id']) {
+                    $check = true;
+                }
+            }
+            if (!$check) {
+                Unit::findOrFail($unit->id)->delete();
+            }
+        }
+
+        if (count($units)) {
+            foreach($units as $unit) {
+                Unit::create(
+                    [
+                        'product_id' => $id,
+                        'number'     => $unit['number'],
+                        'unit_price' => $unit['unit']
+                    ]
+                );
+            }
+        }
 
         return redirect()->route('admin.products.index')->with('success', 'Data Updated successfully.');
     }

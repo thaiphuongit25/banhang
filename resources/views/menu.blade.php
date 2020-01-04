@@ -1,11 +1,14 @@
 <div class="col-12 main-col">
     <div class="f1">
         <ul class="sf-menu">
+            <li class="mn-supplier">
+                <a class="menu_parent" href="/">Trang chủ</a>
+            </li>
             <li class="mn-product">
                 <a href="javascript:" class="menu_parent">
-						Sản phẩm
-						<span class="icon icon-down"></span>
-					</a>
+                    Sản phẩm
+                    <span class="icon icon-down"></span>
+				</a>
             </li>
             <li class="mn-supplier">
                 <a class="menu_parent" href="/brands">Thương hiệu</a>

@@ -387,10 +387,6 @@
     </div>
     <script type="text/javascript">
         $(document).ready(function($) {
-            $(".btn-cart").click(function() {
-                alert("get card");
-            });
-
             $("ul#product_tab li a").click(function() {
                 var id = $(this).attr('data-id');
                 $("ul#product_tab li a").removeClass("select");
