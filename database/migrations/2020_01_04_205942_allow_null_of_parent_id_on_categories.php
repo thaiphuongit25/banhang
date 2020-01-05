@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddStatusToOrders extends Migration
+class AllowNullOfParentIdOnCategories extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class AddStatusToOrders extends Migration
      */
     public function up()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->integer('status')->default(0);
+        Schema::table('categories', function (Blueprint $table) {
+            $table->integer('parent_id')->nullable()->change();
         });
     }
 
@@ -25,8 +25,8 @@ class AddStatusToOrders extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->dropColumn(['status']);
+        Schema::table('categories', function (Blueprint $table) {
+            $table->integer('parent_id')->change();
         });
     }
 }

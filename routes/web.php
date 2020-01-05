@@ -43,6 +43,8 @@ Auth::routes();
 
 Route::get('/mypage', 'UserController@mypage');
 Route::post('/update_info', 'UserController@update');
+Route::get('/favorites', 'FavoriteCOntroller@lists');
+Route::post('/favorite', 'FavoriteCOntroller@add');
 Route::get('/change-password', 'UserController@showChangePasswordForm');
 Route::post('/change-password', 'UserController@changePassword');
 

@@ -161,16 +161,9 @@
   </div>
   <div id="wrapper">
     <div id="body">
-      @if (session('error'))
-      <div class="alert alert-danger">
-        {{ session('error') }}
+      <div class="flash-message">
+        @include('layouts.partials.alert_section')
       </div>
-      @endif
-      @if (session('success'))
-      <div class="alert alert-success">
-        {{ session('success') }}
-      </div>
-      @endif
       @yield('content')
       @include('auth.login_dialog')
     </div>
