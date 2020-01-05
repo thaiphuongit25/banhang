@@ -39,6 +39,20 @@
         ][$status];
     }
 
+    function bannerTypeText($type) {
+        return
+        [   
+            0 => 'Logo',
+            1 => 'Trên cùng bên phải',
+            2 => 'Trên cùng bên trái',
+            3 => 'Bên trái ngoài cùng',
+            4 => 'Bên phải ngoài cùng',
+            5 => 'Bên trái',
+            6 => 'Bên phải',
+            7 => 'Slider'
+        ][$type];
+    }
+
     function getNewestComments() {
         return Comment::with('user')->where('commentable_type', 'App\model\Product')->orderBy('id', 'DESC')->take(10)->get();
     }

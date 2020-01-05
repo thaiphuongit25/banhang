@@ -240,6 +240,11 @@ return [
             'url'  => 'admin/users',
             'icon'    => 'fas fa-users',
 
+        ],
+        [
+            'text'    => 'Banner',
+            'url'  => 'admin/banners',
+            'icon'    => 'fas fa-images',
         ]
     ],
 
