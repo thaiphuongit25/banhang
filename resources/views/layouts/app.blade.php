@@ -59,7 +59,7 @@
 
           <div class="cart-scroll" id="box-cart-scroll">
             <div id="cart1" class="cart-popup-hover-scroll">
-              <a class="bb-hover" href="carts.html">
+              <a class="bb-hover" href="/carts">
                 <label class="lbcart">
                   Giỏ hàng
                 </label>
