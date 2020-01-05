@@ -14,12 +14,6 @@ class UsersController extends Controller
         return view('admin.users.index', compact('users'));
     }
 
-    public function show($id)
-    {
-        $user = User::customer()->findOrFail($id);
-        return view('admin.users.show', compact('user'));
-    }
-
     public function admins(){
 
     }
@@ -28,12 +22,21 @@ class UsersController extends Controller
 
     }
 
-    public function edit(){
-
+    public function edit($id){
+        $user = User::customer()->findOrFail($id);
+        return view('admin.users.edit', compact('user'));
     }
 
-    public function update(){
+    public function update(Request $request, $id){
+        $request->validate([
+            'is_admin' => 'required'
+        ]);
+        $form_data = array(
+            'is_admin' => $request->is_admin
+        );
+        User::whereId($id)->update($form_data);
 
+        return redirect()->route('admin.users.index')->with('success', 'Data Updated successfully.');
     }
 
     public function delete(){
