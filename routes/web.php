@@ -59,7 +59,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::resource('services', 'ServicesController');
     Route::resource('article_categories', 'ArticleCategoriesController')->except(['destroy']);
     Route::resource('articles', 'ArticlesController');
-    Route::resource('users', 'UsersController')->only(['index', 'show']);
+    Route::resource('users', 'UsersController')->only(['index', 'edit', 'update']);
 });
 
 Route::get('/news', 'ArticleController@index');

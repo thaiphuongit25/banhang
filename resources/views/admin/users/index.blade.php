@@ -27,15 +27,15 @@
     <tbody>
         @foreach($users as $user)
         <tr>
-            <td><a href="{{ route('admin.users.show', $user->id) }}">{{ $user->id }}</a></td>
+            <td><a href="{{ route('admin.users.edit', $user->id) }}">{{ $user->id }}</a></td>
             <td>{{ $user->name }}</td>
-            <td><a href="{{ route('admin.users.show', $user->id) }}">{{ $user->email }}</a></td>
+            <td><a href="{{ route('admin.users.edit', $user->id) }}">{{ $user->email }}</a></td>
             <td>{{ $user->address }}</td>
             <td>{{ $user->phone_number }}</td>
             <td>{{ $user->company_name }}</td>
             <td>{{ $user->tax_code }}</td>
             <td>
-                <a href="{{ route('admin.users.show', $user->id) }}" class="btn btn-primary">Details</a>
+                <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-primary">Edit</a>
             </td>
         </tr>
         @endforeach
