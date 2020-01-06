@@ -25,7 +25,11 @@
         @foreach($banners as $banner)
         <tr>
             <td>{{ bannerTypeText($banner->type) }}</td>
-            <td><img src="{{ URL::to('/') }}/images/{{ $banner->image }}" class="img-thumbnail" width="75" /></td>
+            <td>
+                @if ($banner->type != App\Enums\BannerType::Slider)
+                    <img src="{{ URL::to('/') }}/images/{{ $banner->image }}" class="img-thumbnail" width="75" />
+                @endif
+            </td>
             <td>{{ $banner->link }}</td>
             <td>{{ $banner->alt }}</td>
             <td>{{ statusStr($banner->status) }}</td>

@@ -4,6 +4,7 @@
     use App\model\Service;
     use App\model\Reply;
     use App\model\Comment;
+    use App\model\Banner;
 
     function getTypes() {
         return Type::all();
@@ -57,4 +58,7 @@
         return Comment::with('user')->where('commentable_type', 'App\model\Product')->orderBy('id', 'DESC')->take(10)->get();
     }
 
+    function getBanner($type) {
+        return Banner::where('type', $type)->first();
+    }
 
