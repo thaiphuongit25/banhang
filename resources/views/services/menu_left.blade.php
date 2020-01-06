@@ -5,7 +5,7 @@
     <ul class="ul-left-page">
         @foreach (getSuggestServices() as $service)
         <li class="li-service">
-            <a href="{{ route('services.show', ['service' => $service->id]) }}">{{ $service->title }}</a>
+            <a href="{{ route('services.show', ['service' => $service->slug]) }}">{{ $service->title }}</a>
         </li>
         @endforeach
     </ul>
@@ -35,8 +35,4 @@
         background: #666;
     }
 </style>
-<div class="left-menu">
-
-    <a target="_blank" href="http://vinasemi.com/"><img alt="" class="" src="https://thegioiic.com/upload/large/10577.jpg"></a>
-
-</div>
+@include('left_banner')

@@ -23,7 +23,7 @@
             @method('PUT')
             @csrf
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Tiêu đề</label>
+                <label class="col-sm-2 col-form-label require">Tiêu đề</label>
                 <div class="col-sm-10">
                     <input type="text" name="title" class="form-control" value="{{ $service->title }}" />
                 </div>
@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Slug</label>
+                <label class="col-sm-2 col-form-label require">Slug</label>
                 <div class="col-sm-10">
                     <input type="text" name="slug" class="form-control" value="{{ $service->slug }}" />
                 </div>
@@ -71,6 +71,9 @@
         </form>
     </div>
 </div>
+@stop
+@section('css')
+<link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 @section('js')
 <script src={{ url('ckeditor/ckeditor.js') }}></script>

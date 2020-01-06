@@ -31,7 +31,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Miêu tả</label>
                 <div class="col-sm-10">
-                    <input type="text" name="desc" class="form-control" value="{{ $brand->desc }}" />
+                    <textarea name="desc">{{ $brand->desc }}</textarea>
                 </div>
             </div>
             <div class="form-group row">
@@ -56,4 +56,13 @@
 @stop
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+@section('js')
+<script src={{ url('ckeditor/ckeditor.js') }}></script>
+<script>
+    CKEDITOR.replace( 'desc', {
+        filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+    } );
+</script>
+@include('ckfinder::setup')
 @stop

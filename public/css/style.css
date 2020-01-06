@@ -2152,7 +2152,7 @@ table {
 }
 
 #cart1 a.bb-hover {
-    background: url("online-shopping-cart.png") no-repeat right center;
+    background: url("/images/online-shopping-cart.png") no-repeat right center;
     display: block;
     position: relative;
     padding: 3px;
@@ -2737,7 +2737,7 @@ table {
 
 .menubar .f1 li {
     float: left;
-    margin-right: 30px;
+    margin-right: 10px;
     position: relative
 }
 
@@ -2897,7 +2897,7 @@ table {
 }
 
 .icon-down {
-    background: url("down-arrow.png") no-repeat scroll center center;
+    background: url("/images/down-arrow.png") no-repeat scroll center center;
     top: 4px
 }
 
@@ -5102,7 +5102,7 @@ table.cart-popup .action-cart .delete-cart-popup {
 #footer-info table {
     width: 842px;
     float: left;
-    background-image: url("bg_bot.png") !important;
+    background-image: url("/images/bg_bot.png") !important;
     background-repeat: no-repeat;
     height: 36px;
     border-top-left-radius: 5px;
@@ -6070,7 +6070,7 @@ table.cart-popup .action-cart .delete-cart-popup {
     width: 48px;
     cursor: pointer;
     z-index: 1000;
-    background: url(chat.png) no-repeat scroll 7px 8px;
+    background: url(https://thegioiic.com/assets/chat.png) no-repeat scroll 7px 8px;
     padding: 3px 8px 3px 32px;
     line-height: 33px;
     border: 1px solid #ec680a;
@@ -6155,7 +6155,7 @@ table.cart-popup .action-cart .delete-cart-popup {
 }
 
 .btn-close-dialog-support {
-    background: url("close.png") repeat scroll 0 0 transparent;
+    background: url("/images/close.png") repeat scroll 0 0 transparent;
     border: medium none;
     position: absolute;
     right: 6px;

@@ -44,4 +44,9 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Product::class, 'favorites');
     }
+    
+    public function scopeCustomer($query)
+    {
+        return $query->where('is_admin', 0);
+    }
 }

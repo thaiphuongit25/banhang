@@ -42,8 +42,4 @@
         background: #666;
     }
 </style>
-<div class="left-menu">
-
-    <a target="_blank" href="http://vinasemi.com/"><img alt="" class="" src="https://thegioiic.com/upload/large/10577.jpg"></a>
-
-</div>
+@include('left_banner')

@@ -23,9 +23,34 @@
     @include('newest_comments')
   </div>
   <script>
-
+    $(document).ready(function($) {
+      $.ajax({
+        url: '/new_report',
+        type: "get",
+        dataType: 'script'
+      });
+    })
   </script>
+  <style>
+    #product-report {
+      max-height: 258px;
+      overflow: auto;
+      border-bottom: 1px solid #DDD;
+      overscroll-behavior: none;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: #666;
+    }
 
+    #product-report::-webkit-scrollbar {
+      width: 6px;
+      background: #eee;
+    }
+
+    #product-report::-webkit-scrollbar-thumb {
+      background: #666;
+    }
+  </style>
 
   <div class="left-menu">
     <div class="title">
@@ -40,19 +65,54 @@
       </div>
     </div>
   </div>
+  <style>
+    .green a {
+      padding: 0 !important;
+    }
 
-  <div class="left-menu">
+    .same-by-list {
+      max-height: 258px;
+      overflow: auto;
+      border-bottom: 1px solid #DDD;
+      overscroll-behavior: none;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: #666;
+    }
 
-    <a target="_blank" href="http://vinasemi.com/"><img alt="" class="" src="https://thegioiic.com/upload/large/10577.jpg"></a>
+    .same-by-list::-webkit-scrollbar {
+      width: 6px;
+      background: #eee;
+    }
 
-  </div>
+    .same-by-list::-webkit-scrollbar-thumb {
+      background: #666;
+    }
+  </style>
+  @include('left_banner')
 </div>
 <div id="body-right">
 
 
 
   <script>
-
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: '476526335840468',
+        xfbml: true,
+        version: 'v2.4'
+      });
+    };
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
   </script>
   <div class="right-detail">
     <div id="view-product">
@@ -83,7 +143,7 @@
           <div class="info-product-show infodescription">
             <div id="info-p">
               <p style="padding:4px 0">
-                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/suppliers/{{ $product->brand->slug }}">{{ $product->brand->name }}</a>
+                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/brands/{{ $product->brand->slug }}">{{ $product->brand->name }}</a>
               </p>
               <div class="inventory_product">
                 <div class="contact-to-order-w bgaqua"><span class="icon-i"></span>
@@ -312,29 +372,13 @@
             }
           </style>
         </div>
-        <div class="rigthad left">
-
-          <a target="_blank" href="http://vnsmarthome.com"><img alt="" class="" src="https://thegioiic.com/upload/large/10574.jpg"></a>
-
-
-        </div>
+        @include('right_banner')
       </div>
       <div class="clear"></div>
     </div>
   </div>
   <script type="text/javascript">
     $(document).ready(function($) {
-
-      $.ajax({
-        url: '/new_report',
-        type: "get",
-        dataType: 'script'
-      });
-
-      $(".btn-cart").click(function() {
-        alert("get card");
-      });
-
       $("ul#product_tab li a").click(function() {
         var id = $(this).attr('data-id');
         $("ul#product_tab li a").removeClass("select");
@@ -342,22 +386,18 @@
         $(".view_tab_product").css("display", "none");
         $("#tabp" + id).css("display", "block");
       });
-
       $(".detail-tab .view_tab_product").css('display', 'none');
       $(".detail-tab .view_tab_product:first").css('display', 'block');
-
       $.ajax({
         url: '/products/same_category?id=18480&amp;subject_id=95',
         type: "get",
         dataType: 'script'
       });
-
       $("#button-view-report").click(function() {
         $('html, body').animate({
           scrollTop: $("#report-user").offset().top
         }, 2000);
       });
-
       $("#store_id").change(function() {
         var store_id = $(this).val();
         $.ajax({
@@ -370,7 +410,6 @@
           dataType: 'script'
         });
       });
-
       $(document).on("click", ".add_favorite", function() {
         $.ajaxSetup({
           headers: {
@@ -387,24 +426,6 @@
         });
       });
     });
-    window.fbAsyncInit = function() {
-      FB.init({
-        appId: '476526335840468',
-        xfbml: true,
-        version: 'v2.4'
-      });
-    };
-
-    (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {
-        return;
-      }
-      js = d.createElement(s);
-      js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
   </script>
   <style>
     .rigthad img {
@@ -451,48 +472,8 @@
       scrollbar-width: thin;
       scrollbar-color: #666;
     }
-
-    #product-report {
-      max-height: 258px;
-      overflow: auto;
-      border-bottom: 1px solid #DDD;
-      overscroll-behavior: none;
-      overflow-x: hidden;
-      scrollbar-width: thin;
-      scrollbar-color: #666;
-    }
-
-    #product-report::-webkit-scrollbar {
-      width: 6px;
-      background: #eee;
-    }
-
-    #product-report::-webkit-scrollbar-thumb {
-      background: #666;
-    }
-
-    .green a {
-      padding: 0 !important;
-    }
-
-    .same-by-list {
-      max-height: 258px;
-      overflow: auto;
-      border-bottom: 1px solid #DDD;
-      overscroll-behavior: none;
-      overflow-x: hidden;
-      scrollbar-width: thin;
-      scrollbar-color: #666;
-    }
-
-    .same-by-list::-webkit-scrollbar {
-      width: 6px;
-      background: #eee;
-    }
-
-    .same-by-list::-webkit-scrollbar-thumb {
-      background: #666;
-    }
   </style>
+
 </div>
+
 @endsection

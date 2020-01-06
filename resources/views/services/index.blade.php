@@ -18,14 +18,14 @@
               @foreach ($services as $service)
                 <div class="service">
                     <div class="img-service">
-                        <a href="{{ route('services.show', ['service' => $service->id]) }}">
+                        <a href="{{ route('services.show', ['service' => $service->slug]) }}">
                             <img src="{{ URL::to('/') }}/images/{{ $service->thumbnail }}" class="img-thumbnail" />
                         </a>
                     </div>
                     <div class="info-service">
                         <div class="title-service">
                             <h2 style="padding: 0;margin: 0">
-                              <a href="{{ route('services.show', ['service' => $service->id]) }}">
+                              <a href="{{ route('services.show', ['service' => $service->slug]) }}">
                                 {{ $service->title }}
                               </a>
                             </h2>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                     <div class="detail-service">
-                        <a href="{{ route('services.show', ['service' => $service->id]) }}">Chi tiết</a>
+                        <a href="{{ route('services.show', ['service' => $service->slug]) }}">Chi tiết</a>
                     </div>
                     <div class="clear"></div>
                 </div>

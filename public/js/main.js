@@ -4713,7 +4713,7 @@ var pp_alreadyInitialized = !1;
 }(jQuery), $(document).ready(function() {
     $("#txtQuery").autoComplete({
         source: function(e, t) {
-            $.getJSON("/search_autohome.json", {
+            $.getJSON("/search_autohome", {
                 q: e.toLowerCase()
             }, function(e) {
                 var n = [];
@@ -4723,13 +4723,12 @@ var pp_alreadyInitialized = !1;
                     var e = "" != $(this)[0].unit && null != $(this)[0].unit ? $(this)[0].unit : "C\xe1i",
                         t = "" != $(this)[0].unit_en ? $(this)[0].unit_en : "Pc",
                         o = "en" == i ? t : e,
-                        r = "en" == i ? $(this)[0].name_en : $(this)[0].name;
+                        r = $(this)[0].name;
                     n.push({
                         data: r,
                         slug: $(this)[0].slug,
-                        image_id: $(this)[0].image_id,
-                        price: $(this)[0].price,
-                        unit: o
+                        image_id: $(this)[0].image,
+                        price: $(this)[0].price
                     })
                 });
                 var o = "en" == i ? "View all " + total + " results" : "Xem t\u1ea5t c\u1ea3 " + total + " k\u1ebft qu\u1ea3";
@@ -4740,14 +4739,14 @@ var pp_alreadyInitialized = !1;
             t = t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
             var n = new RegExp("(" + t.split(" ").join("|") + ")", "gi"),
                 i = accounting.formatMoney(e.price, "", 0);
-            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="/upload/medium/' + e.image_id + '.jpg"><span class="ne">' + e.data.replace(n, "<b>$1</b>") + '</span><span class="pri">' + i + "\u0111/" + e.unit + "</span></a>"
+            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="/images/' + e.image_id + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/cái" + "</span></a>"
         },
         onSelect: function(e, t) {
             window.location.href = t
         }
     }), $("#txtQueryTop").autoComplete({
         source: function(e, t) {
-            $.getJSON("/search_autohome.json", {
+            $.getJSON("/search_autohome", {
                 q: e.toLowerCase()
             }, function(e) {
                 var n = [];
@@ -4757,13 +4756,12 @@ var pp_alreadyInitialized = !1;
                     var e = "" != $(this)[0].unit && null != $(this)[0].unit ? $(this)[0].unit : "C\xe1i",
                         t = "" != $(this)[0].unit_en ? $(this)[0].unit_en : "Pc",
                         o = "en" == i ? t : e,
-                        r = "en" == i ? $(this)[0].name_en : $(this)[0].name;
+                        r = $(this)[0].name;
                     n.push({
                         data: r,
                         slug: $(this)[0].slug,
-                        image_id: $(this)[0].image_id,
-                        price: $(this)[0].price,
-                        unit: o
+                        image_id: $(this)[0].image,
+                        price: $(this)[0].price
                     })
                 });
                 var o = "en" == i ? "View all " + total + " results" : "Xem t\u1ea5t c\u1ea3 " + total + " k\u1ebft qu\u1ea3";
@@ -4774,7 +4772,7 @@ var pp_alreadyInitialized = !1;
             t = t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
             var n = new RegExp("(" + t.split(" ").join("|") + ")", "gi"),
                 i = accounting.formatMoney(e.price, "", 0);
-            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="/upload/medium/' + e.image_id + '.jpg"><span class="ne">' + e.data.replace(n, "<b>$1</b>") + '</span><span class="pri">' + i + "\u0111/" + e.unit + "</span></a>"
+            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="/images/' + e.image_id + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/cái" + "</span></a>"
         }
     }), $("#search_name_product").autoComplete({
         source: function(e, t) {
@@ -5268,3 +5266,12 @@ var menu = {
                 }), $(".show-small-img[alt='now']").prev().attr("alt", "now").siblings().removeAttr("alt"), $("#small-img-roll").children().length > 4 && ($(".show-small-img[alt='now']").index() >= 3 && $(".show-small-img[alt='now']").index() < $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($(".show-small-img[alt='now']").index() - 2) + "px") : $(".show-small-img[alt='now']").index() == $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($("#small-img-roll").children().length - 4) + "px") : $("#small-img-roll").css("left", "0"))
             })
     });
+
+jQuery(document).ready(function($) {
+    $.featureList(
+        $("#tabs li a"),
+        $("#output li"), {
+            start_item : 1
+        }
+    );
+});

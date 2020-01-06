@@ -52,7 +52,7 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Miêu tả</label>
                 <div class="col-sm-10">
-                    <textarea name="desc"></textarea>
+                    <input type="text" name="desc" class="form-control">
                 </div>
             </div>
             <div class="form-group row">
@@ -103,6 +103,23 @@
                     <input categorie="text" name="meta_description" class="form-control" />
                 </div>
             </div>
+            <div class="form-group row">
+                <input type="hidden" name="count" value="1" />
+                <label class="col-sm-2 col-form-label">Thêm đơn giá</label>
+                <div class="col-sm-10" id="fields">
+                    <div class="row margin-button">
+                        <div class="col-sm-3">
+                            <input autocomplete="off" class="form-control" name="number_" type="text" placeholder="Số lượng">
+                        </div>
+                        <div class="col-sm-3">
+                            <input autocomplete="off" class="form-control" name="unit_" type="text" placeholder="Đơn giá(VND)">
+                        </div>
+                        <div class="col-sm-1">
+                            <button id="b1" class="btn btn-primary add-more form-control" type="button">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="form-group text-center">
                 <input type="submit" name="add" class="btn btn-primary input-lg" value="Thêm" />
             </div>
@@ -114,6 +131,7 @@
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 @section('js')
+<script src={{ url('js/custom.js') }}></script>
 <script src={{ url('ckeditor/ckeditor.js') }}></script>
 <script>
     CKEDITOR.replace( 'specification', {
