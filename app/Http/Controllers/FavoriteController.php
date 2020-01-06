@@ -16,7 +16,6 @@ class FavoriteController extends Controller
 
     public function add(Request $request)
     {
-        // dd($request);
         request()->validate([ 'product_id' => 'required' ]);
 
         $favorite = Favorite::where('user_id',Auth::id())
@@ -41,8 +40,16 @@ class FavoriteController extends Controller
         return view('layouts.partials.alert_section');
     }
 
-    public function remove()
+    public function destroy($id)
     {
+      $check = Favorite::where('product_id',$id)->where('user_id', Auth::id())->delete();
 
+      if($check){ 
+        session()->flash("success","Xóa thành công!");
+      }else {
+        session()->flash("error","Đã xảy ra lỗi!");
+      }
+
+      return view('layouts.partials.alert_section');
     }
 }
