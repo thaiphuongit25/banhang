@@ -107,15 +107,11 @@
                     @endforeach
                 </ul>
                 <ul id="tabs">
+                    @foreach (getBanner(App\Enums\BannerType::Slider) as $slider)
                     <li>
-                        <a href="https://www.thegioiic.com/services/phan-phoi-linh-kien-dien-tu-va-thiet-bi-dien-tu" target="_blank" class="current"></a>
+                        <a href="{{ $slider->link }}" target="_blank"></a>
                     </li>
-                    <li>
-                        <a href="https://www.thegioiic.com/services/thiet-ke-mach-dien-tu-he-thong-nhung-hardware-development-for-embedded-systems" target="_blank" class=""></a>
-                    </li>
-                    <li>
-                        <a href="https://thegioiic.com/services/gia-cong-cac-loai-day-bus-va-day-cap" target="_blank" class=""></a>
-                    </li>
+                    @endforeach
                 </ul>
             </div>
         </div>

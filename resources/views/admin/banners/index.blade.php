@@ -34,7 +34,11 @@
             <td>{{ $banner->alt }}</td>
             <td>{{ statusStr($banner->status) }}</td>
             <td>
+                @if ($banner->type == App\Enums\BannerType::Slider)
+                <a href="{{ route('admin.banner_items.index', ['bannerId' => $banner->id]) }}" class="btn btn-primary">Edit</a>
+                @else
                 <a href="{{ route('admin.banners.edit', $banner->id) }}" class="btn btn-primary">Edit</a>
+                @endif
             </td>
         </tr>
         @endforeach

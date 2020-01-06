@@ -63,9 +63,9 @@
     function getBanner($type) {
         if ($type == BannerType::Slider)
         {
-            $slider = Banner::where('type', $type)->first();
-            return BannerItem::where('banner_id', $slider->id)->get();
+            $slider = Banner::active()->where('type', $type)->first();
+            return BannerItem::active()->where('banner_id', $slider->id)->get();
         }
-        return Banner::where('type', $type)->first();
+        return Banner::active()->where('type', $type)->first();
     }
 
