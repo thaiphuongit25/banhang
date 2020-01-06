@@ -89,11 +89,7 @@
             background: #666;
         }
     </style>
-    <div class="left-menu">
-
-        <a target="_blank" href="http://vinasemi.com/"><img alt="" class="" src="https://thegioiic.com/upload/large/10577.jpg"></a>
-
-    </div>
+    @include('left_banner')
 </div>
 <div id="body-right">
 
@@ -375,12 +371,7 @@
                         }
                     </style>
                 </div>
-                <div class="rigthad left">
-
-                    <a target="_blank" href="http://vnsmarthome.com"><img alt="" class="" src="https://thegioiic.com/upload/large/10574.jpg"></a>
-
-
-                </div>
+                @include('right_banner')
             </div>
             <div class="clear"></div>
         </div>
