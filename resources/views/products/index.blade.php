@@ -95,28 +95,16 @@
                 left: 0;
             }
         </style>
-        <script language="javascript">
-            jQuery(document).ready(function($) {
-                $.featureList(
-                    $("#tabs li a"),
-                    $("#output li"), {
-                        start_item: 1
-                    }
-                );
-            });
-        </script>
         <div id="con_index" style="margin-top:2px">
             <div id="feature_list">
                 <ul id="output">
-                    <li style="display: list-item;">
-                        <a href="https://www.thegioiic.com/services/phan-phoi-linh-kien-dien-tu-va-thiet-bi-dien-tu" target="_blank"><img alt="Phân phối và cung cấp linh kiện điện tử" class="img-slide" src="https://thegioiic.com/upload/large/14151.jpg"></a>
+                    @foreach (getBanner(App\Enums\BannerType::Slider) as $key => $slider)
+                    <li style="display: {{ $key == 0 ? 'list-item' : 'none' }};">
+                        <a href="{{ $slider->link }}" target="_blank">
+                            <img alt="{{ $slider->alt }}" class="img-slide" src="{{ URL::to('/') }}/images/{{ $slider->image }}">
+                        </a>
                     </li>
-                    <li style="display: none;">
-                        <a href="https://www.thegioiic.com/services/thiet-ke-mach-dien-tu-he-thong-nhung-hardware-development-for-embedded-systems" target="_blank"><img alt="Thiết kế mạch điện tử - Hệ thống nhúng" class="img-slide" src="https://thegioiic.com/upload/large/14496.jpg"></a>
-                    </li>
-                    <li style="display: none;">
-                        <a href="https://thegioiic.com/services/gia-cong-cac-loai-day-bus-va-day-cap" target="_blank"><img alt="Gia công các loại dây bus và dây cáp" class="img-slide" src="https://thegioiic.com/upload/large/14154.jpg"></a>
-                    </li>
+                    @endforeach
                 </ul>
                 <ul id="tabs">
                     <li>

@@ -15,7 +15,6 @@
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="{{ asset('js/app.js') }}" defer></script>
   <script src="{{ url('js/main.js') }}" defer></script>
   <script src="{{ url('js/custom.js') }}" defer></script>
   <script src="{{ url('js/comment.js') }}" defer></script>
@@ -24,7 +23,6 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <!-- Styles -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ url('css/style.css') }}" rel="stylesheet">
 </head>
 

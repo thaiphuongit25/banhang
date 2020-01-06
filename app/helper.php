@@ -5,6 +5,8 @@
     use App\model\Reply;
     use App\model\Comment;
     use App\model\Banner;
+    use App\model\BannerItem;
+    use App\Enums\BannerType;
 
     function getTypes() {
         return Type::all();
@@ -59,6 +61,11 @@
     }
 
     function getBanner($type) {
+        if ($type == BannerType::Slider)
+        {
+            $slider = Banner::where('type', $type)->first();
+            return BannerItem::where('banner_id', $slider->id)->get();
+        }
         return Banner::where('type', $type)->first();
     }
 
