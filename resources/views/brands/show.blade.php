@@ -66,7 +66,7 @@
                                 </div>
                             </div>
                             <div>
-                                <input type="button" value="+ Giỏ Hàng" class="btn-cart-show btn-cart">
+                                <input type="button" value="+ Giỏ Hàng" class="btn-cart-show btn-cart" id="{{ $product->id }}">
                             </div>
                         </div>
                     </div>
