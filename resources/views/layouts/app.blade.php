@@ -15,7 +15,6 @@
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="{{ asset('js/app.js') }}" defer></script>
   <script src="{{ url('js/main.js') }}" defer></script>
   <script src="{{ url('js/custom.js') }}" defer></script>
   <script src="{{ url('js/comment.js') }}" defer></script>
@@ -24,19 +23,18 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <!-- Styles -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ url('css/style.css') }}" rel="stylesheet">
 </head>
 
 <body data-cart="0">
-  <!-- <div id="top-fix-scroll" class="top-fix-scroll">
-    <div id="top-fix-scroll" class="top-fix-scroll">
+  <div id="top-fix-scroll" class="top-fix-scroll" style="height: 40px;">
+    <div id="top-fix-scroll">
       <div>
         <div class="logo-scroll">
-          <a href="index.html"><img alt="" class="" src="upload/large/12525.jpg" /></a>
+          <a href="index.html"><img alt="" class="" src="https://thegioiic.com/upload/large/12525.jpg" /></a>
         </div>
         <div class="form-scroll" id="main-search-scroll">
-          <form action="https://thegioiic.com/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+          <form action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
             <div class="namesub">
               <input type="text" placeholder="Tên sản phẩm" name="search" value="" autocomplete="off" id="txtQueryTop" class="defaultText text">
               <input type="submit" class="btn-search-home" value="" style="right:7px;top:4px">
@@ -44,28 +42,22 @@
           </form>
         </div>
         <div class="register-cart">
-          <div class="scroll-flag">
-            <div class="flag f">
-              <a href="forum.html"><img src="images/flag_vn.gif"></a>
-            </div>
-            <div class="flag">
-              <a href="product/rf-detector.html"><img src="images/flag_en.gif"></a>
-            </div>
-          </div>
           <div class="register-scroll">
-            <div class="user_control" style="position:relative;margin-top:5px">
+            <div class="user_control" style="display: flex;">
               <input type="hidden" id="check_login" value="0">
               @if (Auth::check())
-                      do this
+              <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
+              <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
               @else
-              <a href="account/login.html">Đăng Nhập</a></a>
-              | <a href="/register">Đăng Ký</a></a>
+              <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
               @endif
+              <a class="support-img" href="/support/me"><img src="/images/yah.png" alt="Yah"></a>
             </div>
           </div>
+
           <div class="cart-scroll" id="box-cart-scroll">
             <div id="cart1" class="cart-popup-hover-scroll">
-              <a class="bb-hover" href="carts.html">
+              <a class="bb-hover" href="/carts">
                 <label class="lbcart">
                   Giỏ hàng
                 </label>
@@ -81,10 +73,14 @@
         <div class="clear"></div>
       </div>
     </div>
-  </div> -->
+  </div>
   <h1 class="h1_home">IC, transistor, capacitor, inductor, Linh kiện điện tử, linh kien dien tu, electronic component</h1>
   <div id="divAdRight" style="position: absolute; top: 0px">
-    <a href="http://ledsang.com/" TARGET="_blank"><img src="upload/large/10493.jpg" width="140" /></a>
+    @if ($leftMost = getBanner(App\Enums\BannerType::LeftMost))
+        <a href="{{ $leftMost->link }}" TARGET="_blank">
+            <img alt="{{ $leftMost->alt }}" width="140" class="" src="{{ URL::to('/') }}/images/{{ $leftMost->image }}" />
+        </a>
+    @endif
   </div>
   <div class="container">
     <div id="top_bar" class="col-12">
@@ -129,8 +125,16 @@
     </div>
     <div id="view_bar" class="col-12 main-col">
       <div id="logo">
-        <a class="logobat logo1" href="/"><img alt="" class="" src="https://thegioiic.com/upload/large/12525.jpg"></a>
-        <a class="logobat logo2" href="https://thegioiic.com/pages/thegioiic-la-nha-phan-phoi-cua-waveshare"><img alt="" class="logo2" src="https://thegioiic.com/upload/large/14781.jpg"></a>
+          @if ($logo = getBanner(App\Enums\BannerType::Logo))
+              <a href="{{ $logo->link }}" class="logobat logo1">
+                  <img alt="{{ $logo->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $logo->image }}" />
+              </a>
+          @endif
+          @if ($topLeft = getBanner(App\Enums\BannerType::TopLeft))
+              <a href="{{ $topLeft->link }}" class="logobat logo2">
+                  <img alt="{{ $topLeft->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $topLeft->image }}" />
+              </a>
+          @endif
       </div>
       <div id="info-website">
         <div id="box-cart">
@@ -148,7 +152,11 @@
         </div>
       </div>
       <div style="float:right; line-height:0;" class="topad">
-        <a target="_blank" href="https://thegioiic.com/services/phan-phoi-linh-kien-dien-tu-va-thiet-bi-dien-tu"><img alt="" class="top_ad" src="https://thegioiic.com/upload/large/12532.jpg"></a>
+		@if ($topRight = getBanner(App\Enums\BannerType::TopRight))
+			<a href="{{ $topRight->link }}" target="_blank">
+				<img alt="{{ $topRight->alt }}" class="top_ad" src="{{ URL::to('/') }}/images/{{ $topRight->image }}" />
+			</a>
+		@endif
       </div>
       <div class="clear"></div>
     </div>
@@ -179,7 +187,11 @@
     </div>
   </div>
   <div id="divAdLeft" style="position: fixed; top: 175px; right: 30.5px; display: block;">
-    <a href="http://vinaautomation.com" target="_blank"><img src="https://thegioiic.com/upload/large/7282.jpg" width="140"></a>
+  	@if ($rightMost = getBanner(App\Enums\BannerType::RightMost))
+        <a href="{{ $rightMost->link }}" target="_blank">
+            <img alt="{{ $rightMost->alt }}" width="140" class="" src="{{ URL::to('/') }}/images/{{ $rightMost->image }}" />
+        </a>
+    @endif
   </div>
   <div id="left-support" class="btn-show-dialog-support">
     <a href="javascript:">Chat</a>

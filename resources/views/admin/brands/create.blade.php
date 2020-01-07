@@ -24,25 +24,19 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Tên thương hiệu</label>
                 <div class="col-sm-10">
-                    <input type="text" name="name" class="form-control" />
+                    <input type="text" name="name" class="form-control" value="{{ old('name') }}" />
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Miêu tả</label>
                 <div class="col-sm-10">
-                    <input type="text" name="desc" class="form-control" />
+                    <textarea name="desc">{{ old('desc') }}</textarea>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Ảnh</label>
                 <div class="col-sm-10">
                     <input type="file" name="logo" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Slug</label>
-                <div class="col-sm-10">
-                    <input type="text" name="slug" class="form-control" />
                 </div>
             </div>
             <div class="form-group text-center">
@@ -54,4 +48,13 @@
 @stop
 @section('css')
     <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+@section('js')
+<script src={{ url('ckeditor/ckeditor.js') }}></script>
+<script>
+    CKEDITOR.replace( 'desc', {
+        filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+    } );
+</script>
+@include('ckfinder::setup')
 @stop

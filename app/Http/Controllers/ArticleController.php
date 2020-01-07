@@ -33,7 +33,7 @@ class ArticleController extends Controller
      */
     public function show($id)
     {
-        $article = Article::active()->findOrFail($id);
+        $article = Article::active()->whereSlug($id)->firstOrFail();
         $article->view_count = $article->view_count + 1;
         $article->save();
         $related_articles = Article::active()->where('id', '!=', $article->id)->paginate(10);
@@ -42,7 +42,7 @@ class ArticleController extends Controller
 
     public function category_details($id)
     {
-        $category = ArticleCategory::active()->findOrFail($id);
+        $category = ArticleCategory::active()->whereSlug($id)->firstOrFail();
         $articles = Article::active()->where('article_category_id', $category->id)->paginate(10);
         return view('articles.category_details', compact('category', 'articles'));
     }

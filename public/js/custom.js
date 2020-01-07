@@ -14,19 +14,39 @@ $(document).ready(function() {
             return listTr;
         }
 
+        function getStatusCurrent(status, number) {
+            let tmp = null;
+            if (status == 1) {
+                tmp = "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + number + "</span> Cái</span>";
+            } else {
+                tmp = "<span style='color: red'>Hết hàng</span>";
+            }
+            return tmp;
+        }
+
         var formatPrice = function(unit) {
             return Number((unit).toFixed(1)).toLocaleString();
         }
 
         var getUnit = function(units, quantity, price) {
-            let  unit = price;
+            let unit = price;
             if (units.length > 0) {
                 unit = units[0].unit_price;
-                units.forEach(function(value) {
-                    if (quantity < value.number) {
-                        unit = value.unit_price;
+                for (let i = 0; i < units.length; i++) {
+                    let tmp = null;
+                    if (quantity <= units[i].number) {
+                        unit = units[i].unit_price;
+                        if (i > 0) {
+                            tmp = units[i - 1].number;
+                        }
                     }
-                });
+                    if (tmp && quantity < units[i].number) {
+                        unit = units[i - 1].unit_price;
+                    }
+                    if (quantity >= units[units.length - 1].number) {
+                        unit = units[units.length - 1].unit_price;
+                    }
+                }
             }
             return [unit * quantity, unit];
         }
@@ -61,9 +81,9 @@ $(document).ready(function() {
                 products.forEach(function(value) {
                     total += getUnit(value.units, quantityCurrent(value.id), value.price)[0];
                     tmp = getUnit(value.units, quantityCurrent(value.id), value.price);
-                    cart.push({id: value.id, quantity: quantityCurrent(value.id), unit: tmp[1]})
+                    cart.push({ id: value.id, quantity: quantityCurrent(value.id), unit: tmp[1] })
                 });
-                cart.push({total: total});
+                cart.push({ total: total });
                 localStorage.setItem('buy_card', JSON.stringify(cart));
                 return total;
             }
@@ -78,13 +98,15 @@ $(document).ready(function() {
                             value.remove();
                         }
                     });
+                    let j = 0;
                     data.forEach(function(value, index) {
+                        j += 1;
                         $('.list-carts').append(
                             "<tr>" +
-                            "<td class='no'>" + index + 1 + "</td>" +
+                            "<td class='no'>" + j + "</td>" +
                             "<td class='pn'>" +
                             "<div style='width:29%;float:left;margin-right:1%'>" +
-                            "<a href='/products/" + value.slug + "'><img alt='SG8V1' class='image-hover' src='https://thegioiic.com/upload/medium/2734.jpg'></a>" +
+                            "<a href='/products/" + value.slug + "'><img alt='SG8V1' class='image-hover' src='/images/" + value.image + "'></a>" +
                             "</div>" +
                             "<div style='float:left;width:70%'>" +
                             "<a target='_blank' href='/products/" + value.slug + "'>" + value.name + "</a>" +
@@ -102,15 +124,15 @@ $(document).ready(function() {
                             "</table>" +
                             "</td>" +
                             "<td class='pq'>" +
-                            "<input type='number' id='" + value.id + "' value='" + quantityCurrent(value.id) + "' class='cart-quantity-change' style='width:45px; text-align:center;' min='1>" +
+                            "<input type='number' id='" + value.id + "' value='" + quantityCurrent(value.id) + "' class='cart-quantity-change' style='width:45px; text-align:center;' min='1'>" +
                             "<br>" +
-                            "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + value.quantity + "</span> Cái</span>" +
-                            "</td>" +
-                            "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[0]) + "đ" +
+                            getStatusCurrent(value.status, value.quantity) +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
                             formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[1]) + "đ" +
+                            "</td>" +
+                            "<td class='pup' style='text-align:right;padding-right:5px'>" +
+                            formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[0]) + "đ" +
                             "</td>" +
                             "<td class='pa'>" +
                             "<a class='remove-cart' id=" + value.id + ">Xóa</a>" +
@@ -215,8 +237,8 @@ $(document).ready(function() {
             let listCart = JSON.parse(localStorage.getItem('buy_card'));
             let method_check = $(".method-cart").find('input').toArray();
             let note = "";
-            method_check.forEach(function(value){
-                if (value.checked){
+            method_check.forEach(function(value) {
+                if (value.checked) {
                     if (value.value == "1") {
                         note = "Mua và thanh toán tại cửa hàng";
                     } else {
@@ -234,10 +256,10 @@ $(document).ready(function() {
                 url: '/buy_products',
                 data: { cards: listCart, note: note },
                 success: function(data) {
-                    if(data == true) {
+                    if (data == true) {
                         localStorage.removeItem('buy_card');
                         localStorage.removeItem('list_card');
-                        setTimeout(alert('Đặt hàng thành công'), 2000);
+                        setTimeout(alert('Đặt hàng thành công, Vui lòng liên hệ liên hệ tới số máy (28)3896.8699 | 0972924961 để đặt hàng.'), 2000);
                         window.location.href = "/";
                     }
                 },
@@ -247,4 +269,34 @@ $(document).ready(function() {
             })
         });
     }
+
+    var next = 0;
+    $(".add-more").click(function(e) {
+        e.preventDefault();
+        var addto = "#field" + next;
+        var addRemove = "#field" + (next);
+        next = next + 1;
+        var newIn = '<div class="row margin-button">' +
+            '<div class="col-sm-3">' +
+            '<input autocomplete="off" class="form-control" name="number_' + next + '"type="text" placeholder="Số lượng" data-items="1">' +
+            '</div>' +
+            '<div class="col-sm-3">' +
+            '<input autocomplete="off" class="form-control" name="unit_' + next + '"type="text" placeholder="Đơn giá(VND)" data-items="2">' +
+            '</div>' +
+            '<div class="col-sm-1">' +
+            '<button class="btn btn-danger remove-me form-control" type="button">-</button>' +
+            '</div>' +
+            '</div>';
+
+        $("#fields").append(newIn);
+
+        $('.remove-me').click(function(e) {
+            e.preventDefault();
+            $(this).parent().parent().remove();
+        });
+    });
+    $('.remove-me').click(function(e) {
+        e.preventDefault();
+        $(this).parent().parent().remove();
+    });
 });

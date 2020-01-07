@@ -5,11 +5,9 @@
     <ul class="ul-left-page">
         @foreach (getArticleCategories() as $category)
         <li>
-            <a class="parent" href="/news/{{ $category->id }}">{{ $category->name }}</a>
+            <a class="parent" href="/news/{{ $category->slug }}">{{ $category->name }}</a>
         </li>
         @endforeach
     </ul>
 </div>
-<div class="left-menu">
-    <a target="_blank" href="http://vinasemi.com/"><img alt="" class="" src="https://thegioiic.com/upload/large/10577.jpg"></a>
-</div>
+@include('left_banner')

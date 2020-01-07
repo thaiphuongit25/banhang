@@ -40,12 +40,6 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Slug</label>
-                <div class="col-sm-10">
-                    <input type="text" name="slug" class="form-control" value="{{ old('slug') }}" />
-                </div>
-            </div>
-            <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Meta title</label>
                 <div class="col-sm-10">
                     <input type="text" name="meta_title" class="form-control" value="{{ old('meta_title') }}" />

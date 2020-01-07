@@ -41,13 +41,11 @@ class ArticleCategoriesController extends Controller
         $request->validate([
             'name'     =>  'required',
             'status'   =>  'required',
-            'slug'     =>  'required'
         ]);
 
         $article_category = array(
             'name'            =>   $request->name,
             'status'          =>   $request->status,
-            'slug'            =>   $request->slug
         );
 
         ArticleCategory::create($article_category);
@@ -79,7 +77,7 @@ class ArticleCategoriesController extends Controller
         $request->validate([
             'name'     =>  'required',
             'status'   =>  'required',
-            'slug'     =>  'required'
+            'slug'     =>  'required|unique:article_categories'
         ]);
 
         $form_data = array(

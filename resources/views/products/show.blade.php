@@ -89,11 +89,7 @@
             background: #666;
         }
     </style>
-    <div class="left-menu">
-
-        <a target="_blank" href="http://vinasemi.com/"><img alt="" class="" src="https://thegioiic.com/upload/large/10577.jpg"></a>
-
-    </div>
+    @include('left_banner')
 </div>
 <div id="body-right">
 
@@ -148,7 +144,7 @@
                     <div class="info-product-show infodescription">
                         <div id="info-p">
                             <p style="padding:4px 0">
-                                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/suppliers/{{ $product->brand->slug }}">{{ $product->brand->name }}</a>
+                                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/brands/{{ $product->brand->slug }}">{{ $product->brand->name }}</a>
                             </p>
                             <div class="inventory_product">
                                 <div class="contact-to-order-w bgaqua"><span class="icon-i"></span>
@@ -375,22 +371,13 @@
                         }
                     </style>
                 </div>
-                <div class="rigthad left">
-
-                    <a target="_blank" href="http://vnsmarthome.com"><img alt="" class="" src="https://thegioiic.com/upload/large/10574.jpg"></a>
-
-
-                </div>
+                @include('right_banner')
             </div>
             <div class="clear"></div>
         </div>
     </div>
     <script type="text/javascript">
         $(document).ready(function($) {
-            $(".btn-cart").click(function() {
-                alert("get card");
-            });
-
             $("ul#product_tab li a").click(function() {
                 var id = $(this).attr('data-id');
                 $("ul#product_tab li a").removeClass("select");

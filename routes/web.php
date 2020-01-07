@@ -14,14 +14,11 @@
 Route::get('/', 'ProductsController@index')->name('products');
 Route::get('/products/{slug}', 'ProductsController@show')->name('products_show');
 Route::get('/product/{slug}', 'ProductsController@showCategories')->name('categories');
+Route::get('/search_autohome', 'ProductsController@searchAutoHome');
 Route::get('/products', 'ProductsController@search')->name('products_search');
 Route::get('/carts', 'CartsController@cart')->name('carts');
 Route::get('/cart_products', 'CartsController@cartProducts')->name('carts_products');
 Route::post('/buy_products', 'CartsController@buyProducts')->name('buys_products');
-
-Route::get('/suppliers', function () {
-    return view('suppliers.index');
-});
 
 Route::get('/services', function () {
     return view('services.index');
@@ -49,6 +46,7 @@ Route::post('/change-password', 'UserController@changePassword');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController')->only(['index', 'show']);
 Route::resource('articles', 'ArticleController')->only(['index', 'show']);
+Route::resource('brands', 'BrandController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
 Route::post('comments/reply', 'CommentController@reply')->name('comments.reply');
 
@@ -62,6 +60,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::resource('services', 'ServicesController');
     Route::resource('article_categories', 'ArticleCategoriesController')->except(['destroy']);
     Route::resource('articles', 'ArticlesController');
+    Route::resource('users', 'UsersController')->only(['index', 'edit', 'update']);
+    Route::resource('banners', 'BannersController')->only(['index', 'edit', 'update']);
+    Route::resource('banner_items', 'BannerItemsController')->only(['index', 'edit', 'update']);
+    Route::get('/banners/{bannerId}/banner_items', 'BannerItemsController@index')->name('banner_items.index');
+    Route::get('/banners/{bannerId}/banner_items/{id}', 'BannerItemsController@edit')->name('banner_items.edit');
+    Route::put('/banners/{bannerId}/banner_items/{id}', 'BannerItemsController@update')->name('banner_items.update');
 });
 
 Route::get('/news', 'ArticleController@index');
