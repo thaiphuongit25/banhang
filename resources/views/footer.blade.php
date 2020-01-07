@@ -92,16 +92,16 @@
             </li>
         </ul>
     </div>
-    {{-- <div class="info-com two-com f-com">
+    <div class="info-com two-com f-com">
         <ul>
             <li class="title">
-                <a href="https://thegioiic.com/information/thong-tin-cong-ty">Thông Tin Công Ty</a>
+                <a href="/informations">Thông Tin Công Ty</a>
             </li>
-
+{{--
             <li>
                 <a target="_blank" href="https://thegioiic.com/pages/gioi-thieu-cong-ty">Giới thiệu công ty</a>
-            </li>
-            <li>
+            </li> --}}
+            {{-- <li>
                 <a target="_blank" href="https://thegioiic.com/pages/co-hoi-viec-lam-kinh-doanh">Cơ hội việc làm, kinh doanh</a>
             </li>
             <li>
@@ -112,9 +112,10 @@
             </li>
             <li>
                 <a target="_blank" href="https://thegioiic.com/pages/ledsang-com">LEDSANG.com</a>
-            </li>
+            </li> --}}
         </ul>
     </div>
+    {{--
     <div class="info-com two-com f-com">
         <ul>
             <li class="title">

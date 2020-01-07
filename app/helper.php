@@ -4,6 +4,7 @@
     use App\model\Service;
     use App\model\Reply;
     use App\model\Comment;
+    use App\model\Information;
 
     function getTypes() {
         return Type::all();
@@ -15,6 +16,10 @@
 
     function getSuggestServices() {
         return Service::active()->orderBy('id', 'DESC')->take(5)->get();
+    }
+
+    function getSuggestInformations() {
+        return Information::active()->orderBy('id', 'DESC')->take(5)->get();
     }
 
     function getSuggestArticleCategories() {
@@ -32,7 +37,7 @@
     }
 
     function statusStr($status) {
-        return 
+        return
         [
             0 => 'Disabled',
             1 => 'Active'
