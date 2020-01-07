@@ -26,6 +26,11 @@
             <td>
                 <a href="{{ route('admin.settings.edit', $setting->id) }}" class="btn btn-primary">Edit</a>
             </td>
+            <td>
+                @if (in_array($setting->type, onlineSupportSettingTypes()))
+                <a href="{{ route('admin.online_support_informations.index', ['settingId' => $setting->id]) }}" class="btn btn-success">Details</a>
+                @endif
+            </td>
         </tr>
         @endforeach
     </tbody>

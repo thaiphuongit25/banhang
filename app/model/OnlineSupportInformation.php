@@ -3,13 +3,15 @@
 namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
-use App\model\Banner;
+use App\model\Setting;
 
-class BannerItem extends Model
+class OnlineSupportInformation extends Model
 {
+    protected $table = 'online_support_informations';
+
     public function banner()
     {
-        return $this->belongsTo(Banner::class);
+        return $this->belongsTo(Setting::class);
     }
 
     public function scopeActive($query)
@@ -18,6 +20,6 @@ class BannerItem extends Model
     }
 
     protected $fillable = [
-        'id', 'link', 'alt', 'status', 'image'
+        'id', 'name', 'facebook', 'zalo', 'skype', 'tel'
     ];
 }

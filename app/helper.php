@@ -8,6 +8,7 @@
     use App\model\Banner;
     use App\model\BannerItem;
     use App\Enums\BannerType;
+    use App\Enums\SettingType;
 
     function getTypes() {
         return Type::all();
@@ -88,5 +89,9 @@
             return BannerItem::active()->where('banner_id', $slider->id)->get();
         }
         return Banner::active()->where('type', $type)->first();
+    }
+
+    function onlineSupportSettingTypes() {
+        return [SettingType::OnlineSupportBusiness, SettingType::OnlineSupportTechnical, SettingType::OnlineSupportSaleWarranty];
     }
 

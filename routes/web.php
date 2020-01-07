@@ -80,6 +80,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::delete('/user/{id}', 'UsersController@destroy')->name('user.delete');
     Route::post('/user/{id}', 'UsersController@edit_role')->name('user.demote');
     Route::resource('settings', 'SettingsController')->only(['index', 'edit', 'update']);
+    Route::resource('online_support_informations', 'OnlineSupportInformationsController');
+    Route::get('/settings/{settingId}/online_support_informations', 'OnlineSupportInformationsController@index')->name('online_support_informations.index');
+    Route::get('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@edit')->name('online_support_informations.edit');
+    Route::put('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@update')->name('online_support_informations.update');
+    Route::delete('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@destroy')->name('online_support_informations.destroy');
 });
 
 Route::get('/news', 'ArticleController@index');
