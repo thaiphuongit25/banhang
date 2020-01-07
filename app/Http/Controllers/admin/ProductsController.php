@@ -8,6 +8,9 @@ use App\model\Product;
 use App\model\Brand;
 use App\model\Category;
 use App\model\Unit;
+use App\Imports\ProductsImport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class ProductsController extends Controller
 {
@@ -244,5 +247,14 @@ class ProductsController extends Controller
         $data = Product::findOrFail($id);
         $data->delete();
         return redirect()->route('admin.products.index')->with('success', 'Data is successfully deleted');
+    }
+
+    public function import(Request $request)
+    {
+        $this->validate($request, [
+            'excel-file'  => 'required|mimes:xls,xlsx'
+           ]);
+        Excel::import(new ProductsImport,$request->file('excel-file'));
+
     }
 }

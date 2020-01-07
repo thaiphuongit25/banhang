@@ -21,41 +21,54 @@
                 <a href="{{ route('admin.products.create') }}" class="btn btn-primary float-right">Thêm mới</a>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" name='excel-file'>
+                        <label class="custom-file-label" for="inputGroupFile04">Chọn file</label>
+                    </div>
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload file excel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="card-body">
-    @include('admin.layouts.alert_section')
-    <table class="table table-striped">
-        <thead>
-            <tr>
-            <td>ID</td>
-            <td>Tên sản phẩm</td>
-            <td>Miêu tả</td>
-            <td>Hình ảnh</td>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($products as $product)
-            <tr>
-                <td>{{$product->id}}</td>
-                <td>{{$product->name}}</td>
-                <td>{!! Str::words(strip_tags($product->desc), 30, '...')  !!}</td>
-                <td><img src="{{ URL::to('/') }}/images/{{ $product->image }}" class="img-thumbnail" width="75" /></td>
-                <td>
-                    <a href="{{ route('admin.products.edit',$product->id) }}" class="btn btn-primary">Edit</a>
-                </td>
-                <td>
-                    <form action="{{ route('admin.products.destroy', $product->id)}}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-    <br>
-    {{ $products->links() }}
+        @include('admin.layouts.alert_section')
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Tên sản phẩm</td>
+                    <td>Miêu tả</td>
+                    <td>Hình ảnh</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($products as $product)
+                <tr>
+                    <td>{{$product->id}}</td>
+                    <td>{{$product->name}}</td>
+                    <td>{!! Str::words(strip_tags($product->desc), 30, '...') !!}</td>
+                    <td><img src="{{ URL::to('/') }}/images/{{ $product->image }}" class="img-thumbnail" width="75" /></td>
+                    <td>
+                        <a href="{{ route('admin.products.edit',$product->id) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('admin.products.destroy', $product->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <br>
+        {{ $products->links() }}
     </div>
 </div>
 @stop
