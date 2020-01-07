@@ -51,6 +51,16 @@
         ][$status];
     }
 
+    function settingTypeText($type) {
+        return
+        [   
+            0 => 'Số điện thoại',
+            1 => 'Giờ mở cửa',
+            2 => 'Địa chỉ',
+            3 => 'Thông tin chăm sóc khách hàng',
+        ][$type];
+    }
+
     function bannerTypeText($type) {
         return
         [

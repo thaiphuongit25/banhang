@@ -79,6 +79,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::post('/change-password', 'UsersController@changePassword')->name('current.change_password');
     Route::delete('/user/{id}', 'UsersController@destroy')->name('user.delete');
     Route::post('/user/{id}', 'UsersController@edit_role')->name('user.demote');
+    Route::resource('settings', 'SettingsController')->only(['index', 'edit', 'update']);
 });
 
 Route::get('/news', 'ArticleController@index');
