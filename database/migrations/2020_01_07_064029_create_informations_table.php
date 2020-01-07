@@ -19,6 +19,7 @@ class CreateInformationsTable extends Migration
             $table->text('content');
             $table->string('thumbnail');
             $table->integer('status')->default('1');
+            $table->integer('types')->default('1');
             $table->string('slug');
             $table->string('meta_title')->nullable();
             $table->string('meta_keywords')->nullable();

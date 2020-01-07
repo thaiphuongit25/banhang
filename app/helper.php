@@ -22,6 +22,10 @@
         return Information::active()->orderBy('id', 'DESC')->take(5)->get();
     }
 
+    function getInformations($types) {
+        return Information::active()->where('types', $types)->orderBy('id', 'DESC')->take(6)->get();
+    }
+
     function getSuggestArticleCategories() {
         return ArticleCategory::active()->with('articles')->orderBy('id', 'ASC')->take(1)->get();
     }

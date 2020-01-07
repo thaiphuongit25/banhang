@@ -40,6 +40,7 @@ class InformationsController extends Controller
         $request->validate([
             'title'     =>  'required',
             'content'   =>  'required',
+            'types'     =>  'required',
             'thumbnail' =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -50,6 +51,7 @@ class InformationsController extends Controller
         $information = array(
             'title'            =>   $request->title,
             'content'          =>   $request->content,
+            'types'            =>   $request->types,
             'slug'             =>   $request->slug,
             'thumbnail'        =>   $new_name,
             'meta_title'       =>   $request->meta_title,
@@ -90,6 +92,7 @@ class InformationsController extends Controller
             $request->validate([
                 'title'     =>  'required',
                 'content'   =>  'required',
+                'types'     =>  'required',
                 'slug'      =>  'required|unique:informations',
                 'thumbnail' =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
@@ -111,6 +114,7 @@ class InformationsController extends Controller
             'content'          =>   $request->content,
             'slug'             =>   $request->slug,
             'thumbnail'        =>   $image_name,
+            'types'            =>   $request->types,
             'meta_title'       =>   $request->meta_title,
             'meta_keywords'    =>   $request->meta_keywords,
             'meta_description' =>   $request->meta_description

@@ -14,6 +14,12 @@ class Information extends Model
     use Sluggable;
     use SluggableScopeHelpers;
 
+    const Types = [
+        1 => 'Thông tin công ty',
+        2 => 'Dịch vụ bán hàng',
+        3 => 'Chính sách - Quy định',
+        4 => 'Hỗ trợ khách hàng'
+    ];
     /**
      * Return the sluggable configuration array for this model.
      *

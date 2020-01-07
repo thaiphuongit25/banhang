@@ -12,7 +12,6 @@
     <div class="middle-page">
         <div style="border: 1px solid #DDD;-moz-border-radius: 8px;-webkit-border-radius: 8px; background-color:#fff;">
             <div style="font-size:14px; font-weight:bolder; padding:6px 0 8px 16px; color:#027AC7;">
-                Thông tin công ty
             </div>
             <div style="padding:12px 6px 12px 12px;">
               @foreach ($informations as $information)

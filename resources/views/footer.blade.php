@@ -95,73 +95,52 @@
     <div class="info-com two-com f-com">
         <ul>
             <li class="title">
-                <a href="/informations">Thông Tin Công Ty</a>
+                Thông tin công ty
             </li>
-{{--
+            @foreach ( getInformations(1) as $information)
             <li>
-                <a target="_blank" href="https://thegioiic.com/pages/gioi-thieu-cong-ty">Giới thiệu công ty</a>
-            </li> --}}
-            {{-- <li>
-                <a target="_blank" href="https://thegioiic.com/pages/co-hoi-viec-lam-kinh-doanh">Cơ hội việc làm, kinh doanh</a>
+                <a href="{{ route('informations.show', ['information' => $information->slug]) }}">{{ $information->title }}</a>
             </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/product/nut-nhan-ban-phim">Đối tác, hợp tác</a>
+            @endforeach
+        </ul>
+    </div>
+    <div class="info-com two-com f-com">
+        <ul>
+            <li class="title">
+                Dịch vụ bán hàng
             </li>
+            @foreach ( getInformations(2) as $information)
             <li>
-                <a target="_blank" href="https://thegioiic.com/pages/tiep-nhan-sinh-vien-thuc-tap">Tiếp nhận sinh viên thực tập</a>
+                <a href="{{ route('informations.show', ['information' => $information->slug]) }}">{{ $information->title }}</a>
             </li>
+            @endforeach
+        </ul>
+    </div>
+    <div class="info-com two-com f-com">
+        <ul>
+            <li class="title">
+                Chính sách - Quy định
+            </li>
+            @foreach ( getInformations(3) as $information)
             <li>
-                <a target="_blank" href="https://thegioiic.com/pages/ledsang-com">LEDSANG.com</a>
-            </li> --}}
+                <a href="{{ route('informations.show', ['information' => $information->slug]) }}">{{ $information->title }}</a>
+            </li>
+            @endforeach
+        </ul>
+    </div>
+    <div class="info-com two-com f-com">
+        <ul>
+            <li class="title">
+                Hỗ trợ Khách hàng
+            </li>
+            @foreach ( getInformations(4) as $information)
+            <li>
+                <a href="{{ route('informations.show', ['information' => $information->slug]) }}">{{ $information->title }}</a>
+            </li>
+            @endforeach
         </ul>
     </div>
     {{--
-    <div class="info-com two-com f-com">
-        <ul>
-            <li class="title">
-                <a href="/information/dich-vu-ban-hang">Dịch Vụ Bán Hàng</a>
-            </li>
-
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/uu-dai-doanh-nghiep">Ưu đãi doanh nghiệp</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/mua-online-thuan-tien">Mua online thuận tiện</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/huong-dan-mua-hang-online">Hướng dẫn mua hàng online</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Đặt mua linh kiện điện tử</a>
-            </li>
-        </ul>
-    </div>
-    <div class="info-com two-com f-com">
-        <ul>
-            <li class="title">
-                <a href="https://thegioiic.com/information/chinh-sach-quy-dinh">Chính sách - Quy định</a>
-            </li>
-
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/dieu-kien-su-dung">Điều kiện sử dụng</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/chinh-sach-bao-mat">Chính sách bảo mật</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/chinh-sach-thanh-toan">Chính sách thanh toán</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/quy-dinh-bao-hanh">Quy định bảo hành</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/chinh-sach-doi-tra-hang">Chính sách đổi trả hàng</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/van-chuyen-giao-nhan">Vận chuyển - Giao nhận</a>
-            </li>
-        </ul>
-    </div>
     <div class="info-com two-com f-com">
         <ul>
             <li class="title">

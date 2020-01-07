@@ -34,6 +34,17 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label class="col-sm-2 col-form-label require">Loại thông tin</label>
+                <div class="col-sm-10">
+                    <select name="types" class="form-control">
+                        @foreach (App\model\Information::Types as $key => $value)
+                            <option value="{{ $key }}"
+                            >{{ $value }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Ảnh</label>
                 <div class="col-sm-10">
                     <input type="file" name="thumbnail" value="{{ old('thumbnail') }}" />
