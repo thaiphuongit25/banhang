@@ -15,7 +15,6 @@
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="{{ asset('js/app.js') }}" defer></script>
   <script src="{{ url('js/main.js') }}" defer></script>
   <script src="{{ url('js/custom.js') }}" defer></script>
   <script src="{{ url('js/comment.js') }}" defer></script>
@@ -24,7 +23,6 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
   <!-- Styles -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link href="{{ url('css/style.css') }}" rel="stylesheet">
 </head>
 
@@ -78,7 +76,11 @@
   </div>
   <h1 class="h1_home">IC, transistor, capacitor, inductor, Linh kiện điện tử, linh kien dien tu, electronic component</h1>
   <div id="divAdRight" style="position: absolute; top: 0px">
-    <a href="http://ledsang.com/" TARGET="_blank"><img src="https://thegioiic.com/upload/large/10493.jpg" width="140" /></a>
+    @if ($leftMost = getBanner(App\Enums\BannerType::LeftMost))
+        <a href="{{ $leftMost->link }}" TARGET="_blank">
+            <img alt="{{ $leftMost->alt }}" width="140" class="" src="{{ URL::to('/') }}/images/{{ $leftMost->image }}" />
+        </a>
+    @endif
   </div>
   <div class="container">
     <div id="top_bar" class="col-12">
@@ -123,8 +125,16 @@
     </div>
     <div id="view_bar" class="col-12 main-col">
       <div id="logo">
-        <a class="logobat logo1" href="/"><img alt="" class="" src="https://thegioiic.com/upload/large/12525.jpg"></a>
-        <a class="logobat logo2" href="https://thegioiic.com/pages/thegioiic-la-nha-phan-phoi-cua-waveshare"><img alt="" class="logo2" src="https://thegioiic.com/upload/large/14781.jpg"></a>
+          @if ($logo = getBanner(App\Enums\BannerType::Logo))
+              <a href="{{ $logo->link }}" class="logobat logo1">
+                  <img alt="{{ $logo->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $logo->image }}" />
+              </a>
+          @endif
+          @if ($topLeft = getBanner(App\Enums\BannerType::TopLeft))
+              <a href="{{ $topLeft->link }}" class="logobat logo2">
+                  <img alt="{{ $topLeft->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $topLeft->image }}" />
+              </a>
+          @endif
       </div>
       <div id="info-website">
         <div id="box-cart">
@@ -142,7 +152,11 @@
         </div>
       </div>
       <div style="float:right; line-height:0;" class="topad">
-        <a target="_blank" href="https://thegioiic.com/services/phan-phoi-linh-kien-dien-tu-va-thiet-bi-dien-tu"><img alt="" class="top_ad" src="https://thegioiic.com/upload/large/12532.jpg"></a>
+		@if ($topRight = getBanner(App\Enums\BannerType::TopRight))
+			<a href="{{ $topRight->link }}" target="_blank">
+				<img alt="{{ $topRight->alt }}" class="top_ad" src="{{ URL::to('/') }}/images/{{ $topRight->image }}" />
+			</a>
+		@endif
       </div>
       <div class="clear"></div>
     </div>
@@ -173,7 +187,11 @@
     </div>
   </div>
   <div id="divAdLeft" style="position: fixed; top: 175px; right: 30.5px; display: block;">
-    <a href="http://vinaautomation.com" target="_blank"><img src="https://thegioiic.com/upload/large/7282.jpg" width="140"></a>
+  	@if ($rightMost = getBanner(App\Enums\BannerType::RightMost))
+        <a href="{{ $rightMost->link }}" target="_blank">
+            <img alt="{{ $rightMost->alt }}" width="140" class="" src="{{ URL::to('/') }}/images/{{ $rightMost->image }}" />
+        </a>
+    @endif
   </div>
   <div id="left-support" class="btn-show-dialog-support">
     <a href="javascript:">Chat</a>

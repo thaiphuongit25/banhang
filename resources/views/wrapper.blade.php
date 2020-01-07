@@ -80,16 +80,7 @@
 			top:0; left:0;
 		}
 	</style>
-	<script language="javascript">
-		jQuery(document).ready(function($) {
-			$.featureList(
-				$("#tabs li a"),
-				$("#output li"), {
-					start_item : 1
-				}
-			);
-		});
-	</script>
+
 	<div id="con_index" style="margin-top:2px">
 		<div id="feature_list">
 			<ul id="output">

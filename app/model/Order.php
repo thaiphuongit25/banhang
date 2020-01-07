@@ -14,14 +14,14 @@ class Order extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'user_id', 'date_order', 'total', 'note'
+        'id', 'user_id', 'date_order', 'total', 'note', 'code'
      ];
 
     public function scopeOrderDetail($query, $product_id)
     {
         return $query->where('product_id', $product_id);
     }
- 
+
     public function user()
     {
         return $this->belongsTo(User::class);

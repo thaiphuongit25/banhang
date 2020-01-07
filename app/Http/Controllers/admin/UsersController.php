@@ -10,7 +10,7 @@ class UsersController extends Controller
 {
     public function index()
     {
-        $users = User::customer()->orderBy('id', 'desc')->get();
+        $users = User::customer()->orderBy('id', 'desc')->paginate(30);
         return view('admin.users.index', compact('users'));
     }
 

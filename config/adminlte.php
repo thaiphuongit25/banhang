@@ -245,6 +245,11 @@ return [
             'url'  => 'admin/informations',
             'icon'    => 'fas fa-business-time',
         ],
+        [
+            'text'    => 'Banner',
+            'url'  => 'admin/banners',
+            'icon'    => 'fas fa-images',
+        ]
     ],
 
     /*

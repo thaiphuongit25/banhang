@@ -5266,3 +5266,12 @@ var menu = {
                 }), $(".show-small-img[alt='now']").prev().attr("alt", "now").siblings().removeAttr("alt"), $("#small-img-roll").children().length > 4 && ($(".show-small-img[alt='now']").index() >= 3 && $(".show-small-img[alt='now']").index() < $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($(".show-small-img[alt='now']").index() - 2) + "px") : $(".show-small-img[alt='now']").index() == $("#small-img-roll").children().length - 1 ? $("#small-img-roll").css("left", 46 * -($("#small-img-roll").children().length - 4) + "px") : $("#small-img-roll").css("left", "0"))
             })
     });
+
+jQuery(document).ready(function($) {
+    $.featureList(
+        $("#tabs li a"),
+        $("#output li"), {
+            start_item : 1
+        }
+    );
+});

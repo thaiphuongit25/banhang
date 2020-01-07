@@ -29,16 +29,16 @@
                     </div>
                     <div>
                         Địa chỉ: {{ $order->user->address }}
-                    </div>	
+                    </div>
                     <div>
                         Ngày đặt: {{ $order->date_order }}
                     </div>
-                
+
                     <p> Thông tin đơn hàng</p>
-                    
+
                     <table class="cart" cellpadding="0" cellspacing="0">
                         <tbody><tr>
-                            <td style="font-weight:bold;"> No </td>	
+                            <td style="font-weight:bold;"> No </td>
                             <td style="width:290px; font-weight:bold;">Tên sản phẩm </td>
                             <td style="width:100px;font-weight:bold;text-align:center;">Số lượng mua</td>
                             <td style="width:140px;font-weight:bold;text-align:center;">Đơn giá</td>
@@ -46,16 +46,19 @@
                         </tr>
                         @foreach ($order->products as $item)
                             <tr id="item-377472">
-                                <td> {{ $item->id }} </td>	
-                            <td style=""> <a target="_blank" href="/products/{{ $item->slug }}">{{ $item->name }}</a> 
+                                <td> {{ $item->id }} </td>
+                            <td style=""> <a target="_blank" href="/products/{{ $item->slug }}">{{ $item->name }}</a>
                                 </td>
-                                <td style=" text-align:right;padding-right:6px"> 
+                                <td style=" text-align:right;padding-right:6px">
                                     {{ $item->pivot->quantity }} Cái
                                  </td>
-                                <td style=" text-align:right;padding-right:6px"> 
-                                {{ $item->pivot->price }}  đ 
+                                <td style=" text-align:right;padding-right:6px">
+                                {{ $item->pivot->price }}  đ
                                     </td>
-                                <td style=" text-align:right;padding-right:6px"> {{ number_format(($item->pivot->quantity)*($item->pivot->price)) }}  đ  </td>
+                                   @php
+                                        $totalItem = ($item->pivot->quantity)*($item->pivot->price)
+                                   @endphp
+                                <td style=" text-align:right;padding-right:6px"> {{ number_format($totalItem) }}  đ  </td>
                             </tr>
                         @endforeach
                     </tbody></table>
@@ -64,7 +67,7 @@
                         <tr>
                             <td style="text-align:right; color:#c30;" colspan="5">Thanh toán</td>
                             <td style="text-align:right;padding-right:4px;" id="total_bill"><span>{{ number_format($order->total) }}  đ </span></td>
-                            
+
                         </tr>
                     </tbody></table>
                     <br>
