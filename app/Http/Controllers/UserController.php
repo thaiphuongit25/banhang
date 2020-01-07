@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use App\model\Order;
 use Hash;
 
 class UserController extends Controller
@@ -79,5 +80,24 @@ class UserController extends Controller
         $user->password = bcrypt($request->get('new-password'));
         $user->save();
         return redirect('/mypage')->with("success", "Đổi mật khẩu thành công!");
+    }
+
+    public function orders()
+    {
+        $orders = Order::where('user_id', Auth::id())->get();
+        return view('orders.list', compact('orders'));
+    }
+
+    public function ordersDestroy($id)
+    {
+        $data = Order::findOrFail($id);
+        $data->delete();
+        return redirect()->route('orders')->with('success', 'Data is successfully deleted');
+    }
+
+    public function ordersDetail($id)
+    {
+        $order = Order::findOrFail($id);
+        return view('orders.show', compact('order'));
     }
 }

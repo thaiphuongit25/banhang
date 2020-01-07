@@ -42,6 +42,9 @@ Route::get('/mypage', 'UserController@mypage');
 Route::post('/update_info', 'UserController@update');
 Route::get('/change-password', 'UserController@showChangePasswordForm');
 Route::post('/change-password', 'UserController@changePassword');
+Route::get('/orders', 'UserController@orders')->name('orders');
+Route::get('/orders/{id}', 'UserController@ordersDetail')->name('orders.detail');
+Route::delete('/orders-destroy/{id}', 'UserController@ordersDestroy')->name('orders.destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController')->only(['index', 'show']);
