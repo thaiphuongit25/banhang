@@ -239,7 +239,11 @@ return [
             'text'    => 'Khách hàng',
             'url'  => 'admin/users',
             'icon'    => 'fas fa-users',
-
+        ],
+        [
+            'text'    => 'Thông tin công ty',
+            'url'  => 'admin/informations',
+            'icon'    => 'fas fa-business-time',
         ],
         [
             'text'    => 'Banner',

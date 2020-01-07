@@ -4,6 +4,7 @@
     use App\model\Service;
     use App\model\Reply;
     use App\model\Comment;
+    use App\model\Information;
     use App\model\Banner;
     use App\model\BannerItem;
     use App\Enums\BannerType;
@@ -18,6 +19,14 @@
 
     function getSuggestServices() {
         return Service::active()->orderBy('id', 'DESC')->take(5)->get();
+    }
+
+    function getSuggestInformations() {
+        return Information::active()->orderBy('id', 'DESC')->take(5)->get();
+    }
+
+    function getInformations($types) {
+        return Information::active()->where('types', $types)->orderBy('id', 'DESC')->take(6)->get();
     }
 
     function getSuggestArticleCategories() {
@@ -35,7 +44,7 @@
     }
 
     function statusStr($status) {
-        return 
+        return
         [
             0 => 'Disabled',
             1 => 'Active'
@@ -44,7 +53,7 @@
 
     function bannerTypeText($type) {
         return
-        [   
+        [
             0 => 'Logo',
             1 => 'Trên cùng bên phải',
             2 => 'Trên cùng bên trái',

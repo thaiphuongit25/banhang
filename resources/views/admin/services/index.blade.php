@@ -8,36 +8,39 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-    @include('admin.layouts.alert_section')
-    <table class="table table-striped">
-    <thead>
-        <tr>
-          <td>ID</td>
-          <td>Tiêu đề</td>
-          <td>Nội dung</td>
-          <td>Hình ảnh</td>
-          <td>Slug</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($services as $service)
-        <tr>
-            <td>{{ $service->id }}</td>
-            <td>{{ $service->title }}</td>
-            <td>{!! Str::words(strip_tags($service->content), 30, '...')  !!}</td>
-            <td><img src="{{ URL::to('/') }}/images/{{ $service->thumbnail }}" class="img-thumbnail" width="75" /></td>
-            <td>{{ $service->slug }}</td>
-            <td>
-                <a href="{{ route('admin.services.edit',$service->id) }}" class="btn btn-primary">Edit</a>
-                <form action="{{ route('admin.services.destroy', $service->id)}}" method="post" style="display: inline;">
-                  @csrf
-                  @method('DELETE')
-                  <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
+        @include('admin.layouts.alert_section')
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Tiêu đề</td>
+                    <td>Nội dung</td>
+                    <td>Hình ảnh</td>
+                    <td>Slug</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($services as $service)
+                <tr>
+                    <td>{{ $service->id }}</td>
+                    <td>{{ $service->title }}</td>
+                    <td>{!! Str::words(strip_tags($service->content), 30, '...') !!}</td>
+                    <td><img src="{{ URL::to('/') }}/images/{{ $service->thumbnail }}" class="img-thumbnail" width="75" /></td>
+                    <td>{{ $service->slug }}</td>
+                    <td>
+                        <a href="{{ route('admin.services.edit',$service->id) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('admin.services.destroy', $service->id)}}" method="post" style="display: inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit" onclick="return confirm('Bạn muốn xóa mục này?');">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 </div>
 @stop

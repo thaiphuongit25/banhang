@@ -33,15 +33,22 @@
                     <td>{{ statusStr($article->status) }}</td>
                     <td>
                         <a href="{{ route('admin.articles.edit',$article->id) }}" class="btn btn-primary">Edit</a>
-                        <form action="{{ route('admin.articles.destroy', $article->id)}}" method="post" style="display: inline;">
+                    </td>
+                    <td>
+                        <form action="{{ route('admin.articles.destroy', $article->id)}}" method="post"
+                            style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+                            <button class="btn btn-danger" type="submit"
+                                onclick="return confirm('Bạn có chắc muốn xóa bài viết này?');">Delete</button>
                         </form>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
+        </table>
+        <br>
+        {{ $articles->links() }}
     </div>
 </div>
 @stop

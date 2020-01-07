@@ -45,15 +45,19 @@ Route::post('/favorite', 'FavoriteController@add');
 Route::delete('/favorite/{id}', 'FavoriteController@destroy');
 Route::get('/change-password', 'UserController@showChangePasswordForm');
 Route::post('/change-password', 'UserController@changePassword');
+Route::get('/orders', 'UserController@orders')->name('orders');
+Route::get('/orders/{id}', 'UserController@ordersDetail')->name('orders.detail');
+Route::delete('/orders-destroy/{id}', 'UserController@ordersDestroy')->name('orders.destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController')->only(['index', 'show']);
+Route::resource('informations', 'InformationsController')->only(['index', 'show']);
 Route::resource('articles', 'ArticleController')->only(['index', 'show']);
 Route::resource('brands', 'BrandController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
 Route::post('comments/reply', 'CommentController@reply')->name('comments.reply');
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'middleware' => 'auth'], function () {
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
     Route::resource('brands', 'BrandsController');
@@ -61,6 +65,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::resource('categories', 'CategoriesController');
     Route::resource('orders', 'OrdersController');
     Route::resource('services', 'ServicesController');
+    Route::resource('informations', 'InformationsController');
     Route::resource('article_categories', 'ArticleCategoriesController')->except(['destroy']);
     Route::resource('articles', 'ArticlesController');
     Route::resource('users', 'UsersController')->only(['index', 'edit', 'update']);
