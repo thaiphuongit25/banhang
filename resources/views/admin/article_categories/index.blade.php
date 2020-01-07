@@ -8,33 +8,34 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-    @if(session()->get('success'))
-    <div class="alert alert-success">
-        {{ session()->get('success') }}
-    </div>
-    @endif
-    <table class="table table-striped">
-    <thead>
-        <tr>
-          <td>ID</td>
-          <td>Tên</td>
-          <td>Trạng thái</td>
-          <td>Slug</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($article_categories as $article_category)
-        <tr>
-            <td>{{ $article_category->id }}</td>
-            <td>{{ $article_category->name }}</td>
-            <td>{{ statusStr($article_category->status) }}</td>
-            <td>{{ $article_category->slug }}</td>
-            <td>
-                <a href="{{ route('admin.article_categories.edit',$article_category->id) }}" class="btn btn-primary">Edit</a>
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
+        @if(session()->get('success'))
+        <div class="alert alert-success">
+            {{ session()->get('success') }}
+        </div>
+        @endif
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                <td>ID</td>
+                <td>Tên</td>
+                <td>Trạng thái</td>
+                <td>Slug</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($article_categories as $article_category)
+                <tr>
+                    <td>{{ $article_category->id }}</td>
+                    <td>{{ $article_category->name }}</td>
+                    <td>{{ statusStr($article_category->status) }}</td>
+                    <td>{{ $article_category->slug }}</td>
+                    <td>
+                        <a href="{{ route('admin.article_categories.edit',$article_category->id) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
     </div>
 </div>
 @stop
