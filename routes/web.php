@@ -42,9 +42,13 @@ Route::get('/mypage', 'UserController@mypage');
 Route::post('/update_info', 'UserController@update');
 Route::get('/change-password', 'UserController@showChangePasswordForm');
 Route::post('/change-password', 'UserController@changePassword');
+Route::get('/orders', 'UserController@orders')->name('orders');
+Route::get('/orders/{id}', 'UserController@ordersDetail')->name('orders.detail');
+Route::delete('/orders-destroy/{id}', 'UserController@ordersDestroy')->name('orders.destroy');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController')->only(['index', 'show']);
+Route::resource('informations', 'InformationsController')->only(['index', 'show']);
 Route::resource('articles', 'ArticleController')->only(['index', 'show']);
 Route::resource('brands', 'BrandController')->only(['index', 'show']);
 Route::resource('comments', 'CommentController')->only(['store']);
@@ -58,6 +62,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::resource('categories', 'CategoriesController');
     Route::resource('orders', 'OrdersController');
     Route::resource('services', 'ServicesController');
+    Route::resource('informations', 'InformationsController');
     Route::resource('article_categories', 'ArticleCategoriesController')->except(['destroy']);
     Route::resource('articles', 'ArticlesController');
     Route::resource('users', 'UsersController')->only(['index', 'edit', 'update']);

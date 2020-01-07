@@ -158,14 +158,7 @@
                         </div>
                         <div id="showtip_18190" class="showtip">
                             <img alt="EL817S" class="fff" src="{{ URL::to('/') }}/images/{{ $product->image }}">
-
                         </div>
-                        <script type="text/javascript">
-                            //jQuery.noConflict();
-                            $(".popular a#showtip_i_18190").easyTooltip({
-                                useElement: "showtip_18190"
-                            });
-                        </script>
                     </div>
                     @endforeach
                 @endforeach

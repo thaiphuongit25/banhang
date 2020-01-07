@@ -48,7 +48,8 @@ class CartsController extends Controller
             'date_order'    => now(),
             'status'        => 1,
             'total'         => end($carts)['total'],
-            'note'          => $note
+            'note'          => $note,
+            'code'          => rand(100000, 999999)
         ];
         try {
             $order = Order::create($order);
@@ -57,7 +58,7 @@ class CartsController extends Controller
                     OrderDetail::create([
                         'order_id'      => $order->id,
                         'product_id'    => $cart['id'],
-                        'quantily'      => $cart['quantity'],
+                        'quantity'      => $cart['quantity'],
                         'price'         => $cart['unit']
                     ]);
                 }
