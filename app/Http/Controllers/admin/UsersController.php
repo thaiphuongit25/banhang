@@ -4,7 +4,9 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\User;
+use Hash;
 
 class UsersController extends Controller
 {
@@ -84,13 +86,21 @@ class UsersController extends Controller
         }
         $validatedData = $request->validate([
             'current-password' => 'required',
-            'new-password' => 'required|string|min:8',
+            'new-password' => 'required|string|min:8|max:20',
             'password-confirm' => 'required|same:new-password',
         ]);
         //Change Password
         $user = Auth::user();
         $user->password = bcrypt($request->get('new-password'));
-        $user->save();
-        return redirect('/mypage')->with("success", "Đổi mật khẩu thành công!");
+        $check = $user->save();
+
+        if($check)
+        {
+            return redirect()->back()->with('success', 'Đổi mật khẩu thành công!');
+        }
+        else
+        {
+            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+        }
     }
 }

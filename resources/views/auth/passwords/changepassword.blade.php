@@ -18,7 +18,7 @@
           Thay đổi mật khẩu
         </div>
         <div class="content-gf" style="position: relative">
-          <form class="new_user" id="new_user" method="POST" action="/change-password">
+          <form class="change_password" id="change_password" method="POST" action="/change-password">
             @csrf
             <div id="notice" style="padding-left:155px"></div>
             <table>

@@ -23,11 +23,7 @@
         </div>
     </div>
     <div class="card-body">
-    @if(session()->get('success'))
-    <div class="alert alert-success">
-        {{ session()->get('success') }}
-    </div>
-    @endif
+    @include('admin.layouts.alert_section')
     <table class="table table-striped">
         <thead>
             <tr>

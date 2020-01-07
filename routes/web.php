@@ -69,9 +69,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::get('/banners/{bannerId}/banner_items', 'BannerItemsController@index')->name('banner_items.index');
     Route::get('/banners/{bannerId}/banner_items/{id}', 'BannerItemsController@edit')->name('banner_items.edit');
     Route::put('/banners/{bannerId}/banner_items/{id}', 'BannerItemsController@update')->name('banner_items.update');
-    Route::get('/list', 'UsersController@admins')->name('user.admins.list');;
+    Route::get('/list', 'UsersController@admins')->name('user.admins.list');
+    Route::get('/change-password', 'UsersController@showChangePasswordForm');
+    Route::post('/change-password', 'UsersController@changePassword')->name('current.change_password');
     Route::delete('/user/{id}', 'UsersController@destroy')->name('user.delete');
-    Route::post('/user/{id}', 'UsersController@edit_role')->name('user.demote');;
+    Route::post('/user/{id}', 'UsersController@edit_role')->name('user.demote');
 });
 
 Route::get('/news', 'ArticleController@index');
