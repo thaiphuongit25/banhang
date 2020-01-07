@@ -11,8 +11,10 @@ use BenSampo\Enum\Enum;
  */
 final class SettingType extends Enum
 {
-    const Tel           =   0;
-    const OpenTime      =   1;
-    const Address       =   2;
-    const OnlineSupport =   3;
+    const Tel                       =   0;
+    const OpenTime                  =   1;
+    const Address                   =   2;
+    const OnlineSupportBusiness     =   3;
+    const OnlineSupportTechnical    =   4;
+    const OnlineSupportSaleWarranty =   5;
 }

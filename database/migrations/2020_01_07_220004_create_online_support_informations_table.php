@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 use App\Enums\Status;
 
-class CreateSettingsTable extends Migration
+class CreateOnlineSupportInformationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,15 @@ class CreateSettingsTable extends Migration
      */
     public function up()
     {
-        Schema::create('settings', function (Blueprint $table) {
+        Schema::create('online_support_informations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('type');
+            $table->integer('setting_id')->references('id')->on('settings');
             $table->integer('status')->default(Status::Active);
-            $table->text('value')->nullable();
+            $table->string('name');
+            $table->string('skype')->nullable();
+            $table->string('zalo')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('tel')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +34,6 @@ class CreateSettingsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('settings');
+        Schema::dropIfExists('online_support_informations');
     }
 }

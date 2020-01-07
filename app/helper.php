@@ -57,7 +57,9 @@
             0 => 'Số điện thoại',
             1 => 'Giờ mở cửa',
             2 => 'Địa chỉ',
-            3 => 'Thông tin chăm sóc khách hàng',
+            3 => 'Hỗ trợ trực tuyến kinh doanh',
+            4 => 'Hỗ trợ trực tuyến kĩ thuật',
+            5 => 'Hỗ trợ trực tuyến bán hàng - bảo hành',
         ][$type];
     }
 
