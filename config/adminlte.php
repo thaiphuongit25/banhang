@@ -185,13 +185,13 @@ return [
         ],
         ['header' => 'account_settings'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Quản lý quản trị viên',
+            'url'  => 'admin/list',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'text' => 'Chang password',
+            'url'  => 'admin/change_password',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [

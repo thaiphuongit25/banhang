@@ -40,9 +40,9 @@ Auth::routes();
 
 Route::get('/mypage', 'UserController@mypage');
 Route::post('/update_info', 'UserController@update');
-Route::get('/favorites', 'FavoriteCOntroller@lists');
-Route::post('/favorite', 'FavoriteCOntroller@add');
-Route::delete('/favorite/{id}', 'FavoriteCOntroller@destroy');
+Route::get('/favorites', 'FavoriteController@lists');
+Route::post('/favorite', 'FavoriteController@add');
+Route::delete('/favorite/{id}', 'FavoriteController@destroy');
 Route::get('/change-password', 'UserController@showChangePasswordForm');
 Route::post('/change-password', 'UserController@changePassword');
 
@@ -69,6 +69,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::get('/banners/{bannerId}/banner_items', 'BannerItemsController@index')->name('banner_items.index');
     Route::get('/banners/{bannerId}/banner_items/{id}', 'BannerItemsController@edit')->name('banner_items.edit');
     Route::put('/banners/{bannerId}/banner_items/{id}', 'BannerItemsController@update')->name('banner_items.update');
+    Route::get('/list', 'UsersController@admins')->name('user.admins.list');;
+    Route::delete('/user/{id}', 'UsersController@destroy')->name('user.delete');
+    Route::post('/user/{id}', 'UsersController@edit_role')->name('user.demote');;
 });
 
 Route::get('/news', 'ArticleController@index');
