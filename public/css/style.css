@@ -4281,7 +4281,7 @@ select:hover {
     border: 1px solid #CCC;
     padding: 4px 5px 3px 21px;
     color: #0000FF;
-    background: url("rating.png") no-repeat scroll 4px 4px;
+    background: url("/images/rating.png") no-repeat scroll 4px 4px;
     cursor: pointer
 }
 

@@ -22,11 +22,11 @@ class CreateProductsTable extends Migration
             $table->string('image');
             $table->string('specification');
             $table->integer('quantity');
-            $table->integer('price')->default(0);;
+            $table->integer('price')->default(0);
             $table->integer('status')->default(1);
             $table->string('slug');
-            $table->string('meta_title')->default(null);;
-            $table->string('meta_keywords')->default(null);;
+            $table->string('meta_title')->default(null);
+            $table->string('meta_keywords')->default(null);
             $table->string('meta_description')->default(null);
             $table->timestamps();
         });

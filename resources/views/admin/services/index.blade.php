@@ -8,11 +8,7 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        @if(session()->get('success'))
-        <div class="alert alert-success">
-            {{ session()->get('success') }}
-        </div>
-        @endif
+        @include('admin.layouts.alert_section')
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -29,19 +25,16 @@
                     <td>{{ $service->id }}</td>
                     <td>{{ $service->title }}</td>
                     <td>{!! Str::words(strip_tags($service->content), 30, '...') !!}</td>
-                    <td><img src="{{ URL::to('/') }}/images/{{ $service->thumbnail }}" class="img-thumbnail"
-                            width="75" /></td>
+                    <td><img src="{{ URL::to('/') }}/images/{{ $service->thumbnail }}" class="img-thumbnail" width="75" /></td>
                     <td>{{ $service->slug }}</td>
                     <td>
                         <a href="{{ route('admin.services.edit',$service->id) }}" class="btn btn-primary">Edit</a>
                     </td>
                     <td>
-                        <form action="{{ route('admin.services.destroy', $service->id)}}" method="post"
-                            style="display: inline;">
+                        <form action="{{ route('admin.services.destroy', $service->id)}}" method="post" style="display: inline;">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger" type="submit"
-                                onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+                            <button class="btn btn-danger" type="submit" onclick="return confirm('Bạn muốn xóa mục này?');">Delete</button>
                         </form>
                     </td>
                 </tr>

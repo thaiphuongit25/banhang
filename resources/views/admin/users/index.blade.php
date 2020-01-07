@@ -7,11 +7,7 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        @if(session()->get('success'))
-        <div class="alert alert-success">
-            {{ session()->get('success') }}
-        </div>
-        @endif
+        @include('admin.layouts.alert_section')
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -36,6 +32,13 @@
                     <td>{{ $user->tax_code }}</td>
                     <td>
                         <a href="{{ route('admin.users.edit', $user->id) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('admin.user.demote', $user->id)}}" method="post" onsubmit="return confirm('Bạn có chắc chắn muốn cấp quyền quản trị cho tài khoản này không?');">
+                            @csrf
+                            @method('POST')
+                            <button class="btn btn-warning" confirm="Bạn có chắc ko?" type="submit">Cấp quyền</button>
+                        </form>
                     </td>
                 </tr>
                 @endforeach

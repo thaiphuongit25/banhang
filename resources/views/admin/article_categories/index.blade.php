@@ -8,18 +8,14 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        @if(session()->get('success'))
-        <div class="alert alert-success">
-            {{ session()->get('success') }}
-        </div>
-        @endif
+        @include('admin.layouts.alert_section')
         <table class="table table-striped">
             <thead>
                 <tr>
-                <td>ID</td>
-                <td>Tên</td>
-                <td>Trạng thái</td>
-                <td>Slug</td>
+                    <td>ID</td>
+                    <td>Tên</td>
+                    <td>Trạng thái</td>
+                    <td>Slug</td>
                 </tr>
             </thead>
             <tbody>

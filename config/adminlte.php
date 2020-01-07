@@ -183,15 +183,15 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        ['header' => 'account_settings'],
+        ['header' => 'Quản trị website'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Quản lý quản trị viên',
+            'url'  => 'admin/list',
             'icon' => 'fas fa-fw fa-user',
         ],
         [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
+            'text' => 'Thay đổi mật khẩu',
+            'url'  => 'admin/change-password',
             'icon' => 'fas fa-fw fa-lock',
         ],
         [

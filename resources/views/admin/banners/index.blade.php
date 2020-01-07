@@ -6,43 +6,39 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-    @if(session()->get('success'))
-    <div class="alert alert-success">
-        {{ session()->get('success') }}
-    </div>
-    @endif
-    <table class="table table-striped">
-    <thead>
-        <tr>
-          <td>Loại banner</td>
-          <td>Ảnh</td>
-          <td>Đường dẫn</td>
-          <td>Alt</td>
-          <td>Trạng thái</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach($banners as $banner)
-        <tr>
-            <td>{{ bannerTypeText($banner->type) }}</td>
-            <td>
-                @if ($banner->type != App\Enums\BannerType::Slider)
-                    <img src="{{ URL::to('/') }}/images/{{ $banner->image }}" class="img-thumbnail" width="75" />
-                @endif
-            </td>
-            <td>{{ $banner->link }}</td>
-            <td>{{ $banner->alt }}</td>
-            <td>{{ statusStr($banner->status) }}</td>
-            <td>
-                @if ($banner->type == App\Enums\BannerType::Slider)
-                <a href="{{ route('admin.banner_items.index', ['bannerId' => $banner->id]) }}" class="btn btn-primary">Edit</a>
-                @else
-                <a href="{{ route('admin.banners.edit', $banner->id) }}" class="btn btn-primary">Edit</a>
-                @endif
-            </td>
-        </tr>
-        @endforeach
-    </tbody>
+        @include('admin.layouts.alert_section')
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>Loại banner</td>
+                    <td>Ảnh</td>
+                    <td>Đường dẫn</td>
+                    <td>Alt</td>
+                    <td>Trạng thái</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($banners as $banner)
+                <tr>
+                    <td>{{ bannerTypeText($banner->type) }}</td>
+                    <td>
+                        @if ($banner->type != App\Enums\BannerType::Slider)
+                        <img src="{{ URL::to('/') }}/images/{{ $banner->image }}" class="img-thumbnail" width="75" />
+                        @endif
+                    </td>
+                    <td>{{ $banner->link }}</td>
+                    <td>{{ $banner->alt }}</td>
+                    <td>{{ statusStr($banner->status) }}</td>
+                    <td>
+                        @if ($banner->type == App\Enums\BannerType::Slider)
+                        <a href="{{ route('admin.banner_items.index', ['bannerId' => $banner->id]) }}" class="btn btn-primary">Edit</a>
+                        @else
+                        <a href="{{ route('admin.banners.edit', $banner->id) }}" class="btn btn-primary">Edit</a>
+                        @endif
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
     </div>
 </div>
 @stop

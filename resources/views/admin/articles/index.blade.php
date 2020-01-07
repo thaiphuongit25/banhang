@@ -8,11 +8,7 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        @if(session()->get('success'))
-        <div class="alert alert-success">
-            {{ session()->get('success') }}
-        </div>
-        @endif
+        @include('admin.layouts.alert_section')
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -32,8 +28,7 @@
                     <td>{{ $article->title }}</td>
                     <td>{{ $article->article_category->name }}</td>
                     <td>{!! Str::words(strip_tags($article->content), 30, '...') !!}</td>
-                    <td><img src="{{ URL::to('/') }}/images/{{ $article->thumbnail }}" class="img-thumbnail"
-                            width="75" /></td>
+                    <td><img src="{{ URL::to('/') }}/images/{{ $article->thumbnail }}" class="img-thumbnail" width="75" /></td>
                     <td>{{ $article->slug }}</td>
                     <td>{{ statusStr($article->status) }}</td>
                     <td>
@@ -45,7 +40,7 @@
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger" type="submit"
-                                onclick="return confirm('Are you sure you want to delete this item?');">Delete</button>
+                                onclick="return confirm('Bạn có chắc muốn xóa bài viết này?');">Delete</button>
                         </form>
                     </td>
                 </tr>
