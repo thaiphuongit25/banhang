@@ -19,6 +19,14 @@ class OnlineSupportInformationsController extends Controller
         return view('admin.online_support_informations.index', compact('setting', 'online_support_informations'));
     }
 
+    public function create(Request $request)
+    {
+        $setting = Setting::whereIn('type', onlineSupportSettingTypes())
+                            ->where('id', $request->settingId)
+                            ->firstOrFail();
+        return view('admin.online_support_informations.create', compact('setting'));
+    }
+
     public function edit(Request $request)
     {
         $setting = Setting::whereIn('type', onlineSupportSettingTypes())
@@ -43,9 +51,33 @@ class OnlineSupportInformationsController extends Controller
             'facebook'        =>   $request->facebook,
             'skype'           =>   $request->skype,
             'tel'             =>   $request->tel,
+            'status'          =>   $request->status
         );
 
         OnlineSupportInformation::whereId($request->id)->update($form_data);
+
+        return redirect()->route('admin.online_support_informations.index', ['settingId' => $setting->id])->with('success', 'Data Updated successfully.');
+    }
+
+    public function store(Request $request)
+    {
+        $setting = Setting::whereIn('type', onlineSupportSettingTypes())
+                            ->where('id', $request->settingId)
+                            ->firstOrFail();
+        $request->validate([
+            'name'    =>  'required',
+        ]);
+
+        $form_data = array(
+            'name'            =>   $request->name,
+            'zalo'            =>   $request->zalo,
+            'facebook'        =>   $request->facebook,
+            'skype'           =>   $request->skype,
+            'tel'             =>   $request->tel,
+            'setting_id'      =>   $request->settingId,
+        );
+
+        OnlineSupportInformation::create($form_data);
 
         return redirect()->route('admin.online_support_informations.index', ['settingId' => $setting->id])->with('success', 'Data Updated successfully.');
     }

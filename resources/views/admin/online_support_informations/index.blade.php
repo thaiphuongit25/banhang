@@ -2,6 +2,8 @@
 @section('title', 'Dashboard')
 @section('content_header')
 <h1>Danh sách hỗ trợ trực tuyến của: <b>{{ $setting->value }}</b></h1>
+<br>
+<a href="{{ route('admin.online_support_informations.create', ['settingId' => $setting->id]) }}" class="btn btn-primary">Thêm mới hỗ trợ trực tuyến</a>
 @stop
 @section('content')
 <div align="right">

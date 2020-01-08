@@ -83,6 +83,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::resource('online_support_informations', 'OnlineSupportInformationsController');
     Route::get('/settings/{settingId}/online_support_informations', 'OnlineSupportInformationsController@index')->name('online_support_informations.index');
     Route::get('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@edit')->name('online_support_informations.edit');
+    Route::get('/settings/online_support_informations/create', 'OnlineSupportInformationsController@create')->name('online_support_informations.create');
+    Route::post('/settings/{settingId}/online_support_informations/', 'OnlineSupportInformationsController@store')->name('online_support_informations.store');
     Route::put('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@update')->name('online_support_informations.update');
     Route::delete('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@destroy')->name('online_support_informations.destroy');
 });

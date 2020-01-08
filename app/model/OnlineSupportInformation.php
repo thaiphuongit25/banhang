@@ -20,6 +20,6 @@ class OnlineSupportInformation extends Model
     }
 
     protected $fillable = [
-        'id', 'name', 'facebook', 'zalo', 'skype', 'tel'
+        'id', 'name', 'facebook', 'zalo', 'skype', 'tel', 'setting_id', 'status'
     ];
 }
