@@ -47,7 +47,7 @@
                     KẾT QUẢ TÌM KIẾM
                 </div>
                 <div class="detail-search">
-                    <span>{{ count($products) }}</span> kết quả cho <span>{{ $name }}</span>
+                    <span>{{ $total }}</span> kết quả cho <span>{{ $name }}</span>
                 </div>
             </div>
             <div class="subject" style="height:auto">
@@ -108,9 +108,8 @@
                 </div>
                 <div style="display:block;float:left;width:100%;">
                     <div class="pagination"><span class="previous_page disabled">&nbsp; </span>
-                        <em class="current">1</em>
-                        @for ($i = 1; $i < $numberPage; $i++)
-                            <a rel="next" href="/products?page={{$i}}&amp;search={{ $name }}&amp;utf8=%E2%9C%93">2</a>&nbsp; </a>
+                        @for ($i = 0; $i < $numberPage; $i++)
+                            <a rel="next" href="/products?page={{ $i + 1 }}&amp;search={{ $name }}&amp;utf8=%E2%9C%93">{{ $i + 1 }}</a>&nbsp; </a>
                         @endfor
                     </div>
                 </div>
