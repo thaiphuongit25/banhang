@@ -104,11 +104,14 @@
         </div>
         <div class="textmenu_top" style="float: left;">
           <img class="phone" src="https://thegioiic.com/assets/phone-5132c0a1dbb76aaf5137a4c070684d7332a2cd648f49606b6212839e8fc77b83.png" alt="Phone">
-          <span class="px">(28)3896.8699</span> |
-          <span class="px">0972924961</span>
+          @if ($tel = getSetting(App\Enums\SettingType::Tel))
+          <span class="px">{{ $tel->value }}</span>
+          @endif
         </div>
         <div class="marquee">
-          <a href="">Giờ mở cửa: Thứ 2~7: 7:30~18:00 | CN: 8:00~16:30 (Bán thông trưa)</a>
+          @if ($openTime = getSetting(App\Enums\SettingType::OpenTime))
+          {!!html_entity_decode($openTime->value)!!}
+          @endif
         </div>
         <div class="user_control" style="display: flex;">
           <input type="hidden" id="check_login" value="0">
@@ -186,13 +189,14 @@
         </a>
     @endif
   </div>
-  <div id="left-support" class="btn-show-dialog-support">
-    <a href="javascript:">Chat</a>
+  <div id="left-support" onclick="$('#supportbox').show();">
+    <a href="#">Chat</a>
   </div>
   <div class="overlay"></div>
   <div class="go-top" style="display: block;"></div>
   <div class="clear"></div>
   <div class="autocomplete-suggestions " style="display: none; top: 149px; left: 868.5px; width: 352px;"></div>
   <div class="autocomplete-suggestions " style="display: none; top: 2500px; left: 386.938px; width: 424px;"></div>
+  @include('online_support')
 </body>
 </html>

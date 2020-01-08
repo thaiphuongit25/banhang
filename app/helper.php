@@ -7,6 +7,8 @@
     use App\model\Information;
     use App\model\Banner;
     use App\model\BannerItem;
+    use App\model\OnlineSupportInformation;
+    use App\model\Setting;
     use App\Enums\BannerType;
     use App\Enums\SettingType;
 
@@ -89,6 +91,14 @@
             return BannerItem::active()->where('banner_id', $slider->id)->get();
         }
         return Banner::active()->where('type', $type)->first();
+    }
+
+    function getSetting($type) {
+        return Setting::where('type', $type)->first();
+    }
+
+    function getOnlineSupportSetting() {
+        return Setting::with('onlineSupportInformations')->whereIn('type', onlineSupportSettingTypes())->get();
     }
 
     function onlineSupportSettingTypes() {
