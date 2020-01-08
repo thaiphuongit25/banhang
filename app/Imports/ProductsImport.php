@@ -19,13 +19,12 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
     public function model(array $row)
     {
         $brand = Brand::where('name', 'like', '%' . $row['thuong_hieu'] . '%')->get();
-        $brand_id = (empty($brand) ? 1 : $brand->id);
+        $brand_not_exist = $brand->isEmpty();
+        $brand_id = ($brand_not_exist ? 1 : $brand->id);
 
         $category = Category::where('name', 'like', '%' . $row['danh_muc'] . '%')->get();
-        $category_id = (empty($category) ? 1 : $category->id);
-
-        // $image_name = time() . '.' . $image->getClientOriginalExtension();
-        // $image->move(public_path('images'), $image_name);
+        $category_not_exist = $category->isEmpty();
+        $category_id = ($category_not_exist ? 1 : $category->first()->id);
 
         return new Product([
             'name' => $row['ten'],
@@ -34,7 +33,6 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
             'category_id' => $category_id,
             'specification' => $row['thong_so'],
             'price' => $row['gia_tien'],
-            'image' => $row['anh'],
             'slug' => $row['ten_duong_dan'],
             'quantity' => $row['so_luong']
         ]);
@@ -51,14 +49,6 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
             'gia_tien'          =>  'required',
             'thong_so'          =>  'required',
             'ten_duong_dan'     =>  'required',
-            'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-        ];
-    }
-
-    public function customValidationMessages()
-    {
-        return [
-            '1.in' => 'Custom message for :attribute.',
         ];
     }
 }

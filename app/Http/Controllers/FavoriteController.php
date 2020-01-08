@@ -31,7 +31,7 @@ class FavoriteController extends Controller
         $favorite->user_id = Auth::id();
         $check = $favorite->save();
 
-        if($check){ 
+        if($check){
           session()->flash("success","Thêm thành công!");
         }else {
           session()->flash("error","Đã xảy ra lỗi!");
@@ -44,7 +44,7 @@ class FavoriteController extends Controller
     {
       $check = Favorite::where('product_id',$id)->where('user_id', Auth::id())->delete();
 
-      if($check){ 
+      if($check){
         session()->flash("success","Xóa thành công!");
       }else {
         session()->flash("error","Đã xảy ra lỗi!");

@@ -4,6 +4,11 @@
 <h1>Danh sách sản phẩm</h1>
 @stop
 @section('content')
+@error('excel_file')
+    <div class="alert alert-danger">
+        {{ $message }}
+    </div>
+@enderror
 <div class="card">
     <div class="card-header">
         <div class="row">
@@ -23,14 +28,21 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="input-group">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" name='excel-file'>
-                        <label class="custom-file-label" for="inputGroupFile04">Chọn file</label>
-                    </div>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Upload file excel</button>
-                    </div>
+                <div>
+                    <form action="{{ route('admin.products.import') }}" method="post" enctype="multipart/form-data">
+                        @csrf
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="excel_upload" aria-describedby="inputGroupFileAddon04" name='excel_file'>
+                            <label class="custom-file-label" for="excel_upload">Chọn file</label>
+
+                            <small id="fileHelp" class="form-text text-muted">Hãy upload file excel theo mẫu sau:
+                                <a href="{{ route('admin.products.download.example') }}">Tải về</a>
+                            </small>
+                        </div>
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Upload file excel</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
