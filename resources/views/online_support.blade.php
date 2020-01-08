@@ -13,18 +13,18 @@
                         <li class="children">
                             <span>{{ $info->name }}</span>
                             <a class="zalo" href="{{ $info->zalo }}"
-                                target="_blank"><img src="https://thegioiic.com/images/icon_zalo.png"
+                                target="_blank"><img src="/images/icon_zalo.png"
                                     style="border: none;" width="24px" height="24px">
                             </a>
                             <a class="skype"
                                 href="{{ $info->skype }}" target="_blank">
                                 <img
-                                    src="https://thegioiic.com/images/icon_skype.png" style="border: none;" width="24px"
+                                    src="/images/icon_skype.png" style="border: none;" width="24px"
                                     height="24px">
                             </a>
                             <a class="facebook" href="{{ $info->facebook }}"
                                 target="_blank">
-                                <img src="https://thegioiic.com/images/icon_messenger.png"
+                                <img src="/images/icon_messenger.png"
                                     style="border: none;" width="24px" height="24px">
                             </a>
                             <b>Tel: {{ $info->tel }}</b>
