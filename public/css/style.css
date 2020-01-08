@@ -7349,8 +7349,13 @@ div.ppt {
     margin-left: 5px;
 }
 
+.user_control .admin_btn {
+    margin-right: 5px;
+}
+
 .user_control .mypage_btn {
     margin-right: 5px;
+    margin-left: 5px;
 }
 
 .user_control .login_btn {
