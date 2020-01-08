@@ -60,6 +60,8 @@ Route::post('comments/reply', 'CommentController@reply')->name('comments.reply')
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
+    Route::post('/mass_import', 'ProductsController@import')->name('products.import');
+    Route::get('/example_excel', 'ProductsController@download_excel')->name('products.download.example');
     Route::resource('brands', 'BrandsController');
     Route::resource('types', 'TypesController');
     Route::resource('categories', 'CategoriesController');
@@ -79,6 +81,14 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::post('/change-password', 'UsersController@changePassword')->name('current.change_password');
     Route::delete('/user/{id}', 'UsersController@destroy')->name('user.delete');
     Route::post('/user/{id}', 'UsersController@edit_role')->name('user.demote');
+    Route::resource('settings', 'SettingsController')->only(['index', 'edit', 'update']);
+    Route::resource('online_support_informations', 'OnlineSupportInformationsController');
+    Route::get('/settings/{settingId}/online_support_informations', 'OnlineSupportInformationsController@index')->name('online_support_informations.index');
+    Route::get('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@edit')->name('online_support_informations.edit');
+    Route::get('/settings/online_support_informations/create', 'OnlineSupportInformationsController@create')->name('online_support_informations.create');
+    Route::post('/settings/{settingId}/online_support_informations/', 'OnlineSupportInformationsController@store')->name('online_support_informations.store');
+    Route::put('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@update')->name('online_support_informations.update');
+    Route::delete('/settings/{settingId}/online_support_informations/{id}', 'OnlineSupportInformationsController@destroy')->name('online_support_informations.destroy');
 });
 
 Route::get('/news', 'ArticleController@index');

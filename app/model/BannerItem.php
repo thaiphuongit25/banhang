@@ -16,4 +16,8 @@ class BannerItem extends Model
     {
         return $query->where('status', 1);
     }
+
+    protected $fillable = [
+        'id', 'link', 'alt', 'status', 'image'
+    ];
 }

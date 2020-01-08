@@ -4,7 +4,9 @@
             <tr>
                 <td valign="top">
                     <div id="mnf-phone">
-                        (28)3896.8699 | 0972924961
+                        @if ($tel = getSetting(App\Enums\SettingType::Tel))
+                        {!!strip_tags($tel->value)!!}
+                        @endif
                     </div>
                     {{-- <div class="textbody_black mnf-contact">
                         <a class="textbody_black" href="https://thegioiic.com/lien-he">
@@ -76,21 +78,9 @@
 </div>
 <div id="footer-new">
     <div class="info-com first-com">
-        <ul>
-            <li class="title">
-                © THEGIOIIC.COM
-
-            </li>
-            <li>
-                <p>939/1A Kha Vạn Cân, Linh Tây, Thủ Đức, HCM</p>
-            </li>
-            <li>
-                <p>Điện thoại: (28)3896.8699</p>
-            </li>
-            <li>
-                <p>Email: info@thegioiic.com. Skype ID: giaolo, thegioiic</p>
-            </li>
-        </ul>
+        @if ($address = getSetting(App\Enums\SettingType::Address))
+        {!!html_entity_decode($address->value)!!}
+        @endif
     </div>
     <div class="info-com two-com f-com">
         <ul>
