@@ -105,7 +105,7 @@
         <div class="textmenu_top" style="float: left;">
           <img class="phone" src="https://thegioiic.com/assets/phone-5132c0a1dbb76aaf5137a4c070684d7332a2cd648f49606b6212839e8fc77b83.png" alt="Phone">
           @if ($tel = getSetting(App\Enums\SettingType::Tel))
-          <span class="px">{!!html_entity_decode($tel->value)!!}</span>
+          <span class="px">{!!strip_tags($tel->value)!!}</span>
           @endif
         </div>
         <div class="marquee">

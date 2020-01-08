@@ -5,7 +5,7 @@
                 <td valign="top">
                     <div id="mnf-phone">
                         @if ($tel = getSetting(App\Enums\SettingType::Tel))
-                        {!!html_entity_decode($tel->value)!!}
+                        {!!strip_tags($tel->value)!!}
                         @endif
                     </div>
                     {{-- <div class="textbody_black mnf-contact">
