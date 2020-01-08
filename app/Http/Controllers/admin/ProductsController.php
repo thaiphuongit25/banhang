@@ -76,12 +76,13 @@ class ProductsController extends Controller
         $product = Product::create($product);
         $units = [];
         $i = 0;
+
         foreach($request->request as $key => $value) {
             //dd($key);
-            if (stripos($key, "number") !== false) {
+            if (stripos($key, "number") !== false && $value != null) {
                 array_push($units, ['number' => $value]);
             }
-            if (stripos($key, "unit") !== false) {
+            if (stripos($key, "unit") !== false && $value != null) {
                 $units[$i]['unit'] = $value;
                 $i += 1;
             }
