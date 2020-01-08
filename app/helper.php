@@ -7,7 +7,10 @@
     use App\model\Information;
     use App\model\Banner;
     use App\model\BannerItem;
+    use App\model\OnlineSupportInformation;
+    use App\model\Setting;
     use App\Enums\BannerType;
+    use App\Enums\SettingType;
 
     function getTypes() {
         return Type::all();
@@ -51,6 +54,18 @@
         ][$status];
     }
 
+    function settingTypeText($type) {
+        return
+        [   
+            0 => 'Số điện thoại',
+            1 => 'Giờ mở cửa',
+            2 => 'Địa chỉ',
+            3 => 'Hỗ trợ trực tuyến kinh doanh',
+            4 => 'Hỗ trợ trực tuyến kĩ thuật',
+            5 => 'Hỗ trợ trực tuyến bán hàng - bảo hành',
+        ][$type];
+    }
+
     function bannerTypeText($type) {
         return
         [
@@ -76,5 +91,17 @@
             return BannerItem::active()->where('banner_id', $slider->id)->get();
         }
         return Banner::active()->where('type', $type)->first();
+    }
+
+    function getSetting($type) {
+        return Setting::where('type', $type)->first();
+    }
+
+    function getOnlineSupportSetting() {
+        return Setting::with('onlineSupportInformations')->whereIn('type', onlineSupportSettingTypes())->get();
+    }
+
+    function onlineSupportSettingTypes() {
+        return [SettingType::OnlineSupportBusiness, SettingType::OnlineSupportTechnical, SettingType::OnlineSupportSaleWarranty];
     }
 

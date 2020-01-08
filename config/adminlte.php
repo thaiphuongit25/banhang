@@ -249,6 +249,11 @@ return [
             'text'    => 'Banner',
             'url'  => 'admin/banners',
             'icon'    => 'fas fa-images',
+        ],
+        [
+            'text'    => 'Thiết lập khác',
+            'url'  => 'admin/settings',
+            'icon'    => 'fas fa-cog',
         ]
     ],
 

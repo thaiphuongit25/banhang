@@ -16,14 +16,14 @@
                 </div>
                 <div class="img-rp" style="width: 100%;">
                     <div class="avatar-report">
-                        <a href="/users/{{ $comment->user->id }}">
+                        <a href="#">
                             <span class="noavatarname">{{ firstCharacterOfName($comment->user->name) }}</span>
                         </a>
 
                     </div>
                     <div class="name-rp" style="line-height: 2.2;">
                         <b>
-                            <a href="/users/{{ $comment->user->id }}">
+                            <a href="#">
                                 <em class="Highlight"
                                     style="padding: 1px; box-shadow: rgb(229, 229, 229) 1px 1px; border-radius: 3px; -webkit-print-color-adjust: exact; background-color: rgb(255, 255, 102); color: rgb(0, 0, 0); font-style: inherit;">
                                     {{ $comment->user->name }}
@@ -53,14 +53,14 @@
                             </div>
                             <div class="img-rp" style="width: 100%;">
                                 <div class="avatar-report">
-                                    <a href="/users/{{ $comment->user->id }}">
+                                    <a href="#">
                                         <span class="noavatarname">{{ firstCharacterOfName($reply->user->name) }}</span>
                                     </a>
 
                                 </div>
                                 <div class="name-rp" style="line-height: 2.2;">
                                     <b>
-                                        <a href="/users/{{ $comment->user->id }}">
+                                        <a href="#">
                                             <em class="Highlight"
                                                 style="padding: 1px; box-shadow: rgb(229, 229, 229) 1px 1px; border-radius: 3px; -webkit-print-color-adjust: exact; background-color: rgb(255, 255, 102); color: rgb(0, 0, 0); font-style: inherit;">
                                                 {{ $comment->user->name }}
