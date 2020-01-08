@@ -16,7 +16,7 @@ class ArticleCategoriesController extends Controller
      */
     public function index()
     {
-        $article_categories = ArticleCategory::all();
+        $article_categories = ArticleCategory::paginate(10);
         return view('admin.article_categories.index', compact('article_categories'));
     }
 

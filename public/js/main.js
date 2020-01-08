@@ -5191,6 +5191,7 @@ var menu = {
                 }
                 localStorage.setItem("list_card", JSON.stringify(listCard));
                 $(".card_value").html(listCard.length);
+                toastr.success('Thêm thành công');
             }),
             $(".adtocartdestop").find(".btn-cart").click(function() {
 

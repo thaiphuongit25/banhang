@@ -41,6 +41,8 @@
                 @endforeach
             </tbody>
         </table>
+        <br>
+        {{ $services->links() }}
     </div>
 </div>
 @stop

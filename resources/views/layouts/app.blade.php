@@ -13,8 +13,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
   <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+      crossorigin="anonymous">
+  </script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ <!--  <script src="{{ url('js/jnoty.js') }}" defer></script>
+  <script src="{{ url('js/jnoty.min.js') }}" defer></script> -->
   <script src="{{ url('js/main.js') }}" defer></script>
   <script src="{{ url('js/custom.js') }}" defer></script>
   <script src="{{ url('js/comment.js') }}" defer></script>
@@ -24,6 +31,9 @@
 
   <!-- Styles -->
   <link href="{{ url('css/style.css') }}" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+  <!-- <link href="{{ url('css/jnoty.css') }}" rel="stylesheet">
+  <link href="{{ url('css/jnoty.min.css') }}" rel="stylesheet"> -->
 </head>
 
 <body data-cart="0">

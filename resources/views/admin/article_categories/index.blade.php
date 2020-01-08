@@ -32,6 +32,8 @@
                 @endforeach
             </tbody>
         </table>
+        <br>
+        {{ $article_categories->links() }}
     </div>
 </div>
 @stop
