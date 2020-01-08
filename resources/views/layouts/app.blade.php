@@ -41,7 +41,11 @@
     <div id="top-fix-scroll">
       <div>
         <div class="logo-scroll">
-          <a href="index.html"><img alt="" class="" src="https://thegioiic.com/upload/large/12525.jpg" /></a>
+            @if ($logo = getBanner(App\Enums\BannerType::Logo))
+            <a href="{{ $logo->link }}">
+                <img alt="{{ $logo->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $logo->image }}" />
+            </a>
+            @endif
         </div>
         <div class="form-scroll" id="main-search-scroll">
           <form action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />

@@ -37,8 +37,10 @@ class ProductsController extends Controller
         $page = $request->has('page') ? $request->page : 1;
         $offset = $page == 1 ? 0 : 16*($page - 1);
         $products = Product::where("name", 'LIKE','%'.$name.'%')->offset($offset)->limit(16)->get();
-        $numberPage = count($products) / 16;
-        return view('products.list', compact('products', 'name', 'numberPage'));
+        $list = Product::where("name", 'LIKE','%'.$name.'%')->get();
+        $total = count($list);
+        $numberPage = $total / 16;
+        return view('products.list', compact('products', 'name', 'numberPage', 'total'));
     }
 
       /**
