@@ -25,7 +25,7 @@
           <label for="inputPasswordNew">Mật khẩu mới</label>
           <input type="password" class="form-control" id="inputPasswordNew" name="new-password" required="">
           <span class="form-text small text-muted">
-            Mật khẩu phải có từ 8 -> 20 ký tự và <em>Không</em> bao gồm khoảngg trắng.
+            Mật khẩu phải có từ 8 -> 20 ký tự và <em>Không</em> bao gồm khoảng trắng.
           </span>
           @error('new-password')
           <div class="alert alert-danger" role="alert">

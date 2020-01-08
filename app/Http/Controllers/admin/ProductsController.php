@@ -4,10 +4,15 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Storage;
 use App\model\Product;
 use App\model\Brand;
 use App\model\Category;
 use App\model\Unit;
+use App\Imports\ProductsImport;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class ProductsController extends Controller
 {
@@ -77,7 +82,6 @@ class ProductsController extends Controller
         $units = [];
         $i = 0;
         foreach($request->request as $key => $value) {
-            //dd($key);
             if (stripos($key, "number") !== false) {
                 array_push($units, ['number' => $value]);
             }
@@ -244,5 +248,28 @@ class ProductsController extends Controller
         $data = Product::findOrFail($id);
         $data->delete();
         return redirect()->route('admin.products.index')->with('success', 'Data is successfully deleted');
+    }
+
+    public function import()
+    {
+        request()->validate([
+            'excel_file' => 'required|file|mimes:xlsx'
+           ]);
+        try {
+            Excel::import(new ProductsImport,request()->file('excel_file'));
+        } catch (\Maatwebsite\Excel\Validators\ValidationException $e) {
+            $failures = $e->failures();
+            $er='';
+             foreach ($failures as $failure) {
+                $er .= 'Dòng:' . $failure->row() . '- Cột: ' . $failure->attribute() . ' | ';
+             }
+            return back()->withError("Dữ liệu nhập vào chưa chuẩn tại các cột - mục sau: " . $er )->withInput();
+        }
+        return redirect()->route('admin.products.index')->with('success', 'Thành công !');
+    }
+
+    public function download_excel()
+    {
+        return Storage::download('download/example.xlsx');
     }
 }

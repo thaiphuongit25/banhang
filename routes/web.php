@@ -60,6 +60,8 @@ Route::post('comments/reply', 'CommentController@reply')->name('comments.reply')
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'middleware' => 'admin'], function () {
     Route::get('/', 'ProductsController@index');
     Route::resource('products', 'ProductsController');
+    Route::post('/mass_import', 'ProductsController@import')->name('products.import');
+    Route::get('/example_excel', 'ProductsController@download_excel')->name('products.download.example');
     Route::resource('brands', 'BrandsController');
     Route::resource('types', 'TypesController');
     Route::resource('categories', 'CategoriesController');
