@@ -20,7 +20,7 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
     {
         $brand = Brand::where('name', 'like', '%' . $row['thuong_hieu'] . '%')->get();
         $brand_not_exist = $brand->isEmpty();
-        $brand_id = ($brand_not_exist ? 1 : $brand->id);
+        $brand_id = ($brand_not_exist ? 1 : $brand->first()->id);
 
         $category = Category::where('name', 'like', '%' . $row['danh_muc'] . '%')->get();
         $category_not_exist = $category->isEmpty();
