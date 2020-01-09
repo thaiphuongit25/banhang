@@ -59,10 +59,10 @@
           <div class="register-scroll">
             <div class="user_control" style="display: flex;">
               <input type="hidden" id="check_login" value="0">
-              @if (Auth::user()->is_admin == true)
-                <a href="/admin" class="admin_btn">Trang quản trị</a> |
-              @endif
               @if (Auth::check())
+                @if (Auth::user()->is_admin == true)
+                  <a href="/admin" class="admin_btn">Trang quản trị</a> |
+                @endif
                 <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
                 <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
               @else
@@ -132,10 +132,10 @@
         </div>
         <div class="user_control" style="display: flex;">
           <input type="hidden" id="check_login" value="0">
-          @if (Auth::user()->is_admin == true)
-            <a href="/admin" class="admin_btn">Trang quản trị</a> |
-          @endif
           @if (Auth::check())
+            @if (Auth::user()->is_admin == true)
+              <a href="/admin" class="admin_btn">Trang quản trị</a> |
+            @endif
             <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
             <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
           @else
