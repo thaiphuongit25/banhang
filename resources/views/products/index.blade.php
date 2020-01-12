@@ -121,8 +121,8 @@
         @if (count($type->categories))
         <div class="item-ct-pr-home" id="{{ $type->id }}">
             <div class="title-item-ct-pr-home">
-                <h2 style="float:left"><a href="/product/ics" class="review_product">{{ $type->name }}</a></h2>
-                <span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/ics">Xem thêm</a></span>
+                <h2 style="float:left"><a href="/product/{{ $type->slug }}" class="review_product">{{ $type->name }}</a></h2>
+                <span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/{{ $type->slug }}">Xem thêm</a></span>
                 <ul class="subject-child-show-home">
                 @foreach ( $type->categories as $category )
                     <li>
@@ -136,7 +136,7 @@
             <div class="content-item-ct-pr-home" id="products-ct-1">
                 <div class="show-product-top">
                 @foreach ($type->categories as $category)
-                    @foreach ( $category->products as $product )
+                    @foreach ( $category->products->take(8) as $product )
                     <div class="v-p-t" id="{{ $product->id }}">
                         <div class="img-v-p popular ">
                             <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product"><img alt="EL817S" class="image-hover" src="{{ URL::to('/') }}/images/{{ $product->image }}"></a>
