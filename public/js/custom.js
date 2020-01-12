@@ -299,4 +299,6 @@ $(document).ready(function() {
         e.preventDefault();
         $(this).parent().parent().remove();
     });
+
+    menu.build("menubar");
 });

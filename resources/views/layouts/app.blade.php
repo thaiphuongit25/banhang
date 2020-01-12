@@ -32,8 +32,7 @@
   <!-- Styles -->
   <link href="{{ url('css/style.css') }}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-  <!-- <link href="{{ url('css/jnoty.css') }}" rel="stylesheet">
-  <link href="{{ url('css/jnoty.min.css') }}" rel="stylesheet"> -->
+
 </head>
 
 <body data-cart="0">
