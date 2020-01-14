@@ -8,7 +8,11 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>Nhà Phân Phối Linh Kiện Điện Tử - Hardwares</title>
+  <title>
+    @if ($title = getSetting(App\Enums\SettingType::MetaTitle))
+    {!!strip_tags($title->value)!!}
+    @endif
+  </title>
   <link rel="shortcut icon" href="{{ url('images/favicon.ico') }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 

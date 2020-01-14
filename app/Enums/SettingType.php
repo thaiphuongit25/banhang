@@ -17,4 +17,5 @@ final class SettingType extends Enum
     const OnlineSupportBusiness     =   3;
     const OnlineSupportTechnical    =   4;
     const OnlineSupportSaleWarranty =   5;
+    const MetaTitle                 =   6;
 }
