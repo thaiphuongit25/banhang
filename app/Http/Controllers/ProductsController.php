@@ -23,7 +23,7 @@ class ProductsController extends Controller
     public function searchAutoHome(Request $request)
     {
         $q = $request->has('q') ? $request->q : '';
-        $products = Product::where('name', 'LIKE', '%'.$q.'%')->get();
+        $products = Product::where('name', 'LIKE', '%'.$q.'%')->orWhere('desc', 'LIKE', '%'.$q.'%')->get();
         return response()->json(['total' => count($products), 'products' => $products]);
     }
     /**

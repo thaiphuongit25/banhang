@@ -54,6 +54,7 @@
                 <tr>
                     <td>ID</td>
                     <td>Tên sản phẩm</td>
+                    <td>Mã sản phẩm</td>
                     <td>Miêu tả</td>
                     <td>Hình ảnh</td>
                 </tr>
@@ -61,8 +62,9 @@
             <tbody>
                 @foreach($products as $product)
                 <tr>
-                    <td>{{$product->id}}</td>
-                    <td>{{$product->name}}</td>
+                    <td>{{ $product->id }}</td>
+                    <td>{{ $product->name }}</td>
+                    <td>{{ $product->code }}</td>
                     <td>{!! Str::words(strip_tags($product->desc), 30, '...') !!}</td>
                     <td><img src="{{ URL::to('/') }}/images/{{ $product->image }}" class="img-thumbnail" width="75" /></td>
                     <td>
