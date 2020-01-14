@@ -13,11 +13,16 @@ class Type extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'name', 'desc', 'slug'
+        'id', 'name', 'desc', 'slug', 'status'
     ];
 
     public function categories()
     {
         return $this->hasMany(Category::class);
+    }
+
+    public function scopeShowable($query)
+    {
+        return $query->where('status', 1);
     }
 }

@@ -23,37 +23,45 @@
         </div>
     </div>
     <div class="card-body">
-    @include('admin.layouts.alert_section')
-    <table class="table table-striped">
-        <thead>
-            <tr>
-            <td>ID</td>
-            <td>Tên loại</td>
-            <td>Miêu tả</td>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach($types as $type)
-            <tr>
-                <td>{{$type->id}}</td>
-                <td>{{$type->name}}</td>
-                <td>{{$type->desc}}</td>
-                <td>
-                    <a href="{{ route('admin.types.edit',$type->id) }}" class="btn btn-primary">Edit</a>
-                </td>
-                <td>
-                    <form action="{{ route('admin.types.destroy', $type->id)}}" method="post">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Delete</button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-    <br>
-    {{ $types->links() }}
+        @include('admin.layouts.alert_section')
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Tên loại</td>
+                    <td>Miêu tả</td>
+                    <td>Trạng thái</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($types as $type)
+                <tr>
+                    <td>{{$type->id}}</td>
+                    <td>{{$type->name}}</td>
+                    <td>{{$type->desc}}</td>
+                    <td>
+                        @foreach(config('constants.type_status') as $status => $value)
+                            @if ($type->status == $value)
+                                {{ $status }}
+                            @endif
+                        @endforeach
+                    </td>
+                    <td>
+                        <a href="{{ route('admin.types.edit',$type->id) }}" class="btn btn-primary">Edit</a>
+                    </td>
+                    <td>
+                        <form action="{{ route('admin.types.destroy', $type->id)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button class="btn btn-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+        <br>
+        {{ $types->links() }}
     </div>
 </div>
 @stop

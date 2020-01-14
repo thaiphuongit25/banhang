@@ -33,11 +33,9 @@
                 <div class="col-sm-10">
                     <select name="type_id" class="form-control">
                         @foreach ($types as $type)
-                            <option value="{{ $type->id }}"
-                            @if ($type->id == old($category->type_id, $type->id))
-                                selected="selected"
-                            @endif
-                            >{{ $type->name }}</option>
+                        <option {{ $category->type_id == $type->id ? 'selected' : '' }} value="{{ $type->id }}">
+                            {{ $type->name }}
+                        </option>
                         @endforeach
                     </select>
                 </div>
