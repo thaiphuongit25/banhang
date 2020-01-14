@@ -63,6 +63,7 @@
             3 => 'Hỗ trợ trực tuyến kinh doanh',
             4 => 'Hỗ trợ trực tuyến kĩ thuật',
             5 => 'Hỗ trợ trực tuyến bán hàng - bảo hành',
+            6 => 'Tiêu đề trang',
         ][$type];
     }
 

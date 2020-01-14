@@ -1,5 +1,5 @@
 <div class="support-box">
-    <div class="dialog-box" style="top: 292px; left: 685px; display: none;" id="supportbox">
+    <div class="dialog-box" style="top: 20%; left: 30%; display: none;" id="supportbox">
         <div class="dialog-box-title">
             <h1>Online support</h1><input type="button" class="btn-close-dialog-support"
                 onclick="$('#supportbox').hide()">
