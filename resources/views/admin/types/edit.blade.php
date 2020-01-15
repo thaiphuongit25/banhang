@@ -35,12 +35,6 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Slug</label>
-                <div class="col-sm-10">
-                    <input type="text" name="slug" class="form-control" value="{{ $type->slug }}" />
-                </div>
-            </div>
-            <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Trạng thái</label>
                 <div class="col-sm-10">
                     <select name="status" class="form-control">

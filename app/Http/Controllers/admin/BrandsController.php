@@ -41,7 +41,7 @@ class BrandsController extends Controller
         $request->validate([
             'name'     =>  'required',
             'desc'     =>  'required',
-            'logo'     =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'logo'     =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
         $logo = $request->file('logo');
@@ -51,7 +51,8 @@ class BrandsController extends Controller
         $brand = array(
             'name'       =>   $request->name,
             'desc'       =>   $request->desc,
-            'logo'       =>   $new_name
+            'logo'       =>   $new_name,
+            'slug'       =>   $request->slug
         );
 
         Brand::create($brand);
@@ -98,14 +99,12 @@ class BrandsController extends Controller
             $request->validate([
                 'name'    =>  'required',
                 'desc'    =>  'required',
-                'slug'    =>  'required | unique:brands',
             ]);
         }
 
         $form_data = array(
             'name'       =>   $request->name,
             'desc'       =>   $request->desc,
-            'slug'       =>   $request->slug,
             'logo'       =>   $image_name
         );
 

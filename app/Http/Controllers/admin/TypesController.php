@@ -40,8 +40,7 @@ class TypesController extends Controller
     {
         $request->validate([
             'name'    =>  'required',
-            'desc'     =>  'required',
-            'slug'     =>  'required'
+            'desc'     =>  'required'
         ]);
 
         $type = array(
@@ -86,14 +85,12 @@ class TypesController extends Controller
     {
         $request->validate([
             'name'    =>  'required',
-            'desc'    =>  'required',
-            'slug'    =>  'required',
+            'desc'    =>  'required'
         ]);
 
         $form_data = array(
             'name'       =>   $request->name,
             'desc'       =>   $request->desc,
-            'slug'       =>   $request->slug,
             'status'     =>   $request->status
         );
 
