@@ -24,7 +24,8 @@ class ProductsController extends Controller
     public function index(Request $request)
     {
         $name = $request->has('search') ? $request->search : "";
-        $products = Product::where("name", 'LIKE','%'.$name.'%')->paginate(10);
+        $products = Product::where("name", 'LIKE','%'.$name.'%')->orWhere("desc", 'LIKE','%'.$name.'%')->
+        orWhere("code", 'LIKE','%'.$name.'%')->paginate(10);
         return view('admin.products.index', ['products' => $products]);
     }
 
@@ -76,7 +77,8 @@ class ProductsController extends Controller
             'image'              =>   $new_name,
             'meta_title'         =>   $request->meta_title,
             'meta_keywords'      =>   $request->meta_keywords,
-            'meta_description'   =>   $request->meta_description
+            'meta_description'   =>   $request->meta_description,
+            'code'               =>   rand(1000000000, 999999999)
         );
         $product = Product::create($product);
         $units = [];
