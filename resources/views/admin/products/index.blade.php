@@ -32,7 +32,7 @@
                     <form action="{{ route('admin.products.import') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="excel_upload" aria-describedby="inputGroupFileAddon04" name='excel_file'>
+                            <input type="file" class="custom-file-input" id="excel_upload" name='excel_file'>
                             <label class="custom-file-label" for="excel_upload">Chọn file</label>
 
                             <small id="fileHelp" class="form-text text-muted">Hãy upload file excel theo mẫu sau:
@@ -88,9 +88,14 @@
 @stop
 @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css">
+
 @stop
 @section('js')
 <script>
-    console.log('Hi!');
+    document.querySelector('.custom-file-input').addEventListener('change',function(e){
+      var fileName = document.getElementById("excel_upload").files[0].name;
+      var nextSibling = e.target.nextElementSibling
+      nextSibling.innerText = fileName
+    })
 </script>
 @stop
