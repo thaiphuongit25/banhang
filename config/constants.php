@@ -13,5 +13,9 @@ return [
         'Đã xóa' => 0,
         'Hiển thị' => 1,
         'Không hiển thị' => 2
+    ],
+    'product_image_type_status' => [
+        'Trực tiếp tải lên' => 0,
+        'Đường dẫn ngoài' => 1
     ]
 ];

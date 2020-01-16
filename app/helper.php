@@ -11,6 +11,8 @@
     use App\model\Setting;
     use App\Enums\BannerType;
     use App\Enums\SettingType;
+    use App\model\Product;
+    use Illuminate\Support\Facades\URL;
 
     function getTypes() {
         return Type::all();
@@ -105,4 +107,21 @@
     function onlineSupportSettingTypes() {
         return [SettingType::OnlineSupportBusiness, SettingType::OnlineSupportTechnical, SettingType::OnlineSupportSaleWarranty];
     }
+
+    function getProductImageUrl($id) {
+        $product = Product::findOrFail($id);
+        if ($product->image_type == 1)
+        {
+            return $product->image;
+        }
+        else
+        {
+            return URL::to('/') . '/images/' . $product->image;
+        }
+    }
+    function clean_str($string) {
+        $result = str_replace(array("\r", "\n", "\t", "\a"), '', $string);
+		
+        return $result;
+     }
 

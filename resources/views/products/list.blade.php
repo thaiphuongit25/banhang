@@ -55,7 +55,7 @@
                 @foreach ( $products as $product )
                     <div class="item-product-category">
                         <div class="image popular">
-                            <a id="{{$product->id}}" class="review-product" title="{{ $product->name }}" target="_blank" href="/products/{{ $product-> slug }}"><img alt="AT91SAM9260B-QU" class="" src="{{ URL::to('/') }}/images/{{ $product->image }}"></a>
+                            <a id="{{$product->id}}" class="review-product" title="{{ $product->name }}" target="_blank" href="/products/{{ $product-> slug }}"><img alt="{{$product->code}}" class="" src="{{ getProductImageUrl($product->id) }}"></a>
                         </div>
                         <div class="name">
                             <p class="name-a">
@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div id="showtip_10" class="showtip">
-                            <img alt="AT91SAM9260B-QU" class="fff" src="https://thegioiic.com/upload/large/89.jpg">
+                            <img alt="{{$product->code}}" class="fff" src="https://thegioiic.com/upload/large/89.jpg">
 
                         </div>
                         <script type="text/javascript">
