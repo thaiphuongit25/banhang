@@ -98,14 +98,12 @@ class BrandsController extends Controller
             $request->validate([
                 'name'    =>  'required',
                 'desc'    =>  'required',
-                'slug'    =>  'required | unique:brands',
             ]);
         }
 
         $form_data = array(
             'name'       =>   $request->name,
             'desc'       =>   $request->desc,
-            'slug'       =>   $request->slug,
             'logo'       =>   $image_name
         );
 
