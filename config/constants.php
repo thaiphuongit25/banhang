@@ -8,5 +8,10 @@ return [
         'Đang xử lý' => 3,
         'Đã xử lý' => 4,
         'Đã Xóa' => 5
+    ],
+    'type_status' => [
+        'Đã xóa' => 0,
+        'Hiển thị' => 1,
+        'Không hiển thị' => 2
     ]
 ];

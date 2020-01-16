@@ -129,10 +129,10 @@
 </select>
 </span>
 
-                    <span style="position:relative; top:-2px; float:right;margin-right: 10px">
+                    {{--  <span style="position:relative; top:-2px; float:right;margin-right: 10px">
 <span><a href="/product/amplifiers-audio-ics?view_ls=true"><img src="/images/list_product.png" alt="List product"></a></span>
                     <span><a href="/product/amplifiers-audio-ics?view_ga=true"><img src="/images/list_gallery.png" alt="List gallery"></a></span>
-                    </span>
+                    </span>  --}}
                 </div>
                 <div style="padding:2px 2px 10px 2px" class="text-subject">
 

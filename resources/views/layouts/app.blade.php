@@ -8,7 +8,11 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>Nhà Phân Phối Linh Kiện Điện Tử - Hardwares</title>
+  <title>
+    @if ($title = getSetting(App\Enums\SettingType::MetaTitle))
+    {!!strip_tags($title->value)!!}
+    @endif
+  </title>
   <link rel="shortcut icon" href="{{ url('images/favicon.ico') }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -32,8 +36,7 @@
   <!-- Styles -->
   <link href="{{ url('css/style.css') }}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-  <!-- <link href="{{ url('css/jnoty.css') }}" rel="stylesheet">
-  <link href="{{ url('css/jnoty.min.css') }}" rel="stylesheet"> -->
+
 </head>
 
 <body data-cart="0">
@@ -41,7 +44,11 @@
     <div id="top-fix-scroll">
       <div>
         <div class="logo-scroll">
-          <a href="index.html"><img alt="" class="" src="https://thegioiic.com/upload/large/12525.jpg" /></a>
+            @if ($logo = getBanner(App\Enums\BannerType::Logo))
+            <a href="{{ $logo->link }}">
+                <img alt="{{ $logo->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $logo->image }}" />
+            </a>
+            @endif
         </div>
         <div class="form-scroll" id="main-search-scroll">
           <form action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
@@ -56,10 +63,13 @@
             <div class="user_control" style="display: flex;">
               <input type="hidden" id="check_login" value="0">
               @if (Auth::check())
-              <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
-              <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
+                @if (Auth::user()->is_admin == true)
+                  <a href="/admin" class="admin_btn">Trang quản trị</a> |
+                @endif
+                <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
+                <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
               @else
-              <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
+                <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
               @endif
               <a class="support-img" href="/support/me"><img src="/images/yah.png" alt="Yah"></a>
             </div>
@@ -126,10 +136,13 @@
         <div class="user_control" style="display: flex;">
           <input type="hidden" id="check_login" value="0">
           @if (Auth::check())
-          <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
-          <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
+            @if (Auth::user()->is_admin == true)
+              <a href="/admin" class="admin_btn">Trang quản trị</a> |
+            @endif
+            <a href="/mypage" class="mypage_btn">Chào {{ Auth::user()->name }} </a> |
+            <form method="POST" class='logout' action="{{ route('logout') }}">@csrf<button class='logout_btn' type="submit"> Đăng xuất</button></form>
           @else
-          <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
+            <a href="/login" class="login_btn">Đăng Nhập </a>|<a href="/register" class="register_btn"> Đăng Ký</a>
           @endif
           <a class="support-img" href="/support/me"><img src="/images/yah.png" alt="Yah"></a>
         </div>

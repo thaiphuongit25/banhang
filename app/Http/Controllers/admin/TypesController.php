@@ -51,9 +51,16 @@ class TypesController extends Controller
             'status'     =>   1
         );
 
-        Type::create($type);
+        $check = Type::create($type);
 
-        return redirect()->route('admin.types.index')->with('success', 'Data Added successfully.');
+        if($check)
+        {
+            return redirect()->route('admin.types.index')->with('success', 'Thêm dữ liệu thành công.');
+        }
+        else
+        {
+            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+        }
     }
 
     /**
@@ -86,12 +93,20 @@ class TypesController extends Controller
         $form_data = array(
             'name'       =>   $request->name,
             'desc'       =>   $request->desc,
-            'slug'       =>   $request->slug
+            'slug'       =>   $request->slug,
+            'status'     =>   $request->status
         );
 
-        Type::whereId($id)->update($form_data);
+        $check = Type::whereId($id)->update($form_data);
 
-        return redirect()->route('admin.types.index')->with('success', 'Data Updated successfully.');
+        if($check)
+        {
+            return redirect()->route('admin.types.index')->with('success', 'Cập nhật thành công.');
+        }
+        else
+        {
+            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+        }
     }
 
     /**
@@ -103,7 +118,15 @@ class TypesController extends Controller
     public function destroy($id)
     {
         $data = type::findOrFail($id);
-        $data->delete();
-        return redirect()->route('admin.types.index')->with('success', 'Data is successfully deleted');
+        $check = $data->delete();
+
+        if($check)
+        {
+            return redirect()->route('admin.types.index')->with('success', 'Xóa dữ liệu thành công');
+        }
+        else
+        {
+            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+        }
     }
 }
