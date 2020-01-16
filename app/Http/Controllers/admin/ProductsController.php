@@ -184,20 +184,20 @@ class ProductsController extends Controller
         $i = 0;
         $j = 0;
         foreach($request->request as $key => $value) {
-            if (stripos($key, "number-") !== false) {
+            if (stripos($key, "number-") !== false && $value != null) {
                 $idUnit = explode("-", $key)[1];
                 array_push($unitsOld, ['id' => $idUnit, 'number' => $value]);
             }
 
-            if (stripos($key, "unit-") !== false) {
+            if (stripos($key, "unit-") !== false && $value != null) {
                 $unitsOld[$j]['unit'] = $value;
                 $j += 1;
             }
 
-            if (stripos($key, "number_") !== false) {
+            if (stripos($key, "number_") !== false && $value != null) {
                 array_push($units, ['number' => $value]);
             }
-            if (stripos($key, "unit_") !== false) {
+            if (stripos($key, "unit_") !== false && $value != null) {
                 $units[$i]['unit'] = $value;
                 $i += 1;
             }
