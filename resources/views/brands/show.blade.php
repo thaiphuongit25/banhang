@@ -26,7 +26,7 @@
                 <div style="border-bottom:1px solid #ccc; margin-bottom:12px;padding-bottom:12px;">
                     <div class="image" style="float:left;">
                         <a href="/products/{{ $product->slug }}"><img alt="{{ $product->slug }}" class=""
-                                src="{{ URL::to('/') }}/images/{{ $brand->logo }}"></a>
+                                src="{{ URL::to('/') }}/images/{{ $product->image }}"></a>
                     </div>
                     <div style="float:left; padding:3px 0 0 12px; width:400px;">
                         <div class="name-a">
