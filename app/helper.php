@@ -125,7 +125,7 @@
         }
         else
         {
-            if ($product) {
+            if ($product->image) {
                 return URL::to('/').'/images/'.$product->image;
             } else {
                 return URL::to('/').'/images/default-image.jpg';
