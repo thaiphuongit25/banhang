@@ -61,10 +61,18 @@ class ProductsController extends Controller
             'price'             =>  'required'
         ]);
 
-        $image = $request->file('image');
+        if($request->image_type == 0)
+        {
+            $image = $request->file('image');
+    
+            $new_name = time().'.'.$image->getClientOriginalExtension();
+            $image->move(public_path('images'), $new_name);
+        }
+        else
+        {
+            $new_name = $request->image;
+        }
 
-        $new_name = time().'.'.$image->getClientOriginalExtension();
-        $image->move(public_path('images'), $new_name);
         $product = array(
             'name'               =>   $request->name,
             'desc'               =>   $request->desc,
@@ -75,6 +83,7 @@ class ProductsController extends Controller
             'brand_id'           =>   $request->brand_id,
             'category_id'        =>   $request->category_id,
             'image'              =>   $new_name,
+            'image_type'         =>   $request->image_type,
             'meta_title'         =>   $request->meta_title,
             'meta_keywords'      =>   $request->meta_keywords,
             'meta_description'   =>   $request->meta_description,
@@ -131,9 +140,17 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $image_name = $request->hidden_image;
-        $image = $request->file('image');
-        if($image)
+        if($request->image_type == 0)
+        {
+            $image_name = $request->hidden_image;
+            $image = $request->file('image');
+        }
+        else
+        {
+            $image_name = $request->image;
+            $image = $request->image;
+        }
+        if($image && ($request->image_type == 0))
         {
             $request->validate([
                 'name'              =>  'required',
@@ -173,6 +190,7 @@ class ProductsController extends Controller
             'brand_id'          =>   $request->brand_id,
             'category_id'       =>   $request->category_id,
             'image'             =>   $image_name,
+            'image_type'        =>   $request->image_type,
             'meta_title'        =>   $request->meta_title,
             'meta_keywords'     =>   $request->meta_keywords,
             'meta_description'  =>   $request->meta_description

@@ -95,7 +95,7 @@
                             </div>
                         </div>
                         <div id="showtip_10" class="showtip">
-                            <img alt="AT91SAM9260B-QU" class="fff" src="https://thegioiic.com/upload/large/89.jpg">
+                            <img alt="{{$product->code}}" class="fff" src="https://thegioiic.com/upload/large/89.jpg">
 
                         </div>
                         <script type="text/javascript">

@@ -66,7 +66,7 @@
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->code }}</td>
                     <td>{!! Str::words(strip_tags($product->desc), 30, '...') !!}</td>
-                    <td><img src="{{ loadImage($product->image) }}" class="img-thumbnail" width="75" /></td>
+                    <td><img src="{{ getProductImageUrl($product->id) }}" class="img-thumbnail" width="75" /></td>
                     <td>
                         <a href="{{ route('admin.products.edit',$product->id) }}" class="btn btn-primary">Edit</a>
                     </td>
