@@ -87,7 +87,7 @@ class ProductsController extends Controller
             'meta_title'         =>   $request->meta_title,
             'meta_keywords'      =>   $request->meta_keywords,
             'meta_description'   =>   $request->meta_description,
-            'code'               =>   rand(1000000000, 999999999)
+            'code'               =>   rand(1000000000, 9999999999)
         );
         $product = Product::create($product);
         $units = [];

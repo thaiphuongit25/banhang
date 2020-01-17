@@ -120,15 +120,15 @@
       <div id="info-product">
         <div class="image-product-show">
           <div class="image">
-            <div class="show" href="{{ getProductImageUrl($product->id) }}" style="position: relative;">
-              <img class="large" alt="LM258P" src="{{ getProductImageUrl($product->id) }}" id="show-img" style="width: 100%; height: 100%;">
+            <div class="show" href="{{ loadImage($product->image) }}" style="position: relative;">
+              <img class="large" alt="LM258P" src="{{ loadImage($product->image) }}" id="show-img" style="width: 100%; height: 100%;">
               <div style="position: absolute; left: 76.5px; top: 149px; background-color: rgb(0, 0, 0); width: 100px; height: 100px; opacity: 0.2; border: 1px solid rgb(204, 204, 204); cursor: crosshair; display: none;"></div>
             </div>
           </div>
           <div class="small-img">
             <div class="small-container">
               <div id="small-img-roll">
-                <img src="{{ getProductImageUrl($product->id) }}" class="thumb show-small-img" alt="now" style="border: 1px solid rgb(149, 27, 37); padding: 2px;">
+                <img src="{{ loadImage($product->image) }}" class="thumb show-small-img" alt="now" style="border: 1px solid rgb(149, 27, 37); padding: 2px;">
               </div>
             </div>
           </div>
@@ -288,7 +288,7 @@
               <li>
                 <div class="list-same">
                   <div class="image-same ">
-                    <a href="/products/{{ $sameProduct->slug }}"><img alt="" src="{{ URL::to('/') }}/images/{{ $sameProduct->image }}"></a>
+                    <a href="/products/{{ $sameProduct->slug }}"><img alt="" src="{{ loadImage($sameProduct->image) }}"></a>
                   </div>
                   <div class="name-same">
                     <p class="name-a ablack">

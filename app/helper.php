@@ -56,6 +56,15 @@
         ][$status];
     }
 
+
+    function loadImage($image) {
+        if ($image) {
+            return URL::to('/').'/images/'.$image;
+        } else {
+            return URL::to('/').'/images/default-image.jpg';
+        }
+    }
+
     function settingTypeText($type) {
         return
         [   
@@ -116,7 +125,11 @@
         }
         else
         {
-            return URL::to('/') . '/images/' . $product->image;
+            if ($product->image) {
+                return URL::to('/').'/images/'.$product->image;
+            } else {
+                return URL::to('/').'/images/default-image.jpg';
+            }
         }
     }
     function clean_str($string) {

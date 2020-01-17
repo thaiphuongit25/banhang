@@ -14,7 +14,7 @@
         <div
             style="border:1px solid #ccc; padding:5px;-webkit-border-radius: 5px; -moz-border-radius: 5px; background-color:#fff;position: relative;padding-bottom:25px;">
             <div style="padding:0 8px 0 12px;">
-                <img alt="" src="{{ URL::to('/') }}/images/{{ $brand->logo }}">
+                <img alt="" src="{{ loadImage($brand->logo) }}">
                 {!!html_entity_decode($brand->desc)!!}
             </div>
             <div
@@ -26,7 +26,7 @@
                 <div style="border-bottom:1px solid #ccc; margin-bottom:12px;padding-bottom:12px;">
                     <div class="image" style="float:left;">
                         <a href="/products/{{ $product->slug }}"><img alt="{{ $product->slug }}" class=""
-                                src="{{ getProductImageUrl($product->id) }}"></a>
+                                src="{{ loadImage($product->image) }}"></a>
                     </div>
                     <div style="float:left; padding:3px 0 0 12px; width:400px;">
                         <div class="name-a">
