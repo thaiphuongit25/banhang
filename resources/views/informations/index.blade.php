@@ -18,7 +18,7 @@
                 <div class="information">
                     <div class="img-information">
                         <a href="{{ route('informations.show', ['information' => $information->slug]) }}">
-                            <img src="{{ URL::to('/') }}/images/{{ $information->thumbnail }}" class="img-thumbnail" />
+                            <img src="{{ loadImage($information->thumbnail) }}" class="img-thumbnail" />
                         </a>
                     </div>
                     <div class="info-information">

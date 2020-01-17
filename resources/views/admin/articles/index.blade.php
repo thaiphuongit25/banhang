@@ -28,7 +28,7 @@
                     <td>{{ $article->title }}</td>
                     <td>{{ $article->article_category->name }}</td>
                     <td>{!! Str::words(strip_tags($article->content), 30, '...') !!}</td>
-                    <td><img src="{{ URL::to('/') }}/images/{{ $article->thumbnail }}" class="img-thumbnail" width="75" /></td>
+                    <td><img src="{{ loadImage($article->thumbnail) }}" class="img-thumbnail" width="75" /></td>
                     <td>{{ $article->slug }}</td>
                     <td>{{ statusStr($article->status) }}</td>
                     <td>

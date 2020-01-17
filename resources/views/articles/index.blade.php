@@ -21,7 +21,7 @@
                     <li style="background: none;padding-left: 0;">
                         <div style="float:left;margin-right: 4%;width:22%;">
                             <a style="padding-right:6px; display:block; float:left;" href="/news-detail/{{ $article->slug }}">
-                                <img src="{{ URL::to('/') }}/images/{{ $article->thumbnail }}" />
+                                <img src="{{ loadImage($article->thumbnail) }}" />
                             </a>
                         </div>
                         <div style="width: 73%;float: left;">

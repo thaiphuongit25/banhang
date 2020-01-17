@@ -54,6 +54,15 @@
         ][$status];
     }
 
+
+    function loadImage($image) {
+        if ($image) {
+            return URL::to('/').'/images/'.$image;
+        } else {
+            return URL::to('/').'/images/default-image.jpg';
+        }
+    }
+
     function settingTypeText($type) {
         return
         [   

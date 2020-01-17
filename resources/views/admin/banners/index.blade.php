@@ -23,7 +23,7 @@
                     <td>{{ bannerTypeText($banner->type) }}</td>
                     <td>
                         @if ($banner->type != App\Enums\BannerType::Slider)
-                        <img src="{{ URL::to('/') }}/images/{{ $banner->image }}" class="img-thumbnail" width="75" />
+                        <img src="{{ loadImage($banner->image) }}" class="img-thumbnail" width="75" />
                         @endif
                     </td>
                     <td>{{ $banner->link }}</td>

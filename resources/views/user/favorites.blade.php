@@ -18,7 +18,7 @@
           </tr>
           @foreach ($products as $product)
             <tr id="product_id_{{ $product->id }}">
-              <td class="img"><a href="/products/{{ $product->slug }}"><img src="{{ URL::to('/') }}/images/{{ $product->image }}" alt="89" /></a></td>
+              <td class="img"><a href="/products/{{ $product->slug }}"><img src="{{ loadImage($product->image) }}" alt="89" /></a></td>
               <td><a href="/products/{{ $product->slug }}">{{ $product->name }}</a></td>
               <td>
                 {{ number_format($product->price) }} đ/cái<br />

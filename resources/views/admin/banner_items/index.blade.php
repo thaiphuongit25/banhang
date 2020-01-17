@@ -24,7 +24,7 @@
         @foreach($banner_items as $banner_item)
         <tr>
             <td>
-                <img src="{{ URL::to('/') }}/images/{{ $banner_item->image }}" class="img-thumbnail" width="125" />
+                <img src="{{ loadImage($banner_item->image) }}" class="img-thumbnail" width="125" />
             </td>
             <td>{{ $banner_item->link }}</td>
             <td>{{ $banner_item->alt }}</td>
