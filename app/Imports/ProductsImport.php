@@ -18,11 +18,13 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
      */
     public function model(array $row)
     {
-        $brand = Brand::where('name', 'like', '%' . $row['thuong_hieu'] . '%')->get();
+        $brand_name = clean_str($row['thuong_hieu']);
+        $brand = Brand::where('name', 'like', '%'.$brand_name.'%')->get();
         $brand_not_exist = $brand->isEmpty();
         $brand_id = ($brand_not_exist ? 1 : $brand->first()->id);
 
-        $category = Category::where('name', 'like', '%' . $row['danh_muc'] . '%')->get();
+        $category_name = clean_str($row['danh_muc']);
+        $category = Category::where('name', 'LIKE', '%'.$category_name.'%')->get();
         $category_not_exist = $category->isEmpty();
         $category_id = ($category_not_exist ? 1 : $category->first()->id);
 
@@ -33,9 +35,13 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
             'category_id' => $category_id,
             'specification' => $row['thong_so'],
             'price' => $row['gia_tien'],
-            'slug' => $row['ten_duong_dan'],
+            'image' => $row['duong_dan_anh'],
+            'image_type' => 1,
             'quantity' => $row['so_luong'],
-            'code'     => rand(1000000000, 999999999)
+            'code'     => rand(1000000000, 9999999999)
+            'meta_title'=> $row['meta_title'],
+            'meta_keywords'=> $row['meta_keywords'],
+            'meta_description'=> $row['meta_description']
         ]);
     }
 
@@ -49,7 +55,7 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
             'so_luong'          =>  'required',
             'gia_tien'          =>  'required',
             'thong_so'          =>  'required',
-            'ten_duong_dan'     =>  'required',
+            'duong_dan_anh'     =>  'required'
         ];
     }
 }

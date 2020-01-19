@@ -29,7 +29,7 @@
             <td>{{ $information->id }}</td>
             <td>{{ $information->title }}</td>
             <td>{!! Str::words(strip_tags($information->content), 30, '...')  !!}</td>
-            <td><img src="{{ URL::to('/') }}/images/{{ $information->thumbnail }}" class="img-thumbnail" width="75" /></td>
+            <td><img src="{{ loadImage($information->thumbnail) }}" class="img-thumbnail" width="75" /></td>
             <td>{{ $information->slug }}</td>
             <td>
                 <a href="{{ route('admin.informations.edit',$information->id) }}" class="btn btn-primary">Edit</a>

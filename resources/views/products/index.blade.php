@@ -101,7 +101,7 @@
                     @foreach (getBanner(App\Enums\BannerType::Slider) as $key => $slider)
                     <li style="display: {{ $key == 0 ? 'list-item' : 'none' }};">
                         <a href="{{ $slider->link }}" target="_blank">
-                            <img alt="{{ $slider->alt }}" class="img-slide" src="{{ URL::to('/') }}/images/{{ $slider->image }}">
+                            <img alt="{{ $slider->alt }}" class="img-slide" src="{{ loadImage($slider->image) }}">
                         </a>
                     </li>
                     @endforeach
@@ -139,7 +139,7 @@
                     @foreach ( $category->products->take(8) as $product )
                     <div class="v-p-t" id="{{ $product->id }}">
                         <div class="img-v-p popular ">
-                            <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product"><img alt="EL817S" class="image-hover" src="{{ URL::to('/') }}/images/{{ $product->image }}"></a>
+                            <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product"><img alt="EL817S" class="image-hover" src="{{ loadImage($product->image) }}"></a>
                         </div>
                         <div class="info-v-p">
                             <div class="name-a">
@@ -157,7 +157,7 @@
                             </div>
                         </div>
                         <div id="showtip_18190" class="showtip">
-                            <img alt="EL817S" class="fff" src="{{ URL::to('/') }}/images/{{ $product->image }}">
+                            <img alt="EL817S" class="fff" src="{{ loadImage($product->image) }}">
                         </div>
                     </div>
                     @endforeach

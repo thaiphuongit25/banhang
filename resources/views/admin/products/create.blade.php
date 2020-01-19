@@ -62,9 +62,28 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Ảnh</label>
+                <label class="col-sm-2 col-form-label require">Loại ảnh</label>
                 <div class="col-sm-10">
-                    <input type="file" name="image" />
+                    <select name="image_type" class="form-control" id="image_type">
+                        @foreach (config('constants.product_image_type_status') as $image_type => $value)
+                        <option value="{{ $value }}">
+                            {{ $image_type }}
+                        </option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row image_file" id='image_type_0'>
+                <label class="col-sm-2 col-form-label">Ảnh</label>
+                <div class="col-sm-10">
+                    <input type="file" name="image" value="{{ $product->image }}" disabled/>
+                    <input type="hidden" name="hidden_image" value="{{ $product->image }}" disabled>
+                </div>
+            </div>
+            <div class="form-group row image_file" id='image_type_1'>
+                <label class="col-sm-2 col-form-label require">Đường dẫn ảnh</label>
+                <div class="col-sm-10">
+                    <input type="input" name="image" class="form-control" value="{{ $product->image }}" disabled/>
                 </div>
             </div>
             <div class="form-group row">
@@ -131,6 +150,19 @@
     CKEDITOR.replace( 'specification', {
         filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
     } );
+    $(function() {
+        $(document).ready(function() {
+            const current_image_type = parseInt($('#image_type').val(), 10);
+            $('#image_type_' + current_image_type).show().css("display","flex");
+            $('#image_type_' + current_image_type).attr("disabled", false);
+        })
+
+        $('#image_type').change(function() {
+            $('.image_file').hide();
+            $('#image_type_' + $(this).val()).show().css("display","flex");;
+            $('#image_type_' + $(this).val() + ' input').attr("disabled", false);
+        });
+    });
 </script>
 @include('ckfinder::setup')
 @stop
