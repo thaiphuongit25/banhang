@@ -31,7 +31,7 @@
                         <li style="width:30%;float:left;height: 185px;margin:0 10px 10px 10px;text-align:center;border:1px solid #DDD;border-radius:5px">
                             <div style="min-height:100px; margin-top:12px;">
                                 <a href="{{ route('brands.show', ['brand' => $brand->slug]) }}">
-                                    <img alt="" src="{{ loadImage($brand->logo) }}">
+                                    <img alt="" src="{{ loadImage($brand->logo) }}" style="max-width: 190px;">
                                 </a>
                             </div>
                             <div>
