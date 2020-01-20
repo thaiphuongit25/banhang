@@ -262,7 +262,7 @@ $(document).ready(function() {
                     if (data == true) {
                         localStorage.removeItem('buy_card');
                         localStorage.removeItem('list_card');
-                        setTimeout(alert('Đặt hàng thành công, Vui lòng liên hệ liên hệ tới số máy (28)3896.8699 | 0972924961 để đặt hàng.'), 2000);
+                        setTimeout(alert('Đặt hàng thành công, Cửa hàng sẽ liên hệ đến quý khách trong thời gian sớm nhất để xác nhận đơn hàng. Xin cảm ơn.'), 2000);
                         window.location.href = "/";
                     }
                 },
