@@ -35,7 +35,7 @@
                                 </a>
                             </div>
                             <div>
-                                <a href="{{ route('brands.show', ['brand' => $brand->slug]) }}">Atmel</a>
+                                <a href="{{ route('brands.show', ['brand' => $brand->slug]) }}">{{ $brand->name }}</a>
                             </div>
                         </li>
                         @endforeach
