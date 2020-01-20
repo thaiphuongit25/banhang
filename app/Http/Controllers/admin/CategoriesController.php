@@ -99,6 +99,7 @@ class CategoriesController extends Controller
             'name'              =>   $request->name,
             'type_id'           =>   $request->type_id,
             'desc'              =>   $request->desc,
+            'slug'              =>   $request->slug,
             'meta_title'        =>   $request->meta_title,
             'meta_keywords'     =>   $request->meta_keywords,
             'meta_description'  =>   $request->meta_description

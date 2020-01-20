@@ -183,6 +183,7 @@ class ProductsController extends Controller
             'specification'     =>   $request->specification,
             'quantity'          =>   $request->quantity,
             'price'             =>   $request->price,
+            'slug'              =>   $request->slug,
             'brand_id'          =>   $request->brand_id,
             'category_id'       =>   $request->category_id,
             'image'             =>   $image_name,
