@@ -34,14 +34,17 @@ $(document).ready(function() {
                 unit = units[0].unit_price;
                 for (let i = 0; i < units.length; i++) {
                     let tmp = null;
-                    if (quantity <= units[i].number) {
+                    if (quantity <= units[i].number && tmp == null) {
                         unit = units[i].unit_price;
                         if (i > 0) {
                             tmp = units[i - 1].number;
+                        } else {
+                            break;
                         }
                     }
                     if (tmp && quantity < units[i].number) {
                         unit = units[i - 1].unit_price;
+                        break
                     }
                     if (quantity >= units[units.length - 1].number) {
                         unit = units[units.length - 1].unit_price;
