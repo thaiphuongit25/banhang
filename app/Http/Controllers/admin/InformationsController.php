@@ -40,14 +40,17 @@ class InformationsController extends Controller
         $request->validate([
             'title'     =>  'required',
             'content'   =>  'required',
-            'types'     =>  'required',
-            'thumbnail' =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'types'     =>  'required'
         ]);
 
         $thumbnail = $request->file('thumbnail');
-
-        $new_name = time().'.'.$thumbnail->getClientOriginalExtension();
-        $thumbnail->move(public_path('images'), $new_name);
+        if ($thumbnail) {
+            $new_name = time().'.'.$thumbnail->getClientOriginalExtension();
+            $thumbnail->move(public_path('images'), $new_name);
+        } else {
+            $new_name = null;
+        }
+        
         $information = array(
             'title'            =>   $request->title,
             'content'          =>   $request->content,
@@ -93,8 +96,7 @@ class InformationsController extends Controller
                 'title'     =>  'required',
                 'content'   =>  'required',
                 'types'     =>  'required',
-                'slug'      =>  'required|unique:informations',
-                'thumbnail' =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'slug'      =>  'required|unique:informations'
             ]);
 
             $image_name = time().'.'.$image->getClientOriginalExtension();
