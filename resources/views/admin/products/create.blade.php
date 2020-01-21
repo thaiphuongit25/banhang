@@ -76,14 +76,14 @@
             <div class="form-group row image_file" id='image_type_0'>
                 <label class="col-sm-2 col-form-label">Ảnh</label>
                 <div class="col-sm-10">
-                    <input type="file" name="image" value="{{ $product->image }}" disabled/>
-                    <input type="hidden" name="hidden_image" value="{{ $product->image }}" disabled>
+                    <input type="file" name="image" value="{{ $product ?? ''->image }}" disabled/>
+                    <input type="hidden" name="hidden_image" value="{{ $product ?? ''->image }}" disabled>
                 </div>
             </div>
             <div class="form-group row image_file" id='image_type_1'>
                 <label class="col-sm-2 col-form-label require">Đường dẫn ảnh</label>
                 <div class="col-sm-10">
-                    <input type="input" name="image" class="form-control" value="{{ $product->image }}" disabled/>
+                    <input type="input" name="image" class="form-control" value="{{ $product ?? ''->image }}" disabled/>
                 </div>
             </div>
             <div class="form-group row">
@@ -96,12 +96,6 @@
                 <label class="col-sm-2 col-form-label require">Số lượng</label>
                 <div class="col-sm-10">
                     <input type="input" name="quantity" class="form-control" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Slug</label>
-                <div class="col-sm-10">
-                    <input type="text" name="slug" class="form-control" />
                 </div>
             </div>
             <div class="form-group row">

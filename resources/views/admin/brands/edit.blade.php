@@ -41,12 +41,6 @@
                     <input type="hidden" name="hidden_image" value="{{ $brand->logo }}">
                 </div>
             </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Slug</label>
-                <div class="col-sm-10">
-                    <input type="text" name="slug" class="form-control" value="{{ $brand->slug }}" />
-                </div>
-            </div>
             <div class="form-group text-center">
                 <input type="submit" name="add" class="btn btn-primary input-lg" value="Cập nhật" />
             </div>

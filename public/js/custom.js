@@ -34,14 +34,17 @@ $(document).ready(function() {
                 unit = units[0].unit_price;
                 for (let i = 0; i < units.length; i++) {
                     let tmp = null;
-                    if (quantity <= units[i].number) {
+                    if (quantity <= units[i].number && tmp == null) {
                         unit = units[i].unit_price;
                         if (i > 0) {
                             tmp = units[i - 1].number;
+                        } else {
+                            break;
                         }
                     }
                     if (tmp && quantity < units[i].number) {
                         unit = units[i - 1].unit_price;
+                        break
                     }
                     if (quantity >= units[units.length - 1].number) {
                         unit = units[units.length - 1].unit_price;
@@ -259,7 +262,7 @@ $(document).ready(function() {
                     if (data == true) {
                         localStorage.removeItem('buy_card');
                         localStorage.removeItem('list_card');
-                        setTimeout(alert('Đặt hàng thành công, Vui lòng liên hệ liên hệ tới số máy (28)3896.8699 | 0972924961 để đặt hàng.'), 2000);
+                        setTimeout(alert('Đặt hàng thành công, Cửa hàng sẽ liên hệ đến quý khách trong thời gian sớm nhất để xác nhận đơn hàng. Xin cảm ơn.'), 2000);
                         window.location.href = "/";
                     }
                 },

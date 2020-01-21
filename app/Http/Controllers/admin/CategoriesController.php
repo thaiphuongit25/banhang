@@ -44,7 +44,6 @@ class CategoriesController extends Controller
             'name'              =>  'required',
             'type_id'           =>  'required',
             'desc'              =>  'required',
-            'slug'              =>  'required',
             'meta_title'        =>  'required',
             'meta_keywords'     =>  'required',
             'meta_description'  =>  'required'
@@ -91,7 +90,6 @@ class CategoriesController extends Controller
             'name'              =>  'required',
             'type_id'           =>  'required',
             'desc'              =>  'required',
-            'slug'              =>  'required',
             'meta_title'        =>  'required',
             'meta_keywords'     =>  'required',
             'meta_description'  =>  'required'
