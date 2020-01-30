@@ -52,12 +52,12 @@ class ProductsController extends Controller
         $request->validate([
             'name'              =>  'required',
             'desc'              =>  'required',
-            'quantity'          =>  'required',
+            'quantity'          =>  'required|numeric',
             'specification'     =>  'required',
             'brand_id'          =>  'required',
             'category_id'       =>  'required',
             'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'price'             =>  'required'
+            'price'             =>  'required|numeric'
         ]);
 
         if($request->image_type == 0)
@@ -155,10 +155,10 @@ class ProductsController extends Controller
                 'name'              =>  'required',
                 'desc'              =>  'required',
                 'specification'     =>  'required',
-                'quantity'          =>  'required',
+                'quantity'          =>  'required|numeric',
                 'brand_id'          =>  'required',
                 'category_id'       =>  'required',
-                'price'             =>  'required',
+                'price'             =>  'required|numeric',
                 'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
             ]);
 
