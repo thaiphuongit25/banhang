@@ -281,10 +281,10 @@ $(document).ready(function() {
         next = next + 1;
         var newIn = '<div class="row margin-button">' +
             '<div class="col-sm-3">' +
-            '<input autocomplete="off" class="form-control" name="number_' + next + '"type="text" placeholder="Số lượng" data-items="1">' +
+            '<input autocomplete="off" class="form-control" name="number_' + next + '"type="number" placeholder="Số lượng" data-items="1">' +
             '</div>' +
             '<div class="col-sm-3">' +
-            '<input autocomplete="off" class="form-control" name="unit_' + next + '"type="text" placeholder="Đơn giá(VND)" data-items="2">' +
+            '<input autocomplete="off" class="form-control" name="unit_' + next + '"type="number" placeholder="Đơn giá(VND)" data-items="2">' +
             '</div>' +
             '<div class="col-sm-1">' +
             '<button class="btn btn-danger remove-me form-control" type="button">-</button>' +
