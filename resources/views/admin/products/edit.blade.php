@@ -132,10 +132,10 @@
                     @foreach ($product->units as $unit)
                     <div class="row margin-button">
                         <div class="col-sm-3">
-                            <input autocomplete="off" value="{{ $unit->number }}" class="form-control" name="number-{{ $unit->id }}" type="text" placeholder="Số lượng">
+                            <input autocomplete="off" value="{{ $unit->number }}" class="form-control" name="number-{{ $unit->id }}" type="number" placeholder="Số lượng">
                         </div>
                         <div class="col-sm-3">
-                            <input autocomplete="off" value="{{ $unit->unit_price }}" class="form-control" name="unit-{{ $unit->id }}" type="text" placeholder="Đơn giá(VND)">
+                            <input autocomplete="off" value="{{ $unit->unit_price }}" class="form-control" name="unit-{{ $unit->id }}" type="number" placeholder="Đơn giá(VND)">
                         </div>
                         <div class="col-sm-1">
                             <button id="b1" class="btn btn-primary add-more form-control" type="button">+</button>
@@ -148,10 +148,10 @@
                     @if (!count($product->units))
                     <div class="row margin-button">
                         <div class="col-sm-3">
-                            <input autocomplete="off" class="form-control" name="number_" type="text" placeholder="Số lượng">
+                            <input autocomplete="off" class="form-control" name="number_" type="number" placeholder="Số lượng">
                         </div>
                         <div class="col-sm-3">
-                            <input autocomplete="off" class="form-control" name="unit_" type="text" placeholder="Đơn giá(VND)">
+                            <input autocomplete="off" class="form-control" name="unit_" type="number" placeholder="Đơn giá(VND)">
                         </div>
                         <div class="col-sm-1">
                             <button id="b1" class="btn btn-primary add-more form-control" type="button">+</button>

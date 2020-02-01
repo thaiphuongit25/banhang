@@ -56,7 +56,6 @@ class ProductsController extends Controller
             'specification'     =>  'required',
             'brand_id'          =>  'required',
             'category_id'       =>  'required',
-            'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'price'             =>  'required|numeric'
         ]);
 
@@ -158,8 +157,7 @@ class ProductsController extends Controller
                 'quantity'          =>  'required|numeric',
                 'brand_id'          =>  'required',
                 'category_id'       =>  'required',
-                'price'             =>  'required|numeric',
-                'image'             =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+                'price'             =>  'required|numeric'
             ]);
 
             $image_name = time().'.'.$image->getClientOriginalExtension();

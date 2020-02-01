@@ -76,14 +76,14 @@
             <div class="form-group row image_file" id='image_type_0'>
                 <label class="col-sm-2 col-form-label">Ảnh</label>
                 <div class="col-sm-10">
-                    <input type="file" name="image" value="{{ $product ?? ''->image }}" disabled/>
-                    <input type="hidden" name="hidden_image" value="{{ $product ?? ''->image }}" disabled>
+                    <input type="file" name="image" value="">
+                    <input type="hidden" name="hidden_image" value="" disabled>
                 </div>
             </div>
             <div class="form-group row image_file" id='image_type_1'>
                 <label class="col-sm-2 col-form-label require">Đường dẫn ảnh</label>
                 <div class="col-sm-10">
-                    <input type="input" name="image" class="form-control" value="{{ $product ?? ''->image }}" disabled/>
+                    <input type="input" name="image" class="form-control" value="" disabled/>
                 </div>
             </div>
             <div class="form-group row">
@@ -122,10 +122,10 @@
                 <div class="col-sm-10" id="fields">
                     <div class="row margin-button">
                         <div class="col-sm-3">
-                            <input autocomplete="off" class="form-control" name="number_" type="text" placeholder="Số lượng">
+                            <input autocomplete="off" class="form-control" name="number_" type="number" placeholder="Số lượng">
                         </div>
                         <div class="col-sm-3">
-                            <input autocomplete="off" class="form-control" name="unit_" type="text" placeholder="Đơn giá(VND)">
+                            <input autocomplete="off" class="form-control" name="unit_" type="number" placeholder="Đơn giá(VND)">
                         </div>
                         <div class="col-sm-1">
                             <button id="b1" class="btn btn-primary add-more form-control" type="button">+</button>
