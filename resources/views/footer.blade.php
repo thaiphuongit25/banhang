@@ -71,10 +71,6 @@
             </tr>
         </tbody>
     </table>
-    <div class="tbao">
-        <a href="http://online.gov.vn/CustomWebsiteDisplay.aspx?DocId=27111" target="_blank">
-            <img border="0" src="/images/tbao.png"></a>
-    </div>
 </div>
 <div id="footer-new">
     <div class="info-com first-com">

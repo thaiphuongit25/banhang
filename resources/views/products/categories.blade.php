@@ -142,7 +142,7 @@
                 @foreach ( $categor->products as $product )
                     <div class="item-product-category" style="height: 315px">
                         <div class="image popular">
-                            <a id="{{$product->id}}" class="review-product" title="LA4440J" target="_blank" href="/products/{{ $product->slug }}"><img alt="LA4440J" class="" src="https://thegioiic.com/upload/large/7181.jpg"></a>
+                            <a id="{{$product->id}}" class="review-product" title="LA4440J" target="_blank" href="/products/{{ $product->slug }}"><img src="{{ getProductImageUrl($product->id) }}"></a>
                         </div>
                         <div class="name">
                             <p class="name-a">
@@ -159,7 +159,7 @@
                             </p>
 
                             <p class="inventory">
-                                <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
+                                <span class="green"> <a class="contact-to-order" href="#">Hết hàng</a></span>
                             </p>
                             <div class="adtocartdestop">
                                 <input type="hidden" name="id" class="product_id" value="9319">
@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <div id="showtip_9319" class="showtip">
-                            <img alt="LA4440J" class="fff" src="https://thegioiic.com/upload/large/7181.jpg">
+                            <img class="fff" src="{{ getProductImageUrl($product->id) }}">
 
                         </div>
                         <script type="text/javascript">
