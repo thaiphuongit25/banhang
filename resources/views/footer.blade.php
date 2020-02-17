@@ -105,21 +105,9 @@
     <div class="info-com two-com f-com">
         <ul>
             <li class="title">
-                Chính sách - Quy định
+                Chính sách công ty
             </li>
             @foreach ( getInformations(3) as $information)
-            <li>
-                <a href="{{ route('informations.show', ['information' => $information->slug]) }}">{{ $information->title }}</a>
-            </li>
-            @endforeach
-        </ul>
-    </div>
-    <div class="info-com two-com f-com">
-        <ul>
-            <li class="title">
-                Hỗ trợ Khách hàng
-            </li>
-            @foreach ( getInformations(4) as $information)
             <li>
                 <a href="{{ route('informations.show', ['information' => $information->slug]) }}">{{ $information->title }}</a>
             </li>
@@ -147,7 +135,4 @@
 
     <div class="clear"></div>
 </div>
-<div style="margin-bottom:25px;padding-left:10px">
-    <p>Chấp nhận thanh toán</p>
-    <img src="https://thegioiic.com/images/ship_method.png" style="height:30px">
-</div>
+

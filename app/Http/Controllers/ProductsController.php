@@ -52,13 +52,13 @@ class ProductsController extends Controller
     public function showCategories($slug)
     {
         $categor = Category::where('slug', $slug)->first();
-        $categories = Category::all();
         if (!$categor) {
             $type = Type::where('slug', $slug)->first();
             $types = Type::all();
             $categories = Category::where("type_id", $type->id);
             return view("products.types", compact("type", "types", "categories"));
         } else {
+            $categories = Category::where("type_id", $categor->type_id)->get();
             return view("products.categories", compact("categor", "categories"));
         }
     }
