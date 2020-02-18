@@ -118,16 +118,13 @@
             </div>
             <ul id="help-gh">
                 <li>
-                    <a id="help-buy" target="_blank" href="/pages/uu-dai-doanh-nghiep">Ưu đãi doanh nghiệp</a>
+                    <a id="help-buy" target="_blank" href="/pages/uu-dai-doanh-nghiep">Mua hàng online</a>
                 </li>
                 <li>
-                    <a id="help-buy" target="_blank" href="/pages/mua-online-thuan-tien">Mua online thuận tiện</a>
+                    <a id="help-buy" target="_blank" href="/pages/mua-online-thuan-tien">Dịch vụ đặt hàng</a>
                 </li>
                 <li>
-                    <a id="help-buy" target="_blank" href="/pages/huong-dan-mua-hang-online">Hướng dẫn mua hàng online</a>
-                </li>
-                <li>
-                    <a id="help-buy" target="_blank" href="/pages/dat-mua-linh-kien-dien-tu">Đặt mua linh kiện điện tử</a>
+                    <a id="help-buy" target="_blank" href="/pages/huong-dan-mua-hang-online">Dịch vụ thiết kế sản phẩm</a>
                 </li>
             </ul>
             <div class="clear"></div>
