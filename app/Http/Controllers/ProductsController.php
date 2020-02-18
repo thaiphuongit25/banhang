@@ -76,7 +76,7 @@ class ProductsController extends Controller
             ->whereNotIn("id", [$product->id])->get();
         $productHots = Product::whereNotIn("id", [$product->id])
             ->orderBy('price', 'DESC')->limit(10)->get();
-        $categories = Category::where("category_id", $product->category_id)->get();
+        $categories = Category::where("id", $product->category_id)->get();
         return view("products.show", compact("product", "categories", "sameProducts", "productHots"));
     }
 }
