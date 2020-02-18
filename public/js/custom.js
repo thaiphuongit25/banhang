@@ -14,6 +14,15 @@ $(document).ready(function() {
             return listTr;
         }
 
+      
+        function linkImage(image) {
+            if(image.split("/").length > 2) {
+                return image;
+            } else {
+                return `/images/${image}`;
+            }
+        }
+
         function getStatusCurrent(status, number) {
             let tmp = null;
             if (status == 1) {
@@ -109,7 +118,7 @@ $(document).ready(function() {
                             "<td class='no'>" + j + "</td>" +
                             "<td class='pn'>" +
                             "<div style='width:29%;float:left;margin-right:1%'>" +
-                            "<a href='/products/" + value.slug + "'><img alt='SG8V1' class='image-hover' src='/images/" + value.image + "'></a>" +
+                            "<a href='/products/" + value.slug + "'><img alt='SG8V1' class='image-hover' src='" + linkImage(value.image) + "'></a>" +
                             "</div>" +
                             "<div style='float:left;width:70%'>" +
                             "<a target='_blank' href='/products/" + value.slug + "'>" + value.name + "</a>" +
@@ -210,7 +219,7 @@ $(document).ready(function() {
                         "<li>" +
                         "<div class='list-same'>" +
                         "<div class='image-same'>" +
-                        "<a href='/products/lm258p'><img alt='' src='/images/" + value.image + "'></a>" +
+                        "<a href='/products/lm258p'><img alt='' src='" + linkImage(value.image) + "'></a>" +
                         "</div>" +
                         "<div class='name-same'>" +
                         "<p class='name-a ablack'>" +
