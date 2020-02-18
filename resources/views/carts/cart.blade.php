@@ -117,15 +117,9 @@
                 Trợ giúp
             </div>
             <ul id="help-gh">
-                <li>
-                    <a id="help-buy" target="_blank" href="/pages/uu-dai-doanh-nghiep">Mua hàng online</a>
-                </li>
-                <li>
-                    <a id="help-buy" target="_blank" href="/pages/mua-online-thuan-tien">Dịch vụ đặt hàng</a>
-                </li>
-                <li>
-                    <a id="help-buy" target="_blank" href="/pages/huong-dan-mua-hang-online">Dịch vụ thiết kế sản phẩm</a>
-                </li>
+                @if ($help = getSetting(App\Enums\SettingType::Help))
+                {!!html_entity_decode($help->value)!!}
+                @endif
             </ul>
             <div class="clear"></div>
         </div>

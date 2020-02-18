@@ -75,6 +75,7 @@
             4 => 'Hỗ trợ trực tuyến kĩ thuật',
             5 => 'Hỗ trợ trực tuyến bán hàng - bảo hành',
             6 => 'Tiêu đề trang',
+            7 => 'Trợ giúp'
         ][$type];
     }
 
