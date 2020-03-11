@@ -24,6 +24,12 @@ class ProductsController extends Controller
     {
         $q = $request->has('q') ? $request->q : '';
         $products = Product::where('name', 'LIKE', '%'.$q.'%')->orWhere('desc', 'LIKE', '%'.$q.'%')->get();
+        if (count($products) == 0 && $q != '') {
+            $tmps = explode(" ", $q);
+            foreach ($tmps as $tmp) {
+                $products = $products->where('name', 'LIKE', '%'.$tmp.'%')->get();
+            }
+        }
         return response()->json(['total' => count($products), 'products' => $products]);
     }
     /**

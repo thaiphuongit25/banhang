@@ -4711,6 +4711,15 @@ var pp_alreadyInitialized = !1;
         }
     }
 }(jQuery), $(document).ready(function() {
+
+    function linkImage(image) {
+        if (image.split("/").length > 2) {
+            return image;
+        } else {
+            return `/images/${image}`;
+        }
+    }
+
     $("#txtQuery").autoComplete({
         source: function(e, t) {
             $.getJSON("/search_autohome", {
@@ -4739,7 +4748,7 @@ var pp_alreadyInitialized = !1;
             t = t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
             var n = new RegExp("(" + t.split(" ").join("|") + ")", "gi"),
                 i = accounting.formatMoney(e.price, "", 0);
-            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="/images/' + e.image_id + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/cái" + "</span></a>"
+            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="' + linkImage(e.image_id) + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/cái" + "</span></a>"
         },
         onSelect: function(e, t) {
             window.location.href = t
@@ -4772,7 +4781,7 @@ var pp_alreadyInitialized = !1;
             t = t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
             var n = new RegExp("(" + t.split(" ").join("|") + ")", "gi"),
                 i = accounting.formatMoney(e.price, "", 0);
-            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="/images/' + e.image_id + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/cái" + "</span></a>"
+            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="' + linkImage(e.image_id) + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/cái" + "</span></a>"
         }
     }), $("#search_name_product").autoComplete({
         source: function(e, t) {
@@ -5272,7 +5281,7 @@ jQuery(document).ready(function($) {
     $.featureList(
         $("#tabs li a"),
         $("#output li"), {
-            start_item : 1
+            start_item: 1
         }
     );
 });
