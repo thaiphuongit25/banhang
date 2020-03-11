@@ -30,45 +30,7 @@
         </div>
         <div id="product_viewed">
             <div class="same-by-list ">
-                <ul class="content">
-                    <li>
-                        <div class="list-same">
-                            <div class="image-same">
-                                <a href="/products/sg8v1"><img alt="" src="https://thegioiic.com/upload/medium/2734.jpg"></a>
-                            </div>
-                            <div class="name-same">
-                                <p class="name-a ablack">
-                                    <a style="padding:0" href="/products/sg8v1">SG8V1</a>
-                                </p>
-                                <p class="price blue">
-                                    65,000 đ/Cái
-                                </p>
-                                <p>
-                                    <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">17</span> Cái</span>
-                                </p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="list-same">
-                            <div class="image-same">
-                                <a href="/products/lm258p"><img alt="" src="https://thegioiic.com/upload/medium/200.jpg"></a>
-                            </div>
-                            <div class="name-same">
-                                <p class="name-a ablack">
-                                    <a style="padding:0" href="/products/lm258p">LM258P</a>
-                                </p>
-                                <p class="price blue">
-                                    16,000 đ/Cái
-                                </p>
-                                <p>
-                                    <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">90</span> Cái</span>
-                                </p>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </li>
+                <ul class="content seed-product">
                 </ul>
                 <div class="clear"></div>
             </div>
@@ -158,9 +120,7 @@
                                {{ $product->price }} đ/Cái
                             </p>
 
-                            <p class="inventory">
-                                <span class="green"> <a class="contact-to-order" href="#">Hết hàng</a></span>
-                            </p>
+                            @include('products.quantity')
                             <div class="adtocartdestop">
                                 <input type="hidden" name="id" class="product_id" value="9319">
                                 <input type="hidden" name="option_id" value="">

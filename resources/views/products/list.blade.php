@@ -69,9 +69,7 @@
                                 {{ $product->price }} đ/Cái
                             </p>
 
-                            <p class="inventory">
-                                <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span> Cái</span>
-                            </p>
+                            @include('products.quantity')
                             <div class="adtocartdestop">
                                 <input type="hidden" name="id" class="product_id" value="10">
                                 <input type="hidden" name="option_id" value="">
