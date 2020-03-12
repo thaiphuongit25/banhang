@@ -14,9 +14,9 @@ $(document).ready(function() {
             return listTr;
         }
 
-      
+
         function linkImage(image) {
-            if(image.split("/").length > 2) {
+            if (image.split("/").length > 2) {
                 return image;
             } else {
                 return `/images/${image}`;
@@ -219,7 +219,7 @@ $(document).ready(function() {
                         "<li>" +
                         "<div class='list-same'>" +
                         "<div class='image-same'>" +
-                        "<a href='/products/lm258p'><img alt='' src='" + linkImage(value.image) + "'></a>" +
+                        "<a href='/products/" + value.slug + "'><img alt='' src='" + linkImage(value.image) + "'></a>" +
                         "</div>" +
                         "<div class='name-same'>" +
                         "<p class='name-a ablack'>" +
