@@ -62,9 +62,9 @@ class RegisterController extends Controller
             'phone-number' => ['required', 'string', 'min:10'],
             'address' => ['required', 'string'],
             'company_name' => ['string', 'max:255'],
-            'tax_code' => ['integer'],
+            'tax_code' => ['string', 'max:255'],
             'company_address' => ['string', 'max:255'],
-            'g-recaptcha-response' => ['required', new \App\Rules\ValidRecaptcha]
+            // 'g-recaptcha-response' => ['required', new \App\Rules\ValidRecaptcha]
         ]);
     }
 
