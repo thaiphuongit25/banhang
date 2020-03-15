@@ -13,7 +13,7 @@
     {!!strip_tags($title->value)!!}
     @endif
   </title>
-  <link rel="shortcut icon" href="{{ url('images/favicon.ico') }}" />
+  <link rel="shortcut icon" href="{{ url('logo/logo.ico') }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
   <!-- Scripts -->
