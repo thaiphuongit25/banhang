@@ -262,7 +262,7 @@
               {!! $product->specification !!}
             </div>
             <div id="tabp2" class="view_tab_product" style="display: none;">
-              <p><a href="http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&amp;gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Flm258a" target="_blank">Datasheet</a></p>
+            <p><a href="{{ $product->datasheet }}" target="_blank">{{ $product->datasheet ? $product->name : '' }}</a></p>
             </div>
             <div id="tabp6" class="view_tab_product" style="display: none;">
               <div class="sam-buy-product-list">

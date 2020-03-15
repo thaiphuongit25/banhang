@@ -105,6 +105,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Link datasheet</label>
+                <div class="col-sm-10">
+                    <input type="input" name="datasheet" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Tiêu đề meta</label>
                 <div class="col-sm-10">
                     <input categorie="text" name="meta_title" class="form-control" />

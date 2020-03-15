@@ -39,6 +39,7 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
             'image_type' => 1,
             'quantity' => $row['so_luong'],
             'note' => $row['don_vi'],
+            'datasheet' => $row['datasheet'],
             'code'     => rand(1000000000, 9999999999),
             'meta_title'=> $row['meta_title'],
             'meta_keywords'=> $row['meta_keywords'],
