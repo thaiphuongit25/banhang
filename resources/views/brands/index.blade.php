@@ -29,9 +29,9 @@
                     <ul>
                         @foreach ($brands as $brand)
                         <li style="width:30%;float:left;height: 185px;margin:0 10px 10px 10px;text-align:center;border:1px solid #DDD;border-radius:5px">
-                            <div style="min-height:100px; margin-top:12px;">
+                            <div style="height: 85%;">
                                 <a href="{{ route('brands.show', ['brand' => $brand->slug]) }}">
-                                    <img alt="" src="{{ loadImage($brand->logo) }}" style="max-width: 190px;">
+                                    <img alt="" src="{{ loadImage($brand->logo) }}" style="height: 90%;width: 80%;object-position: center;object-fit: contain;margin-top: 10px;">
                                 </a>
                             </div>
                             <div>
