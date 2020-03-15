@@ -40,7 +40,6 @@ class BrandsController extends Controller
     {
         $request->validate([
             'name'     =>  'required',
-            'desc'     =>  'required',
             'logo'     =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
 
@@ -87,7 +86,6 @@ class BrandsController extends Controller
         {
             $request->validate([
                 'name'    =>  'required',
-                'desc'    =>  'required',
                 'logo'    =>  'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
             ]);
 
@@ -98,7 +96,6 @@ class BrandsController extends Controller
         {
             $request->validate([
                 'name'    =>  'required',
-                'desc'    =>  'required',
             ]);
         }
 

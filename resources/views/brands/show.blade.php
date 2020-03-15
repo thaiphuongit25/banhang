@@ -14,7 +14,7 @@
         <div
             style="border:1px solid #ccc; padding:5px;-webkit-border-radius: 5px; -moz-border-radius: 5px; background-color:#fff;position: relative;padding-bottom:25px;">
             <div style="padding:0 8px 0 12px;">
-                <img alt="" src="{{ loadImage($brand->logo) }}">
+                <img alt="" src="{{ loadImage($brand->logo) }}" style="max-width: 250px;">
                 {!!html_entity_decode($brand->desc)!!}
             </div>
             <div

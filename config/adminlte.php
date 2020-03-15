@@ -226,6 +226,11 @@ return [
             'icon'    => 'fas fa-business-time',
         ],
         [
+            'text'    => 'Hướng dẫn',
+            'url'  => 'admin/guides',
+            'icon'    => 'fas fa-book',
+        ],
+        [
             'text'    => 'Danh mục tin tức',
             'url'  => 'admin/article_categories',
             'icon'    => 'fas fa-list-alt',

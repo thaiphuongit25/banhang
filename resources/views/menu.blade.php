@@ -19,6 +19,9 @@
             <li class="mn-news">
                 <a href="/news" class="menu_parent">Tin tức</a>
             </li>
+            <li class="mn-news">
+                <a href="/guides" class="menu_parent">Hướng dẫn</a>
+            </li>
         </ul>
     </div>
 

@@ -51,6 +51,7 @@ Route::delete('/orders-destroy/{id}', 'UserController@ordersDestroy')->name('ord
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('services', 'ServiceController')->only(['index', 'show']);
+Route::resource('guides', 'GuideController')->only(['index', 'show']);
 Route::resource('informations', 'InformationsController')->only(['index', 'show']);
 Route::resource('articles', 'ArticleController')->only(['index', 'show']);
 Route::resource('brands', 'BrandController')->only(['index', 'show']);
@@ -67,6 +68,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::resource('categories', 'CategoriesController');
     Route::resource('orders', 'OrdersController');
     Route::resource('services', 'ServicesController');
+    Route::resource('guides', 'GuidesController');
     Route::resource('informations', 'InformationsController');
     Route::resource('article_categories', 'ArticleCategoriesController')->except(['destroy']);
     Route::resource('articles', 'ArticlesController');
