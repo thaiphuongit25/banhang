@@ -254,6 +254,11 @@ return [
             'text'    => 'Thiết lập khác',
             'url'  => 'admin/settings',
             'icon'    => 'fas fa-cog',
+        ],
+        [
+            'text'    => 'Thiết lập gửi mail',
+            'url'  => 'admin/mails/1/edit',
+            'icon'    => 'fas fa-envelope',
         ]
     ],
 

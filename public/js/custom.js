@@ -255,10 +255,11 @@ $(document).ready(function() {
             window.location.href = "/";
         });
         $(".confirm-order").click(function() {
+            $(".confirm-order").prop('disabled', true);
             let listCart = JSON.parse(localStorage.getItem('buy_card'));
             let carts = JSON.parse(localStorage.getItem('list_card'));
             if (carts == null || carts.length == 0) {
-                alert("Vui lòng thêm sản phẩm đến giỏi hàng");
+                alert("Vui lòng thêm sản phẩm đến giỏ hàng");
                 return
             }
             let method_check = $(".method-cart").find('input').toArray();
@@ -285,7 +286,7 @@ $(document).ready(function() {
                     if (data == true) {
                         localStorage.removeItem('buy_card');
                         localStorage.removeItem('list_card');
-                        setTimeout(alert('Đặt hàng thành công, Cửa hàng sẽ liên hệ đến quý khách trong thời gian sớm nhất để xác nhận đơn hàng. Xin cảm ơn.'), 2000);
+                        setTimeout(alert('Đặt hàng thành công. Xin cảm ơn.'), 2000);
                         window.location.href = "/";
                     }
                 },

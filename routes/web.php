@@ -71,6 +71,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::resource('article_categories', 'ArticleCategoriesController')->except(['destroy']);
     Route::resource('articles', 'ArticlesController');
     Route::resource('users', 'UsersController')->only(['index', 'edit', 'update']);
+    Route::resource('mails', 'MailController')->only(['edit', 'update']);
     Route::resource('banners', 'BannersController')->only(['index', 'edit', 'update']);
     Route::resource('banner_items', 'BannerItemsController')->only(['index', 'edit', 'update']);
     Route::get('/banners/{bannerId}/banner_items', 'BannerItemsController@index')->name('banner_items.index');

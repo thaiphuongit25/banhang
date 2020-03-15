@@ -146,3 +146,11 @@
             return 'Cái';
         }
      }
+
+     function total_money_of_products($products) {
+         $total = 0;
+         foreach($products as $item) {
+            $total += ($item->pivot->quantity)*($item->pivot->price);
+         }
+         return number_format($total + 37000);
+     }

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\model\Product;
 use App\model\Order;
 use App\model\OrderDetail;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Orders;
 use DB;
 
 class CartsController extends Controller
@@ -43,6 +45,7 @@ class CartsController extends Controller
         $carts = $request->has('cards') ? $request->cards : [];
         $note = $request->has('note') ? $request->note : "";
         $user_id = \Auth::id();
+        $email = \Auth::user()->email;
         $order = [
             'user_id'       => $user_id,
             'date_order'    => now(),
@@ -63,6 +66,7 @@ class CartsController extends Controller
                     ]);
                 }
             }
+            Mail::to($email)->send(new Orders($order));
         }
         catch (Exception $e) {
             throw new Exception($e->getMessage());
