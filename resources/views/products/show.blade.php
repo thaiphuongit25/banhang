@@ -150,7 +150,7 @@
                   @if ($product->status == 0)
                   <div class="brown"><span class="f"><a class="contact-to-order-show" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span><span>(Đặt mua 7-10 ngày có hàng)</span></div>
                   @else
-                  <div class="ngreen"><span class="f">Hàng còn: {{ $product->quantity }} Cái</span><span>(Gửi hàng trong ngày)</span></div>
+                  <div class="ngreen"><span class="f">Hàng còn: {{ $product->quantity }} {{ unit_product($product->note) }}</span><span>(Gửi hàng trong ngày)</span></div>
                   @endif
                 </div>
               </div>
@@ -195,13 +195,13 @@
                 <table class="list-price-product" cellpadding="0" cellspacing="0">
                   <tbody>
                     <tr class="header">
-                      <td>Số lượng mua<br>(Cái)
+                      <td>Số lượng mua<br>({{ unit_product($product->note) }})
                       </td>
                       <td>Đơn giá<br>(VND)</td>
                     </tr>
                     @foreach ($product->units as $unit)
                     <tr>
-                      <td class="price-column">{{ $unit->number }}</td>
+                      <td class="price-column">{{ $unit->number }} +</td>
                       <td class="price-column">{{ number_format($unit->unit_price) }} </td>
                     </tr>
                     @endforeach
@@ -295,13 +295,13 @@
                       <a title="MCP6041T-I/OT" href="/products/{{ $sameProduct->slug }}">{{ $sameProduct->name }}</a>
                     </p>
                     <p class="price blue">
-                      {{ number_format($sameProduct->price) }} đ/Cái
+                      {{ number_format($sameProduct->price) }} đ/{{ unit_product($sameProduct->note) }}
                     </p>
                     <p>
                       @if ($sameProduct-> status == 0)
                       <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
                       @else
-                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $sameProduct->quantity }}</span> Cái</span>
+                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $sameProduct->quantity }}</span> {{ unit_product($sameProduct->note) }}</span>
                       @endif
                     </p>
                   </div>
@@ -334,13 +334,13 @@
                       <a id="{{$product->id}}" class="review-product" title="{{  $productHot->name }}" href="/products/{{ $productHot->slug }}">{{ $productHot->name }}</a>
                     </p>
                     <p class="price blue">
-                      {{ number_format($productHot->price) }} đ/Cái
+                      {{ number_format($productHot->price) }} đ/{{ unit_product($productHot->note) }}
                     </p>
                     <p>
                       @if ($productHot-> status == 0)
                       <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
                       @else
-                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $productHot->quantity }}</span> Cái</span>
+                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $productHot->quantity }}</span> {{ unit_product($productHot->note) }}</span>
                       @endif
                     </p>
                   </div>

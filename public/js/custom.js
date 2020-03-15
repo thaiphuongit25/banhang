@@ -23,14 +23,23 @@ $(document).ready(function() {
             }
         }
 
-        function getStatusCurrent(status, number) {
+        function getStatusCurrent(status, number, note) {
             let tmp = null;
             if (status == 1) {
-                tmp = "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + number + "</span> Cái</span>";
+                tmp = "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + number + "</span> " + unit_price(note) +
+                    "</span>";
             } else {
                 tmp = "<span style='color: red'>Hết hàng</span>";
             }
             return tmp;
+        }
+
+        var unit_price = function(note) {
+            if (note) {
+                return note;
+            } else {
+                return 'Cái';
+            }
         }
 
         var formatPrice = function(unit) {
@@ -138,7 +147,7 @@ $(document).ready(function() {
                             "<td class='pq'>" +
                             "<input type='number' id='" + value.id + "' value='" + quantityCurrent(value.id) + "' class='cart-quantity-change' style='width:45px; text-align:center;' min='1'>" +
                             "<br>" +
-                            getStatusCurrent(value.status, value.quantity) +
+                            getStatusCurrent(value.status, value.quantity, value.note) +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
                             formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[1]) + "đ" +
@@ -226,7 +235,7 @@ $(document).ready(function() {
                         "<a style='padding:0' href='/products/" + value.slug + "'>" + value.name + "</a>" +
                         "</p>" +
                         "<p class='price blue'>" +
-                        formatPrice(value.price) + "đ/Cái" +
+                        formatPrice(value.price) + "đ/" + unit_price(value.note) +
                         "</p>" +
                         "<p>" +
                         // "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + data.quantity + "</span> Cái</span>" +

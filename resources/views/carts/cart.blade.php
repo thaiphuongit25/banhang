@@ -13,7 +13,7 @@
                                 <th> No. </th>
                                 <th> Tên sản phẩm </th>
                                 <th> Bảng giá </th>
-                                <th> Số lượng mua </th>
+                                <th style="width: 90px;"> Số lượng mua </th>
                                 <th> Đơn giá </th>
                                 <th> Thành tiền </th>
                                 <th> Xóa </th>

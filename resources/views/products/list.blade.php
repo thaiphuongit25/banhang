@@ -66,11 +66,11 @@
                             </div>
 
                             <p class="price blue">
-                                {{ $product->price }} đ/Cái
+                                {{ $product->price }} đ/{{ unit_product($product->note) }}
                             </p>
 
                             <p class="inventory">
-                                <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span> Cái</span>
+                                <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span> {{ unit_product($product->note) }}</span>
                             </p>
                             <div class="adtocartdestop">
                                 <input type="hidden" name="id" class="product_id" value="10">

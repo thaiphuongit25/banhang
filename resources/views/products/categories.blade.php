@@ -117,7 +117,7 @@
                                 On Semiconductor
                             </div>
                             <p class="price blue">
-                               {{ $product->price }} đ/Cái
+                               {{ $product->price }} đ/{{ unit_product($product->note) }}
                             </p>
 
                             <p class="inventory">

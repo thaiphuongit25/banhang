@@ -139,3 +139,10 @@
         return $result;
      }
 
+     function unit_product($str) {
+        if ($str) {
+            return $str;
+        } else {
+            return 'Cái';
+        }
+     }

@@ -21,8 +21,8 @@
               <td class="img"><a href="/products/{{ $product->slug }}"><img src="{{ getProductImageUrl($product->id) }}" alt="89" /></a></td>
               <td><a href="/products/{{ $product->slug }}">{{ $product->name }}</a></td>
               <td>
-                {{ number_format($product->price) }} đ/cái<br />
-                <span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>{{ $product->quantity }}</span> Cái</span>
+                {{ number_format($product->price) }} đ/{{ unit_product($product->note) }}<br />
+                <span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>{{ $product->quantity }}</span> {{ unit_product($product->note) }}</span>
               </td>
               <td>
                 <a data-remote="true" rel="nofollow" data-method="post" href="#" id="{{$product->id}}">

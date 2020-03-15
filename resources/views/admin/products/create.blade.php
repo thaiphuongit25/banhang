@@ -93,6 +93,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label class="col-sm-2 col-form-label require">Đơn vị(Cái/Gói)</label>
+                <div class="col-sm-10">
+                    <input type="input" name="note" class="form-control" placeholder="Cái/Gói(50pcs)" />
+                </div>
+            </div>
+            <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Số lượng</label>
                 <div class="col-sm-10">
                     <input type="input" name="quantity" class="form-control" />
