@@ -81,7 +81,11 @@
     <div class="info-com two-com f-com">
         <ul>
             <li class="title">
-                Thông tin công ty
+                @if ( $category = getInformationCategory(1) )
+                    {{ $category->name }}
+                @else
+                    Thông tin công ty
+                @endif
             </li>
             @foreach ( getInformations(1) as $information)
             <li>
@@ -93,7 +97,11 @@
     <div class="info-com two-com f-com">
         <ul>
             <li class="title">
-                Dịch vụ bán hàng
+                @if ( $category = getInformationCategory(2) )
+                    {{ $category->name }}
+                @else
+                    Dịch vụ bán hàng
+                @endif
             </li>
             @foreach ( getInformations(2) as $information)
             <li>
@@ -105,7 +113,11 @@
     <div class="info-com two-com f-com">
         <ul>
             <li class="title">
-                Chính sách công ty
+                @if ( $category = getInformationCategory(3) )
+                    {{ $category->name }}
+                @else
+                    Chính sách công ty
+                @endif
             </li>
             @foreach ( getInformations(3) as $information)
             <li>
@@ -118,18 +130,17 @@
     <div class="info-com two-com f-com">
         <ul>
             <li class="title">
-                <a href="https://thegioiic.com/information/ho-tro-khach-hang">Hỗ trợ Khách hàng</a>
+                @if ( $category = getInformationCategory(3) )
+                    {{ $category->name }}
+                @else
+                    Hỗ trợ Khách hàng
+                @endif
             </li>
-
+            @foreach ( getInformations(4) as $information)
             <li>
-                <a target="_blank" href="https://thegioiic.com/pages/tro-giup-khach-hang-faq">Trợ giúp Khách hàng (FAQ)</a>
+                <a href="{{ route('informations.show', ['information' => $information->slug]) }}">{{ $information->title }}</a>
             </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/dich-vu-ho-tro-khac">Dịch vụ hỗ trợ khác</a>
-            </li>
-            <li>
-                <a target="_blank" href="https://thegioiic.com/pages/sua-chua-theo-yeu-cau">Sửa chữa theo yêu cầu</a>
-            </li>
+            @endforeach
         </ul>
     </div> --}}
 

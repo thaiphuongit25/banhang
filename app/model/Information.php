@@ -4,6 +4,7 @@ namespace App\model;
 
 use Illuminate\Database\Eloquent\Model;
 use App\model\Comment;
+use App\model\InformationCategory;
 use Cviebrock\EloquentSluggable\Sluggable;
 use Cviebrock\EloquentSluggable\SluggableScopeHelpers;
 
@@ -54,7 +55,12 @@ class Information extends Model
         return $query->where('status', 1);
     }
 
+    public function information_category()
+    {
+        return $this->belongsTo(InformationCategory::class);
+    }
+
     protected $fillable = [
-        'id', 'title', 'content', 'slug', 'thumbnail', 'meta_title', 'meta_keywords', 'meta_description'
+        'id', 'title', 'content', 'slug', 'thumbnail', 'meta_title', 'meta_keywords', 'meta_description', 'information_category_id'
     ];
 }
