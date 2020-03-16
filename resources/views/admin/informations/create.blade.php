@@ -36,10 +36,13 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Loại thông tin</label>
                 <div class="col-sm-10">
-                    <select name="types" class="form-control">
-                        @foreach (App\model\Information::Types as $key => $value)
-                            <option value="{{ $key }}"
-                            >{{ $value }}</option>
+                    <select name="information_category_id" class="form-control">
+                        @foreach ($categories as $category)
+                        <option value="{{ $category->id }}"
+                            @if ($category->id == old('information_category_id'))
+                                selected="selected"
+                            @endif
+                        >{{ $category->name }}</option>
                         @endforeach
                     </select>
                 </div>

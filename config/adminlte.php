@@ -246,6 +246,11 @@ return [
             'icon'    => 'fas fa-users',
         ],
         [
+            'text'    => 'Danh mục thông tin',
+            'url'  => 'admin/information_categories',
+            'icon'    => 'fas fa-business-time',
+        ],
+        [
             'text'    => 'Thông tin công ty',
             'url'  => 'admin/informations',
             'icon'    => 'fas fa-business-time',

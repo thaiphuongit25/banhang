@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\model\Information;
+use App\model\InformationCategory;
 
 class InformationsController extends Controller
 {
@@ -26,7 +27,8 @@ class InformationsController extends Controller
      */
     public function create()
     {
-        return view('admin.informations.create');
+        $categories = InformationCategory::all();
+        return view('admin.informations.create', compact('categories'));
     }
 
     /**
@@ -38,9 +40,9 @@ class InformationsController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'     =>  'required',
-            'content'   =>  'required',
-            'types'     =>  'required'
+            'title'                    =>  'required',
+            'content'                  =>  'required',
+            'information_category_id'  =>  'required'
         ]);
 
         $thumbnail = $request->file('thumbnail');
@@ -50,16 +52,16 @@ class InformationsController extends Controller
         } else {
             $new_name = null;
         }
-        
+
         $information = array(
-            'title'            =>   $request->title,
-            'content'          =>   $request->content,
-            'types'            =>   $request->types,
-            'slug'             =>   $request->slug,
-            'thumbnail'        =>   $new_name,
-            'meta_title'       =>   $request->meta_title,
-            'meta_keywords'    =>   $request->meta_keywords,
-            'meta_description' =>   $request->meta_description
+            'title'                     =>   $request->title,
+            'content'                   =>   $request->content,
+            'information_category_id'   =>   $request->information_category_id,
+            'slug'                      =>   $request->slug,
+            'thumbnail'                 =>   $new_name,
+            'meta_title'                =>   $request->meta_title,
+            'meta_keywords'             =>   $request->meta_keywords,
+            'meta_description'          =>   $request->meta_description
         );
 
         Information::create($information);
@@ -75,8 +77,9 @@ class InformationsController extends Controller
      */
     public function edit($id)
     {
+        $categories = InformationCategory::all();
         $information = Information::findOrFail($id);
-        return view('admin.informations.edit', compact('information'));
+        return view('admin.informations.edit', compact('information', 'categories'));
     }
 
     /**
@@ -93,10 +96,10 @@ class InformationsController extends Controller
         if($image)
         {
             $request->validate([
-                'title'     =>  'required',
-                'content'   =>  'required',
-                'types'     =>  'required',
-                'slug'      =>  'required|unique:informations'
+                'title'                       =>  'required',
+                'content'                     =>  'required',
+                'information_category_id'     =>  'required',
+                'slug'                        =>  'required|unique:informations'
             ]);
 
             $image_name = time().'.'.$image->getClientOriginalExtension();
@@ -112,14 +115,14 @@ class InformationsController extends Controller
         }
 
         $form_data = array(
-            'title'            =>   $request->title,
-            'content'          =>   $request->content,
-            'slug'             =>   $request->slug,
-            'thumbnail'        =>   $image_name,
-            'types'            =>   $request->types,
-            'meta_title'       =>   $request->meta_title,
-            'meta_keywords'    =>   $request->meta_keywords,
-            'meta_description' =>   $request->meta_description
+            'title'                      =>   $request->title,
+            'content'                    =>   $request->content,
+            'slug'                       =>   $request->slug,
+            'thumbnail'                  =>   $image_name,
+            'information_category_id'    =>   $request->information_category_id,
+            'meta_title'                 =>   $request->meta_title,
+            'meta_keywords'              =>   $request->meta_keywords,
+            'meta_description'           =>   $request->meta_description
         );
 
         Information::whereId($id)->update($form_data);

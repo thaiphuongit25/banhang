@@ -70,6 +70,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'admin', 'mi
     Route::resource('services', 'ServicesController');
     Route::resource('guides', 'GuidesController');
     Route::resource('informations', 'InformationsController');
+    Route::resource('information_categories', 'InformationCategoriesController')->except(['destroy', 'create']);
     Route::resource('article_categories', 'ArticleCategoriesController')->except(['destroy']);
     Route::resource('articles', 'ArticlesController');
     Route::resource('users', 'UsersController')->only(['index', 'edit', 'update']);
