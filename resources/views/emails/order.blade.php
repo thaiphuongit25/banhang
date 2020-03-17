@@ -6,17 +6,20 @@
             <u></u>
             <div>
                 <div style="font-size:16px">Xin chào khách <span class="il">hàng</span> 
-                    {{ $order->user->name }},	
+                    {{ $order->user->name }}.
                 </div>
-            <div>Đơn đặt <span class="il">hàng</span>: {{ $order->code }}</div>
+            <div>Mã đơn <span class="il">hàng</span>: {{ $order->code }}</div>
                 <div style="padding:0;clear:both">
-                    <p><span class="il">Linhkieniot</span> chân thành cảm ơn quý Khách đã mua sản phẩm.</p>
-                    <p>Quý khách đã chọn thanh toán bằng {{ $order->note  }}, Thanh toán đơn <span class="il">vui lòng hàng ghi: </span> Họ và Tên_Mã đơn hàng_Ngày đặt hàng. Quý khách phản hồi bằng điện thoại hoặc email tới công ty.</p>
-                    <p>Chúng tôi sẽ gửi <span class="il">hàng</span> khi nhận được thanh toán. Số vận đơn sẽ được gửi tới email của Quý khách.</p>
-                    <p>Thông tin thanh toán bên dưới đơn <span class="il">hàng</span>.</p>
+                    <p><strong>Linhkieniotvn </strong> xin chân thành cảm ơn Quý khách đã lựa chọn sản phẩm của chúng tôi.</p>
+                    <p>Quý khách có thể lựa chọn hình thức thanh toán chuyển khoản hoặc hình thức giao hàng thanh toán(COD).</p>
+                    <p>Nếu chọn hình thức thanh toán chuyển khoản, sau khi chuyển khoản Quý khách liên hệ lại với </br> nhân viên Linhkieniotvn, chúng tôi sẽ gửi hàng ngay cho Quý khách.
+                    </p>
+                    <p>Cú pháp thanh toán: <strong> Họ Tên_Mã đơn hàng_Ngày đặt hàng. </strong></p>
                 </div>
                 <div style="padding:0;margin:5px 0;font-weight:bolder">
                     Danh Sách Sản Phẩm
+                    <p>( Trích xuất đơn hàng của KH trên wesite)
+                    </p>
                 </div>
                 <table border="1">
                     <tbody>
@@ -46,7 +49,7 @@
                                 {{ $key + 1 }}
                             </td>
                             <td>
-                            <a style="text-decoration:none" href="{{ URL::to('/products/').$item->slug }}" target="_blank" >{{ $item->name }}</a>
+                            <a style="text-decoration:none" href="{{ URL::to('/products/').'/'.$item->slug }}" target="_blank" >{{ $item->name }}</a>
                             </td>
                             <td style="text-align:right;padding-right:6px">
                                 {{ $item->pivot->quantity}}  {{ $item->note }}
@@ -64,83 +67,20 @@
                         @endforeach
                         <tr>
                             <td></td>
-                            <td colspan="3" style="color:#c30;text-align:right;padding-right:6px">
-                                Chuyển phát nhanh(Hà Nội)
-                            </td>
-                            <td style="text-align:right;padding-right:6px">					
-                                37,000  đ 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
                             <td colspan="3" style="color:#c30;text-align:right;padding-right:6px">Tổng tiền</td>
                             <td style="text-align:right;padding-right:6px"> {{ total_money_of_products($order->products) }}  đ </td>
                         </tr>
                     </tbody>
                 </table>
-                <div style="font-weight:bolder;border-bottom:1px solid #bbb;margin:12px 0 5px 0">
-                    Thông tin Khách <span class="il">hàng</span>
-                </div>
-                <table border="0">
-                    <tbody>
-                        <tr>
-                            <td style="padding:3px;width:100px">
-                                Tên khách <span class="il">hàng</span>:
-                            </td>
-                            <td style="font-weight:bolder">
-                                {{ $order->user->name }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding:3px;width:100px">
-                                Địa chỉ:
-                            </td>
-                            <td style="font-weight:bolder">					
-                                {{ $order->user->address }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding:3px;width:100px">
-                                Email: 
-                            </td>
-                            <td style="font-weight:bolder">
-                            <a href="mailto:{{ $order->user->email }}" target="_blank"> {{ $order->user->email }}</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding:3px;width:100px">
-                                Điện thoại:
-                            </td>
-                            <td style="font-weight:bolder">
-                                {{ $order->user->phone_number }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding:3px;width:100px">
-                                Ghi chú: 
-                            </td>
-                            <td style="font-weight:bolder">
-                                {{ $order->note }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="padding:3px;width:100px">
-                                Tên công ty: {{ $order->user->company_name }}
-                            </td>
-                            <td style="font-weight:bolder">
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p><strong>Thông tin tài khoản ngân <span class="il">hàng</span> của <span class="il">linhkieniotvn</span><br></strong></p>
-                <p>Ngân <span class="il">hàng</span>:&nbsp;<span style="color:#0000ff">Ngân hàng Vietcombank – Chi nhánh Thăng Long.</span></p>
+                <p><strong>Thông tin thanh toán:</strong></p>
                 <p>Tên tài khoản: Công ty cổ phần Esystech.</p>
                 <p>Số tài khoản: 0491000106298 &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
+                <p>Ngân hàng Vietcombank – Chi nhánh Thăng Long.</p>
                 <p>&nbsp;</p>
             </div>
             <p style="font-weight:bolder;color:#c30;padding:20px;clear:both;border-top:2px solid #09c">
             </p>
-            <p><a title="Nhà phân phối linh kiện điện tử" href="http://linhkieniotvn.com/" target="_blank">linhkieniotvn.com</a></p>
+            <p><a title="Nhà phân phối linh kiện điện tử" href="http://linhkieniotvn.com/" target="_blank">Nhà phân phối linh kiện điện tử</a></p>
             <div class="yj6qo"></div>
             <div class="adL">
                 <p></p>

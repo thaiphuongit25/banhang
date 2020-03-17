@@ -152,5 +152,5 @@
          foreach($products as $item) {
             $total += ($item->pivot->quantity)*($item->pivot->price);
          }
-         return number_format($total + 37000);
+         return number_format($total);
      }

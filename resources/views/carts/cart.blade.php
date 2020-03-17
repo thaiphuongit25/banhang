@@ -157,197 +157,36 @@
                 <div class="clear"></div>
             </div>
         </div>
-
     </div>
     @endif
-    <script type="text/javascript">
-        function checkForm(event) {
-            var capt_value = $("#captcha_valid").val().toUpperCase();
-            if (trim($("#input_captcha_valid").val()).toUpperCase() != trim(capt_value)) {
-                $("#lb_capcha_error").show();
-                $("#input_captcha_valid").addClass('border-red');
-                event.preventDefault();
-                return false;
-            } else {
-                $("#lb_capcha_error").hide();
-                $("#input_captcha_valid").removeClass('border-red');
-                clickOrder(event.target);
-                return;
-            }
-        }
-
-        $("#new_bill_buy").submit(function(e) {
-            $("#btnSubmit").attr("disabled", true).addClass('disabled-button');
-            return true;
-        });
-        $(document).ready(function() {
-            if ($("#express_delivery").prop("checked")) {
-                $("#express_delivery").click();
-            }
-            if ($("#cod_method").prop("checked")) {
-                $("#cod_method").click();
-            }
-            if ($("#atm_method").prop("checked")) {
-                $("#atm_method").click();
-            }
-            if ($("#buy_in_shop").prop("checked")) {
-                $("#buy_in_shop").click();
-            }
-            if ($("#motorbike").prop("checked")) {
-                $("#motorbike").click();
-            }
-        });
-
-        $("#express_delivery").click(function() {
-            $("#express-delivery-value").show();
-            $("#motorbike-delivery-value").hide();
-            $("#div-value-payment-area").show();
-            $(".payment_method").show();
-            $("#div-value-payment-area").show();
-            var ship_payment = $("#express-delivery-value").data('value');
-            var total_cart = $("#total-cart").data("value");
-            var cod_payment = 0;
-            if ($("#cod_method").prop("checked")) {
-                cod_payment = $("#cod-value").data("value");
-            }
-            var total = parseInt(ship_payment) + parseInt(total_cart) + parseInt(cod_payment);
-            var total_ship = parseInt(ship_payment) + parseInt(cod_payment);
-            var vat_payment = 0;
-            if ($(".ordered_btn").prop("checked")) {
-                vat_payment = Math.round(0.05 * total);
-                $("#value-vat5").html(accounting.formatMoney(vat_payment, "", 0) + " đ");
-            }
-            $("#value-payment-area").html(accounting.formatMoney(total_ship, "", 0) + " đ");
-            $("#value-total-cart").html(accounting.formatMoney((total + vat_payment), "", 0) + " đ");
-            $("#value-total-cart").data('value', total);
-            $.ajax({
-                url: "/carts/save_option?delivery_method=2",
-                dataType: "script"
-            });
-        })
-        $("#motorbike").click(function() {
-            $("#express-delivery-value").hide();
-            $("#motorbike-delivery-value").show();
-            $("#div-value-payment-area").show();
-            $(".payment_method").show();
-            var motorbike_payment = $("#motorbike-delivery-value").data('value');
-            var total_cart = $("#total-cart").data("value");
-            var cod_payment = 0;
-            if ($("#cod_method").prop("checked")) {
-                cod_payment = $("#cod-value").data("value");
-            }
-            var total = parseInt(motorbike_payment) + parseInt(total_cart) + parseInt(cod_payment);
-            var vat_payment = 0;
-            if ($(".ordered_btn").prop("checked")) {
-                vat_payment = Math.round(0.05 * total);
-                $("#value-vat5").html(accounting.formatMoney(vat_payment, "", 0) + " đ");
-            }
-            var total_ship = parseInt(motorbike_payment) + parseInt(cod_payment);
-            $("#value-payment-area").html(accounting.formatMoney(total_ship, "", 0) + " đ");
-            $("#value-total-cart").html(accounting.formatMoney((total + vat_payment), "", 0) + " đ");
-            $("#value-total-cart").data('value', total);
-            $.ajax({
-                url: "/carts/save_option?delivery_method=3",
-                dataType: "script"
-            });
-        })
-        $("#buy_in_shop").click(function() {
-            $("#express-delivery-value").hide();
-            $("#motorbike-delivery-value").hide();
-            $(".payment_method").hide();
-            $("#div-value-payment-area").hide();
-            var total_cart = $("#total-cart").data("value");
-            var total = parseInt(total_cart);
-            var vat_payment = 0;
-            if ($(".ordered_btn").prop("checked")) {
-                vat_payment = Math.round(0.05 * total);
-                $("#value-vat5").html(accounting.formatMoney(vat_payment, "", 0) + " đ");
-            }
-            $("#value-total-cart").html(accounting.formatMoney((total + vat_payment), "", 0) + " đ");
-            $("#div-value-payment-area").hide();
-            $("#value-total-cart").data('value', $("#total-cart").data("value"));
-            $.ajax({
-                url: "/carts/save_option?delivery_method=1",
-                dataType: "script"
-            });
-        })
-
-        $("#cod_method").click(function() {
-            $("#cod-value").show();
-            $("#div-value-payment-area").show();
-            var cod_payment = $("#cod-value").data('value');
-            var total_cart = $("#total-cart").data("value");
-            var ship_payment = 0;
-            var motorbike_payment = 0;
-            var vat_payment = 0;
-            if ($("#express_delivery").prop("checked")) {
-                ship_payment = $("#express-delivery-value").data('value');
-            }
-            if ($("#motorbike").prop("checked")) {
-                motorbike_payment = $("#motorbike-delivery-value").data('value');
-            }
-            var total = parseInt(motorbike_payment) + parseInt(total_cart) + parseInt(ship_payment) + parseInt(cod_payment);
-            if ($(".ordered_btn").prop("checked")) {
-                vat_payment = Math.round(0.05 * total);
-                $("#value-vat5").html(accounting.formatMoney(vat_payment, "", 0) + " đ");
-            }
-            var total_ship = parseInt(motorbike_payment) + parseInt(cod_payment) + parseInt(ship_payment);
-            $("#value-payment-area").html(accounting.formatMoney(total_ship, "", 0) + " đ");
-            $("#value-total-cart").html(accounting.formatMoney((total + vat_payment), "", 0) + " đ");
-            $("#value-total-cart").data('value', total);
-            $.ajax({
-                url: "/carts/save_option?payment_method=1",
-                dataType: "script"
-            });
-        })
-        $("#atm_method").click(function() {
-            $("#cod-value").hide();
-            $("#div-value-payment-area").show();
-            var total_cart = $("#total-cart").data("value");
-            var ship_payment = 0;
-            var motorbike_payment = 0;
-            var vat_payment = 0;
-            if ($("#express_delivery").prop("checked")) {
-                ship_payment = $("#express-delivery-value").data('value');
-            }
-
-            if ($("#motorbike").prop("checked")) {
-                motorbike_payment = $("#motorbike-delivery-value").data('value');
-            }
-            var total = parseInt(motorbike_payment) + parseInt(total_cart) + parseInt(ship_payment);
-            if ($(".ordered_btn").prop("checked")) {
-                vat_payment = Math.round(0.05 * total);
-                $("#value-vat5").html(accounting.formatMoney(vat_payment, "", 0) + " đ");
-            }
-            var total_ship = parseInt(motorbike_payment) + parseInt(ship_payment);
-            $("#value-payment-area").html(accounting.formatMoney(total_ship, "", 0) + " đ");
-            $("#value-total-cart").html(accounting.formatMoney((total + vat_payment), "", 0) + " đ");
-            $("#value-total-cart").data('value', total);
-            $.ajax({
-                url: "/carts/save_option?payment_method=2",
-                dataType: "script"
-            });
-        })
-        $(".ordered_btn").click(function() {
-            if ($(this).is(':checked')) {
-                $("#ordered").show();
-                $("#vat-payment").show();
-                var total_cart = $("#value-total-cart").data("value");
-                var vat = Math.round(0.05 * total_cart);
-                $("#value-vat5").html(accounting.formatMoney(vat, "", 0) + " đ");
-                $("#value-total-cart").html(accounting.formatMoney((total_cart + vat), "", 0) + " đ");
-            } else {
-                $("#ordered").hide();
-                $("#vat-payment").hide();
-                $("#value-total-cart").html(accounting.formatMoney($("#value-total-cart").data('value'), "", 0) + " đ");
-            }
-        })
-
-        function openConfirm() {
-            window.location = "/";
-        }
-    </script>
-
-
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content"  style="width: 400px">
+            <div class="modal-header title-gf" style="">
+                <span class="close">&times;</span>
+                <h2 style="font-weight: bolder;
+                font-size: 15px;
+                color: #fff;"><strong>Xác nhận địa chỉ giao hàng</strong></h2>
+            </div>
+            <div class="modal-body">
+                <table class="tbl-list" cellpadding="0" cellspacing="0" style="width:100%;">
+                    <tr>
+                        <td><strong>Số điện thoại:</strong> </td>
+                    <td>{{ \Auth::user() ? \Auth::user()->phone_number : '' }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Địa chỉ giao hàng: </strong></td>
+                        <td>{{ \Auth::user() ? \Auth::user()->address : '' }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <div id="action-cart1" style="margin-top: 20px;">
+                    <input type="button" id="update-address" value="Cập nhật địa chỉ" class="btn btn-warning">
+                    <input type="button" id="update-confirm-order" value="Xác nhận" class="btn btn-primary" style="float:right">
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection

@@ -36,7 +36,6 @@
   <!-- Styles -->
   <link href="{{ url('css/style.css') }}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
-
 </head>
 
 <body data-cart="0">
