@@ -38,6 +38,8 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
             'image' => $row['duong_dan_anh'],
             'image_type' => 1,
             'quantity' => $row['so_luong'],
+            'note' => $row['don_vi'],
+            'datasheet' => $row['datasheet'],
             'code'     => rand(1000000000, 9999999999),
             'meta_title'=> $row['meta_title'],
             'meta_keywords'=> $row['meta_keywords'],
@@ -53,6 +55,7 @@ class ProductsImport implements ToModel, WithValidation, WithHeadingRow
             'thuong_hieu'       =>  'required',
             'danh_muc'          =>  'required',
             'so_luong'          =>  'required',
+            'don_vi'            =>  'required',
             'gia_tien'          =>  'required',
             'thong_so'          =>  'required',
             'duong_dan_anh'     =>  'required'

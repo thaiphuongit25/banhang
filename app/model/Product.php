@@ -45,7 +45,7 @@ class Product extends Model
      */
     protected $fillable = [
        'id', 'name', 'desc', 'brand_id', 'category_id', 'specification', 'price', 'image', 'image_type', 'slug', 'meta_title',
-       'meta_keywords', 'meta_description', 'specification', 'quantity', 'code'
+       'meta_keywords', 'meta_description', 'specification', 'quantity', 'code', 'note', 'datasheet'
     ];
 
     public function scopeOrderDetail($query, $order_id)

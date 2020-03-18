@@ -14,23 +14,32 @@ $(document).ready(function() {
             return listTr;
         }
 
-      
+
         function linkImage(image) {
-            if(image.split("/").length > 2) {
+            if (image.split("/").length > 2) {
                 return image;
             } else {
                 return `/images/${image}`;
             }
         }
 
-        function getStatusCurrent(status, number) {
+        function getStatusCurrent(status, number, note) {
             let tmp = null;
             if (status == 1) {
-                tmp = "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + number + "</span> Cái</span>";
+                tmp = "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + number + "</span> " + unit_price(note) +
+                    "</span>";
             } else {
                 tmp = "<span style='color: red'>Hết hàng</span>";
             }
             return tmp;
+        }
+
+        var unit_price = function(note) {
+            if (note) {
+                return note;
+            } else {
+                return 'Cái';
+            }
         }
 
         var formatPrice = function(unit) {
@@ -138,7 +147,7 @@ $(document).ready(function() {
                             "<td class='pq'>" +
                             "<input type='number' id='" + value.id + "' value='" + quantityCurrent(value.id) + "' class='cart-quantity-change' style='width:45px; text-align:center;' min='1'>" +
                             "<br>" +
-                            getStatusCurrent(value.status, value.quantity) +
+                            getStatusCurrent(value.status, value.quantity, value.note) +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
                             formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[1]) + "đ" +
@@ -219,14 +228,14 @@ $(document).ready(function() {
                         "<li>" +
                         "<div class='list-same'>" +
                         "<div class='image-same'>" +
-                        "<a href='/products/lm258p'><img alt='' src='" + linkImage(value.image) + "'></a>" +
+                        "<a href='/products/" + value.slug + "'><img alt='' src='" + linkImage(value.image) + "'></a>" +
                         "</div>" +
                         "<div class='name-same'>" +
                         "<p class='name-a ablack'>" +
                         "<a style='padding:0' href='/products/" + value.slug + "'>" + value.name + "</a>" +
                         "</p>" +
                         "<p class='price blue'>" +
-                        formatPrice(value.price) + "đ/Cái" +
+                        formatPrice(value.price) + "đ/" + unit_price(value.note) +
                         "</p>" +
                         "<p>" +
                         // "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + data.quantity + "</span> Cái</span>" +
@@ -245,12 +254,27 @@ $(document).ready(function() {
         $('.continue-buy').click(function() {
             window.location.href = "/";
         });
-        $(".confirm-order").click(function() {
+
+        var modal = document.getElementById("myModal");
+        $(".close").click(function() {
+            modal.style.display = "none";
+        });
+
+        $("#update-address").click(function() {
+            modal.style.display = "none";
+            window.location.href = "/mypage";
+        });
+
+        $("#update-confirm-order").click(function(e) {
+            e.preventDefault();
+            //$("#myModal").modal();
+            //$(this).off("click");
+            $(this).prop('disabled', true);
             let listCart = JSON.parse(localStorage.getItem('buy_card'));
             let carts = JSON.parse(localStorage.getItem('list_card'));
             if (carts == null || carts.length == 0) {
-                alert("Vui lòng thêm sản phẩm vào giỏ hàng");
-                return
+                alert("Vui lòng thêm sản phẩm đến giỏ hàng");
+                return;
             }
             let method_check = $(".method-cart").find('input').toArray();
             let note = "";
@@ -284,8 +308,14 @@ $(document).ready(function() {
                     console.log("da co loi xay ra");
                 }
             })
+            $(this).attr('disabled', false);
+        });
+
+        $(".confirm-order").click(function() {
+            modal.style.display = "block";
         });
     }
+
 
     var next = 0;
     $(".add-more").click(function(e) {

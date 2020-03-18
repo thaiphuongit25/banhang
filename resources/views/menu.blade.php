@@ -1,4 +1,4 @@
-<div class="col-12 main-col">
+<div class="col-12 main-col" style="display: flex;">
     <div class="f1">
         <ul class="sf-menu">
             <li class="mn-supplier">

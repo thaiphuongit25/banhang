@@ -10,9 +10,12 @@ use Hash;
 
 class UsersController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $users = User::customer()->orderBy('id', 'desc')->paginate(30);
+        $q = $request->has('q') ? $request->q : "";
+        $users = User::where("name", 'LIKE','%'.$q.'%')->
+        orWhere("email", 'LIKE','%'.$q.'%')->
+        orderBy('id', 'desc')->paginate(30);
         return view('admin.users.index', compact('users'));
     }
 

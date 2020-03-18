@@ -30,8 +30,8 @@ return [
     |
     */
 
-    'logo' => 'THEGIOIIC',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => 'linhkieniotvn',
+    'logo_img' => '/logo/logo.ico',
     'logo_img_class' => 'brand-image-xl',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -264,6 +264,11 @@ return [
             'text'    => 'Thiết lập khác',
             'url'  => 'admin/settings',
             'icon'    => 'fas fa-cog',
+        ],
+        [
+            'text'    => 'Thiết lập gửi mail',
+            'url'  => 'admin/mails/1/edit',
+            'icon'    => 'fas fa-envelope',
         ]
     ],
 

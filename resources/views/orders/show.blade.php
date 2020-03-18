@@ -50,7 +50,7 @@
                             <td style=""> <a target="_blank" href="/products/{{ $item->slug }}">{{ $item->name }}</a>
                                 </td>
                                 <td style=" text-align:right;padding-right:6px">
-                                    {{ $item->pivot->quantity }} Cái
+                                    {{ $item->pivot->quantity }} {{ unit_product($item->note) }}
                                  </td>
                                 <td style=" text-align:right;padding-right:6px">
                                 {{ $item->pivot->price }}  đ

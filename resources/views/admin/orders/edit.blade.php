@@ -35,6 +35,12 @@
         </div>
       </div>
       <div class="form-group row">
+        <label class="col-sm-2 col-form-label">Mã đặt hàng</label>
+        <div class="col-sm-10">
+          <input type="text" name="email" class="form-control" value="{{ $order->code }}" disabled />
+        </div>
+      </div>
+      <div class="form-group row">
         <label class="col-sm-2 col-form-label">Ngày đặt đơn</label>
         <div class="col-sm-10">
           <input type="text" name="desc" class="form-control" value="{{ $order->date_order }}" disabled />

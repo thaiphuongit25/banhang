@@ -149,11 +149,11 @@
                                 {{ $product->desc }}
                             </div>
                             <div class="price blue">
-                               {{ number_format($product->price) }} đ/Cái
+                               {{ number_format($product->price) }} đ/{{ unit_product($product->note) }}
                             </div>
 
                             <div>
-                                <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span> Cái</span>
+                                <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span> {{ unit_product($product->note) }}</span>
                             </div>
                         </div>
                         <div id="showtip_18190" class="showtip">

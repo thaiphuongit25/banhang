@@ -144,3 +144,18 @@
         return $result;
      }
 
+     function unit_product($str) {
+        if ($str) {
+            return $str;
+        } else {
+            return 'Cái';
+        }
+     }
+
+     function total_money_of_products($products) {
+         $total = 0;
+         foreach($products as $item) {
+            $total += ($item->pivot->quantity)*($item->pivot->price);
+         }
+         return number_format($total);
+     }

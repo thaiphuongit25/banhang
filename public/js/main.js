@@ -4711,6 +4711,23 @@ var pp_alreadyInitialized = !1;
         }
     }
 }(jQuery), $(document).ready(function() {
+
+    function linkImage(image) {
+        if (image.split("/").length > 2) {
+            return image;
+        } else {
+            return `/images/${image}`;
+        }
+    }
+
+    var unit_price = function(note) {
+        if (note) {
+            return note;
+        } else {
+            return 'Cái';
+        }
+    }
+
     $("#txtQuery").autoComplete({
         source: function(e, t) {
             $.getJSON("/search_autohome", {
@@ -4728,7 +4745,8 @@ var pp_alreadyInitialized = !1;
                         data: r,
                         slug: $(this)[0].slug,
                         image_id: $(this)[0].image,
-                        price: $(this)[0].price
+                        price: $(this)[0].price,
+                        note: $(this)[0].note
                     })
                 });
                 var o = "en" == i ? "View all " + total + " results" : "Xem t\u1ea5t c\u1ea3 " + total + " k\u1ebft qu\u1ea3";
@@ -4739,7 +4757,8 @@ var pp_alreadyInitialized = !1;
             t = t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
             var n = new RegExp("(" + t.split(" ").join("|") + ")", "gi"),
                 i = accounting.formatMoney(e.price, "", 0);
-            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="/images/' + e.image_id + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/cái" + "</span></a>"
+            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="' + linkImage(e.image_id) + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/" + unit_price(e.note) +
+                "</span></a>"
         },
         onSelect: function(e, t) {
             window.location.href = t
@@ -4761,7 +4780,8 @@ var pp_alreadyInitialized = !1;
                         data: r,
                         slug: $(this)[0].slug,
                         image_id: $(this)[0].image,
-                        price: $(this)[0].price
+                        price: $(this)[0].price,
+                        note: $(this)[0].note
                     })
                 });
                 var o = "en" == i ? "View all " + total + " results" : "Xem t\u1ea5t c\u1ea3 " + total + " k\u1ebft qu\u1ea3";
@@ -4772,7 +4792,7 @@ var pp_alreadyInitialized = !1;
             t = t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
             var n = new RegExp("(" + t.split(" ").join("|") + ")", "gi"),
                 i = accounting.formatMoney(e.price, "", 0);
-            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="/images/' + e.image_id + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/cái" + "</span></a>"
+            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="' + linkImage(e.image_id) + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/" + unit_price(e.note) + "</span></a>"
         }
     }), $("#search_name_product").autoComplete({
         source: function(e, t) {
@@ -5272,7 +5292,7 @@ jQuery(document).ready(function($) {
     $.featureList(
         $("#tabs li a"),
         $("#output li"), {
-            start_item : 1
+            start_item: 1
         }
     );
 });

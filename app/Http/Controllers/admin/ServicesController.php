@@ -84,7 +84,7 @@ class ServicesController extends Controller
     public function update(Request $request, $id)
     {
         $image_name = $request->hidden_image;
-        $image = $request->file('logo');
+        $image = $request->file('thumbnail');
         if($image)
         {
             $request->validate([
