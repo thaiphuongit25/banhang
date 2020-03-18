@@ -264,11 +264,14 @@ $(document).ready(function() {
             modal.style.display = "none";
             window.location.href = "/mypage";
         });
-
+        var statusSend = false;
         $("#update-confirm-order").click(function(e) {
             e.preventDefault();
             //$("#myModal").modal();
             //$(this).off("click");
+            if (statusSend) {
+                return;
+            }
             $(this).prop('disabled', true);
             let listCart = JSON.parse(localStorage.getItem('buy_card'));
             let carts = JSON.parse(localStorage.getItem('list_card'));
@@ -287,6 +290,7 @@ $(document).ready(function() {
                     }
                 }
             });
+            statusSend = true;
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -300,11 +304,13 @@ $(document).ready(function() {
                     if (data == true) {
                         localStorage.removeItem('buy_card');
                         localStorage.removeItem('list_card');
+                        statusSend = false;
                         setTimeout(alert('Đặt hàng thành công. Xin cảm ơn.'), 2000);
                         window.location.href = "/";
                     }
                 },
                 error: function(error) {
+                    statusSend = false;
                     console.log("da co loi xay ra");
                 }
             })

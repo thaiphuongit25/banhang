@@ -1,6 +1,6 @@
 <div class="left-menu">
     <div class="title">
-        Dịch vụ
+        Hướng dẫn
     </div>
     <ul class="ul-left-page">
         @foreach (getSuggestServices() as $service)
