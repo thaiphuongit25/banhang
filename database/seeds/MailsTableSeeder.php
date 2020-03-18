@@ -13,13 +13,13 @@ class MailsTableSeeder extends Seeder
     {
         $form_data = array(
             'driver'            =>   'smtp',
-            'host'              =>   'smtp.mailtrap.io',
-            'port'              =>   2525,
-            'from_address'      =>   'from@example.com',
-            'from_name'         =>   'linhkieniot',
+            'host'              =>   'smtp.gmail.com',
+            'port'              =>   587,
+            'from_address'      =>   'linhkieniotvn@gmail.com',
+            'from_name'         =>   'Linhkineiot',
             'encryption'        =>   null,
-            'username'          =>   '5df4e62bdca51f',
-            'password'          =>   '40d62d4addcc65'
+            'username'          =>   'linhkieniotvn@gmail.com',
+            'password'          =>   'fabpozceiqwfygde'
         );
         DB::table('mails')->insert($form_data);
     }

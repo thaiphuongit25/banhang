@@ -5,6 +5,7 @@
     use App\model\Reply;
     use App\model\Comment;
     use App\model\Information;
+    use App\model\InformationCategory;
     use App\model\Banner;
     use App\model\BannerItem;
     use App\model\OnlineSupportInformation;
@@ -31,7 +32,11 @@
     }
 
     function getInformations($types) {
-        return Information::active()->where('types', $types)->orderBy('id', 'DESC')->take(6)->get();
+        return Information::active()->where('information_category_id', $types)->orderBy('id', 'DESC')->take(6)->get();
+    }
+
+    function getInformationCategory($id) {
+        return InformationCategory::whereId($id)->get()->first();
     }
 
     function getSuggestArticleCategories() {

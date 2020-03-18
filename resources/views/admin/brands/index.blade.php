@@ -10,7 +10,7 @@
             <form action="{{ route('admin.brands.index') }}" method="GET" class="col-sm-5">
                 <div class="input-group">
                     <input type="text" name="search" class="form-control" placeholder="Tìm kiếm">
-                    <div class="input-group-append_btn">
+                <div class="input-group-append_btn">
                         <button type="submit" class="btn btn-secondary" type="button">
                             <i class="fa fa-search"></i>
                         </button>

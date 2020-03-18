@@ -12,7 +12,7 @@
                 <div style="padding:0;clear:both">
                     <p><strong>Linhkieniotvn </strong> xin chân thành cảm ơn Quý khách đã lựa chọn sản phẩm của chúng tôi.</p>
                     <p>Quý khách có thể lựa chọn hình thức thanh toán chuyển khoản hoặc hình thức giao hàng thanh toán(COD).</p>
-                    <p>Nếu chọn hình thức thanh toán chuyển khoản, sau khi chuyển khoản Quý khách liên hệ lại với </br> nhân viên Linhkieniotvn, chúng tôi sẽ gửi hàng ngay cho Quý khách.
+                    <p>Nếu chọn hình thức thanh toán chuyển khoản, sau khi chuyển khoản Quý khách liên hệ lại với <br> nhân viên Linhkieniotvn, chúng tôi sẽ gửi hàng ngay cho Quý khách.
                     </p>
                     <p>Cú pháp thanh toán: <strong> Họ Tên_Mã đơn hàng_Ngày đặt hàng. </strong></p>
                 </div>

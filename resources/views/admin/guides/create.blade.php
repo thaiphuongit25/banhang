@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('title', 'Dashboard')
 @section('content_header')
-<h1>Tạo thông tin</h1>
+<h1>Tạo hướng dẫn</h1>
 @stop
 @section('content')
 @if($errors->any())
@@ -14,12 +14,12 @@
 </div>
 @endif
 <div align="right">
-    <a href="{{ route('admin.informations.index') }}" class="btn btn-default">Back</a>
+    <a href="{{ route('admin.guides.index') }}" class="btn btn-default">Back</a>
 </div>
 <br>
 <div class="card">
     <div class="card-body">
-        <form method="post" action="{{ route('admin.informations.store') }}" enctype="multipart/form-data">
+        <form method="post" action="{{ route('admin.guides.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Tiêu đề</label>
@@ -34,21 +34,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Loại thông tin</label>
-                <div class="col-sm-10">
-                    <select name="information_category_id" class="form-control">
-                        @foreach ($categories as $category)
-                        <option value="{{ $category->id }}"
-                            @if ($category->id == old('information_category_id'))
-                                selected="selected"
-                            @endif
-                        >{{ $category->name }}</option>
-                        @endforeach
-                    </select>
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Ảnh</label>
+                <label class="col-sm-2 col-form-label require">Ảnh</label>
                 <div class="col-sm-10">
                     <input type="file" name="thumbnail" value="{{ old('thumbnail') }}" />
                 </div>

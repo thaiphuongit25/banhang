@@ -18,6 +18,7 @@
         <tr>
           <td>ID</td>
           <td>Tiêu đề</td>
+          <td>Danh mục</td>
           <td>Nội dung</td>
           <td>Hình ảnh</td>
           <td>Slug</td>
@@ -28,6 +29,7 @@
         <tr>
             <td>{{ $information->id }}</td>
             <td>{{ $information->title }}</td>
+            <td>{{ $information->information_category->name }}</td>
             <td>{!! Str::words(strip_tags($information->content), 30, '...')  !!}</td>
             <td><img src="{{ loadImage($information->thumbnail) }}" class="img-thumbnail" width="75" /></td>
             <td>{{ $information->slug }}</td>

@@ -1,4 +1,4 @@
-<div class="col-12 main-col">
+<div class="col-12 main-col" style="display: flex;">
     <div class="f1">
         <ul class="sf-menu">
             <li class="mn-supplier">
@@ -18,6 +18,9 @@
             </li>
             <li class="mn-news">
                 <a href="/news" class="menu_parent">Tin tức</a>
+            </li>
+            <li class="mn-news">
+                <a href="/guides" class="menu_parent">Hướng dẫn</a>
             </li>
         </ul>
     </div>

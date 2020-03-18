@@ -120,9 +120,7 @@
                                {{ $product->price }} đ/{{ unit_product($product->note) }}
                             </p>
 
-                            <p class="inventory">
-                                <span class="green"> <a class="contact-to-order" href="#">Hết hàng</a></span>
-                            </p>
+                            @include('products.quantity')
                             <div class="adtocartdestop">
                                 <input type="hidden" name="id" class="product_id" value="9319">
                                 <input type="hidden" name="option_id" value="">

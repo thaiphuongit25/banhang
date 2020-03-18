@@ -268,7 +268,8 @@ $(document).ready(function() {
         $("#update-confirm-order").click(function(e) {
             e.preventDefault();
             //$("#myModal").modal();
-            $("#update-confirm-order").prop('disabled', true);
+            //$(this).off("click");
+            $(this).prop('disabled', true);
             let listCart = JSON.parse(localStorage.getItem('buy_card'));
             let carts = JSON.parse(localStorage.getItem('list_card'));
             if (carts == null || carts.length == 0) {
