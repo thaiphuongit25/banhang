@@ -137,7 +137,7 @@
                                         </div>
                                     </div>
                                     <div class="_50">
-                                        <input type="button" value="+ Giỏ Hàng" class="btn-cart">
+                                    <input type="button" value="+ Giỏ Hàng" class="btn-cart" id="{{$product->id}}">
                                     </div>
                                 </div>
                             </div>
