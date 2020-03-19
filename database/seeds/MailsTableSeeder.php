@@ -17,7 +17,7 @@ class MailsTableSeeder extends Seeder
             'port'              =>   587,
             'from_address'      =>   'linhkieniotvn@gmail.com',
             'from_name'         =>   'Linhkineiot',
-            'encryption'        =>   null,
+            'encryption'        =>   'tls',
             'username'          =>   'linhkieniotvn@gmail.com',
             'password'          =>   'fabpozceiqwfygde'
         );
