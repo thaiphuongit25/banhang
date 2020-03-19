@@ -68,25 +68,7 @@
                                     </div>
                                 </div>
                             @endforeach
-                                <script type="text/javascript">
-                                    $(document).ready(function($) {
-                                        $("#list-subject-s-11").carouFredSel({
-                                            items: 4,
-                                            direction: "left",
-                                            circular: false,
-                                            infinite: true,
-                                            scroll: {
-                                                items: 1,
-                                                effect: "easeOutBounce",
-                                                duration: 500,
-                                                pauseOnHover: true
-                                            },
-                                            auto: false,
-                                            prev: "#list-subject-ss-11 #prev",
-                                            next: "#list-subject-ss-11 #next"
-                                        });
-                                    });
-                                </script>
+                        
                             </div>
                         </div>
                         <a href="javascript:" id="prev"></a>

@@ -55,7 +55,7 @@ class ProductsController extends Controller
      * @param  int  $slug
      * @return \Illuminate\Http\Response
      */
-    public function showCategories($slug)
+    public function showCategories(Request $request, $slug)
     {
         $categor = Category::where('slug', $slug)->first();
         if (!$categor) {
@@ -64,8 +64,29 @@ class ProductsController extends Controller
             $categories = Category::where("type_id", $type->id);
             return view("products.types", compact("type", "types", "categories"));
         } else {
+            $limit = $request->has('number_view') ? $request->number_view : 40;
             $categories = Category::where("type_id", $categor->type_id)->get();
-            return view("products.categories", compact("categor", "categories"));
+            $type_id = $request->has('order_sort') ? $request->order_sort : 1;
+            $type = [];
+            switch ($type_id) {
+                case 1:
+                    $type = ['name', 'asc'];
+                    break;
+                case 2:
+                    $type = ['price', 'asc'];
+                    break;
+                case 3:
+                    $type = ['quantity', 'asc'];
+                    break;
+                case 4:
+                    $type = ['created_at', 'desc'];
+                    break;
+                default:
+                    $type = ['name', 'asc'];
+                    break;
+            }
+            $products = Product::where("category_id", $categor->id)->orderBy($type[0], $type[1])->limit($limit)->get();
+            return view("products.categories", compact("categor", "categories", "products"));
         }
     }
 

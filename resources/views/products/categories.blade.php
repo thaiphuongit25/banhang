@@ -97,11 +97,9 @@
                     </span>  --}}
                 </div>
                 <div style="padding:2px 2px 10px 2px" class="text-subject">
-
-
                 </div>
                 <div class="list-subject2" id="order_product">
-                @foreach ( $categor->products as $product )
+                @foreach ( $products as $product )
                     <div class="item-product-category" style="height: 315px">
                         <div class="image popular">
                             <a id="{{$product->id}}" class="review-product" title="LA4440J" target="_blank" href="/products/{{ $product->slug }}"><img src="{{ getProductImageUrl($product->id) }}"></a>

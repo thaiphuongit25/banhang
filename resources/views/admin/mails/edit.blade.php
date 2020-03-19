@@ -13,6 +13,7 @@
     </ul>
 </div>
 @endif
+@include('admin.layouts.alert_section')
 
 <br>
 <div class="card">
