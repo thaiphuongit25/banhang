@@ -58,7 +58,7 @@
                     <div class="a999" id="list-subject-ss-11">
                         <div class="caroufredsel_wrapper" style="position: relative; overflow: hidden; width: 764px; height: 216px;">
                             <div class="list-subject" id="list-subject-s-11" style="position: absolute; width: 2674px; height: 216px;">
-                            @foreach ( $category->products as $product )
+                            @foreach ( $category->products->take(4) as $product )
                                 <div class="item-subject">
                                     <div class="image">
                                         <a id="{{$product->id}}" class="review-product" title="ICDREC" href="/products/{{ $product->slug }}"><img alt="ICDREC" class="" src="{{ getProductImageUrl($product->id) }}"></a>
@@ -68,25 +68,7 @@
                                     </div>
                                 </div>
                             @endforeach
-                                <script type="text/javascript">
-                                    $(document).ready(function($) {
-                                        $("#list-subject-s-11").carouFredSel({
-                                            items: 4,
-                                            direction: "left",
-                                            circular: false,
-                                            infinite: true,
-                                            scroll: {
-                                                items: 1,
-                                                effect: "easeOutBounce",
-                                                duration: 500,
-                                                pauseOnHover: true
-                                            },
-                                            auto: false,
-                                            prev: "#list-subject-ss-11 #prev",
-                                            next: "#list-subject-ss-11 #next"
-                                        });
-                                    });
-                                </script>
+                        
                             </div>
                         </div>
                         <a href="javascript:" id="prev"></a>
