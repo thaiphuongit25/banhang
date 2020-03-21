@@ -32,6 +32,27 @@ class ProductsController extends Controller
         }
         return response()->json(['total' => count($products), 'products' => $products]);
     }
+
+    public function productByType(Request $request)
+    {   
+        $type = $request->type;
+        $page = $request->page;
+        $current = $request->current;
+        $page = intval($page);
+        if ($current == 'next') {
+            $page += 1;
+        } else {
+            $page -= 1;
+        }
+        $products = [];
+       
+        if ($page >= 0) {
+            $category_ids = Category::where("type_id", $type)->get()->pluck('id');
+            //dd($category_ids);
+            $products = Product::whereIn("category_id", $category_ids)->offset($page*4)->limit(4)->get();
+        }
+        return response()->json($products);
+    }
     /**
      * Show the form for creating a new resource.
      *

@@ -132,11 +132,11 @@
                 </ul>
                 <div class="clear"></div>
             </div>
-            <div class="prev"></div>
+        <div class="prev" id="{{$type->id}}"> <input type="hidden" class="page-{{$type->id}}" value="{{ 0 }}" > </div>
             <div class="content-item-ct-pr-home" id="products-ct-1">
-                <div class="show-product-top">
-                @foreach ($type->categories as $category)
-                    @foreach ( $category->products->take(8) as $product )
+            <div class="show-product-top" id="show-product-top-{{$type->id}}">
+                {{-- @foreach ($type->categories as $category) --}}
+                    @foreach ( getProductLimit($type->categories->pluck("id")) as $product )
                     <div class="v-p-t" id="{{ $product->id }}">
                         <div class="img-v-p popular ">
                             <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product"><img alt="EL817S" class="image-hover" src="{{ getProductImageUrl($product->id) }}"></a>
@@ -161,11 +161,11 @@
                         </div>
                     </div>
                     @endforeach
-                @endforeach
+                {{-- @endforeach --}}
                 <div class="clear"></div>
                 </div>
             </div>
-            <div class="next"></div>
+            <div class="next" id="{{$type->id}}"></div>
             <div class="clear"></div>
         </div>
         <div class="clear"></div>

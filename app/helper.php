@@ -23,6 +23,10 @@
         return ArticleCategory::active()->get();
     }
 
+    function getProductLimit($ids) {
+        return Product::whereIn('category_id', $ids)->limit(4)->get();
+    }
+
     function getSuggestServices() {
         return Service::active()->orderBy('id', 'DESC')->take(5)->get();
     }

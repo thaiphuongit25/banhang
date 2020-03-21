@@ -19,6 +19,7 @@ Route::get('/products', 'ProductsController@search')->name('products_search');
 Route::get('/carts', 'CartsController@cart')->name('carts');
 Route::get('/cart_products', 'CartsController@cartProducts')->name('carts_products');
 Route::post('/buy_products', 'CartsController@buyProducts')->name('buys_products');
+Route::get('/subject', 'ProductsController@productByType')->name('product_by_type');
 
 Route::get('/services', function () {
     return view('services.index');
