@@ -5227,30 +5227,6 @@ var menu = {
                         quantitybuy: e
                     }
                 }) : alert("!!!Error!!!")
-            }), $(".item-ct-pr-home").each(function() {
-                $.ajax({
-                    type: "get",
-                    url: "/products/subject?id=" + $(this).attr("id"),
-                    dataType: "script"
-                })
-            }), $(".next").click(function() {
-                if ($(this).attr("disable") == undefined) {
-                    var e = $(this).parent(".item-ct-pr-home").attr("id"),
-                        t = $(this).parent(".item-ct-pr-home").children(".content-item-ct-pr-home").children().children(".v-p-t").last().attr("id");
-                    $.ajax({
-                        url: "/products/subject?id=" + e + "&last=" + t,
-                        dataType: "script"
-                    }), $(this).attr("disable", !0), $(this).parent(".item-ct-pr-home").children(".prev").removeAttr("disable")
-                }
-            }), $(".prev").click(function() {
-                if ($(this).attr("disable") == undefined) {
-                    var e = $(this).parent(".item-ct-pr-home").attr("id"),
-                        t = $(this).parent(".item-ct-pr-home").children(".content-item-ct-pr-home").children().children(".v-p-t").first().attr("id");
-                    $.ajax({
-                        url: "/products/subject?id=" + e + "&first=" + t,
-                        dataType: "script"
-                    }), $(this).attr("disable", !0), $(this).parent(".item-ct-pr-home").children(".next").removeAttr("disable")
-                }
             }), $(".touchspin-down").click(function() {
                 $quantity = $(this).parents(".touchspin").find(".quantity-buy");
                 var e = $quantity.val();

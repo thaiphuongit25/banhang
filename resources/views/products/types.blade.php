@@ -55,10 +55,10 @@
                         <h2 style="margin: 0;padding: 0"><a href="/product/{{ $category->slug }}">{{ $category->name }}</a></h2>
                         <span style="text-align:right;position: absolute;top: 2px;right: 3px;"><a style="font-size: 11px;font-weight: normal;" href="/product/{{ $category->slug }}">Xem thêm</a></span>
                     </div>
-                    <div class="a999" id="list-subject-ss-11">
+                <div class="a999" id="list-subject-ss-{{$category->id}}">
                         <div class="caroufredsel_wrapper" style="position: relative; overflow: hidden; width: 764px; height: 216px;">
-                            <div class="list-subject" id="list-subject-s-11" style="position: absolute; width: 2674px; height: 216px;">
-                            @foreach ( $category->products->take(4) as $product )
+                        <div class="list-subject" id="list-subject-s-{{$category->id}}" style="position: absolute; width: 2674px; height: 216px;">
+                            @foreach ( $category->products as $product )
                                 <div class="item-subject">
                                     <div class="image">
                                         <a id="{{$product->id}}" class="review-product" title="ICDREC" href="/products/{{ $product->slug }}"><img alt="ICDREC" class="" src="{{ getProductImageUrl($product->id) }}"></a>
@@ -71,8 +71,14 @@
                         
                             </div>
                         </div>
-                        <a href="javascript:" id="prev"></a>
-                        <a href="javascript:" id="next"></a>
+                        <a href="javascript:" id="prev">
+                            <i class="fa" style="font-size: 15px;
+                            font-weight: 900;"><</i>
+                        </a>
+                        <a href="javascript:" id="next">
+                            <i class="fa" style="font-size: 15px;
+                            font-weight: 900; margin-left: 6px;">></i>
+                        </a>
                     </div>
                 </div>
             </div>

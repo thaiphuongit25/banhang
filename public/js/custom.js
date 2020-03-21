@@ -1,4 +1,16 @@
 $(document).ready(function() {
+    function linkImage(image) {
+        if (image.split("/").length > 2) {
+            return image;
+        } else {
+            return `/images/${image}`;
+        }
+    }
+
+    var formatPrice = function(unit) {
+        return Number((unit).toFixed(1)).toLocaleString();
+    }
+
     window.onload = function() {
         var curren_url = window.location.href.split("/").slice(-1)[0];
 
@@ -353,5 +365,121 @@ $(document).ready(function() {
         $(this).parent().parent().remove();
     });
 
+    $('.next').click(function(e) {
+        var type = $(this).attr("id");
+        var page = $(".page-" + type).val();
+        $.ajax({
+            type: 'get',
+            url: '/subject',
+            data: { type: type, page: page, current: 'next' },
+            success: function(data) {
+                if (data.length > 0) {
+                    $(".page-" + type).val(parseInt(page) + 1);
+                    $("#show-product-top-" + type).html("");
+                    data.forEach(function(value) {
+                        $("#show-product-top-" + type).append(
+                            '<div class="v-p-t" id="' + value.id + '">' +
+                            '<div class="img-v-p popular ">' + 
+                                '<a id="' + value.id + '"' +  'class="review-product" href="/products/' + value.slug + '" title="" class="review_product"><img alt="EL817S" class="image-hover" src="'+ linkImage(value.image) + '"></a>' +
+                            '</div>' +
+                            '<div class="info-v-p">' +
+                                '<div class="name-a">' + 
+                                    '<a title="' + value.title + '" id="' + value.id + '" class="review-product" href="/products/' + value.slug + '">' + value.name + '</a>' +
+                                '</div>' + 
+                                '<div class="desc_small">' +
+                                   value.desc +
+                                '</div>' +
+                                '<div class="price blue">' + 
+                                   value.price +  'đ/' + (value.note ? value.note : 'Cái') +
+                                '</div>' +
+                                '<div>' +
+                                    '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> '+ (value.note ? value.note : 'Cái') +'</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div id="showtip_18190" class="showtip">' +
+                                '<img alt="EL817S" class="fff" src="' + linkImage(value.image) + '">' +
+                            '</div>' +
+                        '</div>'
+                        );
+                    });
+                    $("#show-product-top-" + type).append(
+                        '<div class="clear"></div>'
+                    );
+                }
+            },
+            error: function(error) {
+                statusSend = false;
+                console.log("da co loi xay ra");
+            }
+        })
+    });
+
+    $('.prev').click(function(e) {
+        var type = $(this).attr("id");
+        var page = $(".page-" + type).val();
+        $.ajax({
+            type: 'get',
+            url: '/subject',
+            data: { type: type, page: page, current: 'prev' },
+            success: function(data) {
+                if (data.length > 0) {
+                    $(".page-" + type).val(parseInt(page) -1);
+                    $("#show-product-top-" + type).html("");
+                    data.forEach(function(value) {
+                        $("#show-product-top-" + type).append(
+                            '<div class="v-p-t" id="' + value.id + '">' +
+                            '<div class="img-v-p popular ">' + 
+                                '<a id="' + value.id + '"' +  'class="review-product" href="/products/' + value.slug + '" title="" class="review_product"><img alt="EL817S" class="image-hover" src="'+ linkImage(value.image) + '"></a>' +
+                            '</div>' +
+                            '<div class="info-v-p">' +
+                                '<div class="name-a">' + 
+                                    '<a title="' + value.title + '" id="' + value.id + '" class="review-product" href="/products/' + value.slug + '">' + value.name + '</a>' +
+                                '</div>' + 
+                                '<div class="desc_small">' +
+                                   value.desc +
+                                '</div>' +
+                                '<div class="price blue">' + 
+                                   value.price +  'đ/' + (value.note ? value.note : 'Cái') +
+                                '</div>' +
+                                '<div>' +
+                                    '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> '+ (value.note ? value.note : 'Cái') +'</span>' +
+                                '</div>' +
+                            '</div>' +
+                            '<div id="showtip_18190" class="showtip">' +
+                                '<img alt="EL817S" class="fff" src="' + linkImage(value.image) + '">' +
+                            '</div>' +
+                        '</div>'
+                        );
+                    });
+                    $("#show-product-top-" + type).append(
+                        '<div class="clear"></div>'
+                    );
+                }
+            },
+            error: function(error) {
+                statusSend = false;
+                console.log("da co loi xay ra");
+            }
+        })
+    });
+
+    [...Array(200).keys()].forEach(function(value) {
+        $("#list-subject-s-" + value).carouFredSel({
+            items: 4,
+            direction: "left",
+            circular: false,
+            infinite: true,
+            scroll: {
+                items: 1,
+                effect: "easeOutBounce",
+                duration: 500,
+                pauseOnHover: true
+            },
+            auto: false,
+            prev: "#list-subject-ss-" + value + " #prev",
+            next: "#list-subject-ss-" + value + " #next"
+        });
+    });
+                    
     menu.build("menubar");
 });

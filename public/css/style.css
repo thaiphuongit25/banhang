@@ -417,7 +417,7 @@ a.contact-to-order:hover {
 }
 
 .item-ct-pr-home .prev {
-    background: url("arrow-home.png") no-repeat transparent;
+    background: url("/images/arrow-home.png") no-repeat transparent;
     width: 19px;
     height: 151px;
     display: block;
@@ -434,7 +434,7 @@ a.contact-to-order:hover {
 }
 
 .item-ct-pr-home .next {
-    background: url("arrow-home.png") no-repeat transparent;
+    background: url("/images/arrow-home.png") no-repeat transparent;
     width: 19px;
     height: 151px;
     display: block;
@@ -5267,7 +5267,7 @@ table.cart-popup .action-cart .delete-cart-popup {
     height: 16px;
     top: 70px;
     z-index: 3;
-    background: transparent url("next3.png") no-repeat scroll 0 0
+    background: #eee;
 }
 
 .a999 a#prev,
@@ -5278,7 +5278,7 @@ table.cart-popup .action-cart .delete-cart-popup {
     height: 16px;
     top: 70px;
     z-index: 3;
-    background: transparent url("prev3.png") no-repeat scroll 0 0
+    background: #eee;
 }
 
 .new-update-style-name {
