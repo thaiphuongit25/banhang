@@ -5262,23 +5262,43 @@ table.cart-popup .action-cart .delete-cart-popup {
 .a999 a#next,
 .b999 a#next {
     position: absolute;
-    right: 4px;
-    width: 16px;
-    height: 16px;
+    right: 5px;
+    text-align: center;
+    background: #eee;
+    border-radius: 20px;
+    padding: 1px 7px;
     top: 70px;
     z-index: 3;
-    background: #eee;
+}
+
+.arrow-right-02 {
+    border: solid #847272;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.arrow-left-01 {
+    border: solid #847272;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
 .a999 a#prev,
 .b999 a#prev {
     position: absolute;
     left: 5px;
-    width: 16px;
-    height: 16px;
+    text-align: center;
+    background: #eee;
+    border-radius: 20px;
+    padding: 1px 7px;
     top: 70px;
     z-index: 3;
-    background: #eee;
 }
 
 .new-update-style-name {
