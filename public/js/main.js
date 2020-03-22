@@ -36,7 +36,7 @@ function trim(e) {
 function showAd(e, t, n, i, o) {
     var r = $(window).width(),
         a = e + t + 2 * n;
-    startLY = startRY = (r - a) / 2, r > a - 90 ? (set1(i, 300, startLY), set2(o, 300, startRY)) : ($(i).css("display", "none"), $(o).css("display", "none"))
+    startLY = startRY = (r - a) / 2, r > a - 90 ? (set1(i, 245, startLY), set2(o, 245, startRY)) : ($(i).css("display", "none"), $(o).css("display", "none"))
 }
 
 function set1(e, t, n) {
