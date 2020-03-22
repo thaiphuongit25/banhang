@@ -72,12 +72,10 @@
                             </div>
                         </div>
                         <a href="javascript:" id="prev">
-                            <i class="fa" style="font-size: 15px;
-                            font-weight: 900;"><</i>
+                            <i class="arrow-left-01"></i>
                         </a>
                         <a href="javascript:" id="next">
-                            <i class="fa" style="font-size: 15px;
-                            font-weight: 900; margin-left: 6px;">></i>
+                            <i class="arrow-right-02"></i>
                         </a>
                     </div>
                 </div>
