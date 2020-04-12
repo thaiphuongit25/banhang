@@ -11,6 +11,14 @@ $(document).ready(function() {
         return Number((unit).toFixed(1)).toLocaleString();
     }
 
+    var unit_price = function(note) {
+        if (note) {
+            return note;
+        } else {
+            return 'Cái';
+        }
+    }
+
     window.onload = function() {
         var curren_url = window.location.href.split("/").slice(-1)[0];
 
@@ -46,13 +54,6 @@ $(document).ready(function() {
             return tmp;
         }
 
-        var unit_price = function(note) {
-            if (note) {
-                return note;
-            } else {
-                return 'Cái';
-            }
-        }
 
         var formatPrice = function(unit) {
             return Number((unit).toFixed(1)).toLocaleString();
@@ -247,7 +248,7 @@ $(document).ready(function() {
                         "<a style='padding:0' href='/products/" + value.slug + "'>" + value.name + "</a>" +
                         "</p>" +
                         "<p class='price blue'>" +
-                        formatPrice(value.price) + "đ/" + unit_price(value.note) +
+                        formatPrice(value.price) + " đ/" + unit_price(value.note) +
                         "</p>" +
                         "<p>" +
                         // "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + data.quantity + "</span> Cái</span>" +
@@ -390,7 +391,7 @@ $(document).ready(function() {
                                    value.desc +
                                 '</div>' +
                                 '<div class="price blue">' + 
-                                   value.price +  'đ/' + (value.note ? value.note : 'Cái') +
+                                formatPrice(value.price) +  ' đ/' + (value.note ? value.note : 'Cái') +
                                 '</div>' +
                                 '<div>' +
                                     '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> '+ (value.note ? value.note : 'Cái') +'</span>' +
@@ -439,7 +440,7 @@ $(document).ready(function() {
                                    value.desc +
                                 '</div>' +
                                 '<div class="price blue">' + 
-                                   value.price +  'đ/' + (value.note ? value.note : 'Cái') +
+                                formatPrice(value.price) +  ' đ/' + (value.note ? value.note : 'Cái') +
                                 '</div>' +
                                 '<div>' +
                                     '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> '+ (value.note ? value.note : 'Cái') +'</span>' +
@@ -463,7 +464,7 @@ $(document).ready(function() {
         })
     });
 
-    [...Array(200).keys()].forEach(function(value) {
+    [...Array(300).keys()].forEach(function(value) {
         $("#list-subject-s-" + value).carouFredSel({
             items: 4,
             direction: "left",

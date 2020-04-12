@@ -95,7 +95,7 @@
 <span><a href="/product/amplifiers-audio-ics?view_ls=true"><img src="/images/list_product.png" alt="List product"></a></span>
                     <span><a href="/product/amplifiers-audio-ics?view_ga=true"><img src="/images/list_gallery.png" alt="List gallery"></a></span>
                     </span>  --}}
-                </div>
+            </div>
                 <div style="padding:2px 2px 10px 2px" class="text-subject">
                 </div>
                 <div class="list-subject2" id="order_product">
@@ -112,10 +112,10 @@
                                 {{ $product->desc }}
                             </div>
                             <div class="supplier-name-show">
-                                On Semiconductor
+                                {{ $product->brand->name }}
                             </div>
                             <p class="price blue">
-                               {{ $product->price }} đ/{{ unit_product($product->note) }}
+                               {{ number_format($product->price) }} đ/{{ unit_product($product->note) }}
                             </p>
 
                             @include('products.quantity')
