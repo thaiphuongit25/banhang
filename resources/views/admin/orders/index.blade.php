@@ -12,8 +12,8 @@
                 <tr>
                     <td>ID</td>
                     <td>Tên người mua</td>
+                    <td>Mã đặt hàng</td>
                     <td>Ngày đặt đơn</td>
-                    <td>Ngày cập nhật</td>
                     <td>Tổng giá trị</td>
                     <td>Lưu ý</td>
                     <td>Trạng thái</td>
@@ -24,8 +24,8 @@
                 <tr>
                     <td>{{$order->id}}</td>
                     <td>{{$order->user->name}}</td>
+                    <td>{{$order->code}}</td>
                     <td>{{$order->date_order}}</td>
-                    <td>{{$order->updated_at}}</td>
                     <td>₫{{ number_format($order->total)}}</td>
                     <td>{{$order->note}}</td>
                     <td>
