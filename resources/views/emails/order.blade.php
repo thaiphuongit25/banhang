@@ -18,8 +18,6 @@
                 </div>
                 <div style="padding:0;margin:5px 0;font-weight:bolder">
                     Danh Sách Sản Phẩm
-                    <p>( Trích xuất đơn hàng của KH trên wesite)
-                    </p>
                 </div>
                 <table border="1">
                     <tbody>

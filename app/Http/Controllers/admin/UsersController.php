@@ -15,6 +15,7 @@ class UsersController extends Controller
         $q = $request->has('q') ? $request->q : "";
         $users = User::where("name", 'LIKE','%'.$q.'%')->
         orWhere("email", 'LIKE','%'.$q.'%')->
+        orWhere("phone_number", 'LIKE','%'.$q.'%')->
         orderBy('id', 'desc')->paginate(30);
         return view('admin.users.index', compact('users'));
     }

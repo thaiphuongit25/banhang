@@ -10,9 +10,13 @@ use App\model\OrderDetail;
 
 class OrdersController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $orders = Order::paginate(10);
+        $q = $request->has('q') ? $request->q : "";
+        $orders = Order::where("code", 'LIKE','%'.$q.'%')->
+        orWhere("note", 'LIKE','%'.$q.'%')->
+        orWhere("date_order", 'LIKE','%'.$q.'%')->
+        orderBy('id', 'desc')->paginate(15);
         return view('admin.orders.index', compact('orders'));
     }
 
