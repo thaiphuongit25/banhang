@@ -45,7 +45,7 @@
                         @if ($product->status == 0)
                             <div class="brown"><span class="f"><a class="contact-to-order-show" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span><span>(Đặt mua 7-10 ngày có hàng)</span></div>
                         @else
-                            <div class="ngreen"><span class="f">Hàng còn:  {{ $product->quantity }} {{ unit_product($product->note) }}</span><span>(Gửi hàng trong ngày)</span></div>
+                            <div class="ngreen"><span class="f">Hàng còn:  {{ $product->quantity }} </span><span>(Gửi hàng trong ngày)</span></div>
                         @endif
                     </div>
                     <div class="adtocartdestop" style="float:left; width:180px;text-align: right">

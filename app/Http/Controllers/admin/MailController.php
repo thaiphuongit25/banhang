@@ -37,7 +37,9 @@ class MailController extends Controller
             'from_name'         =>   $request->from_name,
             'encryption'        =>   $request->encryption,
             'username'          =>   $request->username,
-            'password'          =>   $request->password
+            'password'          =>   $request->password,
+            'content'          =>   $request->content,
+            'payment'          =>   $request->payment
         );
         Mail::whereId($id)->update($form_data);
         return redirect()->route('admin.mails.edit', $id)->with('success', 'Data Updated successfully.');

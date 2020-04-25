@@ -153,7 +153,7 @@
                             </div>
 
                             <div>
-                                <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span> {{ unit_product($product->note) }}</span>
+                                <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span></span>
                             </div>
                         </div>
                         <div id="showtip_18190" class="showtip">

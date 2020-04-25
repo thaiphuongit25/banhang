@@ -10,11 +10,7 @@
                 </div>
             <div>Mã đơn <span class="il">hàng</span>: {{ $order->code }}</div>
                 <div style="padding:0;clear:both">
-                    <p><strong>Linhkieniotvn </strong> xin chân thành cảm ơn Quý khách đã lựa chọn sản phẩm của chúng tôi.</p>
-                    <p>Quý khách có thể lựa chọn hình thức thanh toán chuyển khoản hoặc hình thức giao hàng thanh toán(COD).</p>
-                    <p>Nếu chọn hình thức thanh toán chuyển khoản, sau khi chuyển khoản Quý khách liên hệ lại với <br> nhân viên Linhkieniotvn, chúng tôi sẽ gửi hàng ngay cho Quý khách.
-                    </p>
-                    <p>Cú pháp thanh toán: <strong> Họ Tên_Mã đơn hàng_Ngày đặt hàng. </strong></p>
+                     {!! App\model\Mail::find(1)->content !!}
                 </div>
                 <div style="padding:0;margin:5px 0;font-weight:bolder">
                     Danh Sách Sản Phẩm
@@ -70,11 +66,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <p><strong>Thông tin thanh toán:</strong></p>
-                <p>Tên tài khoản: Công ty cổ phần Esystech.</p>
-                <p>Số tài khoản: 0491000106298 &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>
-                <p>Ngân hàng Vietcombank – Chi nhánh Thăng Long.</p>
-                <p>&nbsp;</p>
+               {!! App\model\Mail::find(1)->payment !!}
             </div>
             <p style="font-weight:bolder;color:#c30;padding:20px;clear:both;border-top:2px solid #09c">
             </p>

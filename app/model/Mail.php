@@ -12,6 +12,6 @@ class Mail extends Model
      * @var array
      */
     protected $fillable = [
-        'id', 'driver', 'host', 'port', 'from_address', 'from_name', 'encryption', 'username', 'password'
+        'id', 'driver', 'host', 'port', 'from_address', 'from_name', 'encryption', 'username', 'password', 'content', 'payment'
     ];
 }

@@ -22,7 +22,7 @@
               <td><a href="/products/{{ $product->slug }}">{{ $product->name }}</a></td>
               <td>
                 {{ number_format($product->price) }} đ/{{ unit_product($product->note) }}<br />
-                <span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>{{ $product->quantity }}</span> {{ unit_product($product->note) }}</span>
+                <span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>{{ $product->quantity }}</span></span>
               </td>
               <td>
                 <a data-remote="true" rel="nofollow" data-method="post" href="#" id="{{$product->id}}">
