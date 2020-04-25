@@ -46,7 +46,7 @@ $(document).ready(function() {
         function getStatusCurrent(status, number, note) {
             let tmp = null;
             if (status == 1) {
-                tmp = "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + number + "</span> " + unit_price(note) +
+                tmp = "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + number + "</span> "  +
                     "</span>";
             } else {
                 tmp = "<span style='color: red'>Hết hàng</span>";
@@ -394,7 +394,7 @@ $(document).ready(function() {
                                 formatPrice(value.price) +  ' đ/' + (value.note ? value.note : 'Cái') +
                                 '</div>' +
                                 '<div>' +
-                                    '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> '+ (value.note ? value.note : 'Cái') +'</span>' +
+                                    '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> ' +'</span>' +
                                 '</div>' +
                             '</div>' +
                             '<div id="showtip_18190" class="showtip">' +
@@ -443,7 +443,7 @@ $(document).ready(function() {
                                 formatPrice(value.price) +  ' đ/' + (value.note ? value.note : 'Cái') +
                                 '</div>' +
                                 '<div>' +
-                                    '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> '+ (value.note ? value.note : 'Cái') +'</span>' +
+                                    '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> ' +'</span>' +
                                 '</div>' +
                             '</div>' +
                             '<div id="showtip_18190" class="showtip">' +

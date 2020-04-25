@@ -150,7 +150,7 @@
                   @if ($product->status == 0)
                   <div class="brown"><span class="f"><a class="contact-to-order-show" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span><span>(Đặt mua 7-10 ngày có hàng)</span></div>
                   @else
-                  <div class="ngreen"><span class="f">Hàng còn: {{ $product->quantity }} {{ unit_product($product->note) }}</span><span>(Gửi hàng trong ngày)</span></div>
+                  <div class="ngreen"><span class="f">Hàng còn: {{ $product->quantity }}</span><span>(Gửi hàng trong ngày)</span></div>
                   @endif
                 </div>
               </div>
@@ -301,7 +301,7 @@
                       @if ($sameProduct-> status == 0)
                       <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
                       @else
-                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $sameProduct->quantity }}</span> {{ unit_product($sameProduct->note) }}</span>
+                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $sameProduct->quantity }}</span></span>
                       @endif
                     </p>
                   </div>
@@ -340,7 +340,7 @@
                       @if ($productHot-> status == 0)
                       <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
                       @else
-                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $productHot->quantity }}</span> {{ unit_product($productHot->note) }}</span>
+                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $productHot->quantity }}</span></span>
                       @endif
                     </p>
                   </div>

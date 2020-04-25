@@ -69,6 +69,18 @@
                     <input type="text" name="password" class="form-control" value="{{ $mail->password }}" />
                 </div>
             </div>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Nội dung email</label>
+                <div class="col-sm-10">
+                    <textarea name="content">{{ $mail->content }}</textarea>
+                </div>
+            </div>
+             <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Thông tin thanh toán</label>
+                <div class="col-sm-10">
+                    <textarea name="payment">{{ $mail->payment }}</textarea>
+                </div>
+            </div>
             <div class="form-group text-center">
                 <input type="submit" name="add" class="btn btn-primary input-lg" value="Cập nhật" />
             </div>
@@ -78,4 +90,16 @@
 @stop
 @section('css')
 <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
+@section('js')
+<script src={{ url('ckeditor/ckeditor.js') }}></script>
+<script>
+    CKEDITOR.replace( 'content', {
+        filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+    } );
+    CKEDITOR.replace( 'payment', {
+        filebrowserBrowseUrl: '{{ route('ckfinder_browser') }}',
+    } );
+</script>
+@include('ckfinder::setup')
 @stop
