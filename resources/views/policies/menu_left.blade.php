@@ -10,7 +10,7 @@
             <a class="parent" href="/information/dich-vu-ban-hang">Dịch Vụ Bán Hàng</a>
         </li>
         <li>
-            <a class="parent" href="/information/chinh-sach-quy-dinh">Chính sách - Quy định</a>
+            <a class="parent" href="/information/chinh-sach-quy-dinh">Chính sách - Quy €ịnh</a>
         </li>
         <li>
             <a class="parent" href="/information/ho-tro-khach-hang">Hỗ trợ Khách hàng</a>

@@ -1,7 +1,7 @@
 @extends('adminlte::page')
-@section('title', 'Danh sách sản phẩm')
+@section('title', 'Danh sách món ăn')
 @section('content_header')
-<h1>Danh sách sản phẩm</h1>
+<h1>Danh sách món ăn</h1>
 @stop
 @section('content')
 @error('excel_file')
@@ -26,26 +26,6 @@
                 <a href="{{ route('admin.products.create') }}" class="btn btn-primary float-right">Thêm mới</a>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div>
-                    <form action="{{ route('admin.products.import') }}" method="post" enctype="multipart/form-data">
-                        @csrf
-                        <div class="custom-file">
-                            <input type="file" class="custom-file-input" id="excel_upload" name='excel_file'>
-                            <label class="custom-file-label" for="excel_upload">Chọn file</label>
-
-                            <small id="fileHelp" class="form-text text-muted">Hãy upload file excel theo mẫu sau:
-                                <a href="{{ route('admin.products.download.example') }}">Tải về</a>
-                            </small>
-                        </div>
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="submit" id="inputGroupFileAddon04">Upload file excel</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="card-body">
         @include('admin.layouts.alert_section')
@@ -53,7 +33,7 @@
             <thead>
                 <tr>
                     <td>ID</td>
-                    <td>Tên sản phẩm</td>
+                    <td>Tên món ăn</td>
                     <td>Mã sản phẩm</td>
                     <td>Miêu tả</td>
                     <td>Hình ảnh</td>

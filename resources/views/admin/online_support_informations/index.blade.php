@@ -24,7 +24,7 @@
           <td>Zalo</td>
           <td>Skype</td>
           <td>Facebook</td>
-          <td>SĐT</td>
+          <td>S€T</td>
           <td>Trạng thái</td>
         </tr>
     </thead>

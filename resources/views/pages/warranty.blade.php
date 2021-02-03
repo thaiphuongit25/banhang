@@ -3,8 +3,8 @@
     <div class="texttitle sitemaps">
         <a href="/">Trang Chủ</a>
         <a href="/information">Thông tin công ty</a>
-        <a href="/information/chinh-sach-quy-dinh">Chính sách - Quy định</a>
-        <a href="#">Quy định bảo hành</a>
+        <a href="/information/chinh-sach-quy-dinh">Chính sách - Quy €ịnh</a>
+        <a href="#">Quy €ịnh bảo hành</a>
     </div>
 </div>
 <div id="body-left">

@@ -12,7 +12,7 @@
                 <tr>
                     <td>Loại banner</td>
                     <td>Ảnh</td>
-                    <td>Đường dẫn</td>
+                    <td>€ường dẫn</td>
                     <td>Alt</td>
                     <td>Trạng thái</td>
                 </tr>

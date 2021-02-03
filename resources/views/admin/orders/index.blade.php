@@ -12,7 +12,7 @@
                 <tr>
                     <td>ID</td>
                     <td>Tên người mua</td>
-                    <td>Mã đặt hàng</td>
+                    <td>Mã Đặt hàng</td>
                     <td>Ngày đặt đơn</td>
                     <td>Tổng giá trị</td>
                     <td>Lưu ý</td>

@@ -98,45 +98,124 @@
         <div id="con_index" style="margin-top:2px">
             <div id="feature_list">
                 <ul id="output">
-                    @foreach (getBanner(App\Enums\BannerType::Slider) as $key => $slider)
-                    <li style="display: {{ $key == 0 ? 'list-item' : 'none' }};">
-                        <a href="{{ $slider->link }}" target="_blank">
-                            <img alt="{{ $slider->alt }}" class="img-slide" src="{{ loadImage($slider->image) }}">
+                    <li style="display: list-item;">
+                        <a href="">
+                            <img alt="image" class="img-slide" src="/images/panner1.png">
                         </a>
                     </li>
-                    @endforeach
+                    <li style="display: none;">
+                        <a href="">
+                            <img alt="image" class="img-slide" src="/images/panner2.png">
+                        </a>
+                    </li>
+                    <li style="display: none;">
+                        <a href="">
+                            <img alt="image" class="img-slide" src="/images/panner3.png">
+                        </a>
+                    </li>
+                    <li style="display: list-item;">
+                        <a href="">
+                            <img alt="image" class="img-slide" src="/images/panner4.png">
+                        </a>
+                    </li>
+                    <li style="display: none;">
+                        <a href="">
+                            <img alt="image" class="img-slide" src="/images/panner6.png">
+                        </a>
+                    </li>
+                    <li style="display: none;">
+                        <a href="">
+                            <img alt="image" class="img-slide" src="/images/panner7.png">
+                        </a>
+                    </li>
                 </ul>
                 <ul id="tabs">
-                    @foreach (getBanner(App\Enums\BannerType::Slider) as $slider)
+                    @foreach ([1, 2, 3, 4, 5, 6] as $slider)
                     <li>
-                        <a href="{{ $slider->link }}" target="_blank"></a>
+                        <a href=""></a>
                     </li>
                     @endforeach
                 </ul>
             </div>
         </div>
     </div>
-    <div class="left item-home mainDevice">
+    <div class="left item-home mainDevice" style="margin-top: 10px;">
     @foreach($types as $type)
         @if (count($type->categories))
         <div class="item-ct-pr-home" id="{{ $type->id }}">
             <div class="title-item-ct-pr-home">
-                <h2 style="float:left"><a href="/product/{{ $type->slug }}" class="review_product">{{ $type->name }}</a></h2>
-                <span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/{{ $type->slug }}">Xem thêm</a></span>
-                <ul class="subject-child-show-home">
-                @foreach ( $type->categories as $category )
-                    <li>
-                        <a href="/product/{{ $category->slug }}">{{ $category->name }}</a>
-                    </li>
-                @endforeach
-                </ul>
+                <h2 style="float:left; color: #30a544">Danh sách món ăn</h2>
                 <div class="clear"></div>
             </div>
-        <div class="prev" id="{{$type->id}}"> <input type="hidden" class="page-{{$type->id}}" value="{{ 0 }}" > </div>
-            <div class="content-item-ct-pr-home" id="products-ct-1">
-            <div class="show-product-top" id="show-product-top-{{$type->id}}">
-                {{-- @foreach ($type->categories as $category) --}}
-                    @foreach ( getProductLimit($type->categories->pluck("id")) as $product )
+            <style>
+                .showProduct {
+                    display: flex;
+                    flex-wrap: wrap;
+                    grid-template-columns: repeat(4, 1fr);
+                    border-top: 1px solid rgb(244, 244, 244)
+                }
+                .item {
+                    border: 1px solid rgb(244, 244, 244);
+                    padding: 10px 4px;
+                    flex-basis: 24%;
+                }
+                .image-hover {
+                    width: 230px;
+                    height: 166px;
+                    border-radius: 5px;
+                } 
+                @media (max-width: 768px) {
+                    .item {
+                        flex-basis: 47%;
+                    }
+                    .image-hover {
+                        width: 190px;
+                        height: 166px;
+                        border-radius: 5px;
+                    } 
+                }
+                .item-content {
+                    position: relative;
+                    display: block;
+                    height: 100%;
+                }
+                .thump {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                }
+                .content {
+                    text-align: center;
+                    margin-top: 10px;
+                }
+                .review-product {
+                    color: #b536b7 !important;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+            </style>
+            <div class="showProduct">
+                @foreach ( getProductLimit($type->categories->pluck("id")) as $product )
+                <div class="item">
+                    <div class="item-content">
+                        <div class="thump">
+                            <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product">
+                                <img alt="EL817S" class="image-hover" src="{{ getProductImageUrl($product->id) }}">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <div class="name-a">
+                                <a title="{{ $product->name }}" id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}">{{ $product->name }}</a>
+                            </div>
+                            <div class="price blue">
+                               {{ number_format($product->price) }} €/{{ unit_product($product->note) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+                    <!-- @foreach ( getProductLimit($type->categories->pluck("id")) as $product )
                     <div class="v-p-t" id="{{ $product->id }}">
                         <div class="img-v-p popular ">
                             <a id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}" title="" class="review_product"><img alt="EL817S" class="image-hover" src="{{ getProductImageUrl($product->id) }}"></a>
@@ -145,30 +224,12 @@
                             <div class="name-a">
                                 <a title="{{ $product->name }}" id="{{$product->id}}" class="review-product" href="/products/{{ $product->slug }}">{{ $product->name }}</a>
                             </div>
-                            <div class="desc_small">
-                                {{ $product->desc }}
-                            </div>
                             <div class="price blue">
-                               {{ number_format($product->price) }} đ/{{ unit_product($product->note) }}
+                               {{ number_format($product->price) }} €/{{ unit_product($product->note) }}
                             </div>
-
-                            <div>
-                                <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $product->quantity }}</span></span>
-                            </div>
-                        </div>
-                        <div id="showtip_18190" class="showtip">
-                            <img alt="EL817S" class="fff" src="{{ getProductImageUrl($product->id) }}">
                         </div>
                     </div>
-                    @endforeach
-                {{-- @endforeach --}}
-                <div class="clear"></div>
-                </div>
-            </div>
-            <div class="next" id="{{$type->id}}"></div>
-            <div class="clear"></div>
-        </div>
-        <div class="clear"></div>
+                    @endforeach -->
         @endif
     @endforeach
     </div>

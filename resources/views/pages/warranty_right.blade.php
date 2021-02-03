@@ -1,18 +1,18 @@
 <div class="middle-page">
     <div style="border: 1px solid #DDD;-moz-border-radius: 8px;-webkit-border-radius: 8px; padding:10px 0 8px 0; margin-bottom:8px; background-color:#fff;">
         <div style="position:relative;">
-            <h1 style="font-size: 14px;color: #027AC7;font-family: Arial, Tahoma, Verdana,MS Sans Serif;font-weight: bold; padding:0 0 8px 12px;"> Quy định bảo hành </h1>
+            <h1 style="font-size: 14px;color: #027AC7;font-family: Arial, Tahoma, Verdana,MS Sans Serif;font-weight: bold; padding:0 0 8px 12px;"> Quy €ịnh bảo hành </h1>
         </div>
         <div id="page_content" style="padding:0 10px;">
-            <p style="text-align: justify;"><strong>I.</strong><strong> Điều kiện bảo hành: </strong></p>
-            <p style="text-align: justify;"><strong><strong>&nbsp;</strong></strong>-&nbsp;&nbsp; Có phiếu bảo hành/thẻ bảo hành và tem bảo hành còn thời hạn bảo hành (không có dấu hiệu cạo sửa, tẩy xoá, rách nát,...)<br>&nbsp;-&nbsp;&nbsp; Hư hỏng được xác định do lỗi kỹ thuật của
+            <p style="text-align: justify;"><strong>I.</strong><strong> €iều kiện bảo hành: </strong></p>
+            <p style="text-align: justify;"><strong><strong>&nbsp;</strong></strong>-&nbsp;&nbsp; Có phiếu bảo hành/thẻ bảo hành và tem bảo hành còn thời hạn bảo hành (không có dấu hiệu cạo sửa, tẩy xoá, rách nát,...)<br>&nbsp;-&nbsp;&nbsp; Hư hỏng €ược xác €ịnh do lỗi kỹ thuật của
                 Nhà sản xuất.</p>
             <p style="text-align: justify;">Thế giới IC sẽ từ chối bảo hành trong các trường hợp sau:</p>
-            <p style="text-align: justify;">-&nbsp;&nbsp; Đối với các loại linh kiện rời như IC, R, L, C, Transistor, Diode, LED mua với số lượng ít hơn 100 con.<br>-&nbsp;&nbsp; Đối với các sản phẩm hoàn thiện như board, kit: tự ý thay thế bộ phận, linh kiện bị nứt, vỡ, mòn, xước,
-                tróc sơn, đổi màu, hoen ố trong quá trình sử dụng như vỏ máy, vỏ ..<br style="text-align: justify;"> -&nbsp;&nbsp; Hư hỏng do chuột bọ, côn trùng xâm nhập hoặc đặt trong môi trường ẩm ướt, do thiên tai, hoả hoạn, hoặc không theo hướng
+            <p style="text-align: justify;">-&nbsp;&nbsp; €ối với các loại linh kiện rời như IC, R, L, C, Transistor, Diode, LED mua với số lượng ít hơn 100 con.<br>-&nbsp;&nbsp; €ối với các sản phẩm hoàn thiện như board, kit: tự ý thay thế bộ phận, linh kiện bị nứt, vỡ, mòn, xước,
+                tróc sơn, €ổi màu, hoen ố trong quá trình sử dụng như vỏ máy, vỏ ..<br style="text-align: justify;"> -&nbsp;&nbsp; Hư hỏng do chuột bọ, côn trùng xâm nhập hoặc €ặt trong môi trường ẩm ướt, do thiên tai, hoả hoạn, hoặc không theo hướng
                 dẫn sử dụng hoặc bị tháo bởi người không có sự uỷ quyền của Thế giới IC<br>&nbsp;-&nbsp;&nbsp; Không có phiếu bảo hành, phiếu bảo hành hết hạn hoặc phiếu bảo hành bị rách, nát, bị sửa chữa hoặc không có thông tin trong kho dữ liệu lưu
-                trữ của công ty.<br>&nbsp;<br><strong>II. Thời hạn bảo hành</strong><strong><br></strong>&nbsp;Thời hạn bảo hành là thời gian được in trên phiếu bảo hành kèm theo hoặc do Thegioiic ấn định<br>&nbsp;<br><strong>III. Phương thức bảo hành</strong><strong><br></strong>&nbsp;-&nbsp;&nbsp;&nbsp;
-                Nếu đáp ứng được đầy đủ các điều kiện nêu trên, liên kiện, thiết bị, phụ kiện sẽ được bảo hành miễn phí trong suốt thời hạn bảo hành.<br>&nbsp;-&nbsp;&nbsp;&nbsp; Hàng bị lỗi trong 07 ngày kể từ ngày bán sản phẩm sẽ được đổi hàng mới.</p>
+                trữ của công ty.<br>&nbsp;<br><strong>II. Thời hạn bảo hành</strong><strong><br></strong>&nbsp;Thời hạn bảo hành là thời gian €ược in trên phiếu bảo hành kèm theo hoặc do Thegioiic ấn €ịnh<br>&nbsp;<br><strong>III. Phương thức bảo hành</strong><strong><br></strong>&nbsp;-&nbsp;&nbsp;&nbsp;
+                Nếu €áp ứng €ược €ầy €ủ các €iều kiện nêu trên, liên kiện, thiết bị, phụ kiện sẽ €ược bảo hành miễn phí trong suốt thời hạn bảo hành.<br>&nbsp;-&nbsp;&nbsp;&nbsp; Hàng bị lỗi trong 07 ngày kể từ ngày bán sản phẩm sẽ €ược €ổi hàng mới.</p>
         </div>
     </div>
     <div class="report-product" style="position: relative">
@@ -70,7 +70,7 @@
                     </p>
                 </div>
                 <div style="padding-top: 8px">
-                    <a class="hover" href="/account/login?path=%2Fpages%2Fquy-dinh-bao-hanh"><b>Đăng Nhập</b></a> hoặc <a class="hover" href="/users/new?path=%2Fpages%2Fquy-dinh-bao-hanh"><b>Đăng ký</b></a> để chia sẻ.
+                    <a class="hover" href="/account/login?path=%2Fpages%2Fquy-dinh-bao-hanh"><b>Đăng Nhập</b></a> hoặc <a class="hover" href="/users/new?path=%2Fpages%2Fquy-dinh-bao-hanh"><b>Đăng ký</b></a> €ể chia sẻ.
                 </div>
             </div>
 
@@ -103,11 +103,11 @@
                     <div class="clear"></div>
                 </li>
                 <li>
-                    <a href="/pages/chinh-sach-doi-tra-hang">Chính sách đổi trả hàng</a>
+                    <a href="/pages/chinh-sach-doi-tra-hang">Chính sách €ổi trả hàng</a>
                     <div class="clear"></div>
                 </li>
                 <li>
-                    <a href="/pages/dieu-kien-su-dung">Điều kiện sử dụng</a>
+                    <a href="/pages/dieu-kien-su-dung">€iều kiện sử dụng</a>
                     <div class="clear"></div>
                 </li>
                 <li>
@@ -147,10 +147,10 @@
                 <a class="tip-service" href="/services/gia-cong-pcb-va-pcba-voi-cong-nghe-smt-tien-tien">Gia công PCB và PCBA với công nghệ SMT tiên tiến</a>
             </li>
             <li>
-                <a class="tip-service" href="/services/phan-phoi-linh-kien-dien-tu-va-thiet-bi-dien-tu">Phân phối linh kiện điện tử và thiết bị điện tử</a>
+                <a class="tip-service" href="/services/phan-phoi-linh-kien-dien-tu-va-thiet-bi-dien-tu">Phân phối linh kiện €iện tử và thiết bị €iện tử</a>
             </li>
             <li>
-                <a class="tip-service" href="/services/thiet-ke-mach-dien-tu-he-thong-nhung-hardware-development-for-embedded-systems">Thiết kế mạch điện tử</a>
+                <a class="tip-service" href="/services/thiet-ke-mach-dien-tu-he-thong-nhung-hardware-development-for-embedded-systems">Thiết kế mạch €iện tử</a>
             </li>
         </ul>
     </div>

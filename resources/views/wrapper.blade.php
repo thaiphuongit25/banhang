@@ -85,10 +85,10 @@
 		<div id="feature_list">
 			<ul id="output">
 				<li style="display: list-item;">
-					<a href="#" target="_blank"><img alt="Phân phối và cung cấp linh kiện điện tử" class="img-slide" src="https://thegioiic.com/upload/large/14151.jpg"></a>
+					<a href="#" target="_blank"><img alt="Phân phối và cung cấp linh kiện €iện tử" class="img-slide" src="https://thegioiic.com/upload/large/14151.jpg"></a>
 				</li>
 				<li style="display: none;">
-					<a href="#" target="_blank"><img alt="Thiết kế mạch điện tử - Hệ thống nhúng" class="img-slide" src="https://thegioiic.com/upload/large/14496.jpg"></a>
+					<a href="#" target="_blank"><img alt="Thiết kế mạch €iện tử - Hệ thống nhúng" class="img-slide" src="https://thegioiic.com/upload/large/14496.jpg"></a>
 				</li>
 				<li style="display: none;">
 					<a href="#" target="_blank"><img alt="Gia công các loại dây bus và dây cáp" class="img-slide" src="https://thegioiic.com/upload/large/14154.jpg"></a>
@@ -143,7 +143,7 @@
 					OPTOISOLTR 5KV TRANSISTOR 4-SMD
 			</div>
 			<div class="price blue">
-				2,000  đ/Cái
+				2,000  €/Cái
 			</div>
 
 			<div>
@@ -174,7 +174,7 @@
 					OPTOISO 3.75KV OPEN COLL SO6-5
 			</div>
 			<div class="price blue">
-				15,000  đ/Cái
+				15,000  €/Cái
 			</div>
 
 			<div>
@@ -205,7 +205,7 @@
 					IC MCU 32BIT 512KB FLASH 64LQFP
 			</div>
 			<div class="price blue">
-				76,000  đ/Cái
+				76,000  €/Cái
 			</div>
 
 			<div>
@@ -236,7 +236,7 @@
 					IC DUAL DIFF COMP 8-SOIC
 			</div>
 			<div class="price blue">
-				5,000  đ/Cái
+				5,000  €/Cái
 			</div>
 
 			<div>
@@ -298,7 +298,7 @@
 					IC-2803 DRIV.(HAMMER,LAM,REL.) 8-CH.SMD SOP-18
 			</div>
 			<div class="price blue">
-				3,000  đ/Cái
+				3,000  €/Cái
 			</div>
 
 			<div>
@@ -329,7 +329,7 @@
 					MOSFET P-CH 100V 14A TO-220AB
 			</div>
 			<div class="price blue">
-				8,500  đ/Cái
+				8,500  €/Cái
 			</div>
 
 			<div>
@@ -360,7 +360,7 @@
 					TVS DIODE 20.9-39.3V 254A 1500W DO201
 			</div>
 			<div class="price blue">
-				4,300  đ/Cái
+				4,300  €/Cái
 			</div>
 
 			<div>
@@ -391,7 +391,7 @@
 					MOSFET N-CH 40V 50A TO252
 			</div>
 			<div class="price blue">
-				4,900  đ/Cái
+				4,900  €/Cái
 			</div>
 
 			<div>
@@ -417,11 +417,11 @@
 	</div>
 	<div class="item-ct-pr-home" id="3">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/linh-kien-dien-tu-thu-dong">Linh Kiện Điện Tử Thụ Động</a></h2>
+			<h2 style="float:left"><a href="/product/linh-kien-dien-tu-thu-dong">Linh Kiện €iện Tử Thụ €ộng</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/linh-kien-dien-tu-thu-dong">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 					<li>
-						<a href="/product/dien-tro-dan-smd">Điện Trở Dán SMD</a>
+						<a href="/product/dien-tro-dan-smd">€iện Trở Dán SMD</a>
 					</li>
 					<li>
 						<a href="/product/bien-tro">Biến Trở</a>
@@ -456,7 +456,7 @@
 					100K OHM 3W, 5%, 160V
 			</div>
 			<div class="price blue">
-				96,000  đ/Cái
+				96,000  €/Cái
 			</div>
 
 			<div>
@@ -476,18 +476,18 @@
 	</div>
 	<div class="v-p-t" id="18188">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18188" href="/products/dien-tro-0-33-ohm-1-2w-5-4-vong-mau"><img alt="Điện Trở 0.33 Ohm 1/2W 5% 4 Vòng Màu" class="image-hover" src="https://thegioiic.com/upload/large/1572.jpg"></a>
+			<a id="showtip_i_18188" href="/products/dien-tro-0-33-ohm-1-2w-5-4-vong-mau"><img alt="€iện Trở 0.33 Ohm 1/2W 5% 4 Vòng Màu" class="image-hover" src="https://thegioiic.com/upload/large/1572.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Điện Trở 0.33 Ohm 1/2W 5% 4 Vòng Màu" id="name_18188" href="/products/dien-tro-0-33-ohm-1-2w-5-4-vong-mau">Điện Trở 0.33 Ohm 1/2W 5% 4 Vòng Màu</a>
+				<a title="€iện Trở 0.33 Ohm 1/2W 5% 4 Vòng Màu" id="name_18188" href="/products/dien-tro-0-33-ohm-1-2w-5-4-vong-mau">€iện Trở 0.33 Ohm 1/2W 5% 4 Vòng Màu</a>
 			</div>
 			<div class="desc_small">
 					0.33 Ohm 0.5W 5%
 			</div>
 			<div class="price blue">
-				1,600  đ/Gói(10pcs)
+				1,600  €/Gói(10pcs)
 			</div>
 
 			<div>
@@ -495,7 +495,7 @@
 			</div>
 		</div>
 			<div id="showtip_18188" class="showtip">
-                 <img alt="Điện Trở 0.33 Ohm 1/2W 5% 4 Vòng Màu" class="fff" src="https://thegioiic.com/upload/large/1572.jpg">
+                 <img alt="€iện Trở 0.33 Ohm 1/2W 5% 4 Vòng Màu" class="fff" src="https://thegioiic.com/upload/large/1572.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -507,18 +507,18 @@
 	</div>
 	<div class="v-p-t" id="18170">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18170" href="/products/ksd9700-cau-chi-nhiet-no-250v-5a-150-do-c" title=""><img alt="KSD9700 Cầu Chì Nhiệt NO 250V 5A 150 Độ C" class="image-hover" src="https://thegioiic.com/upload/large/18814.jpg"></a>
+			<a id="showtip_i_18170" href="/products/ksd9700-cau-chi-nhiet-no-250v-5a-150-do-c" title=""><img alt="KSD9700 Cầu Chì Nhiệt NO 250V 5A 150 €ộ C" class="image-hover" src="https://thegioiic.com/upload/large/18814.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="KSD9700 Cầu Chì Nhiệt NO 250V 5A 150 Độ C" id="name_18170" href="/products/ksd9700-cau-chi-nhiet-no-250v-5a-150-do-c">KSD9700 Cầu Chì Nhiệt NO 250V 5A 150 ...</a>
+				<a title="KSD9700 Cầu Chì Nhiệt NO 250V 5A 150 €ộ C" id="name_18170" href="/products/ksd9700-cau-chi-nhiet-no-250v-5a-150-do-c">KSD9700 Cầu Chì Nhiệt NO 250V 5A 150 ...</a>
 			</div>
 			<div class="desc_small">
-					Điện áp: 250VAC, dòng điện: 5A, Thermal Cutoff (TCO), tiếp điểm: thường mở
+					€iện áp: 250VAC, dòng €iện: 5A, Thermal Cutoff (TCO), tiếp €iểm: thường mở
 			</div>
 			<div class="price blue">
-				6,800  đ/Cái
+				6,800  €/Cái
 			</div>
 
 			<div>
@@ -526,7 +526,7 @@
 			</div>
 		</div>
 			<div id="showtip_18170" class="showtip">
-                 <img alt="KSD9700 Cầu Chì Nhiệt NO 250V 5A 150 Độ C" class="fff" src="https://thegioiic.com/upload/large/18814.jpg">
+                 <img alt="KSD9700 Cầu Chì Nhiệt NO 250V 5A 150 €ộ C" class="fff" src="https://thegioiic.com/upload/large/18814.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -538,18 +538,18 @@
 	</div>
 	<div class="v-p-t" id="18169">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18169" href="/products/ksd9700-cau-chi-nhiet-nc-250v-5a-150-do-c"><img alt="KSD9700 Cầu Chì Nhiệt NC 250V 5A 150 Độ C" class="image-hover" src="https://thegioiic.com/upload/large/18814.jpg"></a>
+			<a id="showtip_i_18169" href="/products/ksd9700-cau-chi-nhiet-nc-250v-5a-150-do-c"><img alt="KSD9700 Cầu Chì Nhiệt NC 250V 5A 150 €ộ C" class="image-hover" src="https://thegioiic.com/upload/large/18814.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="KSD9700 Cầu Chì Nhiệt NC 250V 5A 150 Độ C" id="name_18169" href="/products/ksd9700-cau-chi-nhiet-nc-250v-5a-150-do-c">KSD9700 Cầu Chì Nhiệt NC 250V 5A 150 ...</a>
+				<a title="KSD9700 Cầu Chì Nhiệt NC 250V 5A 150 €ộ C" id="name_18169" href="/products/ksd9700-cau-chi-nhiet-nc-250v-5a-150-do-c">KSD9700 Cầu Chì Nhiệt NC 250V 5A 150 ...</a>
 			</div>
 			<div class="desc_small">
-					Điện áp: 250VAC, dòng điện: 5A, Thermal Cutoff (TCO), tiếp điểm: thường đóng
+					€iện áp: 250VAC, dòng €iện: 5A, Thermal Cutoff (TCO), tiếp €iểm: thường €óng
 			</div>
 			<div class="price blue">
-				6,800  đ/Cái
+				6,800  €/Cái
 			</div>
 
 			<div>
@@ -557,7 +557,7 @@
 			</div>
 		</div>
 			<div id="showtip_18169" class="showtip">
-                 <img alt="KSD9700 Cầu Chì Nhiệt NC 250V 5A 150 Độ C" class="fff" src="https://thegioiic.com/upload/large/18814.jpg">
+                 <img alt="KSD9700 Cầu Chì Nhiệt NC 250V 5A 150 €ộ C" class="fff" src="https://thegioiic.com/upload/large/18814.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -575,7 +575,7 @@
 	</div>
 	<div class="item-ct-pr-home" id="2">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/mach-dien-module-thiet-bi-nap">Mạch Điện, Module, Thiết Bị Nạp</a></h2>
+			<h2 style="float:left"><a href="/product/mach-dien-module-thiet-bi-nap">Mạch €iện, Module, Thiết Bị Nạp</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/mach-dien-module-thiet-bi-nap">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 					<li>
@@ -605,7 +605,7 @@
 					Nguồn: 2.7-3.6VDC, giao tiếp: SPI, 32bit
 			</div>
 			<div class="price blue">
-				12,000  đ/Cái
+				12,000  €/Cái
 			</div>
 
 			<div>
@@ -625,18 +625,18 @@
 	</div>
 	<div class="v-p-t" id="18187">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18187" href="/products/de-wifi-module-wifi-esp-12f-esp-32"><img alt="Đế WiFi Module WiFi ESP-12F ESP-32" class="image-hover" src="https://thegioiic.com/upload/large/18851.jpg"></a>
+			<a id="showtip_i_18187" href="/products/de-wifi-module-wifi-esp-12f-esp-32"><img alt="€ế WiFi Module WiFi ESP-12F ESP-32" class="image-hover" src="https://thegioiic.com/upload/large/18851.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Đế WiFi Module WiFi ESP-12F ESP-32" id="name_18187" href="/products/de-wifi-module-wifi-esp-12f-esp-32">Đế WiFi Module WiFi ESP-12F ESP-32</a>
+				<a title="€ế WiFi Module WiFi ESP-12F ESP-32" id="name_18187" href="/products/de-wifi-module-wifi-esp-12f-esp-32">€ế WiFi Module WiFi ESP-12F ESP-32</a>
 			</div>
 			<div class="desc_small">
-					Đế ra chân WiFi ESP-12F ESP-32 ESP-12E
+					€ế ra chân WiFi ESP-12F ESP-32 ESP-12E
 			</div>
 			<div class="price blue">
-				24,000  đ/Cái
+				24,000  €/Cái
 			</div>
 
 			<div>
@@ -644,7 +644,7 @@
 			</div>
 		</div>
 			<div id="showtip_18187" class="showtip">
-                 <img alt="Đế WiFi Module WiFi ESP-12F ESP-32" class="fff" src="https://thegioiic.com/upload/large/18851.jpg">
+                 <img alt="€ế WiFi Module WiFi ESP-12F ESP-32" class="fff" src="https://thegioiic.com/upload/large/18851.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -667,7 +667,7 @@
 					Chip: BCM2837, RAM 1GB, Flash eMMC: 4GB, giao tiếp: SPI, I2C, UART, SD/SDIO
 			</div>
 			<div class="price blue">
-				999,000  đ/Cái
+				999,000  €/Cái
 			</div>
 
 			<div>
@@ -698,7 +698,7 @@
 					Nguồn: 3V, phát nhạc cứu hỏa, cảnh sát, cứu thương, tiếng súng máy
 			</div>
 			<div class="price blue">
-				8,000  đ/Cái
+				8,000  €/Cái
 			</div>
 
 			<div>
@@ -754,7 +754,7 @@
 					Nguồn: 1.65-3.3VDC, giao tiếp IIC, Driver: SSD1306
 			</div>
 			<div class="price blue">
-				75,000  đ/Cái
+				75,000  €/Cái
 			</div>
 
 			<div>
@@ -785,7 +785,7 @@
 					Nguồn: 12VDC, dây nối: 20cm
 			</div>
 			<div class="price blue">
-				5,000  đ/Cái
+				5,000  €/Cái
 			</div>
 
 			<div>
@@ -805,18 +805,18 @@
 	</div>
 	<div class="v-p-t" id="18201">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18201" href="/products/led-do-6mm-vo-inox-12vdc"><img alt="LED Đỏ 6mm Vỏ Inox 12VDC" class="image-hover" src="https://thegioiic.com/upload/large/16965.jpg"></a>
+			<a id="showtip_i_18201" href="/products/led-do-6mm-vo-inox-12vdc"><img alt="LED €ỏ 6mm Vỏ Inox 12VDC" class="image-hover" src="https://thegioiic.com/upload/large/16965.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="LED Đỏ 6mm Vỏ Inox 12VDC" id="name_18201" href="/products/led-do-6mm-vo-inox-12vdc">LED Đỏ 6mm Vỏ Inox 12VDC</a>
+				<a title="LED €ỏ 6mm Vỏ Inox 12VDC" id="name_18201" href="/products/led-do-6mm-vo-inox-12vdc">LED €ỏ 6mm Vỏ Inox 12VDC</a>
 			</div>
 			<div class="desc_small">
 					Nguồn: 12VDC, dây nối: 20cm
 			</div>
 			<div class="price blue">
-				5,000  đ/Cái
+				5,000  €/Cái
 			</div>
 
 			<div>
@@ -824,7 +824,7 @@
 			</div>
 		</div>
 			<div id="showtip_18201" class="showtip">
-                 <img alt="LED Đỏ 6mm Vỏ Inox 12VDC" class="fff" src="https://thegioiic.com/upload/large/16965.jpg">
+                 <img alt="LED €ỏ 6mm Vỏ Inox 12VDC" class="fff" src="https://thegioiic.com/upload/large/16965.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -847,7 +847,7 @@
 					Nguồn: 12VDC, dây nối: 20cm
 			</div>
 			<div class="price blue">
-				5,000  đ/Cái
+				5,000  €/Cái
 			</div>
 
 			<div>
@@ -873,14 +873,14 @@
 	</div>
 	<div class="item-ct-pr-home" id="5">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/dau-noi-jack-noi">Đầu Nối, Jack Nối</a></h2>
+			<h2 style="float:left"><a href="/product/dau-noi-jack-noi">€ầu Nối, Jack Nối</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/dau-noi-jack-noi">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 					<li>
 						<a href="/product/terminal-block-domino">Terminal Block, Domino</a>
 					</li>
 					<li>
-						<a href="/product/de-ic">Đế IC</a>
+						<a href="/product/de-ic">€ế IC</a>
 					</li>
 			</ul>
 			<div class="clear"></div>
@@ -889,18 +889,18 @@
 		<div class="content-item-ct-pr-home" id="products-ct-5"><div class="show-product-top">
 	<div class="v-p-t" id="18208">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18208" href="/products/uk-412-hop-dau-noi-cap-160a-500v"><img alt="UK-412 Hộp Đấu Nối Cáp 160A 500V" class="image-hover" src="https://thegioiic.com/upload/large/18916.jpg"></a>
+			<a id="showtip_i_18208" href="/products/uk-412-hop-dau-noi-cap-160a-500v"><img alt="UK-412 Hộp €ấu Nối Cáp 160A 500V" class="image-hover" src="https://thegioiic.com/upload/large/18916.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="UK-412 Hộp Đấu Nối Cáp 160A 500V" id="name_18208" href="/products/uk-412-hop-dau-noi-cap-160a-500v">UK-412 Hộp Đấu Nối Cáp 160A 500V</a>
+				<a title="UK-412 Hộp €ấu Nối Cáp 160A 500V" id="name_18208" href="/products/uk-412-hop-dau-noi-cap-160a-500v">UK-412 Hộp €ấu Nối Cáp 160A 500V</a>
 			</div>
 			<div class="desc_small">
 					3 pha, 4 cực, 160A: 1 ngõ vào 50mm², 3 ngõ ra 35mm², 8 ngõ ra 16mm²
 			</div>
 			<div class="price blue">
-				800,000  đ/Cái
+				800,000  €/Cái
 			</div>
 
 			<div>
@@ -908,7 +908,7 @@
 			</div>
 		</div>
 			<div id="showtip_18208" class="showtip">
-                 <img alt="UK-412 Hộp Đấu Nối Cáp 160A 500V" class="fff" src="https://thegioiic.com/upload/large/18916.jpg">
+                 <img alt="UK-412 Hộp €ấu Nối Cáp 160A 500V" class="fff" src="https://thegioiic.com/upload/large/18916.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -920,18 +920,18 @@
 	</div>
 	<div class="v-p-t" id="18204">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18204" href="/products/lk6322-nema-l6-20p-dau-ac-noi-day-250v-20a"><img alt="LK6322 NEMA L6-20P Đầu AC Nối Dây 250V 20A" class="image-hover" src="https://thegioiic.com/upload/large/18897.jpg"></a>
+			<a id="showtip_i_18204" href="/products/lk6322-nema-l6-20p-dau-ac-noi-day-250v-20a"><img alt="LK6322 NEMA L6-20P €ầu AC Nối Dây 250V 20A" class="image-hover" src="https://thegioiic.com/upload/large/18897.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="LK6322 NEMA L6-20P Đầu AC Nối Dây 250V 20A" id="name_18204" href="/products/lk6322-nema-l6-20p-dau-ac-noi-day-250v-20a">LK6322 NEMA L6-20P Đầu AC Nối Dây 250...</a>
+				<a title="LK6322 NEMA L6-20P €ầu AC Nối Dây 250V 20A" id="name_18204" href="/products/lk6322-nema-l6-20p-dau-ac-noi-day-250v-20a">LK6322 NEMA L6-20P €ầu AC Nối Dây 250...</a>
 			</div>
 			<div class="desc_small">
 					Nguồn: 250VAC/20A, jack nguồn 3 chân, size: 61x45mm
 			</div>
 			<div class="price blue">
-				110,000  đ/Cái
+				110,000  €/Cái
 			</div>
 
 			<div>
@@ -939,7 +939,7 @@
 			</div>
 		</div>
 			<div id="showtip_18204" class="showtip">
-                 <img alt="LK6322 NEMA L6-20P Đầu AC Nối Dây 250V 20A" class="fff" src="https://thegioiic.com/upload/large/18897.jpg">
+                 <img alt="LK6322 NEMA L6-20P €ầu AC Nối Dây 250V 20A" class="fff" src="https://thegioiic.com/upload/large/18897.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -962,7 +962,7 @@
 					12 chân, khoảng cách chân: 3.96mm, 300V, 10A
 			</div>
 			<div class="price blue">
-				9,500  đ/Bộ(M+FM)
+				9,500  €/Bộ(M+FM)
 			</div>
 
 			<div>
@@ -982,18 +982,18 @@
 	</div>
 	<div class="v-p-t" id="18110">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18110" href="/products/ac-03-dau-ac-250v-10a-bat-oc-co-cau-chi-bao-ve"><img alt="AC-03 Đầu AC 250V 10A Bắt Ốc Có Cầu Chì Bảo Vệ" class="image-hover" src="https://thegioiic.com/upload/large/18782.jpg"></a>
+			<a id="showtip_i_18110" href="/products/ac-03-dau-ac-250v-10a-bat-oc-co-cau-chi-bao-ve"><img alt="AC-03 €ầu AC 250V 10A Bắt Ốc Có Cầu Chì Bảo Vệ" class="image-hover" src="https://thegioiic.com/upload/large/18782.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="AC-03 Đầu AC 250V 10A Bắt Ốc Có Cầu Chì Bảo Vệ" id="name_18110" href="/products/ac-03-dau-ac-250v-10a-bat-oc-co-cau-chi-bao-ve">AC-03 Đầu AC 250V 10A Bắt Ốc Có Cầu C...</a>
+				<a title="AC-03 €ầu AC 250V 10A Bắt Ốc Có Cầu Chì Bảo Vệ" id="name_18110" href="/products/ac-03-dau-ac-250v-10a-bat-oc-co-cau-chi-bao-ve">AC-03 €ầu AC 250V 10A Bắt Ốc Có Cầu C...</a>
 			</div>
 			<div class="desc_small">
 					Nguồn: 250V/10A, Jack nguồn 3 chân, Có cầu chì
 			</div>
 			<div class="price blue">
-				9,000  đ/Cái
+				9,000  €/Cái
 			</div>
 
 			<div>
@@ -1001,7 +1001,7 @@
 			</div>
 		</div>
 			<div id="showtip_18110" class="showtip">
-                 <img alt="AC-03 Đầu AC 250V 10A Bắt Ốc Có Cầu Chì Bảo Vệ" class="fff" src="https://thegioiic.com/upload/large/18782.jpg">
+                 <img alt="AC-03 €ầu AC 250V 10A Bắt Ốc Có Cầu Chì Bảo Vệ" class="fff" src="https://thegioiic.com/upload/large/18782.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1019,7 +1019,7 @@
 	</div>
 	<div class="item-ct-pr-home" id="6">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/day-dien-cap-dien-day-tin-hieu">Dây Điện, Cáp Điện, Dây Tín Hiệu</a></h2>
+			<h2 style="float:left"><a href="/product/day-dien-cap-dien-day-tin-hieu">Dây €iện, Cáp €iện, Dây Tín Hiệu</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/day-dien-cap-dien-day-tin-hieu">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 					<li>
@@ -1032,18 +1032,18 @@
 		<div class="content-item-ct-pr-home" id="products-ct-6"><div class="show-product-top">
 	<div class="v-p-t" id="18068">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18068" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-vang"><img alt="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Vàng" class="image-hover" src="https://thegioiic.com/upload/large/18574.jpg"></a>
+			<a id="showtip_i_18068" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-vang"><img alt="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu Vàng" class="image-hover" src="https://thegioiic.com/upload/large/18574.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Vàng" id="name_18068" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-vang">Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Vàng</a>
+				<a title="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu Vàng" id="name_18068" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-vang">Dây €ơn Cadivi CV-1.5 1.5mm2 Màu Vàng</a>
 			</div>
 			<div class="desc_small">
-					Tiết diện dẫn điện: 1.5 mm2, lớp cách điện: 0.8mm, điện áp: 0.6/1kV
+					Tiết diện dẫn €iện: 1.5 mm2, lớp cách €iện: 0.8mm, €iện áp: 0.6/1kV
 			</div>
 			<div class="price blue">
-				8,000  đ/m
+				8,000  €/m
 			</div>
 
 			<div>
@@ -1051,7 +1051,7 @@
 			</div>
 		</div>
 			<div id="showtip_18068" class="showtip">
-                 <img alt="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Vàng" class="fff" src="https://thegioiic.com/upload/large/18574.jpg">
+                 <img alt="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu Vàng" class="fff" src="https://thegioiic.com/upload/large/18574.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1063,18 +1063,18 @@
 	</div>
 	<div class="v-p-t" id="18067">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18067" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-do"><img alt="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Đỏ" class="image-hover" src="https://thegioiic.com/upload/large/18572.jpg"></a>
+			<a id="showtip_i_18067" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-do"><img alt="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu €ỏ" class="image-hover" src="https://thegioiic.com/upload/large/18572.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Đỏ" id="name_18067" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-do">Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Đỏ</a>
+				<a title="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu €ỏ" id="name_18067" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-do">Dây €ơn Cadivi CV-1.5 1.5mm2 Màu €ỏ</a>
 			</div>
 			<div class="desc_small">
-					Tiết diện dẫn điện: 1.5 mm2, lớp cách điện: 0.8mm, điện áp: 0.6/1kV
+					Tiết diện dẫn €iện: 1.5 mm2, lớp cách €iện: 0.8mm, €iện áp: 0.6/1kV
 			</div>
 			<div class="price blue">
-				8,000  đ/m
+				8,000  €/m
 			</div>
 
 			<div>
@@ -1082,7 +1082,7 @@
 			</div>
 		</div>
 			<div id="showtip_18067" class="showtip">
-                 <img alt="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Đỏ" class="fff" src="https://thegioiic.com/upload/large/18572.jpg">
+                 <img alt="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu €ỏ" class="fff" src="https://thegioiic.com/upload/large/18572.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1094,18 +1094,18 @@
 	</div>
 	<div class="v-p-t" id="18066">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18066" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-den"><img alt="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Đen" class="image-hover" src="https://thegioiic.com/upload/large/18569.jpg"></a>
+			<a id="showtip_i_18066" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-den"><img alt="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu €en" class="image-hover" src="https://thegioiic.com/upload/large/18569.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Đen" id="name_18066" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-den">Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Đen</a>
+				<a title="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu €en" id="name_18066" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-den">Dây €ơn Cadivi CV-1.5 1.5mm2 Màu €en</a>
 			</div>
 			<div class="desc_small">
-					Tiết diện dẫn điện: 1.5 mm2, lớp cách điện: 0.8mm, điện áp: 0.6/1kV
+					Tiết diện dẫn €iện: 1.5 mm2, lớp cách €iện: 0.8mm, €iện áp: 0.6/1kV
 			</div>
 			<div class="price blue">
-				8,000  đ/m
+				8,000  €/m
 			</div>
 
 			<div>
@@ -1113,7 +1113,7 @@
 			</div>
 		</div>
 			<div id="showtip_18066" class="showtip">
-                 <img alt="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Đen" class="fff" src="https://thegioiic.com/upload/large/18569.jpg">
+                 <img alt="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu €en" class="fff" src="https://thegioiic.com/upload/large/18569.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1125,18 +1125,18 @@
 	</div>
 	<div class="v-p-t" id="18065">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18065" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-xanh-duong"><img alt="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Xanh Dương" class="image-hover" src="https://thegioiic.com/upload/large/18568.jpg"></a>
+			<a id="showtip_i_18065" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-xanh-duong"><img alt="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu Xanh Dương" class="image-hover" src="https://thegioiic.com/upload/large/18568.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Xanh Dương" id="name_18065" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-xanh-duong">Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Xanh...</a>
+				<a title="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu Xanh Dương" id="name_18065" href="/products/day-don-cadivi-cv-1-5-1-5mm2-mau-xanh-duong">Dây €ơn Cadivi CV-1.5 1.5mm2 Màu Xanh...</a>
 			</div>
 			<div class="desc_small">
-					Tiết diện dẫn điện: 1.5 mm2, lớp cách điện: 0.8mm, điện áp: 0.6/1kV
+					Tiết diện dẫn €iện: 1.5 mm2, lớp cách €iện: 0.8mm, €iện áp: 0.6/1kV
 			</div>
 			<div class="price blue">
-				8,000  đ/m
+				8,000  €/m
 			</div>
 
 			<div>
@@ -1144,7 +1144,7 @@
 			</div>
 		</div>
 			<div id="showtip_18065" class="showtip">
-                 <img alt="Dây Đơn Cadivi CV-1.5 1.5mm2 Màu Xanh Dương" class="fff" src="https://thegioiic.com/upload/large/18568.jpg">
+                 <img alt="Dây €ơn Cadivi CV-1.5 1.5mm2 Màu Xanh Dương" class="fff" src="https://thegioiic.com/upload/large/18568.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1183,7 +1183,7 @@
 					Nguồn: 3.3-5VDC, khoảng cách: 0.12~10cm, ngõ ra digital
 			</div>
 			<div class="price blue">
-				8,500  đ/Cái
+				8,500  €/Cái
 			</div>
 
 			<div>
@@ -1214,7 +1214,7 @@
 					Nguồn: 5VDC, cảm biến nhịp tim qua ngón tay
 			</div>
 			<div class="price blue">
-				12,000  đ/Cái
+				12,000  €/Cái
 			</div>
 
 			<div>
@@ -1234,18 +1234,18 @@
 	</div>
 	<div class="v-p-t" id="18095">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18095" href="/products/inmp441-microphone-da-huong"><img alt="INMP441 Microphone Đa Hướng" class="image-hover" src="https://thegioiic.com/upload/large/18725.jpg"></a>
+			<a id="showtip_i_18095" href="/products/inmp441-microphone-da-huong"><img alt="INMP441 Microphone €a Hướng" class="image-hover" src="https://thegioiic.com/upload/large/18725.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="INMP441 Microphone Đa Hướng" id="name_18095" href="/products/inmp441-microphone-da-huong">INMP441 Microphone Đa Hướng</a>
+				<a title="INMP441 Microphone €a Hướng" id="name_18095" href="/products/inmp441-microphone-da-huong">INMP441 Microphone €a Hướng</a>
 			</div>
 			<div class="desc_small">
 					Nguồn: 1.8-3.3VDC, giao tiếp: I2S, tần số: 60Hz~15kHz
 			</div>
 			<div class="price blue">
-				80,000  đ/Cái
+				80,000  €/Cái
 			</div>
 
 			<div>
@@ -1253,7 +1253,7 @@
 			</div>
 		</div>
 			<div id="showtip_18095" class="showtip">
-                 <img alt="INMP441 Microphone Đa Hướng" class="fff" src="https://thegioiic.com/upload/large/18725.jpg">
+                 <img alt="INMP441 Microphone €a Hướng" class="fff" src="https://thegioiic.com/upload/large/18725.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1273,10 +1273,10 @@
 				<a title="GP2Y0E03 Cảm Biến Khoảng Cách" id="name_18093" href="/products/gp2y0e03-cam-bien-khoang-cach">GP2Y0E03 Cảm Biến Khoảng Cách</a>
 			</div>
 			<div class="desc_small">
-					Nguồn: 2.7~5VDC, khoảng cách đo: 4~50cm, ngõ ra analog
+					Nguồn: 2.7~5VDC, khoảng cách €o: 4~50cm, ngõ ra analog
 			</div>
 			<div class="price blue">
-				92,000  đ/Cái
+				92,000  €/Cái
 			</div>
 
 			<div>
@@ -1302,7 +1302,7 @@
 	</div>
 	<div class="item-ct-pr-home" id="935">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/dien-cong-nghiep-tu-dong-hoa">Điện Công Nghiệp, Tự Động Hóa</a></h2>
+			<h2 style="float:left"><a href="/product/dien-cong-nghiep-tu-dong-hoa">€iện Công Nghiệp, Tự €ộng Hóa</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/dien-cong-nghiep-tu-dong-hoa">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 			</ul>
@@ -1312,18 +1312,18 @@
 		<div class="content-item-ct-pr-home" id="products-ct-935"><div class="show-product-top">
 	<div class="v-p-t" id="18207">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18207" href="/products/module-dong-co-rung-1027"><img alt="Module Động Cơ Rung 1027" class="image-hover" src="https://thegioiic.com/upload/large/18914.jpg"></a>
+			<a id="showtip_i_18207" href="/products/module-dong-co-rung-1027"><img alt="Module €ộng Cơ Rung 1027" class="image-hover" src="https://thegioiic.com/upload/large/18914.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Module Động Cơ Rung 1027" id="name_18207" href="/products/module-dong-co-rung-1027">Module Động Cơ Rung 1027</a>
+				<a title="Module €ộng Cơ Rung 1027" id="name_18207" href="/products/module-dong-co-rung-1027">Module €ộng Cơ Rung 1027</a>
 			</div>
 			<div class="desc_small">
-					Nguồn: 5VDC, tốc độ định mức: 4000rpm, size: 30x21mm
+					Nguồn: 5VDC, tốc €ộ €ịnh mức: 4000rpm, size: 30x21mm
 			</div>
 			<div class="price blue">
-				16,000  đ/Cái
+				16,000  €/Cái
 			</div>
 
 			<div>
@@ -1331,7 +1331,7 @@
 			</div>
 		</div>
 			<div id="showtip_18207" class="showtip">
-                 <img alt="Module Động Cơ Rung 1027" class="fff" src="https://thegioiic.com/upload/large/18914.jpg">
+                 <img alt="Module €ộng Cơ Rung 1027" class="fff" src="https://thegioiic.com/upload/large/18914.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1343,18 +1343,18 @@
 	</div>
 	<div class="v-p-t" id="18189">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18189" href="/products/ga-do-encoder-kieu-l"><img alt="Gá Đỡ Encoder Kiểu L" class="image-hover" src="https://thegioiic.com/upload/large/18863.jpg"></a>
+			<a id="showtip_i_18189" href="/products/ga-do-encoder-kieu-l"><img alt="Gá €ỡ Encoder Kiểu L" class="image-hover" src="https://thegioiic.com/upload/large/18863.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Gá Đỡ Encoder Kiểu L" id="name_18189" href="/products/ga-do-encoder-kieu-l">Gá Đỡ Encoder Kiểu L</a>
+				<a title="Gá €ỡ Encoder Kiểu L" id="name_18189" href="/products/ga-do-encoder-kieu-l">Gá €ỡ Encoder Kiểu L</a>
 			</div>
 			<div class="desc_small">
 					Size: 75x45mm
 			</div>
 			<div class="price blue">
-				30,000  đ/Cái
+				30,000  €/Cái
 			</div>
 
 			<div>
@@ -1362,7 +1362,7 @@
 			</div>
 		</div>
 			<div id="showtip_18189" class="showtip">
-                 <img alt="Gá Đỡ Encoder Kiểu L" class="fff" src="https://thegioiic.com/upload/large/18863.jpg">
+                 <img alt="Gá €ỡ Encoder Kiểu L" class="fff" src="https://thegioiic.com/upload/large/18863.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1382,10 +1382,10 @@
 				<a title="G2RL-2 Relay 24VDC 8 Chân" id="name_18107" href="/products/g2rl-2-relay-24vdc-8-chan">G2RL-2 Relay 24VDC 8 Chân</a>
 			</div>
 			<div class="desc_small">
-					Tiếp điểm chịu tải: 8A 250VAC, 2NO 2NC 8 Pin
+					Tiếp €iểm chịu tải: 8A 250VAC, 2NO 2NC 8 Pin
 			</div>
 			<div class="price blue">
-				25,000  đ/Cái
+				25,000  €/Cái
 			</div>
 
 			<div>
@@ -1405,18 +1405,18 @@
 	</div>
 	<div class="v-p-t" id="18091">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18091" href="/products/dong-co-giam-toc-tt-3-6vdc-truc-kim-loai"><img alt="Động Cơ Giảm Tốc TT 3-6VDC Trục Kim Loại" class="image-hover" src="https://thegioiic.com/upload/large/18689.jpg"></a>
+			<a id="showtip_i_18091" href="/products/dong-co-giam-toc-tt-3-6vdc-truc-kim-loai"><img alt="€ộng Cơ Giảm Tốc TT 3-6VDC Trục Kim Loại" class="image-hover" src="https://thegioiic.com/upload/large/18689.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Động Cơ Giảm Tốc TT 3-6VDC Trục Kim Loại" id="name_18091" href="/products/dong-co-giam-toc-tt-3-6vdc-truc-kim-loai">Động Cơ Giảm Tốc TT 3-6VDC Trục Kim Loại</a>
+				<a title="€ộng Cơ Giảm Tốc TT 3-6VDC Trục Kim Loại" id="name_18091" href="/products/dong-co-giam-toc-tt-3-6vdc-truc-kim-loai">€ộng Cơ Giảm Tốc TT 3-6VDC Trục Kim Loại</a>
 			</div>
 			<div class="desc_small">
 					Nguồn: 3-6VDC 200RPM ± 10%, tỉ lệ giảm tốc: 1:90
 			</div>
 			<div class="price blue">
-				32,000  đ/Cái
+				32,000  €/Cái
 			</div>
 
 			<div>
@@ -1424,7 +1424,7 @@
 			</div>
 		</div>
 			<div id="showtip_18091" class="showtip">
-                 <img alt="Động Cơ Giảm Tốc TT 3-6VDC Trục Kim Loại" class="fff" src="https://thegioiic.com/upload/large/18689.jpg">
+                 <img alt="€ộng Cơ Giảm Tốc TT 3-6VDC Trục Kim Loại" class="fff" src="https://thegioiic.com/upload/large/18689.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1442,7 +1442,7 @@
 	</div>
 	<div class="item-ct-pr-home" id="1116">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/co-dien-tu">Cơ Điện Tử</a></h2>
+			<h2 style="float:left"><a href="/product/co-dien-tu">Cơ €iện Tử</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/co-dien-tu">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 			</ul>
@@ -1452,18 +1452,18 @@
 		<div class="content-item-ct-pr-home" id="products-ct-1116"><div class="show-product-top">
 	<div class="v-p-t" id="18214">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18214" href="/products/httm-phim-cam-ung-dien-dung"><img alt="HTTM Phím Cảm Ứng Điện Dụng" class="image-hover" src="https://thegioiic.com/upload/large/18947.jpg"></a>
+			<a id="showtip_i_18214" href="/products/httm-phim-cam-ung-dien-dung"><img alt="HTTM Phím Cảm Ứng €iện Dụng" class="image-hover" src="https://thegioiic.com/upload/large/18947.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="HTTM Phím Cảm Ứng Điện Dụng" id="name_18214" href="/products/httm-phim-cam-ung-dien-dung">HTTM Phím Cảm Ứng Điện Dụng</a>
+				<a title="HTTM Phím Cảm Ứng €iện Dụng" id="name_18214" href="/products/httm-phim-cam-ung-dien-dung">HTTM Phím Cảm Ứng €iện Dụng</a>
 			</div>
 			<div class="desc_small">
-					Nguồn: 2.7-6VDC, ngõ ra: 3.3V, độ nhạy cao
+					Nguồn: 2.7-6VDC, ngõ ra: 3.3V, €ộ nhạy cao
 			</div>
 			<div class="price blue">
-				22,000  đ/Cái
+				22,000  €/Cái
 			</div>
 
 			<div>
@@ -1471,7 +1471,7 @@
 			</div>
 		</div>
 			<div id="showtip_18214" class="showtip">
-                 <img alt="HTTM Phím Cảm Ứng Điện Dụng" class="fff" src="https://thegioiic.com/upload/large/18947.jpg">
+                 <img alt="HTTM Phím Cảm Ứng €iện Dụng" class="fff" src="https://thegioiic.com/upload/large/18947.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1494,7 +1494,7 @@
 					3A/250VAC, size (LxWxH): 15x10.5x11.8 mm
 			</div>
 			<div class="price blue">
-				3,000  đ/Cái
+				3,000  €/Cái
 			</div>
 
 			<div>
@@ -1514,18 +1514,18 @@
 	</div>
 	<div class="v-p-t" id="18185">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18185" href="/products/pbs-11a-nut-nhan-nha-mau-do"><img alt="PBS-11A Nút Nhấn Nhả Màu Đỏ" class="image-hover" src="https://thegioiic.com/upload/large/18844.jpg"></a>
+			<a id="showtip_i_18185" href="/products/pbs-11a-nut-nhan-nha-mau-do"><img alt="PBS-11A Nút Nhấn Nhả Màu €ỏ" class="image-hover" src="https://thegioiic.com/upload/large/18844.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="PBS-11A Nút Nhấn Nhả Màu Đỏ" id="name_18185" href="/products/pbs-11a-nut-nhan-nha-mau-do">PBS-11A Nút Nhấn Nhả Màu Đỏ</a>
+				<a title="PBS-11A Nút Nhấn Nhả Màu €ỏ" id="name_18185" href="/products/pbs-11a-nut-nhan-nha-mau-do">PBS-11A Nút Nhấn Nhả Màu €ỏ</a>
 			</div>
 			<div class="desc_small">
 					Nút nhấn nhả, 2 chân, 1A/250VAC 20A/12VDC
 			</div>
 			<div class="price blue">
-				2,500  đ/Cái
+				2,500  €/Cái
 			</div>
 
 			<div>
@@ -1533,7 +1533,7 @@
 			</div>
 		</div>
 			<div id="showtip_18185" class="showtip">
-                 <img alt="PBS-11A Nút Nhấn Nhả Màu Đỏ" class="fff" src="https://thegioiic.com/upload/large/18844.jpg">
+                 <img alt="PBS-11A Nút Nhấn Nhả Màu €ỏ" class="fff" src="https://thegioiic.com/upload/large/18844.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1556,7 +1556,7 @@
 					Nút nhấn nhả, 2 chân, 1A/250VAC 20A/12VDC
 			</div>
 			<div class="price blue">
-				2,500  đ/Cái
+				2,500  €/Cái
 			</div>
 
 			<div>
@@ -1582,7 +1582,7 @@
 	</div>
 	<div class="item-ct-pr-home" id="1117">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/khi-nen-thuy-luc-truyen-dong">Khí Nén, Thủy Lực, Truyền Động</a></h2>
+			<h2 style="float:left"><a href="/product/khi-nen-thuy-luc-truyen-dong">Khí Nén, Thủy Lực, Truyền €ộng</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/khi-nen-thuy-luc-truyen-dong">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 			</ul>
@@ -1592,18 +1592,18 @@
 		<div class="content-item-ct-pr-home" id="products-ct-1117"><div class="show-product-top">
 	<div class="v-p-t" id="17920">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_17920" href="/products/khop-noi-truc-dong-co-voi-banh-xe-6mm"><img alt="Khớp Nối Trục Động Cơ Với Bánh Xe 6mm" class="image-hover" src="https://thegioiic.com/upload/large/18082.jpg"></a>
+			<a id="showtip_i_17920" href="/products/khop-noi-truc-dong-co-voi-banh-xe-6mm"><img alt="Khớp Nối Trục €ộng Cơ Với Bánh Xe 6mm" class="image-hover" src="https://thegioiic.com/upload/large/18082.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Khớp Nối Trục Động Cơ Với Bánh Xe 6mm" id="name_17920" href="/products/khop-noi-truc-dong-co-voi-banh-xe-6mm">Khớp Nối Trục Động Cơ Với Bánh Xe 6mm</a>
+				<a title="Khớp Nối Trục €ộng Cơ Với Bánh Xe 6mm" id="name_17920" href="/products/khop-noi-truc-dong-co-voi-banh-xe-6mm">Khớp Nối Trục €ộng Cơ Với Bánh Xe 6mm</a>
 			</div>
 			<div class="desc_small">
 					Size: 18x12mm, ốc: M4
 			</div>
 			<div class="price blue">
-				14,500  đ/Cái
+				14,500  €/Cái
 			</div>
 
 			<div>
@@ -1611,7 +1611,7 @@
 			</div>
 		</div>
 			<div id="showtip_17920" class="showtip">
-                 <img alt="Khớp Nối Trục Động Cơ Với Bánh Xe 6mm" class="fff" src="https://thegioiic.com/upload/large/18082.jpg">
+                 <img alt="Khớp Nối Trục €ộng Cơ Với Bánh Xe 6mm" class="fff" src="https://thegioiic.com/upload/large/18082.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1623,18 +1623,18 @@
 	</div>
 	<div class="v-p-t" id="17919">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_17919" href="/products/khop-noi-truc-dong-co-voi-banh-xe-5mm"><img alt="Khớp Nối Trục Động Cơ Với Bánh Xe 5mm" class="image-hover" src="https://thegioiic.com/upload/large/18082.jpg"></a>
+			<a id="showtip_i_17919" href="/products/khop-noi-truc-dong-co-voi-banh-xe-5mm"><img alt="Khớp Nối Trục €ộng Cơ Với Bánh Xe 5mm" class="image-hover" src="https://thegioiic.com/upload/large/18082.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Khớp Nối Trục Động Cơ Với Bánh Xe 5mm" id="name_17919" href="/products/khop-noi-truc-dong-co-voi-banh-xe-5mm">Khớp Nối Trục Động Cơ Với Bánh Xe 5mm</a>
+				<a title="Khớp Nối Trục €ộng Cơ Với Bánh Xe 5mm" id="name_17919" href="/products/khop-noi-truc-dong-co-voi-banh-xe-5mm">Khớp Nối Trục €ộng Cơ Với Bánh Xe 5mm</a>
 			</div>
 			<div class="desc_small">
 					Size: 18x12mm, ốc: M4
 			</div>
 			<div class="price blue">
-				14,500  đ/Cái
+				14,500  €/Cái
 			</div>
 
 			<div>
@@ -1642,7 +1642,7 @@
 			</div>
 		</div>
 			<div id="showtip_17919" class="showtip">
-                 <img alt="Khớp Nối Trục Động Cơ Với Bánh Xe 5mm" class="fff" src="https://thegioiic.com/upload/large/18082.jpg">
+                 <img alt="Khớp Nối Trục €ộng Cơ Với Bánh Xe 5mm" class="fff" src="https://thegioiic.com/upload/large/18082.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1654,18 +1654,18 @@
 	</div>
 	<div class="v-p-t" id="17918">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_17918" href="/products/khop-noi-truc-dong-co-voi-banh-xe-4mm"><img alt="Khớp Nối Trục Động Cơ Với Bánh Xe 4mm" class="image-hover" src="https://thegioiic.com/upload/large/18082.jpg"></a>
+			<a id="showtip_i_17918" href="/products/khop-noi-truc-dong-co-voi-banh-xe-4mm"><img alt="Khớp Nối Trục €ộng Cơ Với Bánh Xe 4mm" class="image-hover" src="https://thegioiic.com/upload/large/18082.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Khớp Nối Trục Động Cơ Với Bánh Xe 4mm" id="name_17918" href="/products/khop-noi-truc-dong-co-voi-banh-xe-4mm">Khớp Nối Trục Động Cơ Với Bánh Xe 4mm</a>
+				<a title="Khớp Nối Trục €ộng Cơ Với Bánh Xe 4mm" id="name_17918" href="/products/khop-noi-truc-dong-co-voi-banh-xe-4mm">Khớp Nối Trục €ộng Cơ Với Bánh Xe 4mm</a>
 			</div>
 			<div class="desc_small">
 					Size: 18x12mm, ốc: M4
 			</div>
 			<div class="price blue">
-				14,500  đ/Cái
+				14,500  €/Cái
 			</div>
 
 			<div>
@@ -1673,7 +1673,7 @@
 			</div>
 		</div>
 			<div id="showtip_17918" class="showtip">
-                 <img alt="Khớp Nối Trục Động Cơ Với Bánh Xe 4mm" class="fff" src="https://thegioiic.com/upload/large/18082.jpg">
+                 <img alt="Khớp Nối Trục €ộng Cơ Với Bánh Xe 4mm" class="fff" src="https://thegioiic.com/upload/large/18082.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1693,10 +1693,10 @@
 				<a title="Thanh Trượt 10mm Dài 70cm Inox 304" id="name_17825" href="/products/thanh-truot-10mm-dai-70cm-inox-304">Thanh Trượt 10mm Dài 70cm Inox 304</a>
 			</div>
 			<div class="desc_small">
-					Đường kính: 10mm, dài: 70cm, vật liệu: inox 304
+					€ường kính: 10mm, dài: 70cm, vật liệu: inox 304
 			</div>
 			<div class="price blue">
-				54,000  đ/Thanh
+				54,000  €/Thanh
 			</div>
 
 			<div>
@@ -1722,7 +1722,7 @@
 	</div>
 	<div class="item-ct-pr-home" id="940">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/thiet-bi-do-kiem-dau-do">Thiết Bị Đo Kiểm, Đầu Dò</a></h2>
+			<h2 style="float:left"><a href="/product/thiet-bi-do-kiem-dau-do">Thiết Bị €o Kiểm, €ầu Dò</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/thiet-bi-do-kiem-dau-do">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 			</ul>
@@ -1732,18 +1732,18 @@
 		<div class="content-item-ct-pr-home" id="products-ct-940"><div class="show-product-top">
 	<div class="v-p-t" id="18105">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18105" href="/products/de-banana-4mm-cai-dai-29mm-xanh-duong"><img alt="Đế Banana 4mm Cái Dài 29mm Xanh Dương" class="image-hover" src="https://thegioiic.com/upload/large/14177.jpg"></a>
+			<a id="showtip_i_18105" href="/products/de-banana-4mm-cai-dai-29mm-xanh-duong"><img alt="€ế Banana 4mm Cái Dài 29mm Xanh Dương" class="image-hover" src="https://thegioiic.com/upload/large/14177.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Đế Banana 4mm Cái Dài 29mm Xanh Dương" id="name_18105" href="/products/de-banana-4mm-cai-dai-29mm-xanh-duong">Đế Banana 4mm Cái Dài 29mm Xanh Dương</a>
+				<a title="€ế Banana 4mm Cái Dài 29mm Xanh Dương" id="name_18105" href="/products/de-banana-4mm-cai-dai-29mm-xanh-duong">€ế Banana 4mm Cái Dài 29mm Xanh Dương</a>
 			</div>
 			<div class="desc_small">
 					Dout 10mm, Din 4mm, L=23mm, ABS, 24A 60VDC
 			</div>
 			<div class="price blue">
-				7,000  đ/Cái
+				7,000  €/Cái
 			</div>
 
 			<div>
@@ -1751,7 +1751,7 @@
 			</div>
 		</div>
 			<div id="showtip_18105" class="showtip">
-                 <img alt="Đế Banana 4mm Cái Dài 29mm Xanh Dương" class="fff" src="https://thegioiic.com/upload/large/14177.jpg">
+                 <img alt="€ế Banana 4mm Cái Dài 29mm Xanh Dương" class="fff" src="https://thegioiic.com/upload/large/14177.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1763,18 +1763,18 @@
 	</div>
 	<div class="v-p-t" id="18104">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18104" href="/products/de-banana-4mm-cai-dai-29mm-xanh-la"><img alt="Đế Banana 4mm Cái Dài 29mm Xanh Lá" class="image-hover" src="https://thegioiic.com/upload/large/14177.jpg"></a>
+			<a id="showtip_i_18104" href="/products/de-banana-4mm-cai-dai-29mm-xanh-la"><img alt="€ế Banana 4mm Cái Dài 29mm Xanh Lá" class="image-hover" src="https://thegioiic.com/upload/large/14177.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Đế Banana 4mm Cái Dài 29mm Xanh Lá" id="name_18104" href="/products/de-banana-4mm-cai-dai-29mm-xanh-la">Đế Banana 4mm Cái Dài 29mm Xanh Lá</a>
+				<a title="€ế Banana 4mm Cái Dài 29mm Xanh Lá" id="name_18104" href="/products/de-banana-4mm-cai-dai-29mm-xanh-la">€ế Banana 4mm Cái Dài 29mm Xanh Lá</a>
 			</div>
 			<div class="desc_small">
 					Dout 10mm, Din 4mm, L=23mm, ABS, 24A 60VDC
 			</div>
 			<div class="price blue">
-				7,000  đ/Cái
+				7,000  €/Cái
 			</div>
 
 			<div>
@@ -1782,7 +1782,7 @@
 			</div>
 		</div>
 			<div id="showtip_18104" class="showtip">
-                 <img alt="Đế Banana 4mm Cái Dài 29mm Xanh Lá" class="fff" src="https://thegioiic.com/upload/large/14177.jpg">
+                 <img alt="€ế Banana 4mm Cái Dài 29mm Xanh Lá" class="fff" src="https://thegioiic.com/upload/large/14177.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1794,18 +1794,18 @@
 	</div>
 	<div class="v-p-t" id="18103">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18103" href="/products/de-banana-4mm-cai-dai-29mm-vang"><img alt="Đế Banana 4mm Cái Dài 29mm Vàng" class="image-hover" src="https://thegioiic.com/upload/large/14177.jpg"></a>
+			<a id="showtip_i_18103" href="/products/de-banana-4mm-cai-dai-29mm-vang"><img alt="€ế Banana 4mm Cái Dài 29mm Vàng" class="image-hover" src="https://thegioiic.com/upload/large/14177.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Đế Banana 4mm Cái Dài 29mm Vàng" id="name_18103" href="/products/de-banana-4mm-cai-dai-29mm-vang">Đế Banana 4mm Cái Dài 29mm Vàng</a>
+				<a title="€ế Banana 4mm Cái Dài 29mm Vàng" id="name_18103" href="/products/de-banana-4mm-cai-dai-29mm-vang">€ế Banana 4mm Cái Dài 29mm Vàng</a>
 			</div>
 			<div class="desc_small">
 					Dout 10mm, Din 4mm, L=23mm, ABS, 24A 60VDC
 			</div>
 			<div class="price blue">
-				7,000  đ/Cái
+				7,000  €/Cái
 			</div>
 
 			<div>
@@ -1813,7 +1813,7 @@
 			</div>
 		</div>
 			<div id="showtip_18103" class="showtip">
-                 <img alt="Đế Banana 4mm Cái Dài 29mm Vàng" class="fff" src="https://thegioiic.com/upload/large/14177.jpg">
+                 <img alt="€ế Banana 4mm Cái Dài 29mm Vàng" class="fff" src="https://thegioiic.com/upload/large/14177.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1825,18 +1825,18 @@
 	</div>
 	<div class="v-p-t" id="18102">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18102" href="/products/de-banana-4mm-cai-dai-29mm-do"><img alt="Đế Banana 4mm Cái Dài 29mm Đỏ" class="image-hover" src="https://thegioiic.com/upload/large/14177.jpg"></a>
+			<a id="showtip_i_18102" href="/products/de-banana-4mm-cai-dai-29mm-do"><img alt="€ế Banana 4mm Cái Dài 29mm €ỏ" class="image-hover" src="https://thegioiic.com/upload/large/14177.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Đế Banana 4mm Cái Dài 29mm Đỏ" id="name_18102" href="/products/de-banana-4mm-cai-dai-29mm-do">Đế Banana 4mm Cái Dài 29mm Đỏ</a>
+				<a title="€ế Banana 4mm Cái Dài 29mm €ỏ" id="name_18102" href="/products/de-banana-4mm-cai-dai-29mm-do">€ế Banana 4mm Cái Dài 29mm €ỏ</a>
 			</div>
 			<div class="desc_small">
 					Dout 10mm, Din 4mm, L=23mm, ABS, 24A 60VDC
 			</div>
 			<div class="price blue">
-				7,000  đ/Cái
+				7,000  €/Cái
 			</div>
 
 			<div>
@@ -1844,7 +1844,7 @@
 			</div>
 		</div>
 			<div id="showtip_18102" class="showtip">
-                 <img alt="Đế Banana 4mm Cái Dài 29mm Đỏ" class="fff" src="https://thegioiic.com/upload/large/14177.jpg">
+                 <img alt="€ế Banana 4mm Cái Dài 29mm €ỏ" class="fff" src="https://thegioiic.com/upload/large/14177.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -1886,7 +1886,7 @@
 					Dùng cho máy hàn xung 100W
 			</div>
 			<div class="price blue">
-				19,000  đ/Cái
+				19,000  €/Cái
 			</div>
 
 			<div>
@@ -1917,7 +1917,7 @@
 					Lưỡi dao dùng cho dao cắt mạch PCB
 			</div>
 			<div class="price blue">
-				1,900  đ/Lưỡi
+				1,900  €/Lưỡi
 			</div>
 
 			<div>
@@ -1948,7 +1948,7 @@
 					Lưỡi dao dùng cho dao cắt mạch PCB
 			</div>
 			<div class="price blue">
-				1,900  đ/Lưỡi
+				1,900  €/Lưỡi
 			</div>
 
 			<div>
@@ -1979,7 +1979,7 @@
 					Lưỡi dao dùng cho dao cắt mạch PCB
 			</div>
 			<div class="price blue">
-				1,900  đ/Lưỡi
+				1,900  €/Lưỡi
 			</div>
 
 			<div>
@@ -2005,11 +2005,11 @@
 	</div>
 	<div class="item-ct-pr-home" id="966">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/bo-nguon-dien-pin-bien-ap">Bộ Nguồn Điện, Pin, Biến Áp</a></h2>
+			<h2 style="float:left"><a href="/product/bo-nguon-dien-pin-bien-ap">Bộ Nguồn €iện, Pin, Biến Áp</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/bo-nguon-dien-pin-bien-ap">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 					<li>
-						<a href="/product/bo-cap-nguon-dien">Bộ Cấp Nguồn Điện</a>
+						<a href="/product/bo-cap-nguon-dien">Bộ Cấp Nguồn €iện</a>
 					</li>
 			</ul>
 			<div class="clear"></div>
@@ -2029,7 +2029,7 @@
 					Nguồn: microUSB 5V, ngõ ra: 5V 1A
 			</div>
 			<div class="price blue">
-				23,000  đ/Cái
+				23,000  €/Cái
 			</div>
 
 			<div>
@@ -2049,18 +2049,18 @@
 	</div>
 	<div class="v-p-t" id="18206">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18206" href="/products/bo-sac-pin-da-nang-2-vien-blue-army-n2"><img alt="Bộ Sạc Pin Đa Năng 2 Viên Blue Army N2" class="image-hover" src="https://thegioiic.com/upload/large/18909.jpg"></a>
+			<a id="showtip_i_18206" href="/products/bo-sac-pin-da-nang-2-vien-blue-army-n2"><img alt="Bộ Sạc Pin €a Năng 2 Viên Blue Army N2" class="image-hover" src="https://thegioiic.com/upload/large/18909.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Bộ Sạc Pin Đa Năng 2 Viên Blue Army N2" id="name_18206" href="/products/bo-sac-pin-da-nang-2-vien-blue-army-n2">Bộ Sạc Pin Đa Năng 2 Viên Blue Army N2</a>
+				<a title="Bộ Sạc Pin €a Năng 2 Viên Blue Army N2" id="name_18206" href="/products/bo-sac-pin-da-nang-2-vien-blue-army-n2">Bộ Sạc Pin €a Năng 2 Viên Blue Army N2</a>
 			</div>
 			<div class="desc_small">
 					Nguồn: 5V/2A cổng microUSB, pin: AA, AAA, C Ni-MH/Ni-Cd, 18650
 			</div>
 			<div class="price blue">
-				183,000  đ/Cái
+				183,000  €/Cái
 			</div>
 
 			<div>
@@ -2068,7 +2068,7 @@
 			</div>
 		</div>
 			<div id="showtip_18206" class="showtip">
-                 <img alt="Bộ Sạc Pin Đa Năng 2 Viên Blue Army N2" class="fff" src="https://thegioiic.com/upload/large/18909.jpg">
+                 <img alt="Bộ Sạc Pin €a Năng 2 Viên Blue Army N2" class="fff" src="https://thegioiic.com/upload/large/18909.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -2080,18 +2080,18 @@
 	</div>
 	<div class="v-p-t" id="18205">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_18205" href="/products/bo-sac-pin-da-nang-1-vien-blue-army-n1"><img alt="Bộ Sạc Pin Đa Năng 1 Viên Blue Army N1" class="image-hover" src="https://thegioiic.com/upload/large/18902.jpg"></a>
+			<a id="showtip_i_18205" href="/products/bo-sac-pin-da-nang-1-vien-blue-army-n1"><img alt="Bộ Sạc Pin €a Năng 1 Viên Blue Army N1" class="image-hover" src="https://thegioiic.com/upload/large/18902.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Bộ Sạc Pin Đa Năng 1 Viên Blue Army N1" id="name_18205" href="/products/bo-sac-pin-da-nang-1-vien-blue-army-n1">Bộ Sạc Pin Đa Năng 1 Viên Blue Army N1</a>
+				<a title="Bộ Sạc Pin €a Năng 1 Viên Blue Army N1" id="name_18205" href="/products/bo-sac-pin-da-nang-1-vien-blue-army-n1">Bộ Sạc Pin €a Năng 1 Viên Blue Army N1</a>
 			</div>
 			<div class="desc_small">
 					Nguồn: 5V/2A cổng microUSB, pin: AA, AAA, C Ni-MH/Ni-Cd, 18650
 			</div>
 			<div class="price blue">
-				143,000  đ/Cái
+				143,000  €/Cái
 			</div>
 
 			<div>
@@ -2099,7 +2099,7 @@
 			</div>
 		</div>
 			<div id="showtip_18205" class="showtip">
-                 <img alt="Bộ Sạc Pin Đa Năng 1 Viên Blue Army N1" class="fff" src="https://thegioiic.com/upload/large/18902.jpg">
+                 <img alt="Bộ Sạc Pin €a Năng 1 Viên Blue Army N1" class="fff" src="https://thegioiic.com/upload/large/18902.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -2122,7 +2122,7 @@
 					Nguồn: 4.5-5VDC, ngõ ra: 1.2V, dòng ra max: 800mA
 			</div>
 			<div class="price blue">
-				4,600  đ/Cái
+				4,600  €/Cái
 			</div>
 
 			<div>
@@ -2148,7 +2148,7 @@
 	</div>
 	<div class="item-ct-pr-home" id="967">
 		<div class="title-item-ct-pr-home">
-			<h2 style="float:left"><a href="/product/phu-kien-may-tinh-dien-dan-dung">Phụ Kiện Máy Tính, Điện Dân Dụng</a></h2>
+			<h2 style="float:left"><a href="/product/phu-kien-may-tinh-dien-dan-dung">Phụ Kiện Máy Tính, €iện Dân Dụng</a></h2>
 			<span style="float:right;padding-right:7px;font-size:11px;"><a target="_blank" href="/product/phu-kien-may-tinh-dien-dan-dung">Xem thêm</a></span>
 			<ul class="subject-child-show-home">
 			</ul>
@@ -2169,7 +2169,7 @@
 					Giao tiếp: UART,MicroUSB, Quét mã vạch, mã QR
 			</div>
 			<div class="price blue">
-				553,000  đ/Cái
+				553,000  €/Cái
 			</div>
 
 			<div>
@@ -2197,10 +2197,10 @@
 				<a title="Máy Gia Nhiệt Cho Bể Cá 100W" id="name_18011" href="/products/may-gia-nhiet-cho-be-ca-100w">Máy Gia Nhiệt Cho Bể Cá 100W</a>
 			</div>
 			<div class="desc_small">
-					Nguồn: 220-240VAC, công suất: 100W, nhiệt độ: 16~32 độ C
+					Nguồn: 220-240VAC, công suất: 100W, nhiệt €ộ: 16~32 €ộ C
 			</div>
 			<div class="price blue">
-				179,000  đ/Cái
+				179,000  €/Cái
 			</div>
 
 			<div>
@@ -2231,7 +2231,7 @@
 					Nguồn: 100-240VAC, ra 100-240VAC, dòng max 15A, công suất 3500W, app eWeLink
 			</div>
 			<div class="price blue">
-				269,000  đ/Cái
+				269,000  €/Cái
 			</div>
 
 			<div>
@@ -2262,7 +2262,7 @@
 					Nguồn: 100-240VAC, ra 100-240VAC, dòng max 10A, app eWeLink
 			</div>
 			<div class="price blue">
-				175,000  đ/Cái
+				175,000  €/Cái
 			</div>
 
 			<div>
@@ -2298,18 +2298,18 @@
 		<div class="content-item-ct-pr-home" id="products-ct-1118"><div class="show-product-top">
 	<div class="v-p-t" id="16023">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_16023" href="/products/day-noi-dat-chong-tinh-dien-2-dau-4mm"><img alt="Dây Nối Đất Chống Tĩnh Điện 2 Đầu 4mm" class="image-hover" src="https://thegioiic.com/upload/large/15669.jpg"></a>
+			<a id="showtip_i_16023" href="/products/day-noi-dat-chong-tinh-dien-2-dau-4mm"><img alt="Dây Nối €ất Chống Tĩnh €iện 2 €ầu 4mm" class="image-hover" src="https://thegioiic.com/upload/large/15669.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Dây Nối Đất Chống Tĩnh Điện 2 Đầu 4mm" id="name_16023" href="/products/day-noi-dat-chong-tinh-dien-2-dau-4mm">Dây Nối Đất Chống Tĩnh Điện 2 Đầu 4mm</a>
+				<a title="Dây Nối €ất Chống Tĩnh €iện 2 €ầu 4mm" id="name_16023" href="/products/day-noi-dat-chong-tinh-dien-2-dau-4mm">Dây Nối €ất Chống Tĩnh €iện 2 €ầu 4mm</a>
 			</div>
 			<div class="desc_small">
-					Vật liệu PU PVC, Dây chống tĩnh điện chất lượng tốt
+					Vật liệu PU PVC, Dây chống tĩnh €iện chất lượng tốt
 			</div>
 			<div class="price blue">
-				15,000  đ/Sợi
+				15,000  €/Sợi
 			</div>
 
 			<div>
@@ -2317,7 +2317,7 @@
 			</div>
 		</div>
 			<div id="showtip_16023" class="showtip">
-                 <img alt="Dây Nối Đất Chống Tĩnh Điện 2 Đầu 4mm" class="fff" src="https://thegioiic.com/upload/large/15669.jpg">
+                 <img alt="Dây Nối €ất Chống Tĩnh €iện 2 €ầu 4mm" class="fff" src="https://thegioiic.com/upload/large/15669.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -2329,18 +2329,18 @@
 	</div>
 	<div class="v-p-t" id="16022">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_16022" href="/products/day-noi-dat-chong-tinh-dien-2-dau-ca-sau-4mm"><img alt="Dây Nối Đất Chống Tĩnh Điện 2 Đầu Cá Sấu 4mm" class="image-hover" src="https://thegioiic.com/upload/large/15629.jpg"></a>
+			<a id="showtip_i_16022" href="/products/day-noi-dat-chong-tinh-dien-2-dau-ca-sau-4mm"><img alt="Dây Nối €ất Chống Tĩnh €iện 2 €ầu Cá Sấu 4mm" class="image-hover" src="https://thegioiic.com/upload/large/15629.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Dây Nối Đất Chống Tĩnh Điện 2 Đầu Cá Sấu 4mm" id="name_16022" href="/products/day-noi-dat-chong-tinh-dien-2-dau-ca-sau-4mm">Dây Nối Đất Chống Tĩnh Điện 2 Đầu Cá ...</a>
+				<a title="Dây Nối €ất Chống Tĩnh €iện 2 €ầu Cá Sấu 4mm" id="name_16022" href="/products/day-noi-dat-chong-tinh-dien-2-dau-ca-sau-4mm">Dây Nối €ất Chống Tĩnh €iện 2 €ầu Cá ...</a>
 			</div>
 			<div class="desc_small">
 					Vật liệu PU PVC, chất lượng tốt
 			</div>
 			<div class="price blue">
-				15,000  đ/Sợi
+				15,000  €/Sợi
 			</div>
 
 			<div>
@@ -2348,7 +2348,7 @@
 			</div>
 		</div>
 			<div id="showtip_16022" class="showtip">
-                 <img alt="Dây Nối Đất Chống Tĩnh Điện 2 Đầu Cá Sấu 4mm" class="fff" src="https://thegioiic.com/upload/large/15629.jpg">
+                 <img alt="Dây Nối €ất Chống Tĩnh €iện 2 €ầu Cá Sấu 4mm" class="fff" src="https://thegioiic.com/upload/large/15629.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -2360,18 +2360,18 @@
 	</div>
 	<div class="v-p-t" id="16021">
 		<div class="img-v-p popular ">
-			<a id="showtip_i_16021" href="/products/day-noi-dat-chong-tinh-dien-1-dau-kep-ca-sau-4mm"><img alt="Dây Nối Đất Chống Tĩnh Điện 1 Đầu Kẹp Cá Sấu 4mm" class="image-hover" src="https://thegioiic.com/upload/large/15628.jpg"></a>
+			<a id="showtip_i_16021" href="/products/day-noi-dat-chong-tinh-dien-1-dau-kep-ca-sau-4mm"><img alt="Dây Nối €ất Chống Tĩnh €iện 1 €ầu Kẹp Cá Sấu 4mm" class="image-hover" src="https://thegioiic.com/upload/large/15628.jpg"></a>
 
 		</div>
 		<div class="info-v-p">
 			<div class="name-a">
-				<a title="Dây Nối Đất Chống Tĩnh Điện 1 Đầu Kẹp Cá Sấu 4mm" id="name_16021" href="/products/day-noi-dat-chong-tinh-dien-1-dau-kep-ca-sau-4mm">Dây Nối Đất Chống Tĩnh Điện 1 Đầu Kẹp...</a>
+				<a title="Dây Nối €ất Chống Tĩnh €iện 1 €ầu Kẹp Cá Sấu 4mm" id="name_16021" href="/products/day-noi-dat-chong-tinh-dien-1-dau-kep-ca-sau-4mm">Dây Nối €ất Chống Tĩnh €iện 1 €ầu Kẹp...</a>
 			</div>
 			<div class="desc_small">
 					Vật liệu PU, chất lượng tốt
 			</div>
 			<div class="price blue">
-				15,000  đ/Sợi
+				15,000  €/Sợi
 			</div>
 
 			<div>
@@ -2379,7 +2379,7 @@
 			</div>
 		</div>
 			<div id="showtip_16021" class="showtip">
-                 <img alt="Dây Nối Đất Chống Tĩnh Điện 1 Đầu Kẹp Cá Sấu 4mm" class="fff" src="https://thegioiic.com/upload/large/15628.jpg">
+                 <img alt="Dây Nối €ất Chống Tĩnh €iện 1 €ầu Kẹp Cá Sấu 4mm" class="fff" src="https://thegioiic.com/upload/large/15628.jpg">
 
 			</div>
 			<script type="text/javascript">
@@ -2402,7 +2402,7 @@
 					Size: 65x115cm, 30 sheets/sấp
 			</div>
 			<div class="price blue">
-				103,000  đ/Tệp(30Tờ)
+				103,000  €/Tệp(30Tờ)
 			</div>
 
 			<div>
@@ -2448,7 +2448,7 @@
 						<a class="textbody_black" href="/lien-he">
 							<b>
 								<span style="background:transparent url('/images/pointer.png') no-repeat scroll 0 7px; padding-left:25px;display:block">
-									Bản đồ
+									Bản €ồ
 								</span>
 							</b>
 						</a>
@@ -2527,7 +2527,7 @@
 
 				</li>
 				<li>
-					<p>939/1A Kha Vạn Cân, Linh Tây, Thủ Đức, HCM</p>
+					<p>939/1A Kha Vạn Cân, Linh Tây, Thủ €ức, HCM</p>
 				</li>
 				<li>
 					<p>Điện thoại: (28)3896.8699</p>
@@ -2550,7 +2550,7 @@
 							<a target="_blank" href="/pages/co-hoi-viec-lam-kinh-doanh">Cơ hội việc làm, kinh doanh</a>
 						</li>
 						<li>
-							<a target="_blank" href="https://thegioiic.com/product/nut-nhan-ban-phim">Đối tác, hợp tác</a>
+							<a target="_blank" href="https://thegioiic.com/product/nut-nhan-ban-phim">€ối tác, hợp tác</a>
 						</li>
 						<li>
 							<a target="_blank" href="/pages/tiep-nhan-sinh-vien-thuc-tap">Tiếp nhận sinh viên thực tập</a>
@@ -2567,7 +2567,7 @@
 						</li>
 
 						<li>
-							<a target="_blank" href="/pages/uu-dai-doanh-nghiep">Ưu đãi doanh nghiệp</a>
+							<a target="_blank" href="/pages/uu-dai-doanh-nghiep">Ưu €ãi doanh nghiệp</a>
 						</li>
 						<li>
 							<a target="_blank" href="/pages/mua-online-thuan-tien">Mua online thuận tiện</a>
@@ -2576,18 +2576,18 @@
 							<a target="_blank" href="/pages/huong-dan-mua-hang-online">Hướng dẫn mua hàng online</a>
 						</li>
 						<li>
-							<a target="_blank" href="/pages/dat-mua-linh-kien-dien-tu">Đặt mua linh kiện điện tử</a>
+							<a target="_blank" href="/pages/dat-mua-linh-kien-dien-tu">€ặt mua linh kiện €iện tử</a>
 						</li>
 					</ul>
 				</div>
 				<div class="info-com two-com f-com">
 					<ul>
 						<li class="title">
-							<a href="/information/chinh-sach-quy-dinh">Chính sách - Quy định</a>
+							<a href="/information/chinh-sach-quy-dinh">Chính sách - Quy €ịnh</a>
 						</li>
 
 						<li>
-							<a target="_blank" href="/pages/dieu-kien-su-dung">Điều kiện sử dụng</a>
+							<a target="_blank" href="/pages/dieu-kien-su-dung">€iều kiện sử dụng</a>
 						</li>
 						<li>
 							<a target="_blank" href="/pages/chinh-sach-bao-mat">Chính sách bảo mật</a>
@@ -2596,10 +2596,10 @@
 							<a target="_blank" href="/pages/chinh-sach-thanh-toan">Chính sách thanh toán</a>
 						</li>
 						<li>
-							<a target="_blank" href="/pages/quy-dinh-bao-hanh">Quy định bảo hành</a>
+							<a target="_blank" href="/pages/quy-dinh-bao-hanh">Quy €ịnh bảo hành</a>
 						</li>
 						<li>
-							<a target="_blank" href="/pages/chinh-sach-doi-tra-hang">Chính sách đổi trả hàng</a>
+							<a target="_blank" href="/pages/chinh-sach-doi-tra-hang">Chính sách €ổi trả hàng</a>
 						</li>
 						<li>
 							<a target="_blank" href="/pages/van-chuyen-giao-nhan">Vận chuyển - Giao nhận</a>

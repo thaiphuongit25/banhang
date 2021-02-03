@@ -22,7 +22,7 @@
         <form method="post" action="{{ route('admin.guides.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Tiêu đề</label>
+                <label class="col-sm-2 col-form-label require">Tiêu €ề</label>
                 <div class="col-sm-10">
                     <input type="text" name="title" class="form-control" value="{{ old('title') }}" />
                 </div>

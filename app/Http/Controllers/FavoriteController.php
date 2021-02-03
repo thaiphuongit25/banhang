@@ -34,7 +34,7 @@ class FavoriteController extends Controller
         if($check){
           session()->flash("success","Thêm thành công!");
         }else {
-          session()->flash("error","Đã xảy ra lỗi!");
+          session()->flash("error","€ã xảy ra lỗi!");
         }
 
         return view('layouts.partials.alert_section');
@@ -47,7 +47,7 @@ class FavoriteController extends Controller
       if($check){
         session()->flash("success","Xóa thành công!");
       }else {
-        session()->flash("error","Đã xảy ra lỗi!");
+        session()->flash("error","€ã xảy ra lỗi!");
       }
 
       return view('layouts.partials.alert_section');

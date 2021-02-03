@@ -28,7 +28,7 @@ $(document).ready(function() {
                 listTr +=
                     "<tr>" +
                     "<td style='text-align:right;padding-right:5px'>" + value.number + "</td>" +
-                    "<td style='text-align:right;padding-right:5px'>" + formatPrice(value.unit_price) + "đ </td>"
+                    "<td style='text-align:right;padding-right:5px'>" + formatPrice(value.unit_price) + "€ </td>"
                 "</tr>";
             });
             return listTr;
@@ -146,27 +146,26 @@ $(document).ready(function() {
                             "<a target='_blank' href='/products/" + value.slug + "'>" + value.name + "</a>" +
                             "</div>" +
                             "</td>" +
-                            "<td class='pp'>" +
-                            "<table cellpadding='0' cellspacing='0' style='width: 100%;height:75px'>" +
-                            "<tbody>" +
-                            "<tr>" +
-                            "<td style='width:50px;'> Số lượng </td>" +
-                            "<td style='width:90px;'> Đơn giá </td>" +
-                            "</tr>" +
-                            getListTD(value.units) +
-                            "</tbody>" +
-                            "</table>" +
-                            "</td>" +
+                            // "<td class='pp'>" +
+                            // "<table cellpadding='0' cellspacing='0' style='width: 100%;height:75px'>" +
+                            // "<tbody>" +
+                            // "<tr>" +
+                            // "<td style='width:50px;'> Số lượng </td>" +
+                            // "<td style='width:90px;'> Đơn giá </td>" +
+                            // "</tr>" +
+                            // getListTD(value.units) +
+                            // "</tbody>" +
+                            // "</table>" +
+                            // "</td>" +
                             "<td class='pq'>" +
                             "<input type='number' id='" + value.id + "' value='" + quantityCurrent(value.id) + "' class='cart-quantity-change' style='width:45px; text-align:center;' min='1'>" +
                             "<br>" +
-                            getStatusCurrent(value.status, value.quantity, value.note) +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[1]) + "đ" +
+                            formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[1]) + "€" +
                             "</td>" +
                             "<td class='pup' style='text-align:right;padding-right:5px'>" +
-                            formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[0]) + "đ" +
+                            formatPrice(getUnit(value.units, quantityCurrent(value.id), value.price)[0]) + "€" +
                             "</td>" +
                             "<td class='pa'>" +
                             "<a class='remove-cart' id=" + value.id + ">Xóa</a>" +
@@ -181,7 +180,7 @@ $(document).ready(function() {
                         "</td>" +
                         "<td style='text-align: right;font-size: 15px;font-weight: bold;width:140px;border:none'>" +
                         "<span id='total-cart' data-value='1265000'>" +
-                        formatPrice(totalPrice(data)) + "đ" +
+                        formatPrice(totalPrice(data)) + "€" +
                         "</span>" +
                         "</td>" +
                         "<td style='width:45px;border:none'></td>" +
@@ -190,7 +189,7 @@ $(document).ready(function() {
 
                 },
                 error: function(error) {
-                    console.log("Đã có lỗi xẩy ra");
+                    console.log("€ã có lỗi xẩy ra");
                 }
             });
         }
@@ -248,7 +247,7 @@ $(document).ready(function() {
                         "<a style='padding:0' href='/products/" + value.slug + "'>" + value.name + "</a>" +
                         "</p>" +
                         "<p class='price blue'>" +
-                        formatPrice(value.price) + " đ/" + unit_price(value.note) +
+                        formatPrice(value.price) + " €/" + unit_price(value.note) +
                         "</p>" +
                         "<p>" +
                         // "<span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>" + data.quantity + "</span> Cái</span>" +
@@ -289,7 +288,7 @@ $(document).ready(function() {
             let listCart = JSON.parse(localStorage.getItem('buy_card'));
             let carts = JSON.parse(localStorage.getItem('list_card'));
             if (carts == null || carts.length == 0) {
-                alert("Vui lòng thêm sản phẩm đến giỏ hàng");
+                alert("Vui lòng thêm sản phẩm €ến giỏ hàng");
                 return;
             }
             let method_check = $(".method-cart").find('input').toArray();
@@ -387,14 +386,8 @@ $(document).ready(function() {
                                 '<div class="name-a">' + 
                                     '<a title="' + value.title + '" id="' + value.id + '" class="review-product" href="/products/' + value.slug + '">' + value.name + '</a>' +
                                 '</div>' + 
-                                '<div class="desc_small">' +
-                                   value.desc +
-                                '</div>' +
                                 '<div class="price blue">' + 
-                                formatPrice(value.price) +  ' đ/' + (value.note ? value.note : 'Cái') +
-                                '</div>' +
-                                '<div>' +
-                                    '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> ' +'</span>' +
+                                formatPrice(value.price) +  ' €/' + (value.note ? value.note : 'Cái') +
                                 '</div>' +
                             '</div>' +
                             '<div id="showtip_18190" class="showtip">' +
@@ -436,14 +429,8 @@ $(document).ready(function() {
                                 '<div class="name-a">' + 
                                     '<a title="' + value.title + '" id="' + value.id + '" class="review-product" href="/products/' + value.slug + '">' + value.name + '</a>' +
                                 '</div>' + 
-                                '<div class="desc_small">' +
-                                   value.desc +
-                                '</div>' +
                                 '<div class="price blue">' + 
-                                formatPrice(value.price) +  ' đ/' + (value.note ? value.note : 'Cái') +
-                                '</div>' +
-                                '<div>' +
-                                    '<span class="green"> <span class="bb">Hàng còn: </span><span class="iv">' + value.quantity + '</span> ' +'</span>' +
+                                formatPrice(value.price) +  ' €/' + (value.note ? value.note : 'Cái') +
                                 '</div>' +
                             '</div>' +
                             '<div id="showtip_18190" class="showtip">' +

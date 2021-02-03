@@ -43,16 +43,16 @@
     <div id="top-fix-scroll">
       <div>
         <div class="logo-scroll">
-            @if ($logo = getBanner(App\Enums\BannerType::Logo))
-            <a href="{{ $logo->link }}">
-                <img alt="{{ $logo->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $logo->image }}" />
-            </a>
-            @endif
+          <div id="title" style="margin-top: 10px; font-size: 25px; color: #dc4b4b; font-family: cursive">
+            <span>
+              Bếp mẹ Sushi
+            </span>
+          </div>
         </div>
         <div class="form-scroll" id="main-search-scroll">
           <form action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
             <div class="namesub">
-              <input type="text" placeholder="Tên sản phẩm" name="search" value="" autocomplete="off" id="txtQueryTop" class="defaultText text">
+              <input type="text" placeholder="Tên món ăn" name="search" value="" autocomplete="off" id="txtQueryTop" class="defaultText text">
               <input type="submit" class="btn-search-home" value="" style="right:7px;top:4px">
             </div>
           </form>
@@ -93,14 +93,14 @@
       </div>
     </div>
   </div>
-  <h1 class="h1_home">IC, transistor, capacitor, inductor, Linh kiện điện tử, linh kien dien tu, electronic component</h1>
-  <div id="divAdRight" style="position: absolute; top: 0px">
+  <h1 class="h1_home">IC, transistor, capacitor, inductor, Linh kiện €iện tử, linh kien dien tu, electronic component</h1>
+  <!-- <div id="divAdRight" style="position: absolute; top: 0px">
     @if ($leftMost = getBanner(App\Enums\BannerType::LeftMost))
         <a href="{{ $leftMost->link }}" TARGET="_blank">
             <img alt="{{ $leftMost->alt }}" width="140" class="" src="{{ URL::to('/') }}/images/{{ $leftMost->image }}" />
         </a>
     @endif
-  </div>
+  </div> -->
   <div class="container">
     <div id="top_bar" class="col-12">
       <div class="col-12 main-col">
@@ -112,7 +112,7 @@
           <ul>
             <li><a href="/product">Sản phẩm</a></li>
             <li><a href="/services">Dịch vụ</a></li>
-            <li><a href="/forum">Diễn đàn</a></li>
+            <li><a href="/forum">Diễn €àn</a></li>
             <li><a href="/news">Tin tức</a></li>
 
             <li><a href="/carts">Giỏ hàng</a></li>
@@ -122,10 +122,8 @@
           </ul>
         </div>
         <div class="textmenu_top" style="float: left;">
-          <img class="phone" src="https://thegioiic.com/assets/phone-5132c0a1dbb76aaf5137a4c070684d7332a2cd648f49606b6212839e8fc77b83.png" alt="Phone">
-          @if ($tel = getSetting(App\Enums\SettingType::Tel))
-          <span class="px">{!!strip_tags($tel->value)!!}</span>
-          @endif
+          <img class="phone" src="/images/phone.png" alt="Phone">
+          <a class="px" style="color: #0ca9b1; margin-left: 5px;" href="tel:00491629103986">00491629103986</a>
         </div>
         <div class="marquee">
           @if ($openTime = getSetting(App\Enums\SettingType::OpenTime))
@@ -149,20 +147,13 @@
       </div>
     </div>
     <div id="view_bar" class="col-12 main-col">
-      <div id="logo">
-          @if ($logo = getBanner(App\Enums\BannerType::Logo))
-              <a href="{{ $logo->link }}" class="logobat logo1">
-                  <img alt="{{ $logo->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $logo->image }}" />
-              </a>
-          @endif
-          @if ($topLeft = getBanner(App\Enums\BannerType::TopLeft))
-              <a href="{{ $topLeft->link }}" class="logobat logo2">
-                  <img alt="{{ $topLeft->alt }}" class="" src="{{ URL::to('/') }}/images/{{ $topLeft->image }}" />
-              </a>
-          @endif
+      <div id="title" style="margin-top: 15px; font-size: 45px; color: #dc4b4b; font-family: cursive">
+          <span>
+            Bếp mẹ Sushi
+          </span>
       </div>
       <div id="info-website">
-        <div id="box-cart">
+        <div id="box-cart" style="margin-top: 0; margin-bottom: 5px;">
           <div id="cart1" class="cart-popup-hover-main">
             <a class="bb-hover" href="/carts">
               <label class="lbcart">
@@ -176,19 +167,12 @@
           </div>
         </div>
       </div>
-      <div style="float:right; line-height:0;" class="topad">
-		@if ($topRight = getBanner(App\Enums\BannerType::TopRight))
-			<a href="{{ $topRight->link }}" target="_blank">
-				<img alt="{{ $topRight->alt }}" class="top_ad" src="{{ URL::to('/') }}/images/{{ $topRight->image }}" />
-			</a>
-		@endif
-      </div>
       <div class="clear"></div>
     </div>
-    <div class="menubar" id="topmenubar">
+    <div class="menubar" id="topmenubar" style="background-color: #00bb20">
       @include('menu')
     </div>
-    <div id="menubar" class="markermenu" style="display: none;">
+    <div id="menubar" class="markermenu" style="display: none; background-color: #00bb20">
       @include('menu_item')
     </div>
   </div>
@@ -198,27 +182,18 @@
         @include('layouts.partials.alert_section')
       </div>
       @yield('content')
+      @include('footer')
       @include('auth.login_dialog')
     </div>
-    <div id="footer">
-      @include('footer')
+  </div>
+  <a href="https://www.facebook.com/B%E1%BA%BFp-M%E1%BA%B9-Sushi-107058821240404/">
+    <div id="left-support">
+      <a href="https://www.facebook.com/B%E1%BA%BFp-M%E1%BA%B9-Sushi-107058821240404/">Chat</a>
     </div>
-  </div>
-  <div id="divAdLeft" style="position: fixed; top: 175px; right: 30.5px; display: block;">
-  	@if ($rightMost = getBanner(App\Enums\BannerType::RightMost))
-        <a href="{{ $rightMost->link }}" target="_blank">
-            <img alt="{{ $rightMost->alt }}" width="140" class="" src="{{ URL::to('/') }}/images/{{ $rightMost->image }}" />
-        </a>
-    @endif
-  </div>
-  <div id="left-support" onclick="$('#supportbox').show();">
-    <a href="#">Chat</a>
-  </div>
-  <div class="overlay"></div>
+  </a>
+  <!-- <div class="overlay"></div>
   <div class="go-top" style="display: block;"></div>
-  <div class="clear"></div>
-  <div class="autocomplete-suggestions " style="display: none; top: 149px; left: 868.5px; width: 352px;"></div>
-  <div class="autocomplete-suggestions " style="display: none; top: 2500px; left: 386.938px; width: 424px;"></div>
-  @include('online_support')
+  <div class="clear"></div> -->
+  <!-- @include('online_support') -->
 </body>
 </html>

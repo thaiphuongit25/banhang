@@ -15,7 +15,7 @@
     <div id="body-right">
       <div style="background-color:#fff; padding:0px; width:100%;float:left; margin-right:6px;">
         <div class="title-gf">
-          Thay đổi mật khẩu
+          Thay Đổi mật khẩu
         </div>
         <div class="content-gf" style="position: relative">
           <form class="change_password" id="change_password" method="POST" action="/change-password">

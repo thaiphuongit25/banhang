@@ -36,14 +36,14 @@
                             {{ $product->desc }}
                         </div>
                         <div class="price blue">
-                            {{ number_format($product->price) }} đ/{{ unit_product($product->note) }}
+                            {{ number_format($product->price) }} €/{{ unit_product($product->note) }}
                         </div>
                         {{--  <div>
                             <span class="green"> <a class="contact-to-order"
                                     href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
                         </div>  --}}
                         @if ($product->status == 0)
-                            <div class="brown"><span class="f"><a class="contact-to-order-show" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span><span>(Đặt mua 7-10 ngày có hàng)</span></div>
+                            <div class="brown"><span class="f"><a class="contact-to-order-show" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span><span>(€ặt mua 7-10 ngày có hàng)</span></div>
                         @else
                             <div class="ngreen"><span class="f">Hàng còn:  {{ $product->quantity }} </span><span>(Gửi hàng trong ngày)</span></div>
                         @endif

@@ -59,7 +59,7 @@
 			"text": "Koristite dugme <strong>Pošalji</strong> ili <strong>dovucite i ispustite</strong> vaše datoteke ovdje."
 		},
 		"filterFilesEmpty": {
-			"title": "Ništa nije pronađeno.",
+			"title": "Ništa nije prona€eno.",
 			"text": "Pokušajte koristiti drugačiji kriterij pretraživanja."
 		}
 	},
@@ -134,8 +134,8 @@
 			"110": "Nepoznata greška.",
 			"111": "Nije moguće izvršiti zahtjev zbog veličine datoteke.",
 			"115": "Datoteka ili direktorij sa istim nazivom već postoji.",
-			"116": "Direktorij nije pronađen. Molim, osvježite stranicu i pokušajte ponovo.",
-			"117": "Datoteka nije pronađena. Molim, osvježite listu datoteka i pokušajte ponovo.",
+			"116": "Direktorij nije prona€en. Molim, osvježite stranicu i pokušajte ponovo.",
+			"117": "Datoteka nije prona€ena. Molim, osvježite listu datoteka i pokušajte ponovo.",
 			"118": "Putanje izvora i odredišta su jednake.",
 			"201": "Datoteka sa istim nazivom već postoji. Naziv poslane datoteke je promijenjen u \"{name}\".",
 			"202": "Nevažeća datoteka.",
@@ -197,7 +197,7 @@
 		"saveDialogTitle": "Sačuvaj promjene",
 		"title": "Izmjena fotografije",
 		"transformationAction": "Transformacija u toku.",
-		"uploadAction": "Slanje uređene fotografije.",
+		"uploadAction": "Slanje ure€ene fotografije.",
 		"filters": {
 			"brightness": "Svjetlina",
 			"clip": "Clip",

@@ -31,7 +31,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Đường dẫn</label>
+                <label class="col-sm-2 col-form-label">€ường dẫn</label>
                 <div class="col-sm-10">
                     <input type="text" name="link" class="form-control" value="{{ $banner_item->link }}" />
                 </div>

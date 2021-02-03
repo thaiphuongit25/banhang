@@ -15,11 +15,11 @@ class MailsTableSeeder extends Seeder
             'driver'            =>   'smtp',
             'host'              =>   'smtp.gmail.com',
             'port'              =>   587,
-            'from_address'      =>   'linhkieniotvn@gmail.com',
-            'from_name'         =>   'Linhkineiot',
+            'from_address'      =>   'bepmesushi.info@gmail.com',
+            'from_name'         =>   'Bepmesushi',
             'encryption'        =>   'tls',
-            'username'          =>   'linhkieniotvn@gmail.com',
-            'password'          =>   'fabpozceiqwfygde'
+            'username'          =>   'bepmesushi.info@gmail.com',
+            'password'          =>   'oloauigmpbopiewg'
         );
         DB::table('mails')->insert($form_data);
     }

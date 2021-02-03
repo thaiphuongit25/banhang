@@ -59,12 +59,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed'],
-            'phone-number' => ['required', 'string', 'min:10'],
-            'address' => ['required', 'string'],
-            'company_name' => ['string', 'max:255'],
-            'tax_code' => ['string', 'max:255'],
-            'company_address' => ['string', 'max:255'],
-            'g-recaptcha-response' => ['required', new \App\Rules\ValidRecaptcha]
+            'phone-number' => ['required', 'string'],
+            'address' => ['required', 'string']
         ]);
     }
 
@@ -81,10 +77,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'phone_number' => $data['phone-number'],
-            'address' => $data['address'],
-            'company_name' => $data['company-name'],
-            'tax_code' => $data['tax-code'],
-            'company_address' => $data['company-address']
+            'address' => $data['address']
         ]);
     }
 }

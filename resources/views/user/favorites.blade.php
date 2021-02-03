@@ -12,7 +12,7 @@
         <table class="tbl-list" cellpadding="0" cellspacing="0">
           <tr>
             <th>Hình ảnh</th>
-            <th>Tên sản phẩm</th>
+            <th>Tên món ăn</th>
             <th>Giá</th>
             <th class="action">Thao tác</th>
           </tr>
@@ -21,7 +21,7 @@
               <td class="img"><a href="/products/{{ $product->slug }}"><img src="{{ getProductImageUrl($product->id) }}" alt="89" /></a></td>
               <td><a href="/products/{{ $product->slug }}">{{ $product->name }}</a></td>
               <td>
-                {{ number_format($product->price) }} đ/{{ unit_product($product->note) }}<br />
+                {{ number_format($product->price) }} €/{{ unit_product($product->note) }}<br />
                 <span class='green'> <span class='bb'>Hàng còn: </span><span class='iv'>{{ $product->quantity }}</span></span>
               </td>
               <td>

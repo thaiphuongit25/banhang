@@ -59,7 +59,7 @@
 			"text": "Koristite <strong>Upload</strong> gumb ili <strong>dovucite i ispustite </strong> vaše datoteke ovdje."
 		},
 		"filterFilesEmpty": {
-			"title": "Ništa nije nađeno.",
+			"title": "Ništa nije na€eno.",
 			"text": "Pokušajte koristiti drugačiji kriterij pretraživanja."
 		}
 	},
@@ -134,8 +134,8 @@
 			"110": "Nepoznata greška.",
 			"111": "Nije moguće izvršiti zahtjev zbog resulting veličine datoteke.",
 			"115": "Datoteka ili direktorij s istim nazivom već postoji.",
-			"116": "Direktorij nije pronađen. Osvježite stranicu i pokušajte ponovo.",
-			"117": "Datoteka nije pronađena. Osvježite listu datoteka i pokušajte ponovo.",
+			"116": "Direktorij nije prona€en. Osvježite stranicu i pokušajte ponovo.",
+			"117": "Datoteka nije prona€ena. Osvježite listu datoteka i pokušajte ponovo.",
 			"118": "Putanje izvora i odredišta su jednake.",
 			"201": "Datoteka s istim nazivom već postoji. Poslana datoteka je promijenjena u \"{name}\".",
 			"202": "Neispravna datoteka.",
@@ -197,7 +197,7 @@
 		"saveDialogTitle": "Sačuvaj Promjene",
 		"title": "Uredi Sliku",
 		"transformationAction": "Primjenjujem transformacije.",
-		"uploadAction": "Uploadanje uređene slike.",
+		"uploadAction": "Uploadanje ure€ene slike.",
 		"filters": {
 			"brightness": "Svjetlina",
 			"clip": "Clip",
@@ -261,9 +261,9 @@
 			"upload": "Prenesi datoteku(e)"
 		},
 		"folders": {
-			"collapseOrParent": "Suzi folder / Pođi na roditeljski folder",
+			"collapseOrParent": "Suzi folder / Po€i na roditeljski folder",
 			"delete": "Obriši folder",
-			"expandOrSubfolder": "Proširi folder / Pođi na prvi podfolder",
+			"expandOrSubfolder": "Proširi folder / Po€i na prvi podfolder",
 			"title": "Panel Foldera"
 		},
 		"keys": {

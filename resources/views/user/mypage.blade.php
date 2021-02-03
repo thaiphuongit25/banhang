@@ -19,7 +19,7 @@
         </div>
         <div class="content-gf" style="position: relative">
           <div style="border-bottom:1px solid #ddd; padding:2px 0 4px 4px; font-size:15px; font-weight:bold; color:#666; margin-bottom:9px;">
-            Thông tin dùng đăng nhập website
+            Thông tin dùng Đăng nhập website
           </div>
           <form class="edit_profile" id="edit_profile_17932" enctype="multipart/form-data" action="/update_info" accept-charset="UTF-8" method="post">
             @csrf
@@ -77,7 +77,7 @@
                 </td>
                 <td> <input class="number required" type="text" value="{{ $user->phone_number }}" name="phone_number" id="profile_phone" />
                   <br>
-                  <label class="off red" id="lb_profile_phone">Nhập số điện thoại</label>
+                  <label class="off red" id="lb_profile_phone">Nhập số Điện thoại</label>
                   @error('phone_number')
                   <span class="invalid-feedback red" role="alert">
                     <strong>{{ $message }}</strong>
@@ -101,7 +101,7 @@
                       <option value="4">Bắc Kạn</option>
                       <option value="5">Tuyên Quang</option>
                       <option value="6">Lào Cai</option>
-                      <option value="7">Điện Biên</option>
+                      <option value="7">€iện Biên</option>
                       <option value="8">Lai Châu</option>
                       <option value="9">Sơn La</option>
                       <option value="10">Yên Bái</option>
@@ -118,7 +118,7 @@
                       <option value="21">Hưng Yên</option>
                       <option value="22">Thái Bình</option>
                       <option value="23">Hà Nam</option>
-                      <option value="24">Nam Định</option>
+                      <option value="24">Nam €ịnh</option>
                       <option value="25">Ninh Bình</option>
                       <option value="26">Thanh Hóa</option>
                       <option value="27">Nghệ An</option>
@@ -126,30 +126,30 @@
                       <option value="29">Quảng Bình</option>
                       <option value="30">Quảng Trị</option>
                       <option value="31">Thừa Thiên Huế</option>
-                      <option value="32">Đà Nẵng</option>
+                      <option value="32">€à Nẵng</option>
                       <option value="33">Quảng Nam</option>
                       <option value="34">Quảng Ngãi</option>
-                      <option value="35">Bình Định</option>
+                      <option value="35">Bình €ịnh</option>
                       <option value="36">Phú Yên</option>
                       <option value="37">Khánh Hòa</option>
                       <option value="38">Ninh Thuận</option>
                       <option value="39">Bình Thuận</option>
                       <option value="40">Kon Tum</option>
                       <option value="41">Gia Lai</option>
-                      <option value="42">Đắk Lắk</option>
-                      <option value="43">Đắk Nông</option>
-                      <option value="44">Lâm Đồng</option>
+                      <option value="42">€ắk Lắk</option>
+                      <option value="43">€ắk Nông</option>
+                      <option value="44">Lâm €ồng</option>
                       <option value="45">Bình Phước</option>
                       <option value="46">Tây Ninh</option>
                       <option value="47">Bình Dương</option>
-                      <option value="48">Đồng Nai</option>
+                      <option value="48">€ồng Nai</option>
                       <option value="49">Bà Rịa - Vũng Tàu</option>
                       <option value="51">Long An</option>
                       <option value="52">Tiền Giang</option>
                       <option value="53">Bến Tre</option>
                       <option value="54">Trà Vinh</option>
                       <option value="55">Vĩnh Long</option>
-                      <option value="56">Đồng Tháp</option>
+                      <option value="56">€ồng Tháp</option>
                       <option value="57">An Giang</option>
                       <option value="58">Kiên Giang</option>
                       <option value="59">Cần Thơ</option>
@@ -168,28 +168,28 @@
                   <td>
                     <div id="location2">
                       <select name="profile[location2]" id="profile-location2" class="select-location">
-                        <option value="64">Quận Ba Đình</option>
+                        <option value="64">Quận Ba €ình</option>
                         <option value="65">Quận Hoàn Kiếm</option>
                         <option value="66">Quận Tây Hồ</option>
                         <option value="67">Quận Long Biên</option>
                         <option value="68">Quận Cầu Giấy</option>
-                        <option value="69">Quận Đống Đa</option>
+                        <option value="69">Quận €ống €a</option>
                         <option value="70">Quận Hai Bà Trưng</option>
                         <option value="71">Quận Hoàng Mai</option>
                         <option value="72">Quận Thanh Xuân</option>
                         <option value="73">Huyện Sóc Sơn</option>
-                        <option value="74">Huyện Đông Anh</option>
+                        <option value="74">Huyện €ông Anh</option>
                         <option value="75">Huyện Gia Lâm</option>
                         <option value="76" selected="selected">Quận Nam Từ Liêm</option>
                         <option value="77">Huyện Thanh Trì</option>
                         <option value="78">Quận Bắc Từ Liêm</option>
                         <option value="79">Huyện Mê Linh</option>
-                        <option value="80">Quận Hà Đông</option>
+                        <option value="80">Quận Hà €ông</option>
                         <option value="81">Thị xã Sơn Tây</option>
                         <option value="82">Huyện Ba Vì</option>
                         <option value="83">Huyện Phúc Thọ</option>
-                        <option value="84">Huyện Đan Phượng</option>
-                        <option value="85">Huyện Hoài Đức</option>
+                        <option value="84">Huyện €an Phượng</option>
+                        <option value="85">Huyện Hoài €ức</option>
                         <option value="86">Huyện Quốc Oai</option>
                         <option value="87">Huyện Thạch Thất</option>
                         <option value="88">Huyện Chương Mỹ</option>
@@ -197,7 +197,7 @@
                         <option value="90">Huyện Thường Tín</option>
                         <option value="91">Huyện Phú Xuyên</option>
                         <option value="92">Huyện Ứng Hòa</option>
-                        <option value="93">Huyện Mỹ Đức</option>
+                        <option value="93">Huyện Mỹ €ức</option>
                       </select>
                     </div>
                     <label class="off red" id="lb_profile-location2">Hãy chọn quận/huyện</label>
@@ -213,12 +213,12 @@
                         <option value="294">Phường Cầu Diễn</option>
                         <option value="295">Phường Xuân Phương</option>
                         <option value="296">Phường Phương Canh</option>
-                        <option value="297">Phường Mỹ Đình 1</option>
-                        <option value="298">Phường Mỹ Đình 2</option>
+                        <option value="297">Phường Mỹ €ình 1</option>
+                        <option value="298">Phường Mỹ €ình 2</option>
                         <option value="299">Phường Tây Mỗ</option>
                         <option value="300">Phường Mễ Trì</option>
-                        <option value="301" selected="selected">Phường Phú Đô</option>
-                        <option value="302">Phường Đại Mỗ</option>
+                        <option value="301" selected="selected">Phường Phú €ô</option>
+                        <option value="302">Phường €ại Mỗ</option>
                         <option value="303">Phường Trung Văn</option>
                       </select>
                     </div>
@@ -233,7 +233,7 @@
                 </td>
                 <td>
                   <input class="required" type="text" value="{{ $user->address }}" name="address" id="profile_address" /> <br>
-                  <label class="off red" id="lb_profile_address">Vui lòng nhập số nhà, tên đường</label>
+                  <label class="off red" id="lb_profile_address">Vui lòng nhập số nhà, tên €ường</label>
                   @error('address')
                   <span class="invalid-feedback red" role="alert">
                     <strong>{{ $message }}</strong>
@@ -242,26 +242,7 @@
                 </td>
               </tr>
             </table>
-            <div style="border-bottom:1px solid #ddd; padding:20px 0 4px 4px; font-size:15px; font-weight:bold; color:#666; margin-bottom:9px;">
-              Thông tin xuất hóa đơn
-            </div>
             <table>
-              <tr>
-                <td>
-                  <div style="position:relative;">
-                    Tên công ty
-                  </div>
-                </td>
-                <td> <input type="text" value="{{ $user->company_name }}" name="company_name" id="profile_company" /> </td>
-              </tr>
-              <tr>
-                <td> Mã số thuế </td>
-                <td> <input type="text" value="{{ $user->tax_code }}" name="tax_code" id="profile_mst" /></td>
-              </tr>
-              <tr>
-                <td> Địa chỉ công ty </td>
-                <td> <input type="text" value="{{ $user->company_address }}" name="company_address" id="profile_address_pay" /></td>
-              </tr>
               <tr>
                 <td></td>
                 <td>

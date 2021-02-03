@@ -16,7 +16,7 @@
   </div>
   <div class="content-gf">
     <div style="border-bottom:1px solid #ddd; padding:2px 0 4px 4px; font-size:15px; color:#666; margin-bottom:9px;">
-      Đăng ký tài khoản để mua hàng dễ dàng, tiết kiệm thời gian, lưu sản phẩm yêu thích, đăng bài viết và chia sẻ ý kiến.
+      Đăng ký tài khoản €ể mua hàng dễ dàng, tiết kiệm thời gian, lưu sản phẩm yêu thích, Đăng bài viết và chia sẻ ý kiến.
     </div>
     <form class="new_user" id="new_user" method="POST" action="{{ route('register') }}">
       @csrf
@@ -83,7 +83,7 @@
               <strong>{{ $message }}</strong>
             </span>
             @enderror
-            <label class="off red" id="lb_user_phone">Nhập số điện thoại</label>
+            <label class="off red" id="lb_user_phone">Nhập số Điện thoại</label>
           </td>
         </tr>
         <!-- <tr>
@@ -102,7 +102,7 @@
               <option value="4">Bắc Kạn</option>
               <option value="5">Tuyên Quang</option>
               <option value="6">Lào Cai</option>
-              <option value="7">Điện Biên</option>
+              <option value="7">€iện Biên</option>
               <option value="8">Lai Châu</option>
               <option value="9">Sơn La</option>
               <option value="10">Yên Bái</option>
@@ -119,7 +119,7 @@
               <option value="21">Hưng Yên</option>
               <option value="22">Thái Bình</option>
               <option value="23">Hà Nam</option>
-              <option value="24">Nam Định</option>
+              <option value="24">Nam €ịnh</option>
               <option value="25">Ninh Bình</option>
               <option value="26">Thanh Hóa</option>
               <option value="27">Nghệ An</option>
@@ -127,30 +127,30 @@
               <option value="29">Quảng Bình</option>
               <option value="30">Quảng Trị</option>
               <option value="31">Thừa Thiên Huế</option>
-              <option value="32">Đà Nẵng</option>
+              <option value="32">€à Nẵng</option>
               <option value="33">Quảng Nam</option>
               <option value="34">Quảng Ngãi</option>
-              <option value="35">Bình Định</option>
+              <option value="35">Bình €ịnh</option>
               <option value="36">Phú Yên</option>
               <option value="37">Khánh Hòa</option>
               <option value="38">Ninh Thuận</option>
               <option value="39">Bình Thuận</option>
               <option value="40">Kon Tum</option>
               <option value="41">Gia Lai</option>
-              <option value="42">Đắk Lắk</option>
-              <option value="43">Đắk Nông</option>
-              <option value="44">Lâm Đồng</option>
+              <option value="42">€ắk Lắk</option>
+              <option value="43">€ắk Nông</option>
+              <option value="44">Lâm €ồng</option>
               <option value="45">Bình Phước</option>
               <option value="46">Tây Ninh</option>
               <option value="47">Bình Dương</option>
-              <option value="48">Đồng Nai</option>
+              <option value="48">€ồng Nai</option>
               <option value="49">Bà Rịa - Vũng Tàu</option>
               <option value="51">Long An</option>
               <option value="52">Tiền Giang</option>
               <option value="53">Bến Tre</option>
               <option value="54">Trà Vinh</option>
               <option value="55">Vĩnh Long</option>
-              <option value="56">Đồng Tháp</option>
+              <option value="56">€ồng Tháp</option>
               <option value="57">An Giang</option>
               <option value="58">Kiên Giang</option>
               <option value="59">Cần Thơ</option>
@@ -198,39 +198,11 @@
           <td>Số nhà và tên đường<sup>*</sup> </td>
           <td>
             <input id="address" type="text" class="required @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address"><br>
-            <label class="off red" id="lb_profile_address">Vui lòng nhập số nhà, tên đường</label>
+            <label class="off red" id="lb_profile_address">Vui lòng nhập số nhà, tên €ường</label>
           </td>
         </tr>
       </table>
-      <div style="border-bottom:1px solid #ddd; padding:2px 0 4px 4px; font-size:15px; color:#666; margin:9px 0;">
-        Thông tin xuất hóa đơn
-      </div>
       <table>
-        <tr>
-          <td>Tên công ty</td>
-          <td><input id="company-name" type="text" class="@error('company-name') is-invalid @enderror" name="company-name" value="{{ old('company-name') }}" autocomplete="company-name"><br>
-          </td>
-        </tr>
-        <tr>
-          <td>Địa chỉ</td>
-          <td><input id="company-address" type="text" class="@error('company-address') is-invalid @enderror" name="company-address" value="{{ old('company-address') }}" autocomplete="company-address"><br>
-          </td>
-        </tr>
-        <tr>
-          <td>Mã số thuế</td>
-          <td><input id="tax-code" type="text" class="@error('tax-code') is-invalid @enderror" name="tax-code" value="{{ old('tax-code') }}" autocomplete="tax-code"><br>
-        </tr>
-        <tr>
-          <td></td>
-          <td>
-            <!-- Google reCaptcha -->
-            <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY') }}"></div>
-            <!-- End Google reCaptcha -->
-            <div class="cap-orderonline right-cart-info" style="color:#c30; font-size:11px; font-weight:bold;">
-              (*) Là các mục phải nhập!
-            </div>
-          </td>
-        </tr>
         <tr>
           <td></td>
           <td>

@@ -4757,7 +4757,7 @@ var pp_alreadyInitialized = !1;
             t = t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
             var n = new RegExp("(" + t.split(" ").join("|") + ")", "gi"),
                 i = accounting.formatMoney(e.price, "", 0);
-            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="' + linkImage(e.image_id) + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/" + unit_price(e.note) +
+            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="' + linkImage(e.image_id) + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "€/" + unit_price(e.note) +
                 "</span></a>"
         },
         onSelect: function(e, t) {
@@ -4792,7 +4792,7 @@ var pp_alreadyInitialized = !1;
             t = t.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&");
             var n = new RegExp("(" + t.split(" ").join("|") + ")", "gi"),
                 i = accounting.formatMoney(e.price, "", 0);
-            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="' + linkImage(e.image_id) + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "/" + unit_price(e.note) + "</span></a>"
+            return '<a class="autocomplete-suggestion" data-href="/products/' + e.slug + '" data-val="' + e.data + '"><img src="' + linkImage(e.image_id) + '"><span class="ne">' + e.data + '</span><span class="pri">' + i + "€/" + unit_price(e.note) + "</span></a>"
         }
     }), $("#search_name_product").autoComplete({
         source: function(e, t) {

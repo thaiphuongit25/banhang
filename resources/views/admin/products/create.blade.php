@@ -22,7 +22,7 @@
         <form method="post" action="{{ route('admin.products.store') }}" enctype="multipart/form-data">
             @csrf
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Tên sản phẩm</label>
+                <label class="col-sm-2 col-form-label require">Tên món ăn</label>
                 <div class="col-sm-10">
                     <input type="text" name="name" class="form-control" />
                 </div>
@@ -87,62 +87,21 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Giá cứng(VND)</label>
+                <label class="col-sm-2 col-form-label require">Giá (€)</label>
                 <div class="col-sm-10">
                     <input type="input" name="price" class="form-control" />
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Đơn vị(Cái/Gói)</label>
+                <label class="col-sm-2 col-form-label require">Đơn vị(Cái/Kg)</label>
                 <div class="col-sm-10">
-                    <input type="input" name="note" class="form-control" placeholder="Cái/Gói(50pcs)" />
+                    <input type="input" name="note" class="form-control" placeholder="Cái/Kg(0.5)" />
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label require">Số lượng</label>
                 <div class="col-sm-10">
                     <input type="input" name="quantity" class="form-control" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Link datasheet</label>
-                <div class="col-sm-10">
-                    <input type="input" name="datasheet" class="form-control" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Tiêu đề meta</label>
-                <div class="col-sm-10">
-                    <input categorie="text" name="meta_title" class="form-control" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Từ khóa meta</label>
-                <div class="col-sm-10">
-                    <input categorie="text" name="meta_keywords" class="form-control" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-2 col-form-label">Miêu tả meta</label>
-                <div class="col-sm-10">
-                    <input categorie="text" name="meta_description" class="form-control" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <input type="hidden" name="count" value="1" />
-                <label class="col-sm-2 col-form-label">Thêm đơn giá</label>
-                <div class="col-sm-10" id="fields">
-                    <div class="row margin-button">
-                        <div class="col-sm-3">
-                            <input autocomplete="off" class="form-control" name="number_" type="number" placeholder="Số lượng">
-                        </div>
-                        <div class="col-sm-3">
-                            <input autocomplete="off" class="form-control" name="unit_" type="number" placeholder="Đơn giá(VND)">
-                        </div>
-                        <div class="col-sm-1">
-                            <button id="b1" class="btn btn-primary add-more form-control" type="button">+</button>
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="form-group text-center">

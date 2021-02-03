@@ -35,13 +35,13 @@
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label require">Địa chỉ</label>
+            <label class="col-sm-2 col-form-label require">€ịa chỉ</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" value="{{ $user->address }}" disabled />
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">SĐT</label>
+            <label class="col-sm-2 col-form-label">S€T</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" value="{{ $user->phone_number }}" disabled />
             </div>
@@ -53,7 +53,7 @@
             </div>
         </div>
         <div class="form-group row">
-            <label class="col-sm-2 col-form-label">Địa chỉ công ty</label>
+            <label class="col-sm-2 col-form-label">€ịa chỉ công ty</label>
             <div class="col-sm-10">
                 <input type="text" class="form-control" value="{{ $user->company_address }}" disabled />
             </div>

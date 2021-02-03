@@ -23,7 +23,7 @@
             @method('PUT')
             @csrf
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Tên sản phẩm</label>
+                <label class="col-sm-2 col-form-label require">Tên món ăn</label>
                 <div class="col-sm-10">
                     <input type="text" name="name" class="form-control" value="{{ $product->name }}" />
                 </div>
@@ -84,7 +84,7 @@
                 </div>
             </div>
             <div class="form-group row image_file" id='image_type_1'>
-                <label class="col-sm-2 col-form-label require">Đường dẫn ảnh</label>
+                <label class="col-sm-2 col-form-label require">€ường dẫn ảnh</label>
                 <div class="col-sm-10">
                     <input type="input" name="image" class="form-control" value="{{ $product->image }}" disabled/>
                 </div>
@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">Đơn vị(Cái/Gói)</label>
+                <label class="col-sm-2 col-form-label require">€ơn vị(Cái/Gói)</label>
                 <div class="col-sm-10">
                     <input type="input" name="note" class="form-control" value="{{ $product->note }}" placeholder="Cái/Gói(50pcs)"/>
                 </div>

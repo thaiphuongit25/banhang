@@ -10,7 +10,7 @@ return [
         'Đã Xóa' => 5
     ],
     'type_status' => [
-        'Đã xóa' => 0,
+        'Đã Xóa' => 0,
         'Hiển thị' => 1,
         'Không hiển thị' => 2
     ],

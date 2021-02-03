@@ -58,7 +58,7 @@ class TypesController extends Controller
         }
         else
         {
-            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+            return redirect()->back()->with('error', 'Có vấn €ề xảy ra!');
         }
     }
 
@@ -103,7 +103,7 @@ class TypesController extends Controller
         }
         else
         {
-            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+            return redirect()->back()->with('error', 'Có vấn €ề xảy ra!');
         }
     }
 
@@ -124,7 +124,7 @@ class TypesController extends Controller
         }
         else
         {
-            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+            return redirect()->back()->with('error', 'Có vấn €ề xảy ra!');
         }
     }
 }

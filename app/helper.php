@@ -1,5 +1,6 @@
 <?php
     use App\model\Type;
+    use App\model\Category;
     use App\model\ArticleCategory;
     use App\model\Service;
     use App\model\Reply;
@@ -15,8 +16,8 @@
     use App\model\Product;
     use Illuminate\Support\Facades\URL;
 
-    function getTypes() {
-        return Type::all();
+    function getCategories() {
+        return Category::all();
     }
 
     function getArticleCategories() {
@@ -24,7 +25,7 @@
     }
 
     function getProductLimit($ids) {
-        return Product::whereIn('category_id', $ids)->limit(4)->get();
+        return Product::whereIn('category_id', $ids)->get();
     }
 
     function getSuggestServices() {
@@ -77,9 +78,9 @@
     function settingTypeText($type) {
         return
         [   
-            0 => 'Số điện thoại',
+            0 => 'Số Điện thoại',
             1 => 'Giờ mở cửa',
-            2 => 'Địa chỉ',
+            2 => '€ịa chỉ',
             3 => 'Hỗ trợ trực tuyến kinh doanh',
             4 => 'Hỗ trợ trực tuyến kĩ thuật',
             5 => 'Hỗ trợ trực tuyến bán hàng - bảo hành',

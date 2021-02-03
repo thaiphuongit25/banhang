@@ -37,7 +37,7 @@ class UsersController extends Controller
         }
         else
         {
-            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+            return redirect()->back()->with('error', 'Có vấn €ề xảy ra!');
         }
     }
 
@@ -69,7 +69,7 @@ class UsersController extends Controller
         }
         else
         {
-            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+            return redirect()->back()->with('error', 'Có vấn €ề xảy ra!');
         }
     }
 
@@ -86,7 +86,7 @@ class UsersController extends Controller
         }
         if (strcmp($request->get('current-password'), $request->get('new-password')) == 0) {
             //Current password and new password are same
-            return redirect()->back()->with("error", "Mật khẩu mới không được trùng với mật khẩu hiện tại, hãy nhập lại!");
+            return redirect()->back()->with("error", "Mật khẩu mới không €ược trùng với mật khẩu hiện tại, hãy nhập lại!");
         }
         $validatedData = $request->validate([
             'current-password' => 'required',
@@ -104,7 +104,7 @@ class UsersController extends Controller
         }
         else
         {
-            return redirect()->back()->with('error', 'Có vấn đề xảy ra!');
+            return redirect()->back()->with('error', 'Có vấn €ề xảy ra!');
         }
     }
 }

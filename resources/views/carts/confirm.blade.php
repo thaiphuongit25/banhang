@@ -7,7 +7,7 @@
                 <td>{{ $currentUser->email }}</td>
             </tr>
             <tr>
-                <td>Số điện thoại:</td>
+                <td>Số Điện thoại:</td>
                 <td>{{ $currentUser->phone_number }}</td>
             </tr>
             <tr>

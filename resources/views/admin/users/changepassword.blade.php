@@ -1,7 +1,7 @@
 @extends('adminlte::page')
 @section('title', 'Dashboard')
 @section('content_header')
-<h1>Chào {{ Auth::user()->name }} - Thay đổi mật khẩu</h1>
+<h1>Chào {{ Auth::user()->name }} - Thay Đổi mật khẩu</h1>
 <br>
 @stop
 @section('content')

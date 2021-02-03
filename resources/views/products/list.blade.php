@@ -2,7 +2,7 @@
 <div id="body-left">
     <div class="left-menu">
         <div class="title">
-            Sản phẩm đã xem
+            Món ăn đã xem
         </div>
         <div id="product_viewed">
             <div class="same-by-list ">
@@ -36,7 +36,6 @@
             background: #666;
         }
     </style>
-    @include('left_banner')
 </div>
 <div id="body-right">
 
@@ -61,12 +60,8 @@
                             <p class="name-a">
                                 <a id="{{$product->id}}" class="review-product" title="{{ $product->name }}" target="_blank" href="/products/{{ $product->slug }}">{{ $product->name }}</a>
                             </p>
-                            <div class="desc_small">
-                                {{ $product->desc }}
-                            </div>
-
                             <p class="price blue">
-                                {{ $product->price }} đ/{{ unit_product($product->note) }}
+                                {{ $product->price }} €/{{ unit_product($product->note) }}
                             </p>
 
                             @include('products.quantity')
@@ -93,7 +88,7 @@
                             </div>
                         </div>
                         <div id="showtip_10" class="showtip">
-                            <img alt="{{$product->code}}" class="fff" src="https://thegioiic.com/upload/large/89.jpg">
+                            <img alt="{{$product->code}}" class="fff">
 
                         </div>
                         <script type="text/javascript">

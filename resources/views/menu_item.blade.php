@@ -1,15 +1,15 @@
 <ul>
-    @foreach ( getTypes() as $type )
+    @foreach ( getCategories() as $category )
         <li class="root">
-            <a href="/product/{{$type->slug}}">{{ $type->name }}</a>
+            <a href="/product/{{$category->slug}}">{{ $category->name }}</a>
             <ul class="ddsubmenustyle blackwhite" style="min-height: 545px; top: -1000px; left: -500px; visibility: hidden; z-index: -1;">
-                <span class="titleul">{{ $type->name }}</span>
-                @foreach ($type->categories as $category)
+                <span class="titleul">{{ $category->name }}</span>
+                @foreach ($category->products as $product)
                 <li class="click">
-                    <span class="spana">{{ $category->name }}</span>
+                    <span class="spana">{{ $product->name }}</span>
                     <ul style="min-height: 545px; top: -1000px; left: -500px; visibility: hidden; z-index: -1;">
                         <span class="titleul crumb">
-                                <span class="background-crumb-menu">{{ $type->name }}</span>
+                                <span class="background-crumb-menu">{{ $category->name }}</span>
                         <span>{{ $category->name }}</span>
                         </span>
                         <span class="close"></span>

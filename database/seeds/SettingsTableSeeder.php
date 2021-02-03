@@ -41,7 +41,7 @@ class SettingsTableSeeder extends Seeder
             
                         </li>
                         <li>
-                            <p>939/1A Kha Vạn Cân, Linh Tây, Thủ Đức, HCM</p>
+                            <p>939/1A Kha Vạn Cân, Linh Tây, Thủ €ức, HCM</p>
                         </li>
                         <li>
                             <p>Điện thoại: (28)3896.8699</p>

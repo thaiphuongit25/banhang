@@ -17,7 +17,7 @@
     <thead>
         <tr>
           <td>ID</td>
-          <td>Tiêu đề</td>
+          <td>Tiêu €ề</td>
           <td>Danh mục</td>
           <td>Nội dung</td>
           <td>Hình ảnh</td>

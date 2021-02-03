@@ -18,7 +18,7 @@ class Information extends Model
     const Types = [
         1 => 'Thông tin công ty',
         2 => 'Dịch vụ bán hàng',
-        3 => 'Chính sách - Quy định',
+        3 => 'Chính sách - Quy €ịnh',
         4 => 'Hỗ trợ khách hàng'
     ];
     /**

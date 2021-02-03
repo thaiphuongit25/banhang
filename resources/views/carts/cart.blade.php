@@ -11,8 +11,8 @@
                         <tbody class="list-carts">
                             <tr>
                                 <th> No. </th>
-                                <th> Tên sản phẩm </th>
-                                <th> Bảng giá </th>
+                                <th> Tên món ăn </th>
+                                <!-- <th> Bảng giá </th> -->
                                 <th style="width: 90px;"> Số lượng mua </th>
                                 <th> Đơn giá </th>
                                 <th> Thành tiền </th>
@@ -40,10 +40,10 @@
                                 $("#bill_buy_cod").val("1");
                                 var cod = $("#cod-value").data('value');
                                 var total = parseInt(cod) + parseInt($("#total-cart").data('value'));
-                                $("#total-cart").html(accounting.formatMoney(total, "", 0) + " đ");
+                                $("#total-cart").html(accounting.formatMoney(total, "", 0) + " €");
                             } else {
                                 $("#bill_buy_cod").val("0");
-                                $("#total-cart").html(accounting.formatMoney($("#total-cart").data('value'), "", 0) + " đ");
+                                $("#total-cart").html(accounting.formatMoney($("#total-cart").data('value'), "", 0) + " €");
                             }
                         });
 
@@ -75,27 +75,24 @@
         @if (Auth::guest())
         <div style="border:1px solid #DDD;padding:10px;text-align:center">
             Vui lòng
-            <a style="margin:0 5px;" class="btn btn-primary" href="/login"><b>Đăng Nhập</b></a> để đặt hàng
+            <a style="margin:0 5px;" class="btn btn-primary" href="/login"><b>Đăng Nhập</b></a> Để đặt hàng
         </div>
         @endif
         @if (!Auth::guest())
         <div id="infor_cart" style="margin-top:15px">
             <div class="title-gh">
-                Hình thức giao hàng
+                Thanh toán
             </div>
             <div class="method-cart">
                 <ul>
                     <li>
                         <input type="radio" name="bill_buy" value="1" checked="checked" id="buy_in_shop">
-                        <label for="buy_in_shop">Mua và thanh toán tại cửa hàng</label>
+                        <label for="buy_in_shop">Nhận hàng và thanh toán tiền mặt</label>
                     </li>
-                    <li>
+                    <!-- <li>
                         <input type="radio" name="bill_buy" value="2" id="buy_in_shop">
-                        <label for="express_delivery">Chuyển phát nhanh</label>
-                        <span id="express-delivery-value" data-value="37000" style="display:none">
-                        37,000  đ
-                        </span>
-                    </li>
+                        <label for="express_delivery">Chuyển khoản</label>
+                    </li> -->
                 </ul>
             </div>
         </div>
@@ -171,7 +168,7 @@
             <div class="modal-body">
                 <table class="tbl-list" cellpadding="0" cellspacing="0" style="width:100%;">
                     <tr>
-                        <td><strong>Số điện thoại:</strong> </td>
+                        <td><strong>Số Điện thoại:</strong> </td>
                     <td>{{ \Auth::user() ? \Auth::user()->phone_number : '' }}</td>
                     </tr>
                     <tr>

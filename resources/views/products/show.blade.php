@@ -2,14 +2,12 @@
 <div class="container-crumb">
   <div class="texttitle sitemaps">
     <a href="/">Trang Chủ</a>
-    <a href="/products">Sản Phẩm</a>
-    <a href="/product/{{ $product->category->type->slug }}">{{ $product->category->type->name }}</a>
-    <a href="/product/{{ $product->category->slug }}">{{ $product->category->name }}</a>
+    <a href="">Món ăn</a>
     <a>{{$product->name}}</a>
   </div>
 </div>
 <div id="body-left">
-  <div class="left-menu-new ablack">
+  <!-- <div class="left-menu-new ablack">
     <div class="lss">
       <ul>
         @foreach ($categories as $category )
@@ -17,7 +15,7 @@
         @endforeach
       </ul>
     </div>
-  </div>
+  </div> -->
 
   <div class="left-menu">
     @include('newest_comments')
@@ -54,7 +52,7 @@
 
   <div class="left-menu">
     <div class="title">
-      Sản phẩm đã xem
+      Món ăn đã xem
     </div>
     <div id="product_viewed">
       <div class="same-by-list ">
@@ -89,7 +87,6 @@
       background: #666;
     }
   </style>
-  @include('left_banner')
 </div>
 <div id="body-right">
 
@@ -135,26 +132,10 @@
         </div>
         <div class="new-update-style-name right">
           <h1>{{ $product->name }}</h1>
-          <p id="name-p">
-            {{ $product->desc }}
-          </p>
         </div>
         <div class="new-update-style-info right">
           <div class="info-product-show infodescription">
             <div id="info-p">
-              <p style="padding:4px 0">
-                <b style="margin-right:10px;display:inline-block">Thương hiệu:</b><a style="color:#09c;" href="/brands/{{ $product->brand->slug }}">{{ $product->brand->name }}</a>
-              </p>
-              <div class="inventory_product">
-                <div class="contact-to-order-w bgaqua"><span class="icon-i"></span>
-                  @if ($product->status == 0)
-                  <div class="brown"><span class="f"><a class="contact-to-order-show" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span><span>(Đặt mua 7-10 ngày có hàng)</span></div>
-                  @else
-                  <div class="ngreen"><span class="f">Hàng còn: {{ $product->quantity }}</span><span>(Gửi hàng trong ngày)</span></div>
-                  @endif
-                </div>
-              </div>
-
               <div class="product-option-group" style="line-height:32px">
               </div>
               <form action="/carts/add_to_cart" accept-charset="UTF-8" data-remote="true" method="post"><input name="utf8" type="hidden" value="✓">
@@ -187,30 +168,7 @@
             <div class="clear"></div>
             <span id="button-view-report" style="vertical-align: top;margin-right:20px;float:left"><b style="vertical-align: top;color:#09c">{{ getTotalReplies($product) }}</b> Phản hồi</span>
           </div>
-          <div class="info-product-show infoprice">
-            <div class="info-tip">
-              <div style="font-weight:bold; color:#2689CA; padding-left:2px;"></div>
-              <div style="" class="info_sp">
-                <p style="color:#0000ff">Bảng giá</p>
-                <table class="list-price-product" cellpadding="0" cellspacing="0">
-                  <tbody>
-                    <tr class="header">
-                      <td>Số lượng mua<br>({{ unit_product($product->note) }})
-                      </td>
-                      <td>Đơn giá<br>(VND)</td>
-                    </tr>
-                    @foreach ($product->units as $unit)
-                    <tr>
-                      <td class="price-column">{{ $unit->number }} +</td>
-                      <td class="price-column">{{ number_format($unit->unit_price) }} </td>
-                    </tr>
-                    @endforeach
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="info-product-show infoshare" style="margin-top:15px;">
+          <!-- <div class="info-product-show infoshare" style="margin-top:15px;">
             <div>
               <a href="http://www.facebook.com/sharer.php?u=https://thegioiic.com/products/lm258p" target="_blank" title="Share Facebook" rel="nofollow">
                 <img src="https://thegioiic.com/images/facebook-icon.png" alt="Facebook">
@@ -240,47 +198,17 @@
               </script>
               <div class="fb-like fb_iframe_widget" data-href="https://thegioiic.com/products/lm258p" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=476526335840468&amp;container_width=0&amp;href=https%3A%2F%2Fthegioiic.com%2Fproducts%2Flm258p&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small"><span style="vertical-align: bottom; width: 122px; height: 20px;"><iframe name="f2f380f6d395c14" width="1000px" height="1000px" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/v2.4/plugins/like.php?action=like&amp;app_id=476526335840468&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D44%23cb%3Df14fa49a745621%26domain%3Dthegioiic.com%26origin%3Dhttps%253A%252F%252Fthegioiic.com%252Ffa061f17e51308%26relation%3Dparent.parent&amp;container_width=0&amp;href=https%3A%2F%2Fthegioiic.com%2Fproducts%2Flm258p&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;share=true&amp;show_faces=true&amp;size=small" style="border: none; visibility: visible; width: 122px; height: 20px;" class=""></iframe></span></div>
             </div>
-          </div>
+          </div> -->
         </div>
         <div class="clear"></div>
       </div>
       <div class="info-product-show-content">
-        <div id="feature-f">
-          <div id="ff-f">
-            <ul id="product_tab">
-              <li>
-                <a href="javascript:" class="select" data-id="1">Tính năng</a>
-              </li>
-              <li>
-                <a href="javascript:" data-id="2">Datasheet</a>
-              </li>
-            </ul>
-            <div class="clear"></div>
-          </div>
-          <div class="detail-tab">
-            <div id="tabp1" class="view_tab_product" style="display: block;">
-              {!! $product->specification !!}
-            </div>
-            <div id="tabp2" class="view_tab_product" style="display: none;">
-            <p><a href="{{ $product->datasheet }}" target="_blank">{{ $product->datasheet ? $product->name : '' }}</a></p>
-            </div>
-            <div id="tabp6" class="view_tab_product" style="display: none;">
-              <div class="sam-buy-product-list">
-                <div class="clear"></div>
-              </div>
-
-
-            </div>
-            <div class="clear"></div>
-          </div>
-        </div>
-
         @include('comment_section', ['commentable_object' => $product, 'commentable_type' => 'App\model\Product'])
       </div>
       <div class="info-product-show-right">
         <div class="right-menu" id="same-product">
           <div class="title">
-            Sản phẩm cùng loại
+            Xem thêm
           </div>
           <div class="same-by-list" id="paging_container8">
             <ul class="content">
@@ -295,53 +223,7 @@
                       <a title="MCP6041T-I/OT" href="/products/{{ $sameProduct->slug }}">{{ $sameProduct->name }}</a>
                     </p>
                     <p class="price blue">
-                      {{ number_format($sameProduct->price) }} đ/{{ unit_product($sameProduct->note) }}
-                    </p>
-                    <p>
-                      @if ($sameProduct-> status == 0)
-                      <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                      @else
-                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $sameProduct->quantity }}</span></span>
-                      @endif
-                    </p>
-                  </div>
-                  <div class="clear"></div>
-                </div>
-              </li>
-              @endforeach
-            </ul>
-            <div style="text-align: right;padding: 10px" id="view-more">
-              <a href="/product/{{ $product->category->slug }}">Xem thêm</a>
-            </div>
-            <div class="clear"></div>
-          </div>
-        </div>
-        <div id="product-sellmore" class="right-menu">
-          <div class="title">
-            Sản phẩm nổi bật
-          </div>
-
-          <div class="same-by-list" id="paging_container8">
-            <ul class="content">
-              @foreach ( $productHots as $productHot)
-              <li>
-                <div class="list-same">
-                  <div class="image-same">
-                    <a id="{{$product->id}}" class="review-product" href="/products/{{ $productHot->slug }}"><img alt="" src="{{ URL::to('/') }}/images/{{ $productHot->image }}"></a>
-                  </div>
-                  <div class="name-same">
-                    <p class="name-a ablack">
-                      <a id="{{$product->id}}" class="review-product" title="{{  $productHot->name }}" href="/products/{{ $productHot->slug }}">{{ $productHot->name }}</a>
-                    </p>
-                    <p class="price blue">
-                      {{ number_format($productHot->price) }} đ/{{ unit_product($productHot->note) }}
-                    </p>
-                    <p>
-                      @if ($productHot-> status == 0)
-                      <span class="green"> <a class="contact-to-order" href="https://thegioiic.com/pages/dat-mua-linh-kien-dien-tu">Hết hàng</a></span>
-                      @else
-                      <span class="green"> <span class="bb">Hàng còn: </span><span class="iv">{{ $productHot->quantity }}</span></span>
-                      @endif
+                      {{ number_format($sameProduct->price) }} €/{{ unit_product($sameProduct->note) }}
                     </p>
                   </div>
                   <div class="clear"></div>
@@ -351,28 +233,7 @@
             </ul>
             <div class="clear"></div>
           </div>
-          <style>
-            .same-by-list {
-              max-height: 258px;
-              overflow: auto;
-              border-bottom: 1px solid #DDD;
-              overscroll-behavior: none;
-              overflow-x: hidden;
-              scrollbar-width: thin;
-              scrollbar-color: #666;
-            }
-
-            .same-by-list::-webkit-scrollbar {
-              width: 6px;
-              background: #eee;
-            }
-
-            .same-by-list::-webkit-scrollbar-thumb {
-              background: #666;
-            }
-          </style>
         </div>
-        @include('right_banner')
       </div>
       <div class="clear"></div>
     </div>

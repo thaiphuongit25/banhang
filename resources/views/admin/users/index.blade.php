@@ -14,8 +14,8 @@
                     <td>ID</td>
                     <td>Tên</td>
                     <td>Email</td>
-                    <td>Địa chỉ</td>
-                    <td>SĐT</td>
+                    <td>€ịa chỉ</td>
+                    <td>S€T</td>
                     <td>Công ty</td>
                     <td>Mã số thuế</td>
                 </tr>

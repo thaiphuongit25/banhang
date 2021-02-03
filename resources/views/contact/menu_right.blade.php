@@ -8,7 +8,7 @@
             © THEGIOIIC.COM
 
 
-            <p>939/1A Kha Vạn Cân, Linh Tây, Thủ Đức, HCM</p>
+            <p>939/1A Kha Vạn Cân, Linh Tây, Thủ €ức, HCM</p>
 
             <p>
                 Điện thoại: (28)3896.8699
@@ -44,10 +44,10 @@
                 <a class="tip-service" href="/services/gia-cong-pcb-va-pcba-voi-cong-nghe-smt-tien-tien">Gia công PCB và PCBA với công nghệ SMT tiên tiến</a>
             </li>
             <li>
-                <a class="tip-service" href="/services/phan-phoi-linh-kien-dien-tu-va-thiet-bi-dien-tu">Phân phối linh kiện điện tử và thiết bị điện tử</a>
+                <a class="tip-service" href="/services/phan-phoi-linh-kien-dien-tu-va-thiet-bi-dien-tu">Phân phối linh kiện €iện tử và thiết bị €iện tử</a>
             </li>
             <li>
-                <a class="tip-service" href="/services/thiet-ke-mach-dien-tu-he-thong-nhung-hardware-development-for-embedded-systems">Thiết kế mạch điện tử</a>
+                <a class="tip-service" href="/services/thiet-ke-mach-dien-tu-he-thong-nhung-hardware-development-for-embedded-systems">Thiết kế mạch €iện tử</a>
             </li>
         </ul>
     </div>
@@ -66,7 +66,7 @@
             $("#comment_email").addClass('input-errors');
             event.preventDefault();
             return false;
-        } else if (trim($("#comment_title").val()) == "" || trim($("#comment_title").val()) == "Tiêu đề") {
+        } else if (trim($("#comment_title").val()) == "" || trim($("#comment_title").val()) == "Tiêu €ề") {
             $("#comment_title").addClass('input-errors');
             event.preventDefault();
             return false;

@@ -26,7 +26,7 @@
 
     <div class="left-menu">
         <div class="title">
-            Sản phẩm đã xem
+            Món ăn đã xem
         </div>
         <div id="product_viewed">
             <div class="same-by-list ">
@@ -75,7 +75,7 @@
 <input type="submit" id="btn-submit-view" value="" style="width:0;height:0;display:none">
 <select name="order_sort" id="sort_value">
 <option value="0">Sắp xếp</option>
-<option value="1">Tên sản phẩm</option>
+<option value="1">Tên món ăn</option>
 <option value="2">Giá sản phẩm</option>
 <option value="3">Lượng tồn kho</option>
 <option value="4">Mới nhất</option>
@@ -115,7 +115,7 @@
                                 {{ $product->brand->name }}
                             </div>
                             <p class="price blue">
-                               {{ number_format($product->price) }} đ/{{ unit_product($product->note) }}
+                               {{ number_format($product->price) }} €/{{ unit_product($product->note) }}
                             </p>
 
                             @include('products.quantity')

@@ -21,8 +21,8 @@
             <table class="tbl-list" cellpadding="0" cellspacing="0" style="width:100%;">
                 <tbody><tr>
                     <th>No</th>
-                    <th>Mã đơn hàng</th>
-                    <th>Ngày đặt</th>
+                    <th>Mã Đơn hàng</th>
+                    <th>Ngày €ặt</th>
                     <th>Tổng tiền</th>
                     <th>Trạng thái</th>
                     <th></th>
@@ -32,7 +32,7 @@
                     <td> {{ $key + 1 }} </td>
                 <td><a href="/orders/{{ $order->id }}">{{ $order->code }}</a></td>
                     <td style="text-align:left;width:120px"> {{ $order->date_order }} </td>
-                    <td style="text-align:right;padding-right:5px">{{ number_format($order->total) }} đ</td>
+                    <td style="text-align:right;padding-right:5px">{{ number_format($order->total) }} €</td>
                     <td style="width:200px">
                         @foreach(config('constants.order_status') as $status => $value)
                             @if ($order->status == $value)
