@@ -16,7 +16,7 @@
   </div>
   <div class="content-gf">
     <div style="border-bottom:1px solid #ddd; padding:2px 0 4px 4px; font-size:15px; color:#666; margin-bottom:9px;">
-      Đăng ký tài khoản €ể mua hàng dễ dàng, tiết kiệm thời gian, lưu sản phẩm yêu thích, Đăng bài viết và chia sẻ ý kiến.
+      Đăng ký tài khoản để mua hàng dễ dàng, tiết kiệm thời gian, lưu sản phẩm yêu thích, Đăng bài viết và chia sẻ ý kiến.
     </div>
     <form class="new_user" id="new_user" method="POST" action="{{ route('register') }}">
       @csrf
