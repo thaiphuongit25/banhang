@@ -70,7 +70,7 @@ body {
 }
 
 .col-12 {
-    width: 1000px
+    width: auto;
 }
 
 body,
@@ -1505,7 +1505,7 @@ div#ddsidemenubar a.menu_sub {
 }
 
 .left-content-cart {
-    width: 73%
+    width: 95%
 }
 
 .right-sidebar-cart {
@@ -5316,6 +5316,17 @@ table.cart-popup .action-cart .delete-cart-popup {
     width: 450px
 }
 
+@media screen and (max-width: 380px) {
+    .new-update-style-info {
+        width: 350px;
+    }
+    .new-update-style-name h1 {
+       text-align: center;
+       font-weight: bold;
+       margin-top: 10px;
+    }
+}
+
 .list-product-show-2 {
     width: 95%
 }
@@ -5805,7 +5816,7 @@ table.cart-popup .action-cart .delete-cart-popup {
         width: 26%
     }
     table.cart {
-        width: 94%
+        width: 104%;
     }
     #wrapper #body #body-right {
         width: 72.8%

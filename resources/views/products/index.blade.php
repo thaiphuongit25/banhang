@@ -169,7 +169,7 @@
                         flex-basis: 47%;
                     }
                     .image-hover {
-                        width: 190px;
+                        max-width: 160px;
                         height: 166px;
                         border-radius: 5px;
                     } 

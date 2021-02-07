@@ -1,5 +1,5 @@
 @extends('layouts.app') @section('content')
-<div id="body-main" style="margin-top:10px">
+<div id="body-main" style="margin-top:10px; margin-left: 10px;">
     <div class="left-content-cart left">
         <div id="infor_cart" style="margin-top:15px">
             <div class="title-gh">
@@ -109,7 +109,7 @@
         </div>
 
         @endif
-        <div class="infor-cart-help">
+        <!-- <div class="infor-cart-help">
             <div class="title-gh">
                 Trợ giúp
             </div>
@@ -119,7 +119,7 @@
                 @endif
             </ul>
             <div class="clear"></div>
-        </div>
+        </div> -->
     </div>
     @if (Auth::guest())
     <div class="right-sidebar-cart right">

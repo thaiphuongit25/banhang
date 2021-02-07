@@ -1,6 +1,6 @@
 @extends('layouts.app') @section('content')
 <div class="container-crumb">
-  <div class="texttitle sitemaps">
+  <div class="texttitle sitemaps" style="margin-left: 2px;">
     <a href="/">Trang Chủ</a>
     <a href="">Món ăn</a>
     <a>{{$product->name}}</a>

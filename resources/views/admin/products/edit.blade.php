@@ -96,7 +96,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-2 col-form-label require">€ơn vị(Cái/Gói)</label>
+                <label class="col-sm-2 col-form-label require">Đơn vị(Cái/Gói)</label>
                 <div class="col-sm-10">
                     <input type="input" name="note" class="form-control" value="{{ $product->note }}" placeholder="Cái/Gói(50pcs)"/>
                 </div>

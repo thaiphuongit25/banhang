@@ -288,7 +288,7 @@ $(document).ready(function() {
             let listCart = JSON.parse(localStorage.getItem('buy_card'));
             let carts = JSON.parse(localStorage.getItem('list_card'));
             if (carts == null || carts.length == 0) {
-                alert("Vui lòng thêm sản phẩm €ến giỏ hàng");
+                alert("Vui lòng thêm sản phẩm đến giỏ hàng");
                 return;
             }
             let method_check = $(".method-cart").find('input').toArray();

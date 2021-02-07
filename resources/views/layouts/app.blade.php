@@ -42,13 +42,13 @@
   <div id="top-fix-scroll" class="top-fix-scroll" style="height: 40px;">
     <div id="top-fix-scroll">
       <div>
-        <div class="logo-scroll">
+        <!-- <div class="logo-scroll">
           <div id="title" style="margin-top: 10px; font-size: 25px; color: #dc4b4b; font-family: cursive">
             <span>
               Bếp mẹ Sushi
             </span>
           </div>
-        </div>
+        </div> -->
         <div class="form-scroll" id="main-search-scroll">
           <form action="/products" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
             <div class="namesub">
@@ -57,7 +57,7 @@
             </div>
           </form>
         </div>
-        <div class="register-cart">
+        <div class="register-cart" style="max-width: 55%;">
           <div class="register-scroll">
             <div class="user_control" style="display: flex;">
               <input type="hidden" id="check_login" value="0">
@@ -77,9 +77,9 @@
           <div class="cart-scroll" id="box-cart-scroll">
             <div id="cart1" class="cart-popup-hover-scroll">
               <a class="bb-hover" href="/carts">
-                <label class="lbcart">
+                <!-- <label class="lbcart">
                   Giỏ hàng
-                </label>
+                </label> -->
                 <span class="cartd" id="cartd">
                   <sup>
                     <strong style="color:red" class="card_value">0</strong>
@@ -110,18 +110,12 @@
             <span class="view-desktop"><img src="/images/phone-24.png"></span>
           </a>
           <ul>
-            <li><a href="/product">Sản phẩm</a></li>
-            <li><a href="/services">Dịch vụ</a></li>
-            <li><a href="/forum">Diễn €àn</a></li>
-            <li><a href="/news">Tin tức</a></li>
-
+            <li><a href="/">Trang chủ</a></li>
             <li><a href="/carts">Giỏ hàng</a></li>
-            <li><a href="/lien-he">Liên hệ</a></li>
-            <li><a href="/information">Thông tin</a></li>
             <span><img src="/images/close_pirobox.png"></span>
           </ul>
         </div>
-        <div class="textmenu_top" style="float: left;">
+        <div class="textmenu_top" style="float: left; margin-left: 5px;">
           <img class="phone" src="/images/phone.png" alt="Phone">
           <a class="px" style="color: #0ca9b1; margin-left: 5px;" href="tel:00491629103986">00491629103986</a>
         </div>
