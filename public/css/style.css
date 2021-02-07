@@ -2966,7 +2966,8 @@ table {
     margin-top: -1px;
     border: 1px solid #bbb;
     padding: 3px 0 6px 5px;
-    margin-right: 10px
+    margin-right: 10px;
+    margin-left: 3px;
 }
 
 .top-fix-scroll .btn-search-home,
@@ -6135,7 +6136,8 @@ table.cart-popup .action-cart .delete-cart-popup {
         display: none
     }
     .menubar .f2 .namesub input.text {
-        width: 93%
+        width: 93%;
+        margin-left: 3px;
     }
     .menubar .f2 .namesub {
         float: left;
@@ -7530,7 +7532,7 @@ div.ppt {
     /* Sit on top */
     left: 0;
     top: 0;
-    width: 100%;
+    width: 98%;
     /* Full width */
     height: 100%;
     /* Full height */
