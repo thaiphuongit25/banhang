@@ -70,7 +70,7 @@
                     </p>
                 </div>
                 <div style="padding-top: 8px">
-                    <a class="hover" href="/account/login?path=%2Fpages%2Fquy-dinh-bao-hanh"><b>Đăng Nhập</b></a> hoặc <a class="hover" href="/users/new?path=%2Fpages%2Fquy-dinh-bao-hanh"><b>Đăng ký</b></a> €ể chia sẻ.
+                    <a class="hover" href="/account/login?path=%2Fpages%2Fquy-dinh-bao-hanh"><b>Đăng Nhập</b></a> hoặc <a class="hover" href="/users/new?path=%2Fpages%2Fquy-dinh-bao-hanh"><b>Đăng ký</b></a> để chia sẻ.
                 </div>
             </div>
 

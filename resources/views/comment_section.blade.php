@@ -104,7 +104,7 @@
             </div>
             @else
             <div style="padding-top: 8px">
-                <a class="hover" href="{{ route('login') }}"><b>Đăng Nhập</b></a>  hoặc  <a class="hover" href="{{ route('register') }}"><b>Đăng ký</b></a> €ể chia sẻ.
+                <a class="hover" href="{{ route('login') }}"><b>Đăng Nhập</b></a>  hoặc  <a class="hover" href="{{ route('register') }}"><b>Đăng ký</b></a> để chia sẻ.
         </div>
             @endif
         </div>
