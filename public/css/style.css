@@ -5316,7 +5316,7 @@ table.cart-popup .action-cart .delete-cart-popup {
     width: 450px
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 680px) {
     .new-update-style-info {
         width: 350px;
     }
@@ -5821,6 +5821,7 @@ table.cart-popup .action-cart .delete-cart-popup {
     #wrapper #body #body-right {
         width: 72.8%
     }
+
 }
 
 @media screen and (max-width: 845px) {
