@@ -122,7 +122,7 @@
         </div> -->
     </div>
     @if (Auth::guest())
-    <div class="right-sidebar-cart right">
+    <div class="right-sidebar-cart right" style="float: left; width: 92%; margin-top: 20px;">
         <div style="background-color:#fff; border:1px solid #ccc; width:96%;float:right">
             <div class="title-gf" style="color:#FFF;padding: 5px 0 5px 10px;background: #3f96cf">
                 Đăng Nhập
@@ -158,7 +158,7 @@
     @endif
     <div id="myModal" class="modal">
         <!-- Modal content -->
-        <div class="modal-content"  style="width: 400px">
+        <div class="modal-content"  style="max-width: 400px">
             <div class="modal-header title-gf" style="">
                 <span class="close">&times;</span>
                 <h2 style="font-weight: bolder;
