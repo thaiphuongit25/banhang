@@ -26,7 +26,7 @@
                     <td>{{$order->user->name}}</td>
                     <td>{{$order->code}}</td>
                     <td>{{$order->date_order}}</td>
-                    <td>₫{{ number_format($order->total)}}</td>
+                    <td>€{{ number_format($order->total)}}</td>
                     <td>{{$order->note}}</td>
                     <td>
                         @foreach(config('constants.order_status') as $status => $value)
