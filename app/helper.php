@@ -164,3 +164,12 @@
          }
          return number_format($total);
      }
+
+     function infor() {
+         return [
+             'email' => 'alinabeautynailspa@gmail.com',
+             'address' => 'Steinstrasse 2, 47441 Moers.',
+             'phone' => '00491629103986'
+         ];
+     }
+     
