@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="about-3">
-    <h3 class="heading-agileinfo">Welcome<span>Skin,Nails and Beauty Services</span></h3>
+    <h3 class="heading-agileinfo">BEGRÜSSEN<span>Dienstleistungen für Haut, Nägel und Schönheit</span></h3>
     <div class="container">
         <div class="d-flex">
             
@@ -11,7 +11,7 @@
                 <p>If you like nature, picturesque views, beautiful horses and quality time spending, our riding school is the perfect
                     choice to begin your acquaintance with equitation, or to simply enjoy monthly family events at our facility.</p>
                 <p>kuytase uaeraquis autem vel eum iure reprehend unicmquam eius, Basmodi temurer sehsmunim.</p>
-                <a class="join-wthree" href="about.html">About Us
+                <a class="join-wthree" href="{{ url('about') }}">About Us
                     <i class="fa fa-hand-o-right" aria-hidden="true"></i>
                 </a>
             </div>
@@ -38,7 +38,7 @@
 <!-- //wthree-mid -->
 <div class="donails">
     <div class="container">
-    <h3 class="heading-agileinfo">Do Nails & Waxing!<span>Skin,Nails and Beauty Services</span></h3>
+    <h3 class="heading-agileinfo">Do Nails & Waxing!<span>Dienstleistungen für Haut, Nägel und Schönheit</span></h3>
         
         <div class="col-md-6 donail_right">
             <div class="mwho-we-textmks">

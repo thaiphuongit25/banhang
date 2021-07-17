@@ -3,7 +3,7 @@
 <div class="banner-bottom">
   <div class="container">
     <div class="inner_sec_info_agileits_w3">
-            <h3 class="heading-agileinfo">Contact Us<span>Skin,Nails and Beauty Services</span></h3>
+            <h3 class="heading-agileinfo">Kontaktiere uns<span>Dienstleistungen für Haut, Nägel und Schönheit</span></h3>
       <div class="contact-form">
              <form method="post" action="#">
              <div class="left_form">

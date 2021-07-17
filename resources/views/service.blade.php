@@ -2,11 +2,11 @@
 @section('content')
 <div class="agileits-about-top">
   <div class="container">
-  <h3 class="heading-agileinfo">Services<span>Skin,Nails and Beauty Services</span></h3>
+  <h3 class="heading-agileinfo">Dienstleistungen<span>Dienstleistungen für Haut, Nägel und Schönheit</span></h3>
     <div class="agileinfo-top-grids">
       <div class="col-sm-4 wthree-top-grid">
         <img src="images/g1.jpg" class="img-responsive" alt="" />
-        <h4>Packages</h4>
+        <h4>Pakete</h4>
         <p>Pellentesque auctor euismod lectus a pretium. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
       </div>
       <div class="col-sm-4 wthree-top-grid">

@@ -3,13 +3,13 @@
         <div class="col-md-2 footer_grid">
         </div>
         <div class="col-md-4 footer_grid">
-            <h3>About Us</h3>
+            <h3>Über uns</h3>
             <p>Nam libero tempore cum vulputate id est id, pretium semper enim. Morbi viverra congue nisi vel pulvinar posuere sapien
                 eros.
             </p>
         </div>
         <div class="col-md-4 footer_grid">
-            <h3>Contact Info</h3>
+            <h3>Kontaktinformation</h3>
             <ul class="address">
                 <li><i class="fa fa-map-marker" aria-hidden="true"></i>Steinstrasse 2, <span>47441 Moers.</span></li>
                 <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ infor()['email'] }}">{{ infor()['email'] }}</a></li>

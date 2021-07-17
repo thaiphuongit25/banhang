@@ -11,19 +11,19 @@
 					</div>
 
 					<div class="w3-header-top-right-text">
-						<h6 class="caption"> Contact Us</h6>
+						<h6 class="caption">Kontaktiere uns</h6>
 						<p><a href="tel:00491629103986" style="color: #f14156;">00491629103986</a></p>
 					</div>
 
 					<div class="email-right">
-						<h6 class="caption">Email Us</h6>
+						<h6 class="caption">E-Mail an uns</h6>
 						<p><a href="mailto:{{ infor()['email'] }}" class="info">{{ infor()['email'] }}</a></p>
 
 					</div>
 
 
 					<div class="agileinfo-social-grids">
-						<h6 class="caption">Follow Us</h6>
+						<h6 class="caption">Folge uns</h6>
 						<ul>
 							<li><a href="https://www.facebook.com/Alina-Beauty-nagelstudio-Moers-104331675271127"><span class="fa fa-facebook"></span></a></li>
 							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
@@ -44,7 +44,7 @@
 	<div class="container">
 			<div class="navbar-header">
 	   			 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-	                <span class="sr-only">Toggle navigation</span>
+	                <span class="sr-only">Navigation umschalten</span>
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
 	                <span class="icon-bar"></span>
@@ -53,10 +53,10 @@
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav ">
-						<li class="active 0_tab"><a href="{{ url('/') }}">Home</a></li>
-						<li class="1_tab"><a href="{{ url('about') }}">About</a></li>
-						<li class="2_tab"><a href="{{ url('service') }}">Services</a></li>
-						<li class="3_tab"><a href="{{ url('contact') }}">Contact</a></li>
+						<li class="active 0_tab"><a href="{{ url('/') }}">Zuhause</a></li>
+						<li class="1_tab"><a href="{{ url('about') }}">Über</a></li>
+						<li class="2_tab"><a href="{{ url('service') }}">Dienstleistungen</a></li>
+						<li class="3_tab"><a href="{{ url('contact') }}">Kontakt</a></li>
 					</ul>
 				</div>
 			
@@ -68,8 +68,8 @@
 		<div class="w3-banner-head-info">
 				<div class="container">
 				   <div class="banner-text">
-						<h2>Take Care of Your Nails
-                         <span>Paint Them Color Awesome!</span></h2>
+						<h2>Passen Sie auf Ihre Nägel auf
+                         <span>Malen Sie sie Farbe Awesome!</span></h2>
 					
 					</div>
 				</div>
