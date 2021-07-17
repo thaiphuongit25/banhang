@@ -106,5 +106,33 @@
 			});
 		});
 	</script>
+  <script>
+    function activeMenu(index) {
+      for(let i = 0 ; i <= 3; i ++) {
+        if (i === index) {
+          $('.' + i + '_tab').addClass('active');
+        } else {
+          $('.' + i + '_tab').removeClass('active');
+        }
+      }
+    }
+    let pathname = window.location.pathname
+    switch (pathname) {
+      case '/':
+        activeMenu(0)
+        break;
+      case '/about':
+        activeMenu(1)
+        break;
+      case '/service':
+        activeMenu(2)
+        break;
+      case '/contact':
+        activeMenu(3)
+        break;
+      default:
+        break;
+    }
+</script>
 </body>
 </html>

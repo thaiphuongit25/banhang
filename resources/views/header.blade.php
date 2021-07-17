@@ -53,10 +53,10 @@
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav ">
-						<li class="active"><a href="{{ url('/') }}">Home</a></li>
-						<li><a href="{{ url('about') }}">About</a></li>
-						<li><a href="{{ url('service') }}">Services</a></li>
-						<li><a href="{{ url('contact') }}">Contact</a></li>
+						<li class="active 0_tab"><a href="{{ url('/') }}">Home</a></li>
+						<li class="1_tab"><a href="{{ url('about') }}">About</a></li>
+						<li class="2_tab"><a href="{{ url('service') }}">Services</a></li>
+						<li class="3_tab"><a href="{{ url('contact') }}">Contact</a></li>
 					</ul>
 				</div>
 			
