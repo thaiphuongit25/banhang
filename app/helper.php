@@ -167,7 +167,7 @@
 
      function infor() {
          return [
-             'email' => 'alinabeautynailspa@gmail.com',
+             'email' => 'alinabeauty37na@gmail.com',
              'address' => 'Steinstrasse 2, 47441 Moers.',
              'phone' => '00491629103986'
          ];
