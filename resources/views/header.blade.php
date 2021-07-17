@@ -1,4 +1,4 @@
-<div id="demo-1" data-zs-src='["images/b3.jpg", "images/b2.jpg", "images/b1.jpg"]' data-zs-overlay="dots">
+<div id="demo-1" data-zs-src='["{{ url('images/b3.jpg') }}", " {{ url('images/b2.jpg') }}", "{{ url('images/b1.jpg') }}"]' data-zs-overlay="dots">
 	<div class="demo-inner-content">
 	
 	<!--/banner-info-->
