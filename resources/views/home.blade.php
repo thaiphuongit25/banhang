@@ -2,21 +2,33 @@
 
 @section('content')
 <div class="about-3">
-    <h3 class="heading-agileinfo">BEGRÜSSEN<span>Dienstleistungen für Haut, Nägel und Schönheit</span></h3>
+    <h3 class="heading-agileinfo">HERZLICH WILLKOMMEN AUF UNSERER HOMEPAGE
+    <span>
+    </span></h3>
     <div class="container">
         <div class="d-flex">
             
             <div class="about1"> 
-                <h5>Nullam pulvinar vulputate aliquam. Pellentesque venenatis ut mi ac porta. Praesent interdum nibh libero, id malesuada libero aliquet quis. Donec at odio nibh.</h5>
-                <p>If you like nature, picturesque views, beautiful horses and quality time spending, our riding school is the perfect
-                    choice to begin your acquaintance with equitation, or to simply enjoy monthly family events at our facility.</p>
-                <p>kuytase uaeraquis autem vel eum iure reprehend unicmquam eius, Basmodi temurer sehsmunim.</p>
-                <a class="join-wthree" href="{{ url('about') }}">About Us
-                    <i class="fa fa-hand-o-right" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div class="about2">
-                
+                <h5>NAGELSTUDIO Unser Nagelstudio in MOERS </h5>
+                <p>
+                  &nbsp;&nbsp;  Der Luxus traumhaft schöner Nägel beginnt bereits beim Betreten unseres Studios. Besuchen Sie uns – lassen Sie sich verwöhnen 
+                Schöne gepflegte Fingernägel und Hände werten Ihr Äußeres auf, Sie fühlen sich wohler. 
+                Ganz gleich wo Sie sind, beim Ausgehen – Tanzen –  Sport  Beruf und Arbeit, können Sie Ihre Hände her zeigen. 
+                </p>
+                <span id="readmore_wellcome">
+                <p>
+                Immer wieder werden unsere Kundinnen auf Ihre schönen gepflegten Fingernägel angesprochen.
+                Durch aktuelle Fortbildungsseminare, behandeln wir Ihre Fingernägel nach dem neusten Stand der Technik.
+                </p>
+                <p>
+                    Für Nagelbeißer und gespaltene Fingernägel habe ich ein besonderes Behandlungskonzept zusammengestellt. Beim Nageldesign richte ich mich ganz nach Ihren Wünschen. Egal ob natürlicher FrenchNailLook, feinste Hochzeitsnägel oder ausgefallene Farben und Muster – der Kreativität sind fast keine Grenzen gesetzt.
+                </p>
+                </span>
+                <div class="botton readmore_wellcome">
+                    <a class="join-wthree">Lesen Sie mehr
+                        <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
         
@@ -26,17 +38,26 @@
 <!-- wthree-mid -->
 <div class="wthree-mid">
     <div class="container">
-        <h3>Nisl amet dolor sit ipsum veroeros sed blandit</h3>
-        <p>Standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</p>
-        <div class="botton">
-            <a class="join-wthree" href="#" data-toggle="modal" data-target="#myModal">Read More
+        <h3>Der Luxus traumhaft schöner Nägel beginnt bereits beim Betreten unseres Studios. Besuchen Sie uns – lassen Sie sich verwöhnen</h3>
+        <p>
+            &nbsp;&nbsp; Schöne gepflegte Fingernägel und Hände werten Ihr Äußeres auf, Sie fühlen sich wohler.
+            Ganz gleich wo Sie sind, beim Ausgehen – Tanzen –  Sport  Beruf und Arbeit, können Sie Ihre Hände her zeigen.
+            <span id="readmore">
+            Immer wieder werden unsere Kundinnen auf Ihre schönen gepflegten Fingernägel angesprochen.
+            Durch aktuelle Fortbildungsseminare, behandeln wir Ihre Fingernägel nach dem neusten Stand der Technik.
+            Zum Nagel Design benutzen wir Air-Brush und Flexbrush Lack. Mit Air-Brush-Design gehören Nägel zu den exklusivsten Attributen der weiblichen Schönheit. Die kleinen Kunstwerke, mit Spritzpistole und Flexbrush Lack auf die Nägel gebannt, verleihen schönen Nägeln den besonderen Kick.
+            Der eigenen Phantasie sind keine Grenzen gesetzt. Für jeden Anlass und jede Gelegenheit finden wir für Sie ein passendes Motiv. Der Einheitslook gehört der Vergangenheit an.!!!
+            </span>
+        </p>
+        <div class="botton readmore">
+            <a class="join-wthree">Lesen Sie mehr
                     <i class="fa fa-hand-o-right" aria-hidden="true"></i>
                 </a>
         </div>
     </div>
 </div>
 <!-- //wthree-mid -->
-<div class="donails">
+{{-- <div class="donails">
     <div class="container">
     <h3 class="heading-agileinfo">Do Nails & Waxing!<span>Dienstleistungen für Haut, Nägel und Schönheit</span></h3>
         
@@ -108,7 +129,7 @@
                 </div>
                 <div class="clearfix"> </div>
                 <div class="botton">
-            <a class="join-wthree" href="#" data-toggle="modal" data-target="#myModal">Read More
+            <a class="join-wthree" href="#" data-toggle="modal" data-target="#myModal">Lesen Sie mehr
                     <i class="fa fa-hand-o-right" aria-hidden="true"></i>
                 </a>
         </div>
@@ -118,15 +139,17 @@
         </div>
             <div class="clearfix"> </div>
     </div>
-</div>
+</div> --}}
             <!-- pricing -->
 <div class="w3ls-section wthree-pricing">	
     <div class="container">
-        <h3 class="heading-agileinfo">Pricing<span>Skin,Nails and Beauty Services</span></h3>
+        <h3 class="heading-agileinfo">PREISGESTALTUNG<span>30% Rabatt bis 20.8.2021
+            auf Neumodellage und Auffüllen</span></h3>
         <div class="pricing-grids-info">
-        <div class="pricing-grid grid-one">
+            <img src="{{ url('images/price.jpg')}}" alt="price">
+        {{-- <div class="pricing-grid grid-one">
             <div class="w3ls-top">
-                <h3>Pedicure</h3> 
+                <h3>Pedicure</h3>
             </div>
             <div class="w3ls-bottom">
             <h4> 200<span class="sup">$</span> </h4>
@@ -138,55 +161,35 @@
                     <a href="contact.html">Book Now</a>					
                 </div>
             </div>
-        </div>
-        <div class="pricing-grid grid-two">
-            <div class="w3ls-top">
-                <h3>Manicure</h3> 
-            </div>
-            <div class="w3ls-bottom">
-            <h4> 350<span class="sup">$</span> </h4>
-                <ul class="count">
-                    <li>While hand and nail care is usually restricted to just a few services, we’ve got a wide selection of various pedicure methods, just as well as the overall hands skin …</li>
-                </ul>
-                
-                <div class="more">
-                    <a href="contact.html">Book Now</a>				
-                </div>
-            </div>
-        </div>
-        <div class="pricing-grid grid-three">
-            <div class="w3ls-top">
-                <h3>Waxing</h3> 
-            </div>
-            <div class="w3ls-bottom">
-            <h4> 500<span class="sup">$</span> </h4>
-                <ul class="count">
-                    <li>While hand and nail care is usually restricted to just a few services, we’ve got a wide selection of various pedicure methods, just as well as the overall hands skin …</li>
-                </ul>
-                
-                <div class="more">
-                    <a href="contact.html">Book Now</a>			
-                </div>
-            </div>
-        </div>
-        <div class="zb pricing-grid grid-four">
-            <div class="w3ls-top">
-                <h3>Package</h3> 
-            </div>
-            <div class="w3ls-bottom">
-            <h4> 800<span class="sup">$</span> </h4>
-                <ul class="count">
-                    <li>While hand and nail care is usually restricted to just a few services, we’ve got a wide selection of various pedicure methods, just as well as the overall hands skin …</li>
-                </ul>
-                
-                <div class="more">
-                    <a href="contact.html">Book Now</a>				
-                </div>
-            </div>
-        </div>
+        </div> --}}
         <div class="clearfix"> </div> 
             <!--End-slider-script-->
         </div>
     </div>	
 </div>	
+<div class="map_w3layouts_agile">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.349932073151!2d6.6234110153060834!3d51.45173132259364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8bce22a865219%3A0xaf8207e6a0631b6a!2sSteinstra%C3%9Fe%202%2C%2047441%20Moers%2C%20Germany!5e0!3m2!1sen!2s!4v1626504420217!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+</div>
+@endsection
+@section('css')
+    <style>
+        #readmore {
+            display: none;
+        }
+        #readmore_wellcome {
+            display: none;
+        }
+    </style>
+@endsection
+@section('js')
+    <script>
+        $('.readmore').on('click', function() {
+            $('#readmore').show();
+            $(this).hide();
+        })
+        $('.readmore_wellcome').on('click', function() {
+            $('#readmore_wellcome').show();
+            $(this).hide();
+        })
+    </script>
 @endsection

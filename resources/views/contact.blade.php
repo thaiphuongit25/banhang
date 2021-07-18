@@ -5,7 +5,7 @@
     <div class="inner_sec_info_agileits_w3">
             <h3 class="heading-agileinfo">Kontaktiere uns<span>Dienstleistungen für Haut, Nägel und Schönheit</span></h3>
       <div class="contact-form">
-             <form method="post" action="#">
+             <form>
              <div class="left_form">
               <div>
                 <span><label>Name</label></span>

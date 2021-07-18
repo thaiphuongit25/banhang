@@ -465,12 +465,12 @@ a.join-wthree:hover {
 }
 .heading-agileinfo span:after {
     content: '';
-    background: #212121;
-    height: 2px;
+    background: #c19494;
+    height: 3px;
     width: 70px;
     position: absolute;
     top: 132%;
-    right: 47%;
+    right: 40%;
 }
 span.nnn {
     color: #fff;

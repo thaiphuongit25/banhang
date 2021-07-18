@@ -38,7 +38,7 @@
   <link href="{{ url('fonts/fontawesome-webfont.woff2') }}" rel="stylesheet">
   <link href="{{ url('fonts/glyphicons-halflings-regular.woff') }}" rel="stylesheet">
   <!-- //googlefonts -->
-
+   @yield('css')
   <!-- Styles -->
   {{-- <link href="{{ url('css/style.css') }}" rel="stylesheet"> --}}
 </head>
@@ -62,6 +62,7 @@
  <script type="text/javascript" src="{{ url('js/jquery.zoomslider.min.js') }}"></script><!-- zoomslider js -->
 <!-- //for banner js file-->
 <!-- for smooth scrolling -->
+@yield('js')
 <script src="{{ url('js/SmoothScroll.min.js') }}"></script>
 	<script type="text/javascript" src="{{ url('js/move-top.js') }}"></script>
 	<script type="text/javascript" src="{{ url('js/easing.js') }}"></script>
@@ -124,7 +125,7 @@
       case '/about':
         activeMenu(1)
         break;
-      case '/service':
+      case '/library':
         activeMenu(2)
         break;
       case '/contact':

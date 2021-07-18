@@ -7,7 +7,7 @@
 			<div class="container">
 				<div class=" head-wl">
 					<div class="headder-w3">
-						<h1><a href="index.html" style="font-size: 40px;">Alina beauty</a></h1>
+						<h1><a href="{{ url('/')}}" style="font-size: 40px;">Alina beauty</a></h1>
 					</div>
 
 					<div class="w3-header-top-right-text">
@@ -20,15 +20,13 @@
 						<p><a href="mailto:{{ infor()['email'] }}" class="info">{{ infor()['email'] }}</a></p>
 
 					</div>
-
-
 					<div class="agileinfo-social-grids">
 						<h6 class="caption">Folge uns</h6>
 						<ul>
 							<li><a href="https://www.facebook.com/Alina-Beauty-nagelstudio-Moers-104331675271127"><span class="fa fa-facebook"></span></a></li>
+							<li><a href="{{ infor()['instagram'] }}"><span class="fa fa-instagram"></span></a></li>
 							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li><a href="#"><span class="fa fa-rss"></span></a></li>
-							<li><a href="#"><span class="fa fa-vk"></span></a></li>
+							{{-- <li><a href="#"><span class="fa fa-vk"></span></a></li> --}}
 						</ul>
 					</div>
 
@@ -54,8 +52,8 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav ">
 						<li class="active 0_tab"><a href="{{ url('/') }}">Zuhause</a></li>
-						<li class="1_tab"><a href="{{ url('about') }}">Über</a></li>
-						<li class="2_tab"><a href="{{ url('service') }}">Dienstleistungen</a></li>
+						{{-- <li class="1_tab"><a href="{{ url('about') }}">Über</a></li> --}}
+						<li class="2_tab"><a href="{{ url('library') }}">Bibliothek Nägel</a></li>
 						<li class="3_tab"><a href="{{ url('contact') }}">Kontakt</a></li>
 					</ul>
 				</div>
@@ -68,8 +66,11 @@
 		<div class="w3-banner-head-info">
 				<div class="container">
 				   <div class="banner-text">
-						<h2>Passen Sie auf Ihre Nägel auf
-                         <span>Malen Sie sie Farbe Awesome!</span></h2>
+						<h2>Alina Beauty Nagelstudio Neumodellage Auffüllen 
+              <span>Shellac
+								Maniküre 
+								Pediküre
+								Wimpernverlängerung</span></h2>
 					
 					</div>
 				</div>

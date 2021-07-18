@@ -4,8 +4,8 @@
         </div>
         <div class="col-md-4 footer_grid">
             <h3>Über uns</h3>
-            <p>Nam libero tempore cum vulputate id est id, pretium semper enim. Morbi viverra congue nisi vel pulvinar posuere sapien
-                eros.
+            <p>ALINA BEAUTY NAGELSTUDIO NEUMODELLAGE AUFFÜLLEN
+                SHELLAC MANIKÜRE PEDIKÜRE WIMPERNVERLÄNGERUNG
             </p>
         </div>
         <div class="col-md-4 footer_grid">
