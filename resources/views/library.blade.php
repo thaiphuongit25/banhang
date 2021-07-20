@@ -4,6 +4,11 @@
   <div class="container">
   <h3 class="heading-agileinfo">Bibliothek Nägel<span></span></h3>
     <div class="agileinfo-top-grids">
+      @foreach (array(8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19) as $value)
+      <div class="col-sm-4 wthree-top-grid">
+        <img src="{{ url('images/lib'.$value.'.jpg') }}" class="img-responsive" alt="" />
+      </div>
+      @endforeach
       <div class="col-sm-4 wthree-top-grid">
         <img src="{{ url('images/lib1.png') }}" class="img-responsive" alt="" />
       </div>
