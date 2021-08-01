@@ -54,7 +54,7 @@
 						<li class="active 0_tab"><a href="{{ url('/') }}">Zuhause</a></li>
 						<li class="2_tab"><a href="{{ url('library') }}">Bibliothek Nägel</a></li>
 						<li class="3_tab"><a href="{{ url('contact') }}">Kontakt</a></li>
-						<li class="1_tab"><a href="{{ url('order') }}">Nägel Termin</a></li>
+						{{-- <li class="1_tab"><a href="{{ url('order') }}">Nägel Termin</a></li> --}}
 					</ul>
 				</div>
 			
