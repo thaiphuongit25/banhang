@@ -13,7 +13,7 @@
             <ul class="address">
                 <li><i class="fa fa-map-marker" aria-hidden="true"></i>Steinstrasse 2, <span>47441 Moers.</span></li>
                 <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ infor()['email'] }}">{{ infor()['email'] }}</a></li>
-                <li><i class="fa fa-phone" aria-hidden="true"></i>00491629103986</li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:00491629103986">00491629103986</a></li>
             </ul>
         </div>
         <div class="col-md-2 footer_grid">

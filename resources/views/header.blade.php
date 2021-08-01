@@ -23,9 +23,9 @@
 					<div class="agileinfo-social-grids">
 						<h6 class="caption">Folge uns</h6>
 						<ul>
-							<li><a href="https://www.facebook.com/Alina-Beauty-nagelstudio-Moers-104331675271127"><span class="fa fa-facebook"></span></a></li>
-							<li><a href="{{ infor()['instagram'] }}"><span class="fa fa-instagram"></span></a></li>
-							<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+							<li><a href="https://www.facebook.com/Alina-Beauty-nagelstudio-Moers-104331675271127"><span class="fa fa-facebook icon_social"></span></a></li>
+							<li><a href="{{ infor()['instagram'] }}"><span class="fa fa-instagram icon_social"></span></a></li>
+							{{-- <li><a href="#"><span class="fa fa-twitter"></span></a></li> --}}
 							{{-- <li><a href="#"><span class="fa fa-vk"></span></a></li> --}}
 						</ul>
 					</div>
@@ -52,9 +52,9 @@
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav ">
 						<li class="active 0_tab"><a href="{{ url('/') }}">Zuhause</a></li>
-						{{-- <li class="1_tab"><a href="{{ url('about') }}">Über</a></li> --}}
 						<li class="2_tab"><a href="{{ url('library') }}">Bibliothek Nägel</a></li>
 						<li class="3_tab"><a href="{{ url('contact') }}">Kontakt</a></li>
+						<li class="1_tab"><a href="{{ url('order') }}">Nägel Termin</a></li>
 					</ul>
 				</div>
 			
@@ -78,3 +78,10 @@
 			<!--/banner-info-->
 	</div>
 </div>
+<style>
+	.icon_social {
+		font-size: 18px;
+		margin-top: 5px;
+		font-weight: bold;
+	}
+</style>
