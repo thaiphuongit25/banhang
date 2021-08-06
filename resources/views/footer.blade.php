@@ -11,7 +11,7 @@
         <div class="col-md-4 footer_grid">
             <h3>Kontaktinformation</h3>
             <ul class="address">
-                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Steinstrasse 2, <span>47441 Moers.</span></li>
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Steinstraße 2D, <span>47441 Moers.</span></li>
                 <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ infor()['email'] }}">{{ infor()['email'] }}</a></li>
                 <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:00491629103986">00491629103986</a></li>
             </ul>

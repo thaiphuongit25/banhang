@@ -37,8 +37,7 @@
 </div>
   <!-- /map -->
     <div class="map_w3layouts_agile">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.349932073151!2d6.6234110153060834!3d51.45173132259364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8bce22a865219%3A0xaf8207e6a0631b6a!2sSteinstra%C3%9Fe%202%2C%2047441%20Moers%2C%20Germany!5e0!3m2!1sen!2s!4v1626504420217!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2486.3501335778833!2d6.623430515197859!3d51.45172762259401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8bce22ab8b9d5%3A0x65b8e6825ebd7b99!2sSteinstra%C3%9Fe%202D%2C%2047441%20Moers%2C%20Germany!5e0!3m2!1sen!2s!4v1628259267077!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   <!-- //map -->
 @endsection
