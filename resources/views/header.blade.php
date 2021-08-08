@@ -23,8 +23,8 @@
 					<div class="agileinfo-social-grids">
 						<h6 class="caption">Folge uns</h6>
 						<ul>
-							<li><a href="https://www.facebook.com/Alina-Beauty-nagelstudio-Moers-104331675271127"><span class="fa fa-facebook icon_social"></span></a></li>
 							<li><a href="{{ infor()['instagram'] }}"><span class="fa fa-instagram icon_social"></span></a></li>
+							<li><a href="https://www.facebook.com/Alina-Beauty-nagelstudio-Moers-104331675271127"><span class="fa fa-facebook icon_social"></span></a></li>
 							{{-- <li><a href="#"><span class="fa fa-twitter"></span></a></li> --}}
 							{{-- <li><a href="#"><span class="fa fa-vk"></span></a></li> --}}
 						</ul>
@@ -80,8 +80,8 @@
 </div>
 <style>
 	.icon_social {
-		font-size: 18px;
-		margin-top: 5px;
-		font-weight: bold;
+		font-size: 26px;
+    margin-top: 5px;
+    font-weight: bold;
 	}
 </style>
