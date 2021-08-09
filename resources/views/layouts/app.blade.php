@@ -9,7 +9,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>
-    Alina beauty | nails & spa
+    Alina beauty | nails & spa | steinstraße 2D | moers
   </title>
   @yield('title')
   <script> 
