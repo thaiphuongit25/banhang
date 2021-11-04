@@ -7,16 +7,14 @@ use Illuminate\Http\Request;
 use App\model\Order;
 use App\model\Product;
 use App\model\OrderDetail;
+use App\model\Contact;
 
 class OrdersController extends Controller
 {
     public function index(Request $request)
     {
         $q = $request->has('q') ? $request->q : "";
-        $orders = Order::where("code", 'LIKE','%'.$q.'%')->
-        orWhere("note", 'LIKE','%'.$q.'%')->
-        orWhere("date_order", 'LIKE','%'.$q.'%')->
-        orderBy('id', 'desc')->paginate(15);
+        $orders = Contact::orderBy('id', 'desc')->paginate(15);
         return view('admin.orders.index', compact('orders'));
     }
 

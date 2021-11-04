@@ -6,7 +6,7 @@
     <div id="body-main" style="margin-top:10px">
       <div style="width:350px; background-color:#fff; border:1px solid #ccc; margin:0 auto;">
         <div class="title-gf" style="color:#FFF;padding: 5px 0 5px 10px;background: #3f96cf">
-          Thiết lập lại mật khẩu
+          Reset password
         </div>
         <div style="padding:8px 0 12px 12px;">
           <form method="POST" action="{{ route('password.email') }}">
@@ -26,7 +26,7 @@
 
             <p style="padding:12px 0 0 0px; text-align:left;">
                 <button type="submit" class="btn btn-primary">
-                    Gửi email thiết lập lại
+                    Send
                 </button>
             </p>
           </form>

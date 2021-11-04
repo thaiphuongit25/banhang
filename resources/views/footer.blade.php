@@ -1,6 +1,31 @@
-<div id="footer" style="color: #0ca9b1; font-weight: bold; font-size: 20px; font-family: Arial, Tahoma, Verdana, MS Sans Serif;">
-    <hr style="color: gray">
-    <p style="margin-top: 10px; margin-left: 10px;">By Bếp Mẹ Sushi</p>
-    <p style="margin-left: 10px;">Số điện thoại: 00491629103986</p>
-    <p style="margin-left: 10px; margin-bottom: 10px;">Email: bongsmile96@gmail.com hoặc bepmesushi.info@gmail.com</p>
+<div class="footer_top_agileits">
+    <div class="container">
+        <div class="col-md-2 footer_grid">
+        </div>
+        <div class="col-md-4 footer_grid">
+            <h3>Über uns</h3>
+            <p>ALINA BEAUTY NAGELSTUDIO NEUMODELLAGE AUFFÜLLEN
+                SHELLAC MANIKÜRE PEDIKÜRE WIMPERNVERLÄNGERUNG
+            </p>
+        </div>
+        <div class="col-md-4 footer_grid">
+            <h3>Kontaktinformation</h3>
+            <ul class="address">
+                <li><i class="fa fa-map-marker" aria-hidden="true"></i>Steinstraße 2D, <span>47441 Moers.</span></li>
+                <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:{{ infor()['email'] }}">{{ infor()['email'] }}</a></li>
+                <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:00491629103986">00491629103986</a></li>
+            </ul>
+        </div>
+        <div class="col-md-2 footer_grid">
+        </div>
+        <div class="clearfix"> </div>
+        
+    </div>
+</div>
+<div class="footer_w3ls">
+    <div class="container">
+                <div class="footer_bottom1">
+                    <p>© 2021 by Alina beauty. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+                </div>
+    </div>
 </div>

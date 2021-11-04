@@ -164,3 +164,13 @@
          }
          return number_format($total);
      }
+
+     function infor() {
+         return [
+             'email' => 'alinabeauty37na@gmail.com',
+             'address' => 'Steinstrasse 2, 47441 Moers.',
+             'phone' => '00491629103986',
+             'instagram' => 'https://www.instagram.com/alina_beauty_nagelstudiomoers/'
+         ];
+     }
+     
