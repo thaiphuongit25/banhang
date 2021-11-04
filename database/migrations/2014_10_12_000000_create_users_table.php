@@ -26,9 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('ward_id')->references('id')->on('wards')->nullable();
             $table->string('address');
             $table->bigInteger('phone_number');
-            $table->integer('company_name')->nullable();
             $table->integer('tax_code')->nullable();
-            $table->integer('company_address')->nullable();
             $table->string('note')->nullable();
             $table->timestamps();
         });

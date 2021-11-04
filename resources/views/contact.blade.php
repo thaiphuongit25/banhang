@@ -5,28 +5,25 @@
     <div class="inner_sec_info_agileits_w3">
             <h3 class="heading-agileinfo">Kontaktiere uns<span>Dienstleistungen für Haut, Nägel und Schönheit</span></h3>
       <div class="contact-form">
-             <form>
+             <form action="{{ route('contacts.store') }}" method="POST">
+              @csrf
              <div class="left_form">
               <div>
                 <span><label>Name</label></span>
-                <span><input name="userName" type="text" class="textbox" required=""></span>
+                <span><input name="name" type="text" class="textbox" required=""></span>
               </div>
               <div>
                 <span><label>E-mail</label></span>
-                <span><input name="userEmail" type="text" class="textbox" required=""></span>
-              </div>
-              <div>
-                 <span><label>Fax</label></span>
-                <span><input name="userPhone" type="text" class="textbox" required=""></span>
+                <span><input name="email" type="text" class="textbox" required=""></span>
               </div>
             </div>
             <div class="right_form">
               <div>					    	
-                <span><label>Message</label></span>
-                <span><textarea name="Message" required=""> </textarea></span>
+                <span><label>Nachricht</label></span>
+                <span><textarea name="message" required=""> </textarea></span>
               </div>
                <div>
-                <span><input type="submit" value="Submit" class="myButton"></span>
+                <span><input type="submit" value="einreichen" class="myButton"></span>
               </div>
             </div>
             <div class="clearfix"></div>

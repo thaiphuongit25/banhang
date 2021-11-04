@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddContentToMailsTable extends Migration
+class CreateContactTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,13 @@ class AddContentToMailsTable extends Migration
      */
     public function up()
     {
-        Schema::table('mails', function (Blueprint $table) {
-            $table->text('content')->nullable();
-            $table->text('payment')->nullable();
+        Schema::create('contacts', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->string('name')->nullable();
+            $table->string('email')->nullable();
+            $table->text('message')->nullable();
+
+            $table->timestamps();
         });
     }
 
@@ -26,9 +30,6 @@ class AddContentToMailsTable extends Migration
      */
     public function down()
     {
-        Schema::table('mails', function (Blueprint $table) {
-            $table->dropColumn('content');
-            $table->dropColumn('payment');
-        });
+        Schema::dropIfExists('contacts');
     }
 }

@@ -33,7 +33,7 @@
               <strong>{{ $message }}</strong>
             </span>
             @enderror
-            <label class="off red" id="lb_user_fullname">Full Name</label>
+            <label class="off red" id="lb_user_fullname">Please enter username</label>
           </td>
         </tr>
         <tr>

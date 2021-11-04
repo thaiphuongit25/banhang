@@ -246,28 +246,7 @@ return [
             'icon' => 'fas fa-fw fa-lock',
         ],
         [
-            'text'    => 'Thương hiệu',
-            'url'  => 'admin/brands',
-            'icon'    => 'fas fa-copyright',
-        ],
-        [
-            'text'    => 'Phân Loại',
-            'url'  => '/admin/types',
-            'icon'    => 'fas fa-list-alt',
-        ],
-        [
-
-            'text'    => 'Danh mục',
-            'url'  => '/admin/categories',
-            'icon'    => 'fas fa-th-list',
-        ],
-        [
-            'text'    => 'Sản phẩm',
-            'url'  => 'admin/products',
-            'icon'    => 'fas fa-cogs',
-        ],
-        [
-            'text'    => 'Đơn hàng',
+            'text'    => 'Contacts',
             'url'  => '/admin/orders',
             'icon'    => 'fas fa-file-invoice-dollar',
         ],
@@ -276,16 +255,16 @@ return [
             'url'  => 'admin/users',
             'icon'    => 'fas fa-users',
         ],
-        [
-            'text'    => 'Thiết lập khác',
-            'url'  => 'admin/settings',
-            'icon'    => 'fas fa-cog',
-        ],
-        [
-            'text'    => 'Thiết lập gửi mail',
-            'url'  => 'admin/mails/1/edit',
-            'icon'    => 'fas fa-envelope',
-        ]
+        // [
+        //     'text'    => 'Thiết lập khác',
+        //     'url'  => 'admin/settings',
+        //     'icon'    => 'fas fa-cog',
+        // ],
+        // [
+        //     'text'    => 'Thiết lập gửi mail',
+        //     'url'  => 'admin/mails/1/edit',
+        //     'icon'    => 'fas fa-envelope',
+        // ]
     ],
 
     /*

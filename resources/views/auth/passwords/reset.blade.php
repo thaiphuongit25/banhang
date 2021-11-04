@@ -67,7 +67,7 @@
     <div id="body-main" style="margin-top:10px">
       <div style="width:350px; background-color:#fff; border:1px solid #ccc; margin:0 auto;">
         <div class="title-gf" style="color:#FFF;padding: 5px 0 5px 10px;background: #3f96cf">
-          Đăng Nhập
+          Sign in
         </div>
         <div style="padding:8px 0 12px 12px;">
           <form method="POST" action="{{ route('password.update') }}">
@@ -84,7 +84,7 @@
               @enderror
             </p>
             <p style="padding:8px 0 0 0; font-weight:bolder;">
-              Mật khẩu
+              Password
             </p>
             <p>
               <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" style="width:285px; padding:6px;" name="password" required autocomplete="new-password">
@@ -95,7 +95,7 @@
                 @enderror
             </p>
             <p style="padding:8px 0 0 0; font-weight:bolder;">
-                Nhập lại Mật khẩu
+                Password confirmation
             </p>
             <p>
                 <input id="password-confirm" type="password" class="form-control" style="width:285px; padding:6px;" name="password_confirmation" required autocomplete="new-password">
@@ -103,7 +103,7 @@
 
             <p style="padding:12px 0 0 0px; text-align:left;">
                 <button type="submit" class="btn btn-primary">
-                    Thiết lập lại mật khẩu
+                    Set password
                 </button>
             </p>
           </form>

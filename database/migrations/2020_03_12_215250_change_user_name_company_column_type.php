@@ -14,9 +14,6 @@ class ChangeUserNameCompanyColumnType extends Migration
     public function up()
     {
         Schema::table('users', function ($table) {
-            $table->string('company_name')->nullable()->change();
-            $table->string('company_address')->nullable()->change();
-            $table->string('tax_code')->nullable()->change();
         });
     }
 
@@ -28,9 +25,6 @@ class ChangeUserNameCompanyColumnType extends Migration
     public function down()
     {
         Schema::table('users', function ($table) {
-            $table->string('company_name')->nullable()->change();
-            $table->string('company_address')->nullable()->change();
-            $table->string('tax_code')->nullable()->change();
         });
     }
 }

@@ -30,7 +30,7 @@ class LoginController extends Controller
 
     protected function redirectTo()
     {
-        session()->flash("success","Đăng nhập thành công!");
+        session()->flash("success","Login success!");
         return '/';
     }
 
